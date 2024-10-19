@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./src/",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmit": false,
+    "declaration": true
+  },
+  "exclude": [
+    "**/__stories__",
+    "**/__mocks__",
+    "**/__tests__",
+    "**/__docs__",
+    "**/*.test.tsx",
+    "**/*.test.ts",
+    "**/*.spec.tsx",
+    "**/*.spec.ts",
+    "*.ts",
+    "*.js",
+    "*.cjs"
+  ]
+}

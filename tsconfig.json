@@ -1,36 +1,41 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "jsx": "react",
-    "rootDir": ".",
-    "outDir": "./dist",
-    "sourceMap": true,
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "esnext",
-    "module": "esnext",
-    "lib": ["es2017", "dom", "dom.iterable"],
+    "target": "es6",
+    "jsx": "react-jsx",
+    "lib": ["es2017", "ESNext", "dom", "dom.iterable"],
+    "allowJs": true,
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "downlevelIteration": true,
-    "noImplicitReturns": false,
-    "strictPropertyInitialization": false,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "paths": {},
-    "plugins": [
-      {
-        "transform": "@zerollup/ts-transform-paths"
-      }
-    ]
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "downlevelIteration": true,
+    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noImplicitReturns": false,
+    "strictPropertyInitialization": false,
+    "paths": {
+      "storybook": ["storybook/src/index.ts"]
+    },
+    "types": ["jest", "node", "@testing-library/jest-dom"]
   },
-  "exclude": ["node_modules"]
+  "ts-node": {
+    "compilerOptions": {
+      "module": "esnext"
+    }
+  },
+  "tsc-alias": {
+    "resolveFullPaths": true,
+    "verbose": false
+  },
+  "exclude": ["node_modules/**/*", "**/node_modules/**/*", "dist/**/*", "**/dist/**/*", "*.js"]
 }

@@ -1,0 +1,52 @@
+name: Visual Regression
+
+on: [push, pull_request]
+
+concurrency:
+  group: "${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  vissual-regression:
+    name: Visual Regression
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+          cache: "yarn"
+
+      - name: Install packages
+        run: yarn install
+
+      - name: Build packages
+        run: yarn build
+
+      - name: Build storybook
+        run: yarn storybook:build
+
+      - name: Generate new screenshots
+        uses: nick-fields/retry@v3
+        with:
+          max_attempts: 2
+          timeout_seconds: 1200
+          command: yarn loki:update
+
+      - name: Visual Regression
+        uses: reg-viz/reg-actions@v2
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          image-directory-path: "./.loki/reference"
+
+      - name: Commit screenshots
+        if: ${{ github.ref == 'refs/heads/main' }}
+        uses: EndBug/add-and-commit@v4
+        with:
+          message: "chore: 🤖 Updated screenshots"
+          add: "./.loki/reference*"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,13 @@
+{
+  "extends": ["../../.eslintrc.json"],
+  "parserOptions": {
+    "project": ["./tsconfig.json", "./__tests__/tsconfig.json"]
+  },
+  "rules": {
+    "react/no-array-index-key": 0,
+    "react/no-unknown-property": 0,
+    "import/no-default-export":0,
+    "react/jsx-no-useless-fragment": 0
+  },
+  "ignorePatterns": ["dist/", "jest.config.ts"]
+}

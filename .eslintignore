@@ -1,11 +1,12 @@
 dist
 node_modules
+jest.config.js
 jest.config.ts
+jest.setup.ts
+**/jest.setup.ts
 babel.config.js
 rollup.config.js
-jest.setup.ts
 tsconfig.json
 coverage
 temp
-commitlint.config.js
-*lib*
+release.config.js

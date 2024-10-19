@@ -1,0 +1,49 @@
+name: Documentation
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: "docs ${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+          cache: "yarn"
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.PROD_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.PROD_AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.PROD_AWS_REGION }}
+
+      - name: Install packages
+        run: yarn install
+
+      - name: Build packages
+        run: yarn build
+
+      - name: Install packages and build
+        run: |
+          cd documentation
+          yarn install
+          yarn build
+
+      - name: Deploy to S3 bucket
+        run: aws s3 sync ./documentation/build s3://prod-docsgen-website-new --delete
+
+      - name: Clear cache after deploy
+        run: aws cloudfront create-invalidation --distribution-id=${{ secrets.PROD_AWS_CLOUDFRONT_ID }} --paths "/*"
