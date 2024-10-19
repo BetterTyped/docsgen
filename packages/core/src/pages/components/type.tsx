@@ -378,4 +378,3 @@ export const Type = ({
       return <span className="api-type__type token tag class-name ">void</span>;
   }
 };
-

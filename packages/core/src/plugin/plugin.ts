@@ -6,7 +6,6 @@ import { PluginOptions } from "../types/package.types";
 import { trace, info, setLogLevel } from "../helpers/log.utils";
 import { buildDocs } from "../parsing/docs";
 
-
 export const generate = async (
   context: LoadContext,
   options: PluginOptions,

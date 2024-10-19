@@ -26716,12 +26716,12 @@
       },
       {
         "source": "@docsgen/docusaurus",
-        "target": "npm:@types/react@18.3.11",
+        "target": "npm:@types/react",
         "type": "static"
       },
       {
         "source": "@docsgen/docusaurus",
-        "target": "npm:@types/react-dom@18.3.1",
+        "target": "npm:@types/react-dom",
         "type": "static"
       },
       {
@@ -26736,7 +26736,7 @@
       },
       {
         "source": "@docsgen/docusaurus",
-        "target": "npm:fs-extra@11.2.0",
+        "target": "npm:fs-extra",
         "type": "static"
       },
       {
@@ -27081,6 +27081,11 @@
       {
         "source": "@docsgen/core",
         "target": "npm:chalk",
+        "type": "static"
+      },
+      {
+        "source": "@docsgen/core",
+        "target": "npm:@testing-library/react",
         "type": "static"
       }
     ],

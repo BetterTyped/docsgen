@@ -6,1120 +6,691 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".github/workflows/workflow.yml",
-        "hash": "17325608674832914971"
-      },
-      {
-        "file": "documentation/static/branding/icon-white.svg",
-        "hash": "11522782641928272271"
-      },
-      {
-        "file": ".eslintrc.json",
-        "hash": "5925562605508286921"
-      },
-      {
-        "file": ".github/FUNDING.yml",
-        "hash": "8826518055517442170"
-      },
-      {
-        "file": "documentation/static/img/customer-bg-09.png",
-        "hash": "3389715574201428668"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "12718693719708721646"
-      },
-      {
-        "file": "documentation/src/components/title/index.ts",
-        "hash": "3542596132498393216"
-      },
-      {
-        "file": "documentation/src/routes/landing/landing.tsx",
-        "hash": "13935690274085978690"
-      },
-      {
-        "file": "documentation/static/img/feature-website.png",
-        "hash": "721737541204981769"
-      },
-      {
-        "file": "documentation/.gitignore",
-        "hash": "6581195236600154005"
-      },
-      {
-        "file": "documentation/static/img/testimonial-03.jpg",
-        "hash": "14994151206861721497"
-      },
-      {
-        "file": "documentation/static/icons/feature-chat.svg",
-        "hash": "12693729805079179313"
-      },
-      {
-        "file": "documentation/static/sections/calendar.svg",
-        "hash": "3040421830978951419"
-      },
-      {
-        "file": "documentation/static/sections/chat.svg",
-        "hash": "8728724124160134307"
-      },
-      {
-        "file": "documentation/src/api/client.npm.ts",
-        "hash": "17753821900823788611"
-      },
-      {
-        "file": "documentation/src/routes/landing/call-to-action/call-to-action.tsx",
-        "hash": "28548138571449550"
-      },
-      {
-        "file": "documentation/static/sections/analytics.svg",
-        "hash": "6098396921448866071"
-      },
-      {
-        "file": ".github/workflows/visual-regression.yml",
-        "hash": "8080696486530389528"
-      },
-      {
-        "file": "documentation/static/img/integration-HF.svg",
-        "hash": "14837597350112516048"
-      },
-      {
-        "file": "documentation/static/img/integration-graphql.svg",
-        "hash": "17454675812413406095"
-      },
-      {
-        "file": "documentation/src/routes/landing/summary/summary.tsx",
-        "hash": "9261502512553777254"
-      },
-      {
-        "file": "documentation/src/components/highlighter/index.ts",
-        "hash": "10128727498595615627"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "2244876137709825679"
-      },
-      {
-        "file": "documentation/static/images/integration-docusaurus.svg",
-        "hash": "11481207247053456068"
-      },
-      {
-        "file": "documentation/static/img/client-02.svg",
-        "hash": "104517890715532989"
-      },
-      {
-        "file": "documentation/static/icons/feature-visibility.svg",
-        "hash": "7718566454578200904"
-      },
-      {
-        "file": "documentation/src/components/soon/index.ts",
-        "hash": "1200571352766871735"
-      },
-      {
-        "file": "documentation/static/sections/playground.svg",
-        "hash": "1664240236509484960"
-      },
-      {
-        "file": "documentation/src/hooks/use-version.ts",
-        "hash": "16930090969612965754"
-      },
-      {
-        "file": ".npmrc",
-        "hash": "18085261541358865259"
-      },
-      {
-        "file": "documentation/static/icons/tech-appwrite.svg",
-        "hash": "5547740500148643010"
-      },
-      {
-        "file": "documentation/static/img/bookmark.svg",
-        "hash": "7680169660457386330"
-      },
-      {
-        "file": "documentation/static/sections/dashboards.svg",
-        "hash": "7066181388858926166"
-      },
-      {
-        "file": "documentation/src/routes/landing/clients/clients.tsx",
-        "hash": "2806150450376518820"
-      },
-      {
-        "file": "documentation/static/sections/gantt.svg",
-        "hash": "10390289322061933225"
-      },
-      {
-        "file": "documentation/static/sections/animations.svg",
-        "hash": "931813934428571616"
-      },
-      {
-        "file": "src/mockServiceWorker.js",
-        "hash": "13190729204009642066"
-      },
-      {
-        "file": "documentation/static/icons/tech-react.svg",
-        "hash": "16676111174097424183"
-      },
-      {
-        "file": "documentation/static/icons/feature-export.svg",
-        "hash": "8311954568048350815"
-      },
-      {
-        "file": "documentation/static/icons/feature-zoom.svg",
-        "hash": "7165802443186506054"
-      },
-      {
-        "file": "documentation/static/images/feature-ecosystem.png",
-        "hash": "14183195321112077912"
-      },
-      {
-        "file": "documentation/src/components/index.ts",
-        "hash": "3966133540007686020"
-      },
-      {
-        "file": "documentation/src/routes/landing/themes/index.ts",
-        "hash": "12181319828581151554"
-      },
-      {
-        "file": ".yarnrc.yml",
-        "hash": "6014968577989186938"
-      },
-      {
-        "file": ".npmignore",
-        "hash": "14693006796559574655"
-      },
-      {
-        "file": "documentation/src/routes/landing/example/ecommerce/ecommerce.tsx",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "documentation/src/components/sidebar-menu/sidebar-menu.tsx",
-        "hash": "558053046737164940"
-      },
-      {
-        "file": ".github/PULL_REQUEST_TEMPLATE/other.md",
-        "hash": "16408805018062105602"
-      },
-      {
-        "file": "documentation/tsconfig.json",
-        "hash": "6554115139338757959"
-      },
-      {
-        "file": "documentation/static/img/background.png",
-        "hash": "8288102978359578244"
-      },
-      {
         "file": "documentation/versions.json",
         "hash": "5079120912223948982"
-      },
-      {
-        "file": ".github/pull_request_template.md",
-        "hash": "15718757674471456430"
-      },
-      {
-        "file": "documentation/static/.nojekyll",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "documentation/static/img/client-01.svg",
-        "hash": "15689389019168058404"
-      },
-      {
-        "file": "documentation/static/icons/react.svg",
-        "hash": "3415420521517230477"
-      },
-      {
-        "file": "documentation/src/components/package-details/package-details.tsx",
-        "hash": "185990799620646916"
-      },
-      {
-        "file": "documentation/static/icons/feature-real-time.svg",
-        "hash": "3049597057297838549"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "16966323912313085341"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "5443105041930014821"
-      },
-      {
-        "file": "documentation/src/hooks/use-sidebar.ts",
-        "hash": "5319252861231967799"
-      },
-      {
-        "file": "documentation/src/components/scale-out/scale-out.tsx",
-        "hash": "1974497000529473467"
-      },
-      {
-        "file": "documentation/static/sections/config.svg",
-        "hash": "12636195542994206669"
-      },
-      {
-        "file": ".loki/.gitignore",
-        "hash": "1751985631118385081"
-      },
-      {
-        "file": "documentation/docs/playground/index.mdx",
-        "hash": "2908213279716028445"
-      },
-      {
-        "file": "documentation/src/components/scale-in/index.ts",
-        "hash": "6650025190637705918"
-      },
-      {
-        "file": "documentation/src/components/presentation/presentation.tsx",
-        "hash": "9115287179033291501"
-      },
-      {
-        "file": "documentation/static/img/client-03.svg",
-        "hash": "1807827766082878704"
-      },
-      {
-        "file": "documentation/static/sections/files.svg",
-        "hash": "391259802936674937"
-      },
-      {
-        "file": "documentation/src/components/npm-install/npm-install.tsx",
-        "hash": "2005364180449781009"
-      },
-      {
-        "file": "documentation/static/img/client-06.svg",
-        "hash": "9250151979142539126"
-      },
-      {
-        "file": "documentation/src/hooks/use-filtered-sidebar.ts",
-        "hash": "8297070807164991871"
-      },
-      {
-        "file": ".github/PULL_REQUEST_TEMPLATE/feature.md",
-        "hash": "10945558825162374512"
-      },
-      {
-        "file": "documentation/src/routes/landing/modules/cards.tsx",
-        "hash": "13981755380206476832"
-      },
-      {
-        "file": "documentation/src/routes/landing/example/example.tsx",
-        "hash": "16368566625617641313"
-      },
-      {
-        "file": "documentation/src/routes/landing/modules/modules.tsx",
-        "hash": "7231896110319594546"
-      },
-      {
-        "file": "documentation/static/branding/readme.png",
-        "hash": "6022191784148202185"
-      },
-      {
-        "file": "documentation/static/branding/logo-bg-blue.svg",
-        "hash": "2560640821466956951"
-      },
-      {
-        "file": "documentation/static/branding/icon-black.svg",
-        "hash": "6557916936813659680"
-      },
-      {
-        "file": "documentation/src/css/custom.css",
-        "hash": "8404690699590472488"
-      },
-      {
-        "file": "documentation/src/theme/TOC/styles.module.css",
-        "hash": "13506601109228865463"
-      },
-      {
-        "file": "documentation/static/img/page-illustration.svg",
-        "hash": "16076109810705751026"
-      },
-      {
-        "file": "documentation/static/img/customer-bg-03.png",
-        "hash": "10546087229344324354"
-      },
-      {
-        "file": "documentation/docs/documentation/components/Cards.tsx",
-        "hash": "4855049785835496660"
-      },
-      {
-        "file": "documentation/static/branding/logo-bg-black.svg",
-        "hash": "4585367965694407815"
-      },
-      {
-        "file": ".github/workflows/website.yml",
-        "hash": "15261277992413299515"
-      },
-      {
-        "file": "documentation/docusaurus.config.ts",
-        "hash": "5554310490676209862"
-      },
-      {
-        "file": "documentation/static/sections/crud.svg",
-        "hash": "6561676216094071405"
-      },
-      {
-        "file": "documentation/static/icons/feature-flow.svg",
-        "hash": "859617813528222371"
-      },
-      {
-        "file": "documentation/static/img/favicon.ico",
-        "hash": "10428558283053618638"
-      },
-      {
-        "file": "documentation/static/js/theme.js",
-        "hash": "17447856785201825955"
-      },
-      {
-        "file": ".snyk",
-        "hash": "12023498837690092888"
-      },
-      {
-        "file": ".husky/pre-commit",
-        "hash": "17046802873613134250"
-      },
-      {
-        "file": "documentation/static/img/testimonial-02.jpg",
-        "hash": "2317821359200425771"
-      },
-      {
-        "file": "documentation/static/img/customer-bg-08.png",
-        "hash": "2245809718404748321"
-      },
-      {
-        "file": "documentation/src/components/particles/index.ts",
-        "hash": "13830413312367568840"
-      },
-      {
-        "file": "Contributing.md",
-        "hash": "6999165681835231411"
-      },
-      {
-        "file": "documentation/static/icons/feature-analytics.svg",
-        "hash": "4314731756471260622"
-      },
-      {
-        "file": "documentation/static/icons/copy.svg",
-        "hash": "3940659697840166714"
-      },
-      {
-        "file": "documentation/static/images/glow-top.svg",
-        "hash": "13362417403616917727"
-      },
-      {
-        "file": "documentation/static/branding/logo-white.svg",
-        "hash": "18214354198647172803"
-      },
-      {
-        "file": "yarn.lock",
-        "hash": "10311158059034834104"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "6527998082399918071"
-      },
-      {
-        "file": ".env",
-        "hash": "1824177144928828290"
-      },
-      {
-        "file": ".bin/jest.sh",
-        "hash": "1583266103868829662"
-      },
-      {
-        "file": "documentation/src/components/nav-tabs/nav-tabs.tsx",
-        "hash": "1065008096846509082"
-      },
-      {
-        "file": ".github/ISSUE_TEMPLATE/bug_report.md",
-        "hash": "15424388660508099364"
-      },
-      {
-        "file": "documentation/static/icons/tech-astro.svg",
-        "hash": "13549311016780110464"
-      },
-      {
-        "file": "documentation/src/theme/DocSidebar/Mobile/index.tsx",
-        "hash": "586460544969137618"
-      },
-      {
-        "file": "documentation/static/sections/feedback.svg",
-        "hash": "2253657090456765695"
-      },
-      {
-        "file": "scripts/build.js",
-        "hash": "17562487746730284541"
-      },
-      {
-        "file": "documentation/src/theme/DocsRoot/index.tsx",
-        "hash": "10011724779026807745"
-      },
-      {
-        "file": "documentation/src/components/badge/badge.module.css",
-        "hash": "8289628617055368228"
-      },
-      {
-        "file": "documentation/src/theme/PaginatorNavLink/index.tsx",
-        "hash": "9541469381060744364"
-      },
-      {
-        "file": "commitlint.config.js",
-        "hash": "15089399635272455297"
-      },
-      {
-        "file": ".nvmrc",
-        "hash": "937452497547939540"
-      },
-      {
-        "file": "documentation/static/sections/sheets.svg",
-        "hash": "5190869167412637394"
-      },
-      {
-        "file": "documentation/static/sections/auth.svg",
-        "hash": "16534719559551449024"
-      },
-      {
-        "file": "documentation/static/img/client-04.svg",
-        "hash": "9997396602242191234"
-      },
-      {
-        "file": "documentation/src/routes/landing/hero/index.ts",
-        "hash": "4457464500018065942"
-      },
-      {
-        "file": "documentation/static/icons/feature-list.svg",
-        "hash": "16332850599581803747"
-      },
-      {
-        "file": "documentation/src/components/description/index.ts",
-        "hash": "10376440598001472550"
-      },
-      {
-        "file": "nx.json",
-        "hash": "6335029197221196198"
-      },
-      {
-        "file": "documentation/sidebars.ts",
-        "hash": "7652205495749363492"
-      },
-      {
-        "file": "documentation/yarn.lock",
-        "hash": "13094293801715718871"
-      },
-      {
-        "file": "documentation/blog/authors.yml",
-        "hash": "15366915749970326921"
-      },
-      {
-        "file": ".github/ISSUE_TEMPLATE/feature_request.md",
-        "hash": "12003031272452156761"
-      },
-      {
-        "file": "documentation/static/icons/modules-platform.svg",
-        "hash": "16655790281222420441"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "5527625728685108323"
-      },
-      {
-        "file": "documentation/static/icons/feature-control.svg",
-        "hash": "17339447772517781857"
-      },
-      {
-        "file": "documentation/static/sections/dataGrid.svg",
-        "hash": "16430112493726829107"
-      },
-      {
-        "file": ".github/CODEOWNERS",
-        "hash": "2993499543650671656"
-      },
-      {
-        "file": "documentation/static/sections/documentation.svg",
-        "hash": "2260959544300739648"
-      },
-      {
-        "file": "documentation/static/icons/modules-forms.svg",
-        "hash": "489941752299158632"
-      },
-      {
-        "file": "documentation/static/icons/feature-hearth.svg",
-        "hash": "8577470094963728142"
-      },
-      {
-        "file": ".yarn/releases/yarn-1.22.10.cjs",
-        "hash": "2962166681174461087"
-      },
-      {
-        "file": "documentation/static/img/feature-ecosystem.png",
-        "hash": "14183195321112077912"
-      },
-      {
-        "file": "documentation/static/img/client-05.svg",
-        "hash": "1467350351019952816"
-      },
-      {
-        "file": "documentation/src/components/scale-out/index.ts",
-        "hash": "9348996083808243257"
-      },
-      {
-        "file": "documentation/static/img/integration-mdx.svg",
-        "hash": "13146068529563249791"
-      },
-      {
-        "file": "documentation/static/img/integration-next.svg",
-        "hash": "12820272904938283392"
-      },
-      {
-        "file": "documentation/static/branding/logo-black.svg",
-        "hash": "17504202031725919959"
-      },
-      {
-        "file": "documentation/src/routes/landing/index.ts",
-        "hash": "2706866700381512864"
-      },
-      {
-        "file": "documentation/static/img/integration-docusaurus.svg",
-        "hash": "11481207247053456068"
-      },
-      {
-        "file": "documentation/README.md",
-        "hash": "776753332870048573"
-      },
-      {
-        "file": "documentation/src/components/badge/badge.tsx",
-        "hash": "3351888845453658214"
-      },
-      {
-        "file": "documentation/static/img/integrations-github.svg",
-        "hash": "10381815493133447845"
-      },
-      {
-        "file": "documentation/tailwind.config.js",
-        "hash": "17930877965956458197"
-      },
-      {
-        "file": "documentation/src/routes/landing/clients/index.ts",
-        "hash": "11621300818554600160"
-      },
-      {
-        "file": "documentation/static/icons/feature-search.svg",
-        "hash": "11850734282109706072"
-      },
-      {
-        "file": "documentation/static/icons/background.svg",
-        "hash": "1783700064477341656"
-      },
-      {
-        "file": "documentation/static/sections/access.svg",
-        "hash": "373948868882459024"
-      },
-      {
-        "file": "documentation/static/icons/feature-book.svg",
-        "hash": "7811206441705083202"
-      },
-      {
-        "file": "documentation/docs/docusaurus/index.mdx",
-        "hash": "10910131870696154140"
-      },
-      {
-        "file": "documentation/src/routes/landing/integrations/integrations.tsx",
-        "hash": "1831840990871854139"
-      },
-      {
-        "file": "documentation/static/img/customer-bg-04.png",
-        "hash": "11338340911641017854"
-      },
-      {
-        "file": "documentation/src/components/description/description.tsx",
-        "hash": "11852808070324159475"
-      },
-      {
-        "file": "documentation/static/img/customer-bg-01.png",
-        "hash": "9937610918437191801"
-      },
-      {
-        "file": "documentation/static/icons/play.svg",
-        "hash": "2300628873321896757"
-      },
-      {
-        "file": "documentation/src/routes/landing/summary/index.ts",
-        "hash": "2550861670523832413"
-      },
-      {
-        "file": "documentation/src/pages/index.tsx",
-        "hash": "11020570019827370656"
-      },
-      {
-        "file": "documentation/package.json",
-        "hash": "3209729872632159396"
-      },
-      {
-        "file": ".github/PULL_REQUEST_TEMPLATE/fixes.md",
-        "hash": "8483880720000769210"
       },
       {
         "file": "documentation/src/theme/TOC/index.tsx",
         "hash": "10470558596661867584"
       },
       {
-        "file": "documentation/static/sections/docgen.svg",
-        "hash": "6915944151756249030"
+        "file": ".env",
+        "hash": "1824177144928828290"
       },
       {
-        "file": "documentation/static/img/page-illustration-02.svg",
-        "hash": "656827750379712942"
-      },
-      {
-        "file": "documentation/src/components/scale-in/scale-in.tsx",
-        "hash": "13439390233375240565"
-      },
-      {
-        "file": "documentation/static/img/auth-illustration.svg",
-        "hash": "13867125821656808181"
-      },
-      {
-        "file": "documentation/static/sections/translations.svg",
-        "hash": "4753923366951710953"
-      },
-      {
-        "file": "License.md",
-        "hash": "13851284861020632113"
-      },
-      {
-        "file": "package.json",
-        "hash": "6618976898574773470"
-      },
-      {
-        "file": "documentation/src/components/particles/particles.tsx",
-        "hash": "14784663599371865942"
-      },
-      {
-        "file": "documentation/static/sections/search.svg",
-        "hash": "3262875381968045663"
-      },
-      {
-        "file": "documentation/static/img/customer-bg-02.png",
-        "hash": "11655672307688144750"
-      },
-      {
-        "file": "documentation/static/images/feature-cloud.svg",
-        "hash": "17010192082910058732"
-      },
-      {
-        "file": "documentation/static/icons/tech-firebase.svg",
-        "hash": "9755748694781946212"
-      },
-      {
-        "file": "documentation/static/img/feature-integrations.png",
-        "hash": "1125109484243163015"
-      },
-      {
-        "file": ".github/PULL_REQUEST_TEMPLATE/new-package.md",
-        "hash": "15603653756870359589"
-      },
-      {
-        "file": "documentation/static/img/client-07.svg",
-        "hash": "13267193748068477530"
-      },
-      {
-        "file": "README.md",
-        "hash": "7407701235887485952"
-      },
-      {
-        "file": "documentation/src/hooks/use-theme-listener.ts",
-        "hash": "17310098473835882047"
-      },
-      {
-        "file": ".eslintignore",
-        "hash": "5667022313786762492"
-      },
-      {
-        "file": "documentation/static/img/testimonial-01.jpg",
-        "hash": "7728849029339407569"
-      },
-      {
-        "file": "documentation/static/icons/modules-ui.svg",
-        "hash": "13208957251960564865"
-      },
-      {
-        "file": "documentation/src/routes/landing/hero/hero.tsx",
-        "hash": "8892993086824445057"
-      },
-      {
-        "file": "documentation/src/components/highlighter/highlighter.tsx",
-        "hash": "12307590927490038740"
-      },
-      {
-        "file": ".github/PULL_REQUEST_TEMPLATE/docs.md",
-        "hash": "9578834640665527177"
-      },
-      {
-        "file": "scripts/install-peers.js",
-        "hash": "5107254496635832731"
-      },
-      {
-        "file": ".github/PULL_REQUEST_TEMPLATE/tests.md",
-        "hash": "8061046410184548753"
-      },
-      {
-        "file": "documentation/static/icons/mode-dark.svg",
-        "hash": "11595126660453934995"
-      },
-      {
-        "file": ".babelrc.js",
-        "hash": "15868146736439617434"
-      },
-      {
-        "file": "documentation/docs/core/index.mdx",
-        "hash": "10910131870696154140"
-      },
-      {
-        "file": "documentation/static/icons/hf.svg",
-        "hash": "22861000819294835"
-      },
-      {
-        "file": "documentation/static/img/integration-sentry.svg",
-        "hash": "12967889657758431061"
-      },
-      {
-        "file": "documentation/docs/access/index.mdx",
-        "hash": "1038260981753209666"
-      },
-      {
-        "file": "documentation/static/img/star.svg",
-        "hash": "7851146256208113942"
-      },
-      {
-        "file": "documentation/src/theme/DocBreadcrumbs/index.tsx",
-        "hash": "15429824133292792519"
-      },
-      {
-        "file": "documentation/static/img/customer-bg-05.png",
-        "hash": "4954430584229590149"
-      },
-      {
-        "file": "documentation/src/sections.ts",
-        "hash": "1827823685005243363"
-      },
-      {
-        "file": "documentation/static/icons/feature-mouse.svg",
-        "hash": "17432325525321716147"
-      },
-      {
-        "file": "documentation/static/icons/tech-typescript.svg",
-        "hash": "3807306359283655015"
-      },
-      {
-        "file": "Code_of_Conduct.md",
-        "hash": "2854499158486710683"
-      },
-      {
-        "file": "documentation/src/components/title/title.tsx",
-        "hash": "2160442927990236563"
-      },
-      {
-        "file": "documentation/src/routes/landing/call-to-action/index.ts",
-        "hash": "7614686319584612729"
-      },
-      {
-        "file": "documentation/static/icons/bookmark.svg",
-        "hash": "7680169660457386330"
-      },
-      {
-        "file": "documentation/static/branding/logo-bg-grey.svg",
-        "hash": "16851686267446748626"
-      },
-      {
-        "file": "documentation/static/icons/mode-light.svg",
-        "hash": "5464648499207783514"
+        "file": ".github/workflows/website.yml",
+        "hash": "15261277992413299515"
       },
       {
         "file": "jest.preset.js",
         "hash": "9430166341120122740"
       },
       {
-        "file": "migrations.json",
-        "hash": "10536904317362088346"
+        "file": "documentation/yarn.lock",
+        "hash": "13094293801715718871"
       },
       {
-        "file": "release.config.js",
-        "hash": "8759886925848285867"
-      },
-      {
-        "file": "documentation/src/routes/landing/themes/themes.tsx",
-        "hash": "551629770704371935"
-      },
-      {
-        "file": "documentation/static/images/customer-bg-07.png",
-        "hash": "7323096893867933798"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "136501193766066567"
-      },
-      {
-        "file": "documentation/static/sections/admin.svg",
-        "hash": "17882828624454117100"
-      },
-      {
-        "file": "documentation/static/icons/stylex.svg",
-        "hash": "17226862091113238192"
-      },
-      {
-        "file": "documentation/src/components/fade-in/index.ts",
-        "hash": "10029433665488984274"
-      },
-      {
-        "file": "documentation/src/theme/BlogLayout/index.tsx",
-        "hash": "8177791257659185144"
-      },
-      {
-        "file": "documentation/static/sections/filters.svg",
-        "hash": "8812601169072356315"
-      },
-      {
-        "file": "documentation/static/img/logo.svg",
-        "hash": "11522782641928272271"
-      },
-      {
-        "file": "documentation/src/theme/DocSidebar/Desktop/index.tsx",
-        "hash": "14619037422379604606"
-      },
-      {
-        "file": "documentation/static/img/integration-firebase.svg",
-        "hash": "15216168141529407911"
-      },
-      {
-        "file": "documentation/static/sections/store.svg",
-        "hash": "6673547574015972499"
-      },
-      {
-        "file": "documentation/static/icons/feature-doc.svg",
-        "hash": "12786700203141814554"
-      },
-      {
-        "file": "documentation/static/icons/feature-fn.svg",
-        "hash": "2763993296433686102"
-      },
-      {
-        "file": "documentation/static/images/glow-bottom.svg",
-        "hash": "12898543976653977514"
-      },
-      {
-        "file": "documentation/docs/documentation/index.mdx",
-        "hash": "4365448819040470913"
+        "file": "scripts/install-peers.js",
+        "hash": "5107254496635832731"
       },
       {
         "file": "documentation/src/components/soon/soon.tsx",
         "hash": "379500052556167525"
       },
       {
-        "file": "documentation/src/hooks/use-mouse-position.ts",
-        "hash": "13519138466731646401"
+        "file": "documentation/static/img/customer-bg-05.png",
+        "hash": "4954430584229590149"
       },
       {
-        "file": "documentation/src/components/fade-in/fade-in.tsx",
-        "hash": "5943125302009167154"
+        "file": "documentation/src/components/description/description.tsx",
+        "hash": "11852808070324159475"
+      },
+      {
+        "file": "documentation/src/css/custom.css",
+        "hash": "8404690699590472488"
+      },
+      {
+        "file": ".npmrc",
+        "hash": "18085261541358865259"
+      },
+      {
+        "file": ".github/ISSUE_TEMPLATE/bug_report.md",
+        "hash": "15424388660508099364"
+      },
+      {
+        "file": "documentation/src/routes/landing/summary/summary.tsx",
+        "hash": "9261502512553777254"
+      },
+      {
+        "file": "documentation/static/img/client-01.svg",
+        "hash": "15689389019168058404"
+      },
+      {
+        "file": "documentation/docusaurus.config.ts",
+        "hash": "5554310490676209862"
+      },
+      {
+        "file": "documentation/static/img/client-05.svg",
+        "hash": "1467350351019952816"
       },
       {
         "file": "documentation/static/img/customer-bg-10.png",
         "hash": "5637242795633510956"
       },
       {
-        "file": "documentation/static/icons/feature-connect.svg",
-        "hash": "18336167189682634516"
+        "file": "documentation/docs/docusaurus/index.mdx",
+        "hash": "10910131870696154140"
       },
       {
-        "file": "documentation/static/icons/github.svg",
-        "hash": "1767200611981582963"
+        "file": "documentation/static/img/customer-bg-04.png",
+        "hash": "11338340911641017854"
+      },
+      {
+        "file": "documentation/README.md",
+        "hash": "776753332870048573"
+      },
+      {
+        "file": "documentation/static/img/feature-integrations.png",
+        "hash": "1125109484243163015"
+      },
+      {
+        "file": "documentation/static/img/testimonial-03.jpg",
+        "hash": "14994151206861721497"
+      },
+      {
+        "file": ".github/workflows/visual-regression.yml",
+        "hash": "8080696486530389528"
+      },
+      {
+        "file": "commitlint.config.js",
+        "hash": "15089399635272455297"
+      },
+      {
+        "file": "documentation/src/routes/landing/themes/themes.tsx",
+        "hash": "551629770704371935"
+      },
+      {
+        "file": "documentation/src/routes/landing/index.ts",
+        "hash": "2706866700381512864"
+      },
+      {
+        "file": "documentation/static/img/integration-graphql.svg",
+        "hash": "17454675812413406095"
+      },
+      {
+        "file": "documentation/static/branding/logo-bg-blue.svg",
+        "hash": "2560640821466956951"
+      },
+      {
+        "file": ".snyk",
+        "hash": "12023498837690092888"
+      },
+      {
+        "file": "documentation/src/pages/index.tsx",
+        "hash": "11020570019827370656"
+      },
+      {
+        "file": "documentation/static/branding/logo-bg-black.svg",
+        "hash": "4585367965694407815"
+      },
+      {
+        "file": "documentation/static/img/customer-bg-03.png",
+        "hash": "10546087229344324354"
+      },
+      {
+        "file": "documentation/static/img/page-illustration.svg",
+        "hash": "16076109810705751026"
+      },
+      {
+        "file": "documentation/static/branding/icon-black.svg",
+        "hash": "6557916936813659680"
+      },
+      {
+        "file": "documentation/static/img/feature-ecosystem.png",
+        "hash": "14183195321112077912"
+      },
+      {
+        "file": "documentation/static/img/glow-bottom.svg",
+        "hash": "12898543976653977514"
+      },
+      {
+        "file": "documentation/src/components/scale-in/scale-in.tsx",
+        "hash": "13439390233375240565"
+      },
+      {
+        "file": "documentation/src/hooks/use-version.ts",
+        "hash": "16930090969612965754"
+      },
+      {
+        "file": ".github/PULL_REQUEST_TEMPLATE/fixes.md",
+        "hash": "8483880720000769210"
+      },
+      {
+        "file": "documentation/static/img/client-07.svg",
+        "hash": "13267193748068477530"
+      },
+      {
+        "file": "documentation/src/components/fade-in/fade-in.tsx",
+        "hash": "5943125302009167154"
+      },
+      {
+        "file": "documentation/src/components/particles/particles.tsx",
+        "hash": "14784663599371865942"
+      },
+      {
+        "file": "documentation/docs/core/index.mdx",
+        "hash": "10910131870696154140"
+      },
+      {
+        "file": "documentation/static/img/client-03.svg",
+        "hash": "1807827766082878704"
+      },
+      {
+        "file": "documentation/static/img/customer-bg-08.png",
+        "hash": "2245809718404748321"
+      },
+      {
+        "file": "documentation/static/img/testimonial-02.jpg",
+        "hash": "2317821359200425771"
+      },
+      {
+        "file": "documentation/static/img/integration-docusaurus.svg",
+        "hash": "11481207247053456068"
+      },
+      {
+        "file": "documentation/src/routes/landing/landing.tsx",
+        "hash": "13935690274085978690"
+      },
+      {
+        "file": "documentation/static/img/customer-bg-01.png",
+        "hash": "9937610918437191801"
+      },
+      {
+        "file": ".github/FUNDING.yml",
+        "hash": "8826518055517442170"
+      },
+      {
+        "file": "nx.json",
+        "hash": "6335029197221196198"
+      },
+      {
+        "file": "documentation/src/theme/DocSidebar/Mobile/index.tsx",
+        "hash": "586460544969137618"
+      },
+      {
+        "file": "documentation/src/theme/BlogLayout/index.tsx",
+        "hash": "8177791257659185144"
+      },
+      {
+        "file": "documentation/blog/authors.yml",
+        "hash": "15366915749970326921"
+      },
+      {
+        "file": "documentation/src/routes/landing/call-to-action/index.ts",
+        "hash": "7614686319584612729"
+      },
+      {
+        "file": "documentation/static/img/feature-website.png",
+        "hash": "721737541204981769"
+      },
+      {
+        "file": "documentation/static/img/auth-illustration.svg",
+        "hash": "13867125821656808181"
+      },
+      {
+        "file": "documentation/docs/playground/index.mdx",
+        "hash": "2908213279716028445"
+      },
+      {
+        "file": "documentation/static/img/client-06.svg",
+        "hash": "9250151979142539126"
+      },
+      {
+        "file": "yarn.lock",
+        "hash": "10311158059034834104"
+      },
+      {
+        "file": "src/mockServiceWorker.js",
+        "hash": "13190729204009642066"
+      },
+      {
+        "file": ".husky/pre-commit",
+        "hash": "17046802873613134250"
+      },
+      {
+        "file": ".github/PULL_REQUEST_TEMPLATE/tests.md",
+        "hash": "8061046410184548753"
+      },
+      {
+        "file": "documentation/src/routes/landing/clients/index.ts",
+        "hash": "11621300818554600160"
+      },
+      {
+        "file": ".github/PULL_REQUEST_TEMPLATE/feature.md",
+        "hash": "10945558825162374512"
+      },
+      {
+        "file": "documentation/static/branding/readme.png",
+        "hash": "6022191784148202185"
+      },
+      {
+        "file": "documentation/tsconfig.json",
+        "hash": "6554115139338757959"
+      },
+      {
+        "file": "documentation/src/sections.ts",
+        "hash": "1827823685005243363"
+      },
+      {
+        "file": ".loki/.gitignore",
+        "hash": "1751985631118385081"
+      },
+      {
+        "file": "Contributing.md",
+        "hash": "6999165681835231411"
+      },
+      {
+        "file": "documentation/static/js/theme.js",
+        "hash": "17447856785201825955"
+      },
+      {
+        "file": "documentation/src/theme/PaginatorNavLink/index.tsx",
+        "hash": "9541469381060744364"
+      },
+      {
+        "file": "documentation/src/routes/landing/integrations/integrations.tsx",
+        "hash": "1831840990871854139"
+      },
+      {
+        "file": ".nvmrc",
+        "hash": "937452497547939540"
+      },
+      {
+        "file": "documentation/src/routes/landing/modules/cards.tsx",
+        "hash": "13981755380206476832"
+      },
+      {
+        "file": "documentation/static/img/customer-bg-02.png",
+        "hash": "11655672307688144750"
+      },
+      {
+        "file": "documentation/src/components/fade-in/index.ts",
+        "hash": "10029433665488984274"
+      },
+      {
+        "file": "documentation/src/components/badge/badge.module.css",
+        "hash": "8289628617055368228"
+      },
+      {
+        "file": "documentation/src/components/scale-in/index.ts",
+        "hash": "6650025190637705918"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "16966323912313085341"
+      },
+      {
+        "file": "documentation/tailwind.config.js",
+        "hash": "17930877965956458197"
+      },
+      {
+        "file": "documentation/static/img/customer-bg-07.png",
+        "hash": "7323096893867933798"
+      },
+      {
+        "file": "documentation/src/components/nav-tabs/nav-tabs.tsx",
+        "hash": "1065008096846509082"
+      },
+      {
+        "file": "documentation/static/img/customer-bg-09.png",
+        "hash": "3389715574201428668"
+      },
+      {
+        "file": "README.md",
+        "hash": "7407701235887485952"
+      },
+      {
+        "file": "documentation/src/theme/TOC/styles.module.css",
+        "hash": "13506601109228865463"
+      },
+      {
+        "file": "documentation/src/components/highlighter/highlighter.tsx",
+        "hash": "12307590927490038740"
+      },
+      {
+        "file": "documentation/src/components/particles/index.ts",
+        "hash": "13830413312367568840"
+      },
+      {
+        "file": "documentation/src/routes/landing/hero/index.ts",
+        "hash": "4457464500018065942"
+      },
+      {
+        "file": "documentation/static/img/star.svg",
+        "hash": "7851146256208113942"
+      },
+      {
+        "file": ".yarn/releases/yarn-1.22.10.cjs",
+        "hash": "2962166681174461087"
+      },
+      {
+        "file": "documentation/src/theme/DocSidebar/Desktop/index.tsx",
+        "hash": "14619037422379604606"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "5925562605508286921"
+      },
+      {
+        "file": "documentation/src/routes/landing/modules/modules.tsx",
+        "hash": "7231896110319594546"
+      },
+      {
+        "file": "documentation/static/img/integration-sentry.svg",
+        "hash": "12967889657758431061"
+      },
+      {
+        "file": "documentation/src/routes/landing/themes/index.ts",
+        "hash": "12181319828581151554"
+      },
+      {
+        "file": "Code_of_Conduct.md",
+        "hash": "2854499158486710683"
+      },
+      {
+        "file": ".yarnrc.yml",
+        "hash": "6014968577989186938"
+      },
+      {
+        "file": "documentation/src/routes/landing/call-to-action/call-to-action.tsx",
+        "hash": "28548138571449550"
+      },
+      {
+        "file": "documentation/static/img/favicon.ico",
+        "hash": "10428558283053618638"
+      },
+      {
+        "file": ".github/PULL_REQUEST_TEMPLATE/other.md",
+        "hash": "16408805018062105602"
+      },
+      {
+        "file": "documentation/src/routes/landing/hero/hero.tsx",
+        "hash": "8892993086824445057"
+      },
+      {
+        "file": "documentation/src/components/sidebar-menu/sidebar-menu.tsx",
+        "hash": "558053046737164940"
+      },
+      {
+        "file": "documentation/static/img/client-02.svg",
+        "hash": "104517890715532989"
+      },
+      {
+        "file": "scripts/build.js",
+        "hash": "17562487746730284541"
+      },
+      {
+        "file": "documentation/src/components/title/title.tsx",
+        "hash": "2160442927990236563"
+      },
+      {
+        "file": "documentation/static/img/integration-mdx.svg",
+        "hash": "13146068529563249791"
+      },
+      {
+        "file": ".github/PULL_REQUEST_TEMPLATE/docs.md",
+        "hash": "9578834640665527177"
+      },
+      {
+        "file": "documentation/src/components/title/index.ts",
+        "hash": "3542596132498393216"
+      },
+      {
+        "file": "documentation/static/img/integration-HF.svg",
+        "hash": "14837597350112516048"
+      },
+      {
+        "file": "documentation/static/branding/logo-white.svg",
+        "hash": "18214354198647172803"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "12718693719708721646"
+      },
+      {
+        "file": "documentation/src/components/package-details/package-details.tsx",
+        "hash": "185990799620646916"
+      },
+      {
+        "file": "documentation/static/img/customer-bg-06.png",
+        "hash": "2622661434645887431"
+      },
+      {
+        "file": ".bin/jest.sh",
+        "hash": "1583266103868829662"
+      },
+      {
+        "file": "documentation/src/components/npm-install/npm-install.tsx",
+        "hash": "2005364180449781009"
+      },
+      {
+        "file": "documentation/src/routes/landing/summary/index.ts",
+        "hash": "2550861670523832413"
+      },
+      {
+        "file": "documentation/static/img/background.png",
+        "hash": "8288102978359578244"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "6527998082399918071"
+      },
+      {
+        "file": "documentation/static/img/feature-cloud.svg",
+        "hash": "17010192082910058732"
+      },
+      {
+        "file": "documentation/static/img/glow-top.svg",
+        "hash": "13362417403616917727"
+      },
+      {
+        "file": ".babelrc.js",
+        "hash": "15868146736439617434"
+      },
+      {
+        "file": "documentation/static/img/testimonial-01.jpg",
+        "hash": "7728849029339407569"
+      },
+      {
+        "file": "documentation/src/components/description/index.ts",
+        "hash": "10376440598001472550"
+      },
+      {
+        "file": "documentation/static/branding/icon-white.svg",
+        "hash": "11522782641928272271"
+      },
+      {
+        "file": ".github/workflows/workflow.yml",
+        "hash": "17325608674832914971"
+      },
+      {
+        "file": "documentation/static/branding/logo-bg-grey.svg",
+        "hash": "16851686267446748626"
+      },
+      {
+        "file": ".github/CODEOWNERS",
+        "hash": "2993499543650671656"
+      },
+      {
+        "file": ".github/pull_request_template.md",
+        "hash": "15718757674471456430"
+      },
+      {
+        "file": "documentation/src/components/scale-out/scale-out.tsx",
+        "hash": "1974497000529473467"
+      },
+      {
+        "file": "documentation/src/components/index.ts",
+        "hash": "3966133540007686020"
+      },
+      {
+        "file": ".github/ISSUE_TEMPLATE/feature_request.md",
+        "hash": "12003031272452156761"
+      },
+      {
+        "file": "migrations.json",
+        "hash": "10536904317362088346"
+      },
+      {
+        "file": "documentation/package.json",
+        "hash": "3209729872632159396"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "5527625728685108323"
+      },
+      {
+        "file": ".npmignore",
+        "hash": "14693006796559574655"
+      },
+      {
+        "file": "documentation/static/branding/logo-black.svg",
+        "hash": "17504202031725919959"
+      },
+      {
+        "file": "documentation/src/hooks/use-filtered-sidebar.ts",
+        "hash": "8297070807164991871"
+      },
+      {
+        "file": "documentation/static/img/page-illustration-02.svg",
+        "hash": "656827750379712942"
+      },
+      {
+        "file": "release.config.js",
+        "hash": "8759886925848285867"
+      },
+      {
+        "file": "documentation/src/api/client.npm.ts",
+        "hash": "17753821900823788611"
+      },
+      {
+        "file": "documentation/src/theme/DocBreadcrumbs/index.tsx",
+        "hash": "15429824133292792519"
+      },
+      {
+        "file": "documentation/src/hooks/use-sidebar.ts",
+        "hash": "5319252861231967799"
+      },
+      {
+        "file": "documentation/src/components/soon/index.ts",
+        "hash": "1200571352766871735"
+      },
+      {
+        "file": "documentation/src/components/badge/badge.tsx",
+        "hash": "3351888845453658214"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": "documentation/src/components/scale-out/index.ts",
+        "hash": "9348996083808243257"
+      },
+      {
+        "file": "documentation/static/img/client-04.svg",
+        "hash": "9997396602242191234"
+      },
+      {
+        "file": "documentation/src/hooks/use-theme-listener.ts",
+        "hash": "17310098473835882047"
+      },
+      {
+        "file": "documentation/static/img/bookmark.svg",
+        "hash": "7680169660457386330"
+      },
+      {
+        "file": "documentation/static/img/integration-firebase.svg",
+        "hash": "15216168141529407911"
+      },
+      {
+        "file": "documentation/src/components/highlighter/index.ts",
+        "hash": "10128727498595615627"
+      },
+      {
+        "file": "documentation/docs/documentation/components/Cards.tsx",
+        "hash": "4855049785835496660"
+      },
+      {
+        "file": "documentation/.gitignore",
+        "hash": "6581195236600154005"
+      },
+      {
+        "file": "documentation/docs/documentation/index.mdx",
+        "hash": "4365448819040470913"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "5667022313786762492"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "2244876137709825679"
+      },
+      {
+        "file": "documentation/static/img/integration-next.svg",
+        "hash": "12820272904938283392"
+      },
+      {
+        "file": "documentation/src/routes/landing/clients/clients.tsx",
+        "hash": "2806150450376518820"
+      },
+      {
+        "file": "documentation/static/.nojekyll",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "documentation/src/hooks/use-mouse-position.ts",
+        "hash": "13519138466731646401"
+      },
+      {
+        "file": ".github/PULL_REQUEST_TEMPLATE/new-package.md",
+        "hash": "15603653756870359589"
+      },
+      {
+        "file": "documentation/sidebars.ts",
+        "hash": "7652205495749363492"
+      },
+      {
+        "file": "documentation/static/img/integrations-github.svg",
+        "hash": "10381815493133447845"
+      },
+      {
+        "file": "package.json",
+        "hash": "6618976898574773470"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "136501193766066567"
+      },
+      {
+        "file": "License.md",
+        "hash": "13851284861020632113"
+      },
+      {
+        "file": "documentation/src/theme/DocsRoot/index.tsx",
+        "hash": "10011724779026807745"
+      },
+      {
+        "file": "documentation/src/components/presentation/presentation.tsx",
+        "hash": "9115287179033291501"
+      },
+      {
+        "file": "documentation/static/img/logo.svg",
+        "hash": "11522782641928272271"
       }
     ],
     "projectFileMap": {
-      "@docsgen/playground": [
-        {
-          "file": "packages/playground/.eslintrc.json",
-          "hash": "6472485036856461894"
-        },
-        {
-          "file": "packages/playground/LICENSE.md",
-          "hash": "4543758728560137352"
-        },
-        {
-          "file": "packages/playground/README.md",
-          "hash": "15082191093257678373"
-        },
-        {
-          "file": "packages/playground/__tests__/features/example.spec.ts",
-          "hash": "14920610909626253004"
-        },
-        {
-          "file": "packages/playground/__tests__/global.d.ts",
-          "hash": "18346971606568867678",
-          "deps": [
-            "npm:jest-extended"
-          ]
-        },
-        {
-          "file": "packages/playground/__tests__/jest.setup.ts",
-          "hash": "17549756450279193695",
-          "deps": [
-            "npm:@testing-library/jest-dom",
-            "npm:jest-extended"
-          ]
-        },
-        {
-          "file": "packages/playground/__tests__/tsconfig.json",
-          "hash": "4924143633207198522"
-        },
-        {
-          "file": "packages/playground/jest.config.ts",
-          "hash": "7758063399050096932",
-          "deps": [
-            "npm:@jest/types"
-          ]
-        },
-        {
-          "file": "packages/playground/jest.setup.ts",
-          "hash": "17549756450279193695",
-          "deps": [
-            "npm:@testing-library/jest-dom",
-            "npm:jest-extended"
-          ]
-        },
-        {
-          "file": "packages/playground/package.json",
-          "hash": "16816719667205305154",
-          "deps": [
-            "npm:react",
-            "npm:react-dom",
-            "npm:@docusaurus/types@2.0.0-beta.20",
-            "npm:@types/react@18.3.11",
-            "npm:@types/react-dom@18.3.1",
-            "npm:outdent",
-            "npm:prism-react-renderer",
-            "npm:prismjs",
-            "npm:react-live",
-            "npm:react-simple-code-editor"
-          ]
-        },
-        {
-          "file": "packages/playground/project.json",
-          "hash": "3710222407843258286"
-        },
-        {
-          "file": "packages/playground/release.config.cjs",
-          "hash": "2679747273676027881"
-        },
-        {
-          "file": "packages/playground/src/global.d.ts",
-          "hash": "7875035648030149354"
-        },
-        {
-          "file": "packages/playground/src/index.ts",
-          "hash": "7914279965910728929"
-        },
-        {
-          "file": "packages/playground/src/playground/__stories__/playground.stories.tsx",
-          "hash": "7805211352856845126",
-          "deps": [
-            "npm:@storybook/react"
-          ]
-        },
-        {
-          "file": "packages/playground/src/playground/index.ts",
-          "hash": "3448454427671920077"
-        },
-        {
-          "file": "packages/playground/src/playground/playground.tsx",
-          "hash": "2794176831776248733",
-          "deps": [
-            "npm:react",
-            "npm:react-live",
-            "npm:react-simple-code-editor",
-            "npm:react-element-to-jsx-string"
-          ]
-        },
-        {
-          "file": "packages/playground/src/playground/playground.types.ts",
-          "hash": "15150705915554052324"
-        },
-        {
-          "file": "packages/playground/src/playground/playground.utils.tsx",
-          "hash": "13126575274744912784",
-          "deps": [
-            "npm:prism-react-renderer"
-          ]
-        },
-        {
-          "file": "packages/playground/src/playground/variants/show-more.tsx",
-          "hash": "71934868720102084",
-          "deps": [
-            "npm:react",
-            "npm:react-simple-code-editor",
-            "npm:react-live"
-          ]
-        },
-        {
-          "file": "packages/playground/src/playground/variants/switch.tsx",
-          "hash": "7268337580305093651",
-          "deps": [
-            "npm:react",
-            "npm:react-simple-code-editor",
-            "npm:react-live"
-          ]
-        },
-        {
-          "file": "packages/playground/tsconfig.build.json",
-          "hash": "15463727702757290643"
-        },
-        {
-          "file": "packages/playground/tsconfig.json",
-          "hash": "5867280079261850992"
-        }
-      ],
-      "storybook": [
-        {
-          "file": "storybook/.babelrc",
-          "hash": "2946678488919325452"
-        },
-        {
-          "file": "storybook/.eslintrc.json",
-          "hash": "2572959194003876767"
-        },
-        {
-          "file": "storybook/.storybook/main.ts",
-          "hash": "13953065282789109378",
-          "deps": [
-            "npm:@storybook/react-webpack5",
-            "npm:@stylexjs/babel-plugin"
-          ]
-        },
-        {
-          "file": "storybook/.storybook/preview.tsx",
-          "hash": "11333859595523747356",
-          "deps": [
-            "npm:react",
-            "npm:@storybook/react",
-            "npm:@stylexjs/stylex"
-          ]
-        },
-        {
-          "file": "storybook/README.md",
-          "hash": "9038723306009083502"
-        },
-        {
-          "file": "storybook/project.json",
-          "hash": "10939899214235570452"
-        },
-        {
-          "file": "storybook/tsconfig.json",
-          "hash": "152102248894903515"
-        },
-        {
-          "file": "storybook/tsconfig.lib.json",
-          "hash": "9291876913685658258"
-        },
-        {
-          "file": "storybook/tsconfig.storybook.json",
-          "hash": "16239111290203710247"
-        }
-      ],
       "@docsgen/core": [
         {
           "file": "packages/core/.eslintrc.json",
@@ -1309,7 +880,8 @@
           "file": "packages/core/src/pages/components/__tests__/type.spec.tsx",
           "hash": "14249538081845798925",
           "deps": [
-            "npm:typedoc"
+            "npm:typedoc",
+            "npm:@testing-library/react"
           ]
         },
         {
@@ -1496,7 +1068,7 @@
         },
         {
           "file": "packages/core/src/pages/components/type.tsx",
-          "hash": "2501256490601705672",
+          "hash": "2555630069188894519",
           "deps": [
             "npm:react",
             "npm:typedoc"
@@ -1725,7 +1297,7 @@
         },
         {
           "file": "packages/core/src/plugin/plugin.ts",
-          "hash": "10118171091661027249",
+          "hash": "12782844965872360148",
           "deps": [
             "npm:@docusaurus/types"
           ]
@@ -1767,6 +1339,195 @@
         {
           "file": "packages/core/tsconfig.json",
           "hash": "1047403289139556255"
+        }
+      ],
+      "storybook": [
+        {
+          "file": "storybook/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "storybook/.eslintrc.json",
+          "hash": "2572959194003876767"
+        },
+        {
+          "file": "storybook/.storybook/main.ts",
+          "hash": "13953065282789109378",
+          "deps": [
+            "npm:@storybook/react-webpack5",
+            "npm:@stylexjs/babel-plugin"
+          ]
+        },
+        {
+          "file": "storybook/.storybook/preview.tsx",
+          "hash": "11333859595523747356",
+          "deps": [
+            "npm:react",
+            "npm:@storybook/react",
+            "npm:@stylexjs/stylex"
+          ]
+        },
+        {
+          "file": "storybook/README.md",
+          "hash": "9038723306009083502"
+        },
+        {
+          "file": "storybook/project.json",
+          "hash": "10939899214235570452"
+        },
+        {
+          "file": "storybook/tsconfig.json",
+          "hash": "152102248894903515"
+        },
+        {
+          "file": "storybook/tsconfig.lib.json",
+          "hash": "9291876913685658258"
+        },
+        {
+          "file": "storybook/tsconfig.storybook.json",
+          "hash": "16239111290203710247"
+        }
+      ],
+      "@docsgen/playground": [
+        {
+          "file": "packages/playground/.eslintrc.json",
+          "hash": "6472485036856461894"
+        },
+        {
+          "file": "packages/playground/LICENSE.md",
+          "hash": "4543758728560137352"
+        },
+        {
+          "file": "packages/playground/README.md",
+          "hash": "15082191093257678373"
+        },
+        {
+          "file": "packages/playground/__tests__/features/example.spec.ts",
+          "hash": "14920610909626253004"
+        },
+        {
+          "file": "packages/playground/__tests__/global.d.ts",
+          "hash": "18346971606568867678",
+          "deps": [
+            "npm:jest-extended"
+          ]
+        },
+        {
+          "file": "packages/playground/__tests__/jest.setup.ts",
+          "hash": "17549756450279193695",
+          "deps": [
+            "npm:@testing-library/jest-dom",
+            "npm:jest-extended"
+          ]
+        },
+        {
+          "file": "packages/playground/__tests__/tsconfig.json",
+          "hash": "4924143633207198522"
+        },
+        {
+          "file": "packages/playground/jest.config.ts",
+          "hash": "7758063399050096932",
+          "deps": [
+            "npm:@jest/types"
+          ]
+        },
+        {
+          "file": "packages/playground/jest.setup.ts",
+          "hash": "17549756450279193695",
+          "deps": [
+            "npm:@testing-library/jest-dom",
+            "npm:jest-extended"
+          ]
+        },
+        {
+          "file": "packages/playground/package.json",
+          "hash": "16816719667205305154",
+          "deps": [
+            "npm:react",
+            "npm:react-dom",
+            "npm:@docusaurus/types@2.0.0-beta.20",
+            "npm:@types/react@18.3.11",
+            "npm:@types/react-dom@18.3.1",
+            "npm:outdent",
+            "npm:prism-react-renderer",
+            "npm:prismjs",
+            "npm:react-live",
+            "npm:react-simple-code-editor"
+          ]
+        },
+        {
+          "file": "packages/playground/project.json",
+          "hash": "3710222407843258286"
+        },
+        {
+          "file": "packages/playground/release.config.cjs",
+          "hash": "2679747273676027881"
+        },
+        {
+          "file": "packages/playground/src/global.d.ts",
+          "hash": "7875035648030149354"
+        },
+        {
+          "file": "packages/playground/src/index.ts",
+          "hash": "7914279965910728929"
+        },
+        {
+          "file": "packages/playground/src/playground/__stories__/playground.stories.tsx",
+          "hash": "7805211352856845126",
+          "deps": [
+            "npm:@storybook/react"
+          ]
+        },
+        {
+          "file": "packages/playground/src/playground/index.ts",
+          "hash": "3448454427671920077"
+        },
+        {
+          "file": "packages/playground/src/playground/playground.tsx",
+          "hash": "2794176831776248733",
+          "deps": [
+            "npm:react",
+            "npm:react-live",
+            "npm:react-simple-code-editor",
+            "npm:react-element-to-jsx-string"
+          ]
+        },
+        {
+          "file": "packages/playground/src/playground/playground.types.ts",
+          "hash": "15150705915554052324"
+        },
+        {
+          "file": "packages/playground/src/playground/playground.utils.tsx",
+          "hash": "13126575274744912784",
+          "deps": [
+            "npm:prism-react-renderer"
+          ]
+        },
+        {
+          "file": "packages/playground/src/playground/variants/show-more.tsx",
+          "hash": "71934868720102084",
+          "deps": [
+            "npm:react",
+            "npm:react-simple-code-editor",
+            "npm:react-live"
+          ]
+        },
+        {
+          "file": "packages/playground/src/playground/variants/switch.tsx",
+          "hash": "7268337580305093651",
+          "deps": [
+            "npm:react",
+            "npm:react-simple-code-editor",
+            "npm:react-live"
+          ]
+        },
+        {
+          "file": "packages/playground/tsconfig.build.json",
+          "hash": "15463727702757290643"
+        },
+        {
+          "file": "packages/playground/tsconfig.json",
+          "hash": "5867280079261850992"
         }
       ],
       "@docsgen/docusaurus": [
@@ -1830,11 +1591,11 @@
             "npm:@docusaurus/types",
             "npm:@types/fs-extra",
             "npm:@types/pretty",
-            "npm:@types/react@18.3.11",
-            "npm:@types/react-dom@18.3.1",
+            "npm:@types/react",
+            "npm:@types/react-dom",
             "npm:outdent",
             "npm:@reins/query-params",
-            "npm:fs-extra@11.2.0",
+            "npm:fs-extra",
             "npm:mdast-util-from-markdown",
             "npm:mdast-util-mdx",
             "npm:mdx-mermaid",
@@ -1871,7 +1632,7 @@
           "file": "packages/docusaurus/src/helpers/concurrency.utils.ts",
           "hash": "1425794775542588084",
           "deps": [
-            "npm:fs-extra@11.2.0"
+            "npm:fs-extra"
           ]
         },
         {
@@ -1888,7 +1649,7 @@
         },
         {
           "file": "packages/docusaurus/src/plugin/plugin.ts",
-          "hash": "3243417359024944662",
+          "hash": "5601526954664637921",
           "deps": [
             "@docsgen/core",
             "npm:@docusaurus/types"
