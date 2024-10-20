@@ -31,6 +31,7 @@
     "@docusaurus/types": ">= 2.0.0"
   },
   "dependencies": {
+    "@docsgen/core": "*",
     "@reins/query-params": "^0.1.1",
     "fs-extra": "^11.2.0",
     "mdast-util-from-markdown": "^2.0.0",
