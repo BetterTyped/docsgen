@@ -1,11 +1,11 @@
 {
   "name": "@docsgen/docusaurus",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": false,
   "description": "Docusaurus plugin for documentation generation based on your .ts files",
   "author": "Maciej Pyrc <maciekpyrc@gmail.com>",
   "homepage": "",
-  "license": "SEE LICENSE IN LICENCE.md",
+  "license": "Apache 2.0",
   "platform": "node",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -25,10 +25,10 @@
     "release": "yarn semantic-release --extends ../../release.config.js  -t 'docusaurus-v${version}'"
   },
   "peerDependencies": {
-    "react": ">= 16.8.0",
-    "react-dom": ">= 16.8.0",
     "@docusaurus/plugin-content-docs": ">= 2.0.0",
-    "@docusaurus/types": ">= 2.0.0"
+    "@docusaurus/types": ">= 2.0.0",
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0"
   },
   "dependencies": {
     "@docsgen/core": "*",
@@ -54,12 +54,12 @@
     "unist-util-visit-parents": "^6.0.1"
   },
   "devDependencies": {
+    "@docusaurus/plugin-content-docs": ">= 2.0.0",
+    "@docusaurus/types": ">= 2.0.0",
     "@types/fs-extra": "^11.0.4",
     "@types/pretty": "^2.0.3",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "@docusaurus/plugin-content-docs": ">= 2.0.0",
-    "@docusaurus/types": ">= 2.0.0",
     "outdent": "^0.8.0"
   },
   "lint-staged": {
