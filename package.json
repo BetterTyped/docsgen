@@ -125,12 +125,9 @@
     "url": "https://github.com/BetterTyped/docsgen/issues"
   },
   "keywords": [
-    "ui",
-    "routing",
-    "state",
-    "forms",
-    "components",
-    "theme"
+    "docgen",
+    "documentation",
+    "docusaurus"
   ],
   "msw": {
     "workerDirectory": "src"
