@@ -21,7 +21,7 @@
     "format": "prettier --write .",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false",
     "tests": "yarn lint-staged",
-    "release": "yarn semantic-release --extends ./release.config.cjs -t 'playground-v${version}'"
+    "release": "yarn semantic-release --extends ../../release.config.js  -t 'playground-v${version}'"
   },
   "peerDependencies": {
     "react": ">= 16.8.0",

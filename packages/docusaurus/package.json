@@ -22,7 +22,7 @@
     "format": "prettier --write .",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false",
     "tests": "yarn lint-staged",
-    "release": "yarn semantic-release --extends ./release.config.cjs -t 'store-v${version}'"
+    "release": "yarn semantic-release --extends ../../release.config.js  -t 'docusaurus-v${version}'"
   },
   "peerDependencies": {
     "react": ">= 16.8.0",
