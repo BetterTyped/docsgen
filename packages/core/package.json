@@ -1,6 +1,6 @@
 {
   "name": "@docsgen/core",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": false,
   "description": "Docusaurus plugin for documentation generation based on your .ts files",
   "author": "Maciej Pyrc <maciekpyrc@gmail.com>",
@@ -51,12 +51,12 @@
     "unist-util-visit-parents": "^6.0.1"
   },
   "devDependencies": {
+    "@docusaurus/plugin-content-docs": ">= 2.0.0",
+    "@docusaurus/types": ">= 2.0.0",
     "@types/fs-extra": "^11.0.4",
     "@types/pretty": "^2.0.3",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "@docusaurus/plugin-content-docs": ">= 2.0.0",
-    "@docusaurus/types": ">= 2.0.0",
     "outdent": "^0.8.0"
   },
   "lint-staged": {
