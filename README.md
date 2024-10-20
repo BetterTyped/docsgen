@@ -11,10 +11,6 @@ Generate great looking docs for your typescript project. **[Quick Start](https:/
 
 </div>
 
-## About
-
-Docusaurus documentation plugin generator based on typedoc and react. Examples and how-to coming soon!
-
 <br />
 
 <!-- ## Key Features
