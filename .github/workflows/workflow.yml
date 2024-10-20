@@ -47,25 +47,9 @@ jobs:
       matrix:
         test-group:
           [
-            access,
-            admin,
-            analytics,
-            auth,
-            calendar,
-            chat,
-            config,
-            crud,
-            dashboards,
-            data-grid,
-            feedback,
-            files,
-            filters,
-            gantt,
-            playground,
-            search,
-            sheets,
-            store,
-            translations,
+            "core",
+            "docusaurus",
+            "playground"
           ]
     steps:
       - name: Checkout
