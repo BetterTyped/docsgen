@@ -1,6 +1,8 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-# yarn commitlint --edit "$1"
-yarn lint
-#yarn test
+yarn commitlint --edit "$1"
+yarn nx reset
+yarn nx run-many --target=build --all
+yarn nx run-many --target=lint --parallel=10 --all 
+yarn nx run-many --target=typecheck --parallel=10 --all 

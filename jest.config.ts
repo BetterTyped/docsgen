@@ -1,23 +1,28 @@
+import { getJestProjects } from "@nx/jest";
 import type { Config } from "@jest/types";
 
-const config: Config.InitialOptions = {
-  cacheDirectory: "./node_modules/.cache/jest",
+export default {
+  projects: getJestProjects(),
+};
+
+export const getJestConfig = (): Config.InitialOptions => ({
+  cache: false,
+  verbose: true,
   testEnvironment: "jsdom",
-  preset: "ts-jest",
+  preset: "ts-jest/presets/default-esm",
   testRegex: [".spec.ts", ".spec.tsx"],
-  roots: ["<rootDir>/src"],
+  roots: ["<rootDir>"],
   coverageProvider: "v8",
   coverageReporters: [["lcov", { projectRoot: "../.." }], "clover", "json", "text"],
-  collectCoverageFrom: ["<rootDir>/src/**/*.ts", "<rootDir>/src/**/*.tsx"],
-  coveragePathIgnorePatterns: [".spec", "test", "tests", "types", "constants", "index.ts"],
+  collectCoverageFrom: ["./src/**/*.ts", "./src/**/*.tsx"],
+  coveragePathIgnorePatterns: [".spec", "__tests__", "test", "tests", "types", "constants", "index.ts"],
   moduleDirectories: ["node_modules", "src"],
-  globals: {
-    "ts-jest": {
-      tsconfig: "./tsconfig.json",
-      isolatedModules: true,
-    },
+  transform: {
+    "^.+\\.(j|t)sx?$": [
+      "ts-jest",
+      { tsconfig: "./tsconfig.json", useESM: true, isolatedModules: true, babelConfig: "../../.babelrc.js" },
+    ],
   },
   watchPlugins: ["jest-watch-typeahead/filename", "jest-watch-typeahead/testname"],
-  setupFilesAfterEnv: ["jest-extended/all", "<rootDir>/src/__tests__/jest.setup.ts"],
-};
-export default config;
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts", "jest-extended/all"],
+});
