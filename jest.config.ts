@@ -11,11 +11,12 @@ export const getJestConfig = (): Config.InitialOptions => ({
   testEnvironment: "jsdom",
   preset: "ts-jest/presets/default-esm",
   testRegex: [".spec.ts", ".spec.tsx"],
+  testPathIgnorePatterns: ["__snapshots__"],
   roots: ["<rootDir>"],
   coverageProvider: "v8",
   coverageReporters: [["lcov", { projectRoot: "../.." }], "clover", "json", "text"],
   collectCoverageFrom: ["./src/**/*.ts", "./src/**/*.tsx"],
-  coveragePathIgnorePatterns: [".spec", "__tests__", "test", "tests", "types", "constants", "index.ts"],
+  coveragePathIgnorePatterns: [".spec", "__tests__", "test", "tests", "types", "constants", "index.ts", "__snapshots__"],
   moduleDirectories: ["node_modules", "src"],
   transform: {
     "^.+\\.(j|t)sx?$": [
