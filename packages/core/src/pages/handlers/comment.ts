@@ -21,7 +21,9 @@ export const getCommentText = (reflection: JSONOutput.SomeReflection): string =>
     return "";
   }
   // New line is necessary for MDX to parse it correctly - otherwise we would get errors
-  return `
+  return `\n
+
 ${comment?.summary.map(({ text }) => text).join("\n")}
-`;
+
+\n`;
 };
