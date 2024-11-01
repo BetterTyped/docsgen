@@ -4,7 +4,7 @@ import { Code } from "pages/components/code";
 import { Type } from "pages/components/type";
 import { PagePropsType } from "types/page.types";
 import { getCallPreview } from "pages/utils/parsing.utils";
-import { getCommentText } from "pages/handlers/comment";
+import { getCommentNode } from "pages/handlers/comment";
 
 export const Table = ({
   reflections,
@@ -46,7 +46,7 @@ export const Table = ({
                     <Type {...pageProps} reflection={type} />
                   </Code>
                 </td>
-                <td className="api-docs__table-description">{getCommentText(reflection).trim()}</td>
+                <td className="api-docs__table-description">{getCommentNode(reflection)}</td>
               </tr>
             );
           })}

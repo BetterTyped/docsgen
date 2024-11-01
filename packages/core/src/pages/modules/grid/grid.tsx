@@ -4,7 +4,7 @@ import { Code } from "pages/components/code";
 import { Type } from "pages/components/type";
 import { PagePropsType } from "types/page.types";
 import { getCallPreview } from "pages/utils/parsing.utils";
-import { getCommentText } from "pages/handlers/comment";
+import { getCommentNode } from "pages/handlers/comment";
 
 export const Grid = ({
   reflections,
@@ -37,7 +37,7 @@ export const Grid = ({
                 <Type {...pageProps} reflection={type} />
               </Code>
             </div>
-            <div className="api-docs__grid-description">{getCommentText(reflection)}</div>
+            <div className="api-docs__grid-description">{getCommentNode(reflection)}</div>
           </div>
         );
       })}
