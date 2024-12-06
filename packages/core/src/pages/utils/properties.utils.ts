@@ -1,7 +1,8 @@
-import { JSONOutput } from "typedoc";
+import { JSONOutput, ReflectionKind } from "typedoc";
 
 import { isMethod } from "./methods.utils";
 import { getReference } from "./reference.utils";
+import { getSignature } from "./signature.utils";
 
 export const getTypesArray = (
   reflectionsTree: JSONOutput.ProjectReflection[],
@@ -64,6 +65,15 @@ export const getTypesArray = (
 
   if ("type" in reflection && typeof reflection.type === "string" && reflection.type === "reference") {
     const reference = getReference(reflectionsTree, reflection);
+
+    if (reference?.kind === ReflectionKind.Class) {
+      const types = [];
+      const signature = getSignature(reflection);
+      if (signature) {
+        types.push(...getTypesArray(reflectionsTree, signature));
+      }
+      return types;
+    }
 
     if (!reference) return [];
     return getTypesArray(reflectionsTree, reference);

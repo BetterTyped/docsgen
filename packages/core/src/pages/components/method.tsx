@@ -27,6 +27,10 @@ export const Method: React.FC<PagePropsType & MethodProps> = (props) => {
 
   const paramsList = withParams ? methodSignature?.parameters?.map((param) => param.name).join(", ") || "" : "";
 
+  if (!methodSignature) {
+    return null;
+  }
+
   if (display === "grid") {
     if (!methodSignature?.parameters) {
       console.error("Cannot display grid view, parameters not found for method: ", name);
@@ -67,21 +71,21 @@ export const Method: React.FC<PagePropsType & MethodProps> = (props) => {
           ...reflection,
           name: `${name}(${paramsList})`,
         }}
-        headingSize="h4"
+        headingSize="h3"
       />
       <Sources {...props} />
-      <Section headingSize="h5" title="Preview">
-        <Preview {...props} reflection={methodSignature || reflection} />
+      <Section headingSize="h6" title="Description">
+        <Description {...props} />
+        <Definition {...props} />
       </Section>
-      <Section headingSize="h5" title="Description">
-        <Description {...props} reflection={methodSignature || reflection} />
-        <Definition {...props} reflection={reflection} />
+      <Section headingSize="h6" title="Preview">
+        <Preview {...props} />
       </Section>
-      <Section headingSize="h5" title="Parameters">
+      <Section headingSize="h6" title="Parameters">
         <Parameters {...props} headingSize="h4" />
       </Section>
-      <Section headingSize="h5" title="Return">
-        <Returns {...props} reflection={methodSignature || reflection} />
+      <Section headingSize="h6" title="Return">
+        <Returns {...props} />
       </Section>
       <hr />
     </div>

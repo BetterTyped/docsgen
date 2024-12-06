@@ -14,7 +14,7 @@ export const getComment = (reflection: JSONOutput.SomeReflection | undefined): J
   }
 };
 
-export const getCommentText = (reflection: JSONOutput.SomeReflection): string => {
+export const getCommentText = (reflection: JSONOutput.SomeReflection | JSONOutput.SignatureReflection): string => {
   const comment = "comment" in reflection ? reflection.comment : getSignature(reflection)?.comment;
 
   if (!comment) {
@@ -26,7 +26,9 @@ export const getCommentText = (reflection: JSONOutput.SomeReflection): string =>
     .trim();
 };
 
-export const getCommentNode = (reflection: JSONOutput.SomeReflection): React.ReactNode => {
+export const getCommentNode = (
+  reflection: JSONOutput.SomeReflection | JSONOutput.SignatureReflection,
+): React.ReactNode => {
   const comment = getCommentText(reflection).trim();
 
   if (!comment) {

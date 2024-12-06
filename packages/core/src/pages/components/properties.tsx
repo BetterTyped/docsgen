@@ -3,21 +3,18 @@ import React from "react";
 import { PagePropsType } from "../../types/page.types";
 import { getTypesArray, getProperties } from "../utils/properties.utils";
 import { Property } from "./property";
-import { DisplayType, HeadingType } from "types/components.types";
+import { DisplayType } from "types/components.types";
 import { Grid } from "../modules/grid/grid";
 import { Table } from "../modules/table/table";
-import { Separator } from "./separator";
 
 export type PropertiesProps = {
   className?: string;
   display?: DisplayType;
-  headingSize?: HeadingType;
 };
 
 export const Properties: React.FC<PagePropsType & PropertiesProps> = (props) => {
-  const { reflection, reflectionsTree, display, headingSize = "h3", className = "" } = props;
+  const { reflection, reflectionsTree, display, className = "" } = props;
   const children = getTypesArray(reflectionsTree, reflection);
-  const Heading = headingSize;
 
   if (!children) return null;
 
@@ -47,8 +44,6 @@ export const Properties: React.FC<PagePropsType & PropertiesProps> = (props) => 
 
   return (
     <div className="api-docs__properties">
-      <Heading className="api-docs__title">Properties</Heading>
-      <Separator />
       {properties.map((prop, index) => (
         <Property key={index} {...props} reflection={prop} />
       ))}

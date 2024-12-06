@@ -44,6 +44,8 @@ const kindMap = Object.entries(ReflectionKind).reduce(
     const [key, value] = item as [string, ReflectionKind];
     if (value === ReflectionKind.TypeAlias) {
       acc[value] = "Types";
+    } else if (value === ReflectionKind.Class) {
+      acc[value] = "Classes";
     } else {
       acc[value] = `${key}s`;
     }

@@ -19,7 +19,7 @@ export const Parameter: React.FC<PagePropsType> = (props) => {
 
   return (
     <div className="api-docs__parameter">
-      <Name {...props} headingSize="h4" />
+      <Name {...props} headingSize="h3" />
       <Description {...props} />
       <Code>
         <Type {...props} reflection={type} />

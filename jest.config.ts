@@ -16,7 +16,16 @@ export const getJestConfig = (): Config.InitialOptions => ({
   coverageProvider: "v8",
   coverageReporters: [["lcov", { projectRoot: "../.." }], "clover", "json", "text"],
   collectCoverageFrom: ["./src/**/*.ts", "./src/**/*.tsx"],
-  coveragePathIgnorePatterns: [".spec", "__tests__", "test", "tests", "types", "constants", "index.ts", "__snapshots__"],
+  coveragePathIgnorePatterns: [
+    ".spec",
+    "__tests__",
+    "test",
+    "tests",
+    "types",
+    "constants",
+    "index.ts",
+    "__snapshots__",
+  ],
   moduleDirectories: ["node_modules", "src"],
   transform: {
     "^.+\\.(j|t)sx?$": [

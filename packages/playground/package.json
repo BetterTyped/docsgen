@@ -5,7 +5,7 @@
   "description": "React Playground for previewing components in docs",
   "author": "Maciej Pyrc <maciekpyrc@gmail.com>",
   "homepage": "",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",

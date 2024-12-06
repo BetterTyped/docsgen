@@ -5,7 +5,7 @@
   "description": "Docusaurus plugin for documentation generation based on your .ts files",
   "author": "Maciej Pyrc <maciekpyrc@gmail.com>",
   "homepage": "",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "platform": "node",
   "main": "dist/index.js",
   "module": "dist/index.js",

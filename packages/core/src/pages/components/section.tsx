@@ -31,7 +31,7 @@ export const Section: React.FC<{ children: React.ReactNode } & SectionType> = ({
   headingSize = "h2",
   render,
 }) => {
-  if (!render) {
+  if (render === false) {
     return null;
   }
 
