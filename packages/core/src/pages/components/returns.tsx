@@ -57,6 +57,7 @@ export const Returns: React.FC<PagePropsType & ReturnsProps> = (props) => {
   return (
     <div className={`api-docs__returns ${className}`}>
       <Tag {...props} reflection={signature || reflection} tagName="@returns" />
+      {/* TODO: add returns description */}
       {!disableReturn && (
         <Code>
           <Type {...props} reflection={signature || reflection} />

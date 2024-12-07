@@ -8,11 +8,11 @@ import { Signature } from "./signature";
 
 // prettier-ignore
 // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-useless-escape
-const braceLeft = "\\{";
+const braceLeft = "{";
 
 // prettier-ignore
 // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-useless-escape
-const braceRight = "\\}";
+const braceRight = "}";
 
 function parens(element: JSX.Element, needsParens?: boolean): JSX.Element {
   if (!needsParens) {

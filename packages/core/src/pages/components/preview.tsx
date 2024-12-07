@@ -60,15 +60,13 @@ export const Preview: React.FC<PagePropsType<JSONOutput.SomeReflection | JSONOut
           {properties.map((prop, index) => (
             <React.Fragment key={index}>
               {"  "}
-              {prop.name}:
-              <Type {...props} reflection={prop.type} />;{"\n"}
+              {prop.name}: <Type {...props} reflection={prop.type} />;{"\n"}
             </React.Fragment>
           ))}
           {methods.map((method, index) => (
             <React.Fragment key={index}>
               {"  "}
-              {method.name}():
-              <Type {...props} reflection={getSignature(method) || method} />;{"\n"}
+              {method.name}(): <Type {...props} reflection={getSignature(method) || method} />;{"\n"}
             </React.Fragment>
           ))}
           {`}`}

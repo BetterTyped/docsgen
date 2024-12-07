@@ -74,10 +74,8 @@ export const Method: React.FC<PagePropsType & MethodProps> = (props) => {
         headingSize="h3"
       />
       <Sources {...props} />
-      <Section headingSize="h6" title="Description">
-        <Description {...props} />
-        <Definition {...props} />
-      </Section>
+      <Description {...props} />
+      <Definition {...props} />
       <Section headingSize="h6" title="Preview">
         <Preview {...props} />
       </Section>

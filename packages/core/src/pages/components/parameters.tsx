@@ -20,7 +20,7 @@ export const Parameters: React.FC<PagePropsType & ParametersProps> = (props) => 
   const { reflectionsTree, reflection, headingSize = "h2", display = "table", className = "" } = props;
   const signature = getSignature(reflection);
 
-  if (!signature?.parameters) return null;
+  if (!signature?.parameters?.length) return null;
 
   const Heading = headingSize;
 

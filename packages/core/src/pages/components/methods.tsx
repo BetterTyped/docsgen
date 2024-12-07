@@ -21,6 +21,8 @@ export const Methods: React.FC<PagePropsType & MethodsProps> = (props) => {
 
   const methods = getMethods(children, reflectionsTree);
 
+  if (!methods.length) return null;
+
   if (display === "grid") {
     return (
       <Grid className={`api-docs__methods ${className}`} pageProps={props} title="Methods" reflections={methods} />

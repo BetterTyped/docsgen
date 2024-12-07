@@ -20,6 +20,8 @@ export const Properties: React.FC<PagePropsType & PropertiesProps> = (props) => 
 
   const properties = getProperties(children, reflectionsTree);
 
+  if (!properties.length) return null;
+
   if (display === "grid") {
     return (
       <Grid

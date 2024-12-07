@@ -25,10 +25,8 @@ export const Property: React.FC<PagePropsType & PropertyProps> = (props) => {
     <div className={`api-docs__property ${className}`} property-data={name}>
       <Name {...props} headingSize="h3" />
       <Sources {...props} />
-      <Section headingSize="h6" title="Description">
-        <Description {...props} reflection={methodSignature || reflection} />
-        <Definition {...props} reflection={reflection} />
-      </Section>
+      <Description {...props} reflection={methodSignature || reflection} />
+      <Definition {...props} reflection={reflection} />
       <Section headingSize="h6" title="Type">
         <div className="api-docs__property-type">
           <Code>
