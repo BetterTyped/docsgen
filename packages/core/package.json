@@ -16,6 +16,7 @@
     "clean": "npx rimraf dist",
     "test": "jest --watchAll --maxWorkers=3",
     "test:pipeline": "jest --watchAll=false --maxWorkers=1 --no-cache --detectOpenHandles --forceExit",
+    "test:update-snapshot": "jest --watchAll --maxWorkers=3 --updateSnapshot",
     "start": "tsc && (concurrently \"tsc -w\" \"tsc-alias -w\")",
     "build": "yarn clean && tsc -p tsconfig.build.json && tsc-alias",
     "lint": "eslint . --ext .js,.jsx,.tsx,.ts --fix",

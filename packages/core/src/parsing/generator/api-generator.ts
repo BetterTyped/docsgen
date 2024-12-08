@@ -6,10 +6,9 @@ import { createFile, readFile } from "./utils/file.utils";
 import { pageRenderer } from "../renderer/renderer";
 import { PackageOptions, PluginOptions } from "../../types/package.types";
 import { getKindName } from "../../pages/utils/display.utils";
-import { ComponentsProps } from "importer/components/component.types";
 import { isComponent } from "pages/utils/component.utils";
 import { copyDocs } from "./utils/copy-docs";
-import { getSignature, getTag } from "pages";
+import { getSignature, getTags } from "pages";
 
 const docsExtension = ".mdx";
 
@@ -21,7 +20,7 @@ type ApiGeneratorProps = {
   generatedFilesDir: string;
   pluginOptions: PluginOptions;
   packageOptions: PackageOptions;
-} & Partial<ComponentsProps>;
+};
 
 export const apiGenerator = async ({
   packageName,
@@ -48,7 +47,7 @@ export const apiGenerator = async ({
     const kind = getKindName(reflection);
     const signature = getSignature(reflection);
     const comment = signature?.comment || reflection?.comment;
-    const excluded = getTag(comment, "@exclude")?.length;
+    const excluded = getTags(comment, "@exclude")?.length;
 
     if (excluded) {
       return;
@@ -72,7 +71,7 @@ export const apiGenerator = async ({
     }
 
     const data = pageRenderer({
-      reflection,
+      reflection: reflection as JSONOutput.DeclarationReflection,
       reflectionsTree: parsedApiJsons,
       pluginOptions,
       packageOptions,

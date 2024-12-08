@@ -1,9 +1,9 @@
 import React from "react";
 
 import { PagePropsType } from "../../types/page.types";
-import { getTag } from "../handlers/tags";
+import { getTags } from "../handlers/tags";
 import { Code } from "./code";
-import { getTypesArray } from "../utils/properties.utils";
+import { getTypes } from "../utils/properties.utils";
 import { getSortedChildren } from "../utils/display.utils";
 import { DisplayType, HeadingType } from "types/components.types";
 import { Table } from "../modules/table/table";
@@ -22,12 +22,12 @@ export type ReturnsProps = {
 export const Returns: React.FC<PagePropsType & ReturnsProps> = (props) => {
   const { reflection, reflectionsTree, display = "table", className, onlyArray } = props;
   const { comment } = reflection;
-  const disableReturn = getTag(comment, "@disableReturns")[0];
+  const disableReturn = getTags(comment, "@disableReturns")[0];
   const signature = getSignature(reflection);
 
   if (disableReturn) return null;
 
-  const children = getTypesArray(reflectionsTree, signature || reflection);
+  const children = getTypes(reflectionsTree, signature || reflection);
   const sorted = getSortedChildren(children, reflectionsTree);
 
   if (display === "grid" && sorted.length) {
@@ -37,6 +37,7 @@ export const Returns: React.FC<PagePropsType & ReturnsProps> = (props) => {
         pageProps={props}
         title={reflection.name}
         reflections={sorted}
+        reflectionsTree={reflectionsTree}
       />
     );
   }
@@ -48,6 +49,7 @@ export const Returns: React.FC<PagePropsType & ReturnsProps> = (props) => {
         pageProps={props}
         title={reflection.name}
         reflections={sorted}
+        reflectionsTree={reflectionsTree}
       />
     );
   }

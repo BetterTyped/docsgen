@@ -1,6 +1,6 @@
 import React from "react";
 
-import { getTag } from "pages/handlers/tags";
+import { getTags } from "pages/handlers/tags";
 import { PagePropsType } from "types/page.types";
 
 type TagProps = {
@@ -10,7 +10,7 @@ type TagProps = {
 export const Tag: React.FC<PagePropsType & TagProps> = (props) => {
   const { reflection, tagName } = props;
 
-  const tag = getTag(reflection.comment, tagName)[0];
+  const tag = getTags(reflection.comment, tagName)[0];
 
   if (!tag) return null;
 

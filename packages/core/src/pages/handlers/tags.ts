@@ -29,7 +29,7 @@ export const parseTag = (
   };
 };
 
-export const getTag = (comment: JSONOutput.DeclarationReflection["comment"], name: `@${string}`, hasTitle = true) => {
+export const getTags = (comment: JSONOutput.DeclarationReflection["comment"], name: `@${string}`, hasTitle = true) => {
   const tags = comment?.blockTags?.filter((blockTag) => blockTag.tag === name) || [];
 
   return tags.map((tag) => parseTag(tag, hasTitle));

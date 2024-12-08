@@ -6,8 +6,7 @@ import { PluginOptions, PkgMeta } from "../types/package.types";
 import { pluginOptionsPath, packageConfigPath } from "../constants/paths.constants";
 import { cleanFileName } from "../parsing/generator/utils/file.utils";
 import { getPackageDocsPath } from "../parsing/generator/utils/package.utils";
-import { ComponentsProps } from "importer/components/component.types";
-import { getComponent } from "importer/components/component-map.utils";
+import { DocsComponents, getComponent, GetComponentProps } from "importer/components/component-map.utils";
 import { getFile, getMatchingElement } from "importer/utils/docs.utils";
 
 // TODO FIGURE OUT HOW TO MAKE THIS WORK
@@ -18,7 +17,9 @@ const file = {} as any;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const options = {} as any;
 
-export const Docs = (props: ComponentsProps & { packageName: string; componentName: string }) => {
+export const Docs = (
+  props: GetComponentProps<keyof DocsComponents> & { packageName: string; componentName: string },
+) => {
   const { packageName, componentName } = props;
 
   const currentVersionedDir = file.history[0]

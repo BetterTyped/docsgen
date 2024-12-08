@@ -19,7 +19,6 @@ export * from "./returns-preview";
 export * from "./returns";
 export * from "./section";
 export * from "./separator";
-export * from "./signature";
 export * from "./sources";
 export * from "./tag";
 export * from "./type";

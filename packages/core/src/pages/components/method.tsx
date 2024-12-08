@@ -21,7 +21,7 @@ export type MethodProps = {
 };
 
 export const Method: React.FC<PagePropsType & MethodProps> = (props) => {
-  const { reflection, className = "", display, withParams = false } = props;
+  const { reflection, reflectionsTree, className = "", display, withParams = false } = props;
   const { name } = reflection;
   const methodSignature = getSignature(reflection);
 
@@ -43,6 +43,7 @@ export const Method: React.FC<PagePropsType & MethodProps> = (props) => {
         pageProps={props}
         title="Parameters"
         reflections={methodSignature.parameters}
+        reflectionsTree={reflectionsTree}
       />
     );
   }
@@ -59,6 +60,7 @@ export const Method: React.FC<PagePropsType & MethodProps> = (props) => {
         pageProps={props}
         title="Parameters"
         reflections={methodSignature.parameters}
+        reflectionsTree={reflectionsTree}
       />
     );
   }
@@ -82,7 +84,7 @@ export const Method: React.FC<PagePropsType & MethodProps> = (props) => {
       <Section headingSize="h6" title="Parameters">
         <Parameters {...props} headingSize="h4" />
       </Section>
-      <Section headingSize="h6" title="Return">
+      <Section headingSize="h6" title="Returns">
         <Returns {...props} />
       </Section>
       <hr />

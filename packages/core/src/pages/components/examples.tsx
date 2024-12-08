@@ -1,6 +1,6 @@
 import React from "react";
 
-import { getTag } from "pages/handlers/tags";
+import { getTags } from "pages/handlers/tags";
 import { getSignature } from "pages/utils/signature.utils";
 import { PagePropsType } from "types/page.types";
 import { HeadingType } from "types/components.types";
@@ -17,7 +17,7 @@ export const Examples: React.FC<PagePropsType & ExamplesProps> = (props) => {
 
   const signature = getSignature(reflection);
   const comment = signature?.comment || reflection.comment;
-  const examples = getTag(comment, "@example");
+  const examples = getTags(comment, "@example");
 
   if (!examples.length) {
     return null;

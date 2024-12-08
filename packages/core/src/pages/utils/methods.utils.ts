@@ -1,6 +1,7 @@
 import { JSONOutput, ReflectionKind } from "typedoc";
 
 import { getReference } from "./reference.utils";
+import { getTags } from "pages/handlers";
 
 const isFunctionReflection = (
   reflection: JSONOutput.DeclarationReflection | JSONOutput.SomeType,
@@ -79,5 +80,12 @@ export const getMethods = (
       .filter((element) => {
         return isMethod(element, reflectionsTree);
       })
+      .filter((element) => {
+        const isInternal = getTags(element.comment, "@internal");
+        if (isInternal?.length) {
+          return false;
+        }
+        return true;
+      }) as unknown as JSONOutput.SignatureReflection[]
   );
 };

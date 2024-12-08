@@ -1,4 +1,5 @@
 import path from "path";
+import React from "react";
 // TS fails to import it at build
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -13,11 +14,10 @@ import { parse } from "@reins/query-params";
 import { PluginOptions, PkgMeta } from "../types/package.types";
 import { pluginOptionsPath, packageConfigPath } from "../constants/paths.constants";
 import { getFile, getMatchingElement } from "./utils/docs.utils";
-import { getComponent } from "./components/component-map.utils";
+import { DocsComponents, getComponent, GetComponentProps } from "./components/component-map.utils";
 import { cleanFileName } from "../parsing/generator/utils/file.utils";
 import { renderer } from "../parsing/renderer/renderer";
 import { getPackageDocsPath } from "../parsing/generator/utils/package.utils";
-import { ComponentsProps } from "./components/component.types";
 
 function escapeRegExp(string: string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
@@ -135,9 +135,9 @@ export const importer = (options: { packageRoute: string; apiDir: string; versio
           if (optionsNormalization[optionsNormalization.length - 1] === "&") {
             optionsNormalization = optionsNormalization.slice(0, -1);
           }
-          const parsedOptions: ComponentsProps = parse(optionsNormalization) as ComponentsProps;
+          const parsedOptions = parse(optionsNormalization) as GetComponentProps<keyof DocsComponents>;
           const Component = getComponent(parsedOptions);
-          const html = renderer(Component, {
+          const html = renderer(Component as React.FC, {
             ...parsedOptions,
             reflection,
             reflectionsTree: packagesReflections,

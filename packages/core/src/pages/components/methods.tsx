@@ -3,7 +3,7 @@ import React from "react";
 import { PagePropsType } from "../../types/page.types";
 import { getMethods } from "../utils/methods.utils";
 import { Method } from "./method";
-import { getTypesArray } from "../utils/properties.utils";
+import { getTypes } from "../utils/properties.utils";
 import { DisplayType } from "types/components.types";
 import { Table } from "../modules/table/table";
 import { Grid } from "../modules/grid/grid";
@@ -15,7 +15,7 @@ export type MethodsProps = {
 
 export const Methods: React.FC<PagePropsType & MethodsProps> = (props) => {
   const { reflection, reflectionsTree, className = "", display } = props;
-  const children = getTypesArray(reflectionsTree, reflection);
+  const children = getTypes(reflectionsTree, reflection);
 
   if (!children) return null;
 
@@ -25,13 +25,25 @@ export const Methods: React.FC<PagePropsType & MethodsProps> = (props) => {
 
   if (display === "grid") {
     return (
-      <Grid className={`api-docs__methods ${className}`} pageProps={props} title="Methods" reflections={methods} />
+      <Grid
+        className={`api-docs__methods ${className}`}
+        pageProps={props}
+        title="Methods"
+        reflections={methods}
+        reflectionsTree={reflectionsTree}
+      />
     );
   }
 
   if (display === "table") {
     return (
-      <Table className={`api-docs__methods ${className}`} pageProps={props} title="Methods" reflections={methods} />
+      <Table
+        className={`api-docs__methods ${className}`}
+        pageProps={props}
+        title="Methods"
+        reflections={methods}
+        reflectionsTree={reflectionsTree}
+      />
     );
   }
 

@@ -6,7 +6,7 @@ import { getSignature } from "../utils/signature.utils";
 import { Parameter } from "./parameter";
 import { Table } from "../modules/table/table";
 import { Grid } from "../modules/grid/grid";
-import { getTypesArray } from "pages/utils/properties.utils";
+import { getTypes } from "pages/utils/properties.utils";
 import { isComponent } from "pages/utils/component.utils";
 import { Separator } from "./separator";
 
@@ -25,7 +25,7 @@ export const Parameters: React.FC<PagePropsType & ParametersProps> = (props) => 
   const Heading = headingSize;
 
   const firstParam = signature.parameters[0];
-  const children = isComponent(reflection) ? getTypesArray(reflectionsTree, firstParam) : signature.parameters;
+  const children = isComponent(reflection) ? getTypes(reflectionsTree, firstParam) : signature.parameters;
 
   if (display === "grid") {
     return (
@@ -34,6 +34,7 @@ export const Parameters: React.FC<PagePropsType & ParametersProps> = (props) => 
         pageProps={props}
         title="Parameters"
         reflections={children}
+        reflectionsTree={reflectionsTree}
       />
     );
   }
@@ -45,6 +46,7 @@ export const Parameters: React.FC<PagePropsType & ParametersProps> = (props) => 
         pageProps={props}
         title="Parameters"
         reflections={children}
+        reflectionsTree={reflectionsTree}
       />
     );
   }

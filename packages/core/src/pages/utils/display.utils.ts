@@ -1,7 +1,7 @@
 import { JSONOutput, ReflectionKind } from "typedoc";
 
 import { isMethod } from "./methods.utils";
-import { getTag } from "pages/handlers/tags";
+import { getTags } from "pages/handlers/tags";
 import { getSignature } from "./signature.utils";
 import { isComponent } from "./component.utils";
 
@@ -67,7 +67,7 @@ export const getKindName = (reflection: JSONOutput.DeclarationReflection): strin
 
   const signature = getSignature(reflection);
 
-  const customKind = getTag(signature?.comment || reflection.comment, "@kind")[0];
+  const customKind = getTags(signature?.comment || reflection.comment, "@kind")[0];
 
   if (customKind?.title || customKind?.description) {
     return customKind?.title || customKind?.description;

@@ -3,21 +3,22 @@ import { JSONOutput, ReflectionKind } from "typedoc";
 import { isMethod } from "./methods.utils";
 import { getReference } from "./reference.utils";
 import { getSignature } from "./signature.utils";
+import { getTags } from "pages/handlers";
 
-export const getTypesArray = (
+export const getTypes = (
   reflectionsTree: JSONOutput.ProjectReflection[],
   reflection: JSONOutput.SomeReflection | JSONOutput.SomeType,
 ): JSONOutput.DeclarationReflection[] => {
   if (!reflection) return [];
 
   if ("type" in reflection && typeof reflection.type !== "string" && reflection.type) {
-    return getTypesArray(reflectionsTree, reflection.type);
+    return getTypes(reflectionsTree, reflection.type);
   }
 
   if ("type" in reflection && typeof reflection.type === "string" && reflection.type === "intersection") {
     return reflection.types
       .map((type) => {
-        return getTypesArray(reflectionsTree, type);
+        return getTypes(reflectionsTree, type);
       })
       .flat()
       .filter(Boolean);
@@ -31,7 +32,7 @@ export const getTypesArray = (
   ) {
     return reflection.type?.typeArguments
       ?.map((type) => {
-        return getTypesArray(reflectionsTree, type);
+        return getTypes(reflectionsTree, type);
       })
       .flat()
       .filter(Boolean) as JSONOutput.DeclarationReflection[];
@@ -57,7 +58,7 @@ export const getTypesArray = (
   ) {
     return reflection.type.types
       .map((type) => {
-        return getTypesArray(reflectionsTree, type);
+        return getTypes(reflectionsTree, type);
       })
       .flat()
       .filter(Boolean);
@@ -70,17 +71,17 @@ export const getTypesArray = (
       const types = [];
       const signature = getSignature(reflection);
       if (signature) {
-        types.push(...getTypesArray(reflectionsTree, signature));
+        types.push(...getTypes(reflectionsTree, signature));
       }
       return types;
     }
 
     if (!reference) return [];
-    return getTypesArray(reflectionsTree, reference);
+    return getTypes(reflectionsTree, reference);
   }
 
   if ("declaration" in reflection && reflection.declaration) {
-    return getTypesArray(reflectionsTree, reflection.declaration);
+    return getTypes(reflectionsTree, reflection.declaration);
   }
 
   return [];
@@ -107,5 +108,12 @@ export const getProperties = (
     .filter((element) => element.name !== "constructor")
     .filter((element) => {
       return !isMethod(element, reflectionsTree);
+    })
+    .filter((element) => {
+      const isInternal = getTags(element.comment, "@internal");
+      if (isInternal?.length) {
+        return false;
+      }
+      return true;
     });
 };

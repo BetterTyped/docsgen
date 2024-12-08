@@ -12,6 +12,7 @@ export const Description: React.FC<PagePropsType & DescriptionProps> = (props) =
   const { reflection, className = "" } = props;
 
   const signature = getSignature(reflection);
+  const children = getCommentNode(signature || reflection) || getCommentNode(reflection);
 
-  return <div className={`api-docs__description ${className}`}>{getCommentNode(signature || reflection)}</div>;
+  return <div className={`api-docs__description ${className}`}>{children}</div>;
 };

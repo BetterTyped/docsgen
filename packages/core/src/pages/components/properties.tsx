@@ -1,7 +1,7 @@
 import React from "react";
 
 import { PagePropsType } from "../../types/page.types";
-import { getTypesArray, getProperties } from "../utils/properties.utils";
+import { getTypes, getProperties } from "../utils/properties.utils";
 import { Property } from "./property";
 import { DisplayType } from "types/components.types";
 import { Grid } from "../modules/grid/grid";
@@ -14,7 +14,7 @@ export type PropertiesProps = {
 
 export const Properties: React.FC<PagePropsType & PropertiesProps> = (props) => {
   const { reflection, reflectionsTree, display, className = "" } = props;
-  const children = getTypesArray(reflectionsTree, reflection);
+  const children = getTypes(reflectionsTree, reflection);
 
   if (!children) return null;
 
@@ -29,6 +29,7 @@ export const Properties: React.FC<PagePropsType & PropertiesProps> = (props) => 
         pageProps={props}
         title="Properties"
         reflections={properties}
+        reflectionsTree={reflectionsTree}
       />
     );
   }
@@ -40,6 +41,7 @@ export const Properties: React.FC<PagePropsType & PropertiesProps> = (props) => 
         pageProps={props}
         title="Properties"
         reflections={properties}
+        reflectionsTree={reflectionsTree}
       />
     );
   }

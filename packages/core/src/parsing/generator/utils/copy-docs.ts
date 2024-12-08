@@ -2,12 +2,12 @@ import path from "path";
 import fs from "fs-extra";
 import { JSONOutput } from "typedoc";
 
-import { getSignature, getTag } from "pages";
+import { getSignature, getTags } from "pages";
 import { error } from "helpers/log.utils";
 
 export const copyDocs = (reflection: JSONOutput.DeclarationReflection, projectDirectory: string, outPath: string) => {
   const signature = getSignature(reflection);
-  const tags = getTag(signature?.comment || reflection?.comment, "@docs");
+  const tags = getTags(signature?.comment || reflection?.comment, "@docs");
   const source = reflection.sources?.[0];
 
   if (tags?.length && source) {

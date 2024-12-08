@@ -7,10 +7,11 @@ import { Code } from "./code";
 import { GenericParameters } from "./generic-parameters";
 import { getSignature } from "../utils/signature.utils";
 import { getCallPreview } from "../utils/parsing.utils";
-import { getTypesArray, getProperties } from "../utils/properties.utils";
+import { getTypes, getProperties } from "../utils/properties.utils";
 import { getMethods } from "../utils/methods.utils";
 import { isComponent } from "pages/utils/component.utils";
 import { getReference } from "pages/utils/reference.utils";
+import { Signature } from "./signature";
 
 export const Preview: React.FC<PagePropsType<JSONOutput.SomeReflection | JSONOutput.SomeType>> = (props) => {
   const { reflection, reflectionsTree } = props;
@@ -48,15 +49,19 @@ export const Preview: React.FC<PagePropsType<JSONOutput.SomeReflection | JSONOut
     const signature = getSignature(reflection);
     if (!signature) return null;
 
-    const [name, typeSignature, callSignature] = getCallPreview(signature);
-    const children = getTypesArray(reflectionsTree, reflection);
+    const [name, typeSignature, callSignature] = getCallPreview({ signature, reflectionsTree });
+    const children = getTypes(reflectionsTree, reflection);
     const properties = getProperties(children, reflectionsTree);
     const methods = getMethods(children, reflectionsTree);
+    const constructor = `constructor(${callSignature}) {};`;
 
     return (
       <div className="api-docs__preview class">
         <Code>
-          {`${name}${typeSignature}(${callSignature}) {\n`}
+          {`class ${name.replace("new ", "")}${typeSignature} {\n`}
+          {"  "}
+          {constructor}
+          {"\n"}
           {properties.map((prop, index) => (
             <React.Fragment key={index}>
               {"  "}
@@ -66,7 +71,7 @@ export const Preview: React.FC<PagePropsType<JSONOutput.SomeReflection | JSONOut
           {methods.map((method, index) => (
             <React.Fragment key={index}>
               {"  "}
-              {method.name}(): <Type {...props} reflection={getSignature(method) || method} />;{"\n"}
+              <Signature {...props} hideName={false} useArrow reflection={method} />;{"\n"}
             </React.Fragment>
           ))}
           {`}`}
@@ -79,7 +84,7 @@ export const Preview: React.FC<PagePropsType<JSONOutput.SomeReflection | JSONOut
     const signature = getSignature(reflection);
     if (!signature) return null;
 
-    const [name] = getCallPreview(signature);
+    const [name] = getCallPreview({ signature, reflectionsTree });
 
     // prettier-ignore
     return (
@@ -100,7 +105,7 @@ export const Preview: React.FC<PagePropsType<JSONOutput.SomeReflection | JSONOut
     const signature = getSignature(reflection);
     if (!signature) return null;
 
-    const [name, typeSignature, callSignature] = getCallPreview(signature);
+    const [name, typeSignature, callSignature] = getCallPreview({ signature, reflectionsTree });
 
     return (
       <div className="api-docs__preview fn">

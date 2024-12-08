@@ -8,11 +8,13 @@ import { getCommentNode } from "pages/handlers/comment";
 
 export const Grid = ({
   reflections,
+  reflectionsTree,
   pageProps,
   title,
   className = "",
 }: {
   reflections: JSONOutput.SomeReflection[];
+  reflectionsTree: JSONOutput.ProjectReflection[];
   pageProps: PagePropsType;
   title?: string;
   className?: string;
@@ -23,7 +25,10 @@ export const Grid = ({
       {reflections.map((reflection, index) => {
         const isMethod = "signatures" in reflection;
         const callSignature =
-          ("signatures" in reflection && reflection?.signatures && getCallPreview(reflection?.signatures?.[0])) || "";
+          ("signatures" in reflection &&
+            reflection?.signatures &&
+            getCallPreview({ signature: reflection?.signatures?.[0], reflectionsTree })) ||
+          "";
         const type = "type" in reflection && typeof reflection.type !== "string" ? reflection.type : reflection;
 
         return (
