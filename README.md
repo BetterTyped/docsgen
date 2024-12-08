@@ -1,13 +1,13 @@
 <h1 align="center">
 
-  <img src="./assets/" width="260px" />
+  <img src="./assets/logo.svg" width="260px" />
 
 </h1>
 
 <div align="center">
 
-Generate great looking docs for your typescript project. **[Quick Start](https://docsgen.dev/) • [Documentation](https://docs.docsgen.dev/)
-• [Guides](https://docs.docsgen.dev/guides)**
+Generate great looking docs for your typescript project. **[Quick Start](https://docsgen.dev/) •
+[Documentation](https://docs.docsgen.dev/) • [Guides](https://docs.docsgen.dev/guides)**
 
 </div>
 
@@ -15,31 +15,30 @@ Generate great looking docs for your typescript project. **[Quick Start](https:/
 
 <!-- ## Key Features
 
-⚙️ 
+⚙️
 
-🔌 
+🔌
 
-⚛ 
+⚛
 
-📬 
+📬
 
-🔐 
+🔐
 
-⚡ 
+⚡
 
-🔀 
+🔀
 
-🔮 
+🔮
 
-🔋 
+🔋
 
 🎨  -->
 
-
 ## Help us keep working on this project ❤️
 
-Sponsoring is important part of the docsgen growth. We strongly encourage you to help us maintain the project and allow us
-to shape the future of the frameworks.
+Sponsoring is important part of the docsgen growth. We strongly encourage you to help us maintain the project and allow
+us to shape the future of the frameworks.
 
 - [Become a Sponsor on GitHub](https://github.com/sponsors/prc5)
 
