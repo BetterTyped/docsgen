@@ -28,6 +28,7 @@ export type PluginOptions = {
   typeDocOptions?: Partial<TypeDoc.TypeDocOptions>;
   watch?: boolean;
   addMonorepoPage?: boolean;
+  addPackagePage?: boolean;
   logLevel?: (typeof logsLevels)[number];
   pages?: {
     [PackagePages.CLASS]?: ClassPageOptions;
