@@ -53,7 +53,7 @@ export type PackageOptions = {
   readmeName?: string;
   readmeDir?: string;
   showImports?: boolean;
-  addPackagePage?: boolean;
+  hasPackagePage?: boolean;
   generateMdx?: boolean;
   orderCategories?: Record<string, number>;
   excludeCategories?: string[];

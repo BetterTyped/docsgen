@@ -14,6 +14,7 @@ export const defaultPackageOptions: RequiredKeys<
     | "fileNameMapper"
     | "nameMapper"
     | "kindMapper"
+    | "hasPackagePage"
   >
 > = {
   logo: "",
@@ -23,7 +24,6 @@ export const defaultPackageOptions: RequiredKeys<
   readmeName: "README.md",
   readmeDir: "",
   showImports: true,
-  addPackagePage: true,
   orderCategories: {},
   excludeCategories: ["Namespaces"],
 };
