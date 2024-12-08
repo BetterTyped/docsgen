@@ -23,7 +23,7 @@ export const defaultPackageOptions: RequiredKeys<
   readmeName: "README.md",
   readmeDir: "",
   showImports: true,
-  hasMainPage: true,
+  addPackagePage: true,
   orderCategories: {},
   excludeCategories: ["Namespaces"],
 };

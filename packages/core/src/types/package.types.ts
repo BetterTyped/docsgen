@@ -27,7 +27,7 @@ export type PluginOptions = {
   tsConfigPath?: string;
   typeDocOptions?: Partial<TypeDoc.TypeDocOptions>;
   watch?: boolean;
-  hasMonorepoPage?: boolean;
+  addMonorepoPage?: boolean;
   logLevel?: (typeof logsLevels)[number];
   pages?: {
     [PackagePages.CLASS]?: ClassPageOptions;
@@ -52,7 +52,7 @@ export type PackageOptions = {
   readmeName?: string;
   readmeDir?: string;
   showImports?: boolean;
-  hasMainPage?: boolean;
+  addPackagePage?: boolean;
   generateMdx?: boolean;
   orderCategories?: Record<string, number>;
   excludeCategories?: string[];

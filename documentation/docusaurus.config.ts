@@ -58,7 +58,7 @@ const getPackagesList = () => {
           dir,
           entryPath: "src/index.ts",
           tsconfigDir: dir,
-          hasMainPage: false,
+          addPackagePage: false,
           generateMdx: true,
           outDir: `docs/${dirName}`,
           // If we generate mdx for the ui components, we need to put them in tabs
@@ -186,7 +186,7 @@ const config: Config = {
         outDir: `docs/api`,
         packages: getPackagesList(),
         generateMdx: false,
-        hasMonorepoPage: false,
+        generateMonorepoPage: false,
         logLevel: "trace",
         pages: {
           component: {

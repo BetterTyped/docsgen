@@ -22,12 +22,12 @@ export const buildDocs = async (
   extra: { instanceDate: string; instanceFile: string },
   // eslint-disable-next-line max-params
 ) => {
-  const { packages, tsConfigPath, hasMonorepoPage = true } = pluginOptions;
+  const { packages, tsConfigPath, addMonorepoPage = true } = pluginOptions;
   const isMonorepo = packages.length > 1;
 
   const isEnabledMonorepo = packages.filter((pkg) => pkg.generateMdx).length > 1;
 
-  if (isMonorepo && (pluginOptions.generateMdx || isEnabledMonorepo) && hasMonorepoPage) {
+  if (isMonorepo && (pluginOptions.generateMdx || isEnabledMonorepo) && addMonorepoPage) {
     trace(`Generating monorepo page for ${pluginOptions.packages.length} packages`);
     generateMonorepoPage(docsGenerationDir, pluginOptions);
   }
@@ -56,7 +56,7 @@ export const buildDocs = async (
       packageOptionsPath,
       mdxOutDir,
       packageDocsJsonPath,
-      hasMainPage = true,
+      addPackagePage = true,
     } = getPackageOptions(packages, packageOptions, docsGenerationDir, generatedFilesDir, tsConfigPath, isMonorepo);
 
     /**
@@ -68,7 +68,7 @@ export const buildDocs = async (
     /**
      * Generate package page from readme or custom setup
      */
-    if (pluginOptions.generateMdx && hasMainPage) {
+    if (pluginOptions.generateMdx && addPackagePage) {
       trace(`Generating package page`, packageName);
       generatePackagePage(mdxOutDir, packageOptions);
     }
