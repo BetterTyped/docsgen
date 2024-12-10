@@ -3293,7 +3293,21 @@ toJSON()
             </thead>
             <tbody>
               <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">used</td>
+                <td class="api-docs__table-name">abortKey</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+string
+\`\`\`
+
+
+                  </div>
+                </td>
+                <td class="api-docs__table-description"></td>
+              </tr>
+              <tr class="api-docs__table-row">
+                <td class="api-docs__table-name">auth</td>
                 <td class="api-docs__table-type">
                   <div class="api-docs__pre">
 
@@ -3307,7 +3321,315 @@ boolean
                 <td class="api-docs__table-description"></td>
               </tr>
               <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">updatedQueueKey</td>
+                <td class="api-docs__table-name">cache</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+boolean
+\`\`\`
+
+
+                  </div>
+                </td>
+                <td class="api-docs__table-description"></td>
+              </tr>
+              <tr class="api-docs__table-row">
+                <td class="api-docs__table-name">cacheKey</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+string
+\`\`\`
+
+
+                  </div>
+                </td>
+                <td class="api-docs__table-description"></td>
+              </tr>
+              <tr class="api-docs__table-row">
+                <td class="api-docs__table-name">cacheTime</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+number
+\`\`\`
+
+
+                  </div>
+                </td>
+                <td class="api-docs__table-description"></td>
+              </tr>
+              <tr class="api-docs__table-row">
+                <td class="api-docs__table-name">cancelable</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+boolean
+\`\`\`
+
+
+                  </div>
+                </td>
+                <td class="api-docs__table-description"></td>
+              </tr>
+              <tr class="api-docs__table-row">
+                <td class="api-docs__table-name">deduplicate</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+boolean
+\`\`\`
+
+
+                  </div>
+                </td>
+                <td class="api-docs__table-description"></td>
+              </tr>
+              <tr class="api-docs__table-row">
+                <td class="api-docs__table-name">deduplicateTime</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+number
+\`\`\`
+
+
+                  </div>
+                </td>
+                <td class="api-docs__table-description"></td>
+              </tr>
+              <tr class="api-docs__table-row">
+                <td class="api-docs__table-name">disableRequestInterceptors</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+boolean | undefined
+\`\`\`
+
+
+                  </div>
+                </td>
+                <td class="api-docs__table-description"></td>
+              </tr>
+              <tr class="api-docs__table-row">
+                <td class="api-docs__table-name">disableResponseInterceptors</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+boolean | undefined
+\`\`\`
+
+
+                  </div>
+                </td>
+                <td class="api-docs__table-description"></td>
+              </tr>
+              <tr class="api-docs__table-row">
+                <td class="api-docs__table-name">endpoint</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+ExtractEndpointType<Request>
+\`\`\`
+
+
+                  </div>
+                </td>
+                <td class="api-docs__table-description"></td>
+              </tr>
+              <tr class="api-docs__table-row">
+                <td class="api-docs__table-name">garbageCollection</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+number
+\`\`\`
+
+
+                  </div>
+                </td>
+                <td class="api-docs__table-description"></td>
+              </tr>
+              <tr class="api-docs__table-row">
+                <td class="api-docs__table-name">headers</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+HeadersInit
+\`\`\`
+
+
+                  </div>
+                </td>
+                <td class="api-docs__table-description"></td>
+              </tr>
+              <tr class="api-docs__table-row">
+                <td class="api-docs__table-name">method</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+ExtractAdapterMethodType<ExtractAdapterType<Request>>
+\`\`\`
+
+
+                  </div>
+                </td>
+                <td class="api-docs__table-description"></td>
+              </tr>
+              <tr class="api-docs__table-row">
+                <td class="api-docs__table-name">offline</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+boolean
+\`\`\`
+
+
+                  </div>
+                </td>
+                <td class="api-docs__table-description"></td>
+              </tr>
+              <tr class="api-docs__table-row">
+                <td class="api-docs__table-name">options</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+ExtractAdapterOptionsType<ExtractAdapterType<Request>>
+\`\`\`
+
+
+                  </div>
+                </td>
+                <td class="api-docs__table-description"></td>
+              </tr>
+              <tr class="api-docs__table-row">
+                <td class="api-docs__table-name">params</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+ExtractParamsType<Request> | NegativeTypes
+\`\`\`
+
+
+                  </div>
+                </td>
+                <td class="api-docs__table-description"></td>
+              </tr>
+              <tr class="api-docs__table-row">
+                <td class="api-docs__table-name">payload</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+PayloadType<ExtractPayloadType<Request>>
+\`\`\`
+
+
+                  </div>
+                </td>
+                <td class="api-docs__table-description"></td>
+              </tr>
+              <tr class="api-docs__table-row">
+                <td class="api-docs__table-name">queryKey</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+string
+\`\`\`
+
+
+                  </div>
+                </td>
+                <td class="api-docs__table-description"></td>
+              </tr>
+              <tr class="api-docs__table-row">
+                <td class="api-docs__table-name">queryParams</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+ExtractQueryParamsType<Request> | NegativeTypes
+\`\`\`
+
+
+                  </div>
+                </td>
+                <td class="api-docs__table-description"></td>
+              </tr>
+              <tr class="api-docs__table-row">
+                <td class="api-docs__table-name">queued</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+boolean
+\`\`\`
+
+
+                  </div>
+                </td>
+                <td class="api-docs__table-description"></td>
+              </tr>
+              <tr class="api-docs__table-row">
+                <td class="api-docs__table-name">requestOptions</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+RequestOptionsType<ExtractEndpointType<Request>, ExtractAdapterOptionsType<ExtractAdapterType<Request>>, ExtractAdapterMethodType<ExtractAdapterType<Request>>>
+\`\`\`
+
+
+                  </div>
+                </td>
+                <td class="api-docs__table-description"></td>
+              </tr>
+              <tr class="api-docs__table-row">
+                <td class="api-docs__table-name">retry</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+number
+\`\`\`
+
+
+                  </div>
+                </td>
+                <td class="api-docs__table-description"></td>
+              </tr>
+              <tr class="api-docs__table-row">
+                <td class="api-docs__table-name">retryTime</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+number
+\`\`\`
+
+
+                  </div>
+                </td>
+                <td class="api-docs__table-description"></td>
+              </tr>
+              <tr class="api-docs__table-row">
+                <td class="api-docs__table-name">updatedAbortKey</td>
                 <td class="api-docs__table-type">
                   <div class="api-docs__pre">
 
@@ -3335,7 +3657,7 @@ boolean
                 <td class="api-docs__table-description"></td>
               </tr>
               <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">updatedAbortKey</td>
+                <td class="api-docs__table-name">updatedQueueKey</td>
                 <td class="api-docs__table-type">
                   <div class="api-docs__pre">
 
@@ -3349,334 +3671,12 @@ boolean
                 <td class="api-docs__table-description"></td>
               </tr>
               <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">retryTime</td>
-                <td class="api-docs__table-type">
-                  <div class="api-docs__pre">
-
-\`\`\`tsx
-number
-\`\`\`
-
-
-                  </div>
-                </td>
-                <td class="api-docs__table-description"></td>
-              </tr>
-              <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">retry</td>
-                <td class="api-docs__table-type">
-                  <div class="api-docs__pre">
-
-\`\`\`tsx
-number
-\`\`\`
-
-
-                  </div>
-                </td>
-                <td class="api-docs__table-description"></td>
-              </tr>
-              <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">requestOptions</td>
-                <td class="api-docs__table-type">
-                  <div class="api-docs__pre">
-
-\`\`\`tsx
-RequestOptionsType<ExtractEndpointType<Request>, ExtractAdapterOptionsType<ExtractAdapterType<Request>>, ExtractAdapterMethodType<ExtractAdapterType<Request>>>
-\`\`\`
-
-
-                  </div>
-                </td>
-                <td class="api-docs__table-description"></td>
-              </tr>
-              <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">queued</td>
+                <td class="api-docs__table-name">used</td>
                 <td class="api-docs__table-type">
                   <div class="api-docs__pre">
 
 \`\`\`tsx
 boolean
-\`\`\`
-
-
-                  </div>
-                </td>
-                <td class="api-docs__table-description"></td>
-              </tr>
-              <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">queryParams</td>
-                <td class="api-docs__table-type">
-                  <div class="api-docs__pre">
-
-\`\`\`tsx
-ExtractQueryParamsType<Request> | NegativeTypes
-\`\`\`
-
-
-                  </div>
-                </td>
-                <td class="api-docs__table-description"></td>
-              </tr>
-              <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">queryKey</td>
-                <td class="api-docs__table-type">
-                  <div class="api-docs__pre">
-
-\`\`\`tsx
-string
-\`\`\`
-
-
-                  </div>
-                </td>
-                <td class="api-docs__table-description"></td>
-              </tr>
-              <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">payload</td>
-                <td class="api-docs__table-type">
-                  <div class="api-docs__pre">
-
-\`\`\`tsx
-PayloadType<ExtractPayloadType<Request>>
-\`\`\`
-
-
-                  </div>
-                </td>
-                <td class="api-docs__table-description"></td>
-              </tr>
-              <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">params</td>
-                <td class="api-docs__table-type">
-                  <div class="api-docs__pre">
-
-\`\`\`tsx
-ExtractParamsType<Request> | NegativeTypes
-\`\`\`
-
-
-                  </div>
-                </td>
-                <td class="api-docs__table-description"></td>
-              </tr>
-              <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">options</td>
-                <td class="api-docs__table-type">
-                  <div class="api-docs__pre">
-
-\`\`\`tsx
-ExtractAdapterOptionsType<ExtractAdapterType<Request>>
-\`\`\`
-
-
-                  </div>
-                </td>
-                <td class="api-docs__table-description"></td>
-              </tr>
-              <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">offline</td>
-                <td class="api-docs__table-type">
-                  <div class="api-docs__pre">
-
-\`\`\`tsx
-boolean
-\`\`\`
-
-
-                  </div>
-                </td>
-                <td class="api-docs__table-description"></td>
-              </tr>
-              <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">method</td>
-                <td class="api-docs__table-type">
-                  <div class="api-docs__pre">
-
-\`\`\`tsx
-ExtractAdapterMethodType<ExtractAdapterType<Request>>
-\`\`\`
-
-
-                  </div>
-                </td>
-                <td class="api-docs__table-description"></td>
-              </tr>
-              <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">headers</td>
-                <td class="api-docs__table-type">
-                  <div class="api-docs__pre">
-
-\`\`\`tsx
-HeadersInit
-\`\`\`
-
-
-                  </div>
-                </td>
-                <td class="api-docs__table-description"></td>
-              </tr>
-              <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">garbageCollection</td>
-                <td class="api-docs__table-type">
-                  <div class="api-docs__pre">
-
-\`\`\`tsx
-number
-\`\`\`
-
-
-                  </div>
-                </td>
-                <td class="api-docs__table-description"></td>
-              </tr>
-              <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">endpoint</td>
-                <td class="api-docs__table-type">
-                  <div class="api-docs__pre">
-
-\`\`\`tsx
-ExtractEndpointType<Request>
-\`\`\`
-
-
-                  </div>
-                </td>
-                <td class="api-docs__table-description"></td>
-              </tr>
-              <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">disableResponseInterceptors</td>
-                <td class="api-docs__table-type">
-                  <div class="api-docs__pre">
-
-\`\`\`tsx
-boolean | undefined
-\`\`\`
-
-
-                  </div>
-                </td>
-                <td class="api-docs__table-description"></td>
-              </tr>
-              <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">disableRequestInterceptors</td>
-                <td class="api-docs__table-type">
-                  <div class="api-docs__pre">
-
-\`\`\`tsx
-boolean | undefined
-\`\`\`
-
-
-                  </div>
-                </td>
-                <td class="api-docs__table-description"></td>
-              </tr>
-              <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">deduplicateTime</td>
-                <td class="api-docs__table-type">
-                  <div class="api-docs__pre">
-
-\`\`\`tsx
-number
-\`\`\`
-
-
-                  </div>
-                </td>
-                <td class="api-docs__table-description"></td>
-              </tr>
-              <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">deduplicate</td>
-                <td class="api-docs__table-type">
-                  <div class="api-docs__pre">
-
-\`\`\`tsx
-boolean
-\`\`\`
-
-
-                  </div>
-                </td>
-                <td class="api-docs__table-description"></td>
-              </tr>
-              <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">cancelable</td>
-                <td class="api-docs__table-type">
-                  <div class="api-docs__pre">
-
-\`\`\`tsx
-boolean
-\`\`\`
-
-
-                  </div>
-                </td>
-                <td class="api-docs__table-description"></td>
-              </tr>
-              <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">cacheTime</td>
-                <td class="api-docs__table-type">
-                  <div class="api-docs__pre">
-
-\`\`\`tsx
-number
-\`\`\`
-
-
-                  </div>
-                </td>
-                <td class="api-docs__table-description"></td>
-              </tr>
-              <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">cacheKey</td>
-                <td class="api-docs__table-type">
-                  <div class="api-docs__pre">
-
-\`\`\`tsx
-string
-\`\`\`
-
-
-                  </div>
-                </td>
-                <td class="api-docs__table-description"></td>
-              </tr>
-              <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">cache</td>
-                <td class="api-docs__table-type">
-                  <div class="api-docs__pre">
-
-\`\`\`tsx
-boolean
-\`\`\`
-
-
-                  </div>
-                </td>
-                <td class="api-docs__table-description"></td>
-              </tr>
-              <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">auth</td>
-                <td class="api-docs__table-type">
-                  <div class="api-docs__pre">
-
-\`\`\`tsx
-boolean
-\`\`\`
-
-
-                  </div>
-                </td>
-                <td class="api-docs__table-description"></td>
-              </tr>
-              <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">abortKey</td>
-                <td class="api-docs__table-type">
-                  <div class="api-docs__pre">
-
-\`\`\`tsx
-string
 \`\`\`
 
 

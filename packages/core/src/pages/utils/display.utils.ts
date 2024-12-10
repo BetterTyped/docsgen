@@ -99,22 +99,26 @@ export const getSortedChildren = (
       };
     })
     .sort((a, b) => {
-      const nameA = a.name.startsWith("_");
-      const nameB = b.name.startsWith("_");
+      const underscoreNameA = a.name.startsWith("_");
+      const underscoreNameB = b.name.startsWith("_");
 
       if (a.isMethod && b.isMethod) {
         return 0;
       }
       if (a.isMethod) {
-        return -1;
-      }
-
-      if (nameA && nameB) {
-        return 0;
-      }
-      if (nameA) {
         return 1;
       }
+
+      if (underscoreNameA && underscoreNameB) {
+        return 0;
+      }
+      if (underscoreNameA) {
+        return 1;
+      }
+      if (!a.isMethod && !b.isMethod) {
+        return 0;
+      }
+
       return -1;
     })
     .filter((element) => element.name !== "constructor");
