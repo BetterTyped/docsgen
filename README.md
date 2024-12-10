@@ -6,8 +6,12 @@
 
 <div align="center">
 
-Generate great looking docs for your typescript project. **[Quick Start](https://docsgen.dev/) •
-[Documentation](https://docs.docsgen.dev/) • [Guides](https://docs.docsgen.dev/guides)**
+Generate great looking docs for your typescript project.
+
+**[Quick Start](https://docsgen.dev/) • [Documentation](https://docs.docsgen.dev/) •
+[Guides](https://docs.docsgen.dev/guides)**
+
+### [Example](https://hyperfetch.bettertyped.com/docs/api/)
 
 </div>
 
@@ -58,9 +62,7 @@ request. We will be glad to consider your suggestions!
 
 ## ©️ License
 
-docsgen Pro requires subscription in projects that you sell to end users.
-
-Copyright (c) 2023, GreenSock. All rights reserved.
+Apache License Version 2.0
 
 ## 📚 Contact
 
