@@ -43,6 +43,7 @@ export const Methods: React.FC<PagePropsType & MethodsProps> = (props) => {
         title="Methods"
         reflections={methods}
         reflectionsTree={reflectionsTree}
+        hideType
       />
     );
   }

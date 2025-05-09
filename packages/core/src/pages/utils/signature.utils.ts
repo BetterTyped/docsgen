@@ -40,11 +40,17 @@ export const getSignaturePreview = ({
   reflectionsTree,
   useArrow,
   hideName,
+  hideGenerics,
+  hideParamTypes,
+  hideReturns,
 }: {
   reflection: JSONOutput.SignatureReflection;
   reflectionsTree: JSONOutput.ProjectReflection[];
   useArrow?: boolean;
   hideName?: boolean;
+  hideGenerics?: boolean;
+  hideParamTypes?: boolean;
+  hideReturns?: boolean;
 }): string => {
   const hasName = !hideName && reflection.name !== "__type";
   const isConstructor = reflection.kind === ReflectionKind.Constructor;
@@ -53,14 +59,23 @@ export const getSignaturePreview = ({
 
   const name = hasName ? reflection.name : constructorName;
 
-  const generics = getGenericParamsPreview({ generics: reflection.typeParameter });
+  const generics = !hideGenerics ? getGenericParamsPreview({ generics: reflection.typeParameter }) : "";
   const params =
     reflection.parameters
       ?.map((param) => {
+        if (hideParamTypes) {
+          return param.name;
+        }
         const type = getTypePreview({ typeReflection: param.type, reflectionsTree });
         return `${param.flags?.isRest ? "..." : ""}${param.name}${param.flags?.isOptional ? "?" : ""}: ${type}`;
       })
       .join(", ") || "";
+  const returns = !hideReturns
+    ? `${useArrow ? " => " : ": "}${getTypePreview({
+        typeReflection: reflection.type,
+        reflectionsTree,
+      })}`
+    : "";
 
-  return `${name}${generics}(${params})${useArrow ? " => " : ": "}${getTypePreview({ typeReflection: reflection.type, reflectionsTree })}`;
+  return `${name}${generics}(${params})${returns}`;
 };
