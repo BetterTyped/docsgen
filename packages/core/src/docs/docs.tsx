@@ -54,7 +54,7 @@ export const Docs = (
   );
 
   if (!packagesNames.includes(packageName)) {
-    throw new Error(`Cannot find package ${packageName}`);
+    throw new Error(`Cannot find package ${packageName}, available packages: ${packagesNames.join(", ")}`);
   }
 
   const packageOptions = pluginOptions.packages.find((pkg) => cleanFileName(pkg.title) === packageName);

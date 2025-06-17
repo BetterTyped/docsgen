@@ -101,7 +101,7 @@ export const importer = (options: { packageRoute: string; apiDir: string; versio
           const [, , packageName, componentName, componentOptions] = apiImport;
           // eslint-disable-next-line prettier/prettier
           if (!packagesNames.includes(packageName)) {
-            throw new Error(`Cannot find package ${packageName}`);
+            throw new Error(`Cannot find package ${packageName}, available packages: ${packagesNames.join(", ")}`);
           }
           const packageOptions = pluginOptions.packages.find((pkg) => cleanFileName(pkg.title) === packageName);
           if (!packageOptions) {
