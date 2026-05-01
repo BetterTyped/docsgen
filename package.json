@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "postinstall": "husky install",
-    "build": "nx run-many --target=build --all --parallel=2 --skip-nx-cache",
+    "build": "nx run-many --target=build --all --parallel=2 --skip-nx-cache --exclude=documentation",
     "build:watch": "nx run-many --target=start --all --parallel=20",
     "build:docs": "cd documentation && pnpm install && pnpm build",
     "test": "nx run-many --target=test --all --parallel=1 --skip-nx-cache",

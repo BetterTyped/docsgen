@@ -2,7 +2,6 @@
 . "$(dirname "$0")/_/husky.sh"
 
 pnpm commitlint --edit "$1"
-pnpm nx reset
-pnpm nx run-many --target=build --all
-pnpm nx run-many --target=lint --parallel=3 --all
-pnpm nx run-many --target=typecheck --parallel=2 --all
+pnpm build
+pnpm lint
+pnpm typecheck
