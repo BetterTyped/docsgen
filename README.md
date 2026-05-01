@@ -1,6 +1,6 @@
 <h1 align="center">
 
-  <img src="./documentation/static/branding/logo-bg-blue.svg" width="260px" />
+  <img src="./documentation/static/branding/icon-black.svg" width="260px" />
 
 </h1>
 
@@ -84,9 +84,9 @@ and always matching your source.
 
 ## Packages
 
-| Package | Version | Downloads |
-| --- | --- | --- |
-| [@docsgen/core](https://github.com/BetterTyped/docsgen/tree/main/packages/core) | [![npm](https://img.shields.io/npm/v/@docsgen/core)](https://www.npmjs.com/package/@docsgen/core) | [![downloads](https://img.shields.io/npm/dm/@docsgen/core)](https://www.npmjs.com/package/@docsgen/core) |
+| Package                                                                                     | Version                                                                                                       | Downloads                                                                                                            |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| [@docsgen/core](https://github.com/BetterTyped/docsgen/tree/main/packages/core)             | [![npm](https://img.shields.io/npm/v/@docsgen/core)](https://www.npmjs.com/package/@docsgen/core)             | [![downloads](https://img.shields.io/npm/dm/@docsgen/core)](https://www.npmjs.com/package/@docsgen/core)             |
 | [@docsgen/docusaurus](https://github.com/BetterTyped/docsgen/tree/main/packages/docusaurus) | [![npm](https://img.shields.io/npm/v/@docsgen/docusaurus)](https://www.npmjs.com/package/@docsgen/docusaurus) | [![downloads](https://img.shields.io/npm/dm/@docsgen/docusaurus)](https://www.npmjs.com/package/@docsgen/docusaurus) |
 
 ---

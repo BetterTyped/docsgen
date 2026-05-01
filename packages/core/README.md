@@ -1,6 +1,6 @@
 <h1 align="center">
 
-  <img src="../../documentation/static/branding/logo-bg-blue.svg" width="260px" />
+  <img src="./documentation/static/branding/icon-black.svg" width="260px" />
 
 </h1>
 
@@ -107,27 +107,27 @@ Then use `@import` in any MDX file:
 
 ### Available `@import` content types
 
-| Type | Description |
-| --- | --- |
-| `definition` | Complete type/class definition |
-| `npm` | npm install command |
-| `import` | Import statement |
-| `details` | Detailed symbol information |
-| `description` | JSDoc description |
-| `generics` | Generic type parameters |
-| `method` | Single method (use `name=` to select) |
-| `methods` | All methods table |
-| `name` | Symbol name |
-| `parameter` | Single parameter (use `name=` to select) |
-| `parameters` | All parameters table |
-| `preview` | Brief symbol preview |
-| `property` | Single property (use `name=` to select) |
-| `properties` | All properties |
-| `returns` | Return type information |
-| `returnsPreview` | Brief return type preview |
-| `signature` | Function/method signature |
-| `sources` | Source file information |
-| `type` | Type information |
+| Type             | Description                              |
+| ---------------- | ---------------------------------------- |
+| `definition`     | Complete type/class definition           |
+| `npm`            | npm install command                      |
+| `import`         | Import statement                         |
+| `details`        | Detailed symbol information              |
+| `description`    | JSDoc description                        |
+| `generics`       | Generic type parameters                  |
+| `method`         | Single method (use `name=` to select)    |
+| `methods`        | All methods table                        |
+| `name`           | Symbol name                              |
+| `parameter`      | Single parameter (use `name=` to select) |
+| `parameters`     | All parameters table                     |
+| `preview`        | Brief symbol preview                     |
+| `property`       | Single property (use `name=` to select)  |
+| `properties`     | All properties                           |
+| `returns`        | Return type information                  |
+| `returnsPreview` | Brief return type preview                |
+| `signature`      | Function/method signature                |
+| `sources`        | Source file information                  |
+| `type`           | Type information                         |
 
 Display modes: `table`, `grid`, `block`.
 
@@ -135,15 +135,15 @@ Display modes: `table`, `grid`, `block`.
 
 Each symbol kind gets a dedicated page with relevant sections:
 
-| Page | Sections |
-| --- | --- |
-| `ClassPage` | Name, Description, Sources, Import, Definition, Npm, Parameters, Properties, Methods, Examples |
-| `ComponentPage` | Intro, Usage, Props (Preview + Parameters) |
-| `FunctionPage` | Intro, Usage, Parameters, Returns |
-| `TypePage` | Intro, Preview, Structure |
-| `EnumPage` | Intro, Preview |
-| `VarPage` | Intro, Preview, Structure |
-| `DefaultPage` | Intro, Preview, Structure |
+| Page            | Sections                                                                                       |
+| --------------- | ---------------------------------------------------------------------------------------------- |
+| `ClassPage`     | Name, Description, Sources, Import, Definition, Npm, Parameters, Properties, Methods, Examples |
+| `ComponentPage` | Intro, Usage, Props (Preview + Parameters)                                                     |
+| `FunctionPage`  | Intro, Usage, Parameters, Returns                                                              |
+| `TypePage`      | Intro, Preview, Structure                                                                      |
+| `EnumPage`      | Intro, Preview                                                                                 |
+| `VarPage`       | Intro, Preview, Structure                                                                      |
+| `DefaultPage`   | Intro, Preview, Structure                                                                      |
 
 Every section can be toggled on/off or replaced with a custom React renderer via `PluginOptions.pages`.
 
@@ -151,35 +151,35 @@ Every section can be toggled on/off or replaced with a custom React renderer via
 
 ### `PluginOptions`
 
-| Option | Type | Description |
-| --- | --- | --- |
-| `id` | `string` | Unique plugin instance identifier |
-| `outDir` | `string` | Output directory for generated files |
-| `packages` | `PackageOptions[]` | Array of packages to document |
-| `generateMdx` | `boolean` | Generate MDX files (default: `true`) |
-| `tsConfigPath` | `string` | Path to tsconfig |
-| `typeDocOptions` | `Partial<TypeDocOptions>` | TypeDoc configuration overrides |
-| `watch` | `boolean` | Enable watch mode |
-| `addMonorepoPage` | `boolean` | Generate monorepo index page |
-| `addPackagePage` | `boolean` | Generate per-package index pages |
-| `logLevel` | `LogLevel` | Logging verbosity |
-| `pages` | `PagesOptions` | Per-kind page template overrides |
+| Option            | Type                      | Description                          |
+| ----------------- | ------------------------- | ------------------------------------ |
+| `id`              | `string`                  | Unique plugin instance identifier    |
+| `outDir`          | `string`                  | Output directory for generated files |
+| `packages`        | `PackageOptions[]`        | Array of packages to document        |
+| `generateMdx`     | `boolean`                 | Generate MDX files (default: `true`) |
+| `tsConfigPath`    | `string`                  | Path to tsconfig                     |
+| `typeDocOptions`  | `Partial<TypeDocOptions>` | TypeDoc configuration overrides      |
+| `watch`           | `boolean`                 | Enable watch mode                    |
+| `addMonorepoPage` | `boolean`                 | Generate monorepo index page         |
+| `addPackagePage`  | `boolean`                 | Generate per-package index pages     |
+| `logLevel`        | `LogLevel`                | Logging verbosity                    |
+| `pages`           | `PagesOptions`            | Per-kind page template overrides     |
 
 ### `PackageOptions`
 
-| Option | Type | Description |
-| --- | --- | --- |
-| `title` | `string` | Package display name |
-| `dir` | `string` | Path to the package directory |
-| `entryPath` | `string \| string[]` | Entry point file(s) |
-| `showImports` | `boolean` | Show import statements on pages |
-| `orderCategories` | `string[]` | Category sidebar order |
-| `excludeCategories` | `string[]` | Categories to exclude |
-| `additionalCategories` | `object[]` | Extra categories to add |
-| `fileNameMapper` | `function` | Custom file name mapping |
-| `nameMapper` | `function` | Custom display name mapping |
-| `kindMapper` | `function` | Custom kind/category mapping |
-| `exclude` | `function` | Predicate to filter symbols |
+| Option                 | Type                 | Description                     |
+| ---------------------- | -------------------- | ------------------------------- |
+| `title`                | `string`             | Package display name            |
+| `dir`                  | `string`             | Path to the package directory   |
+| `entryPath`            | `string \| string[]` | Entry point file(s)             |
+| `showImports`          | `boolean`            | Show import statements on pages |
+| `orderCategories`      | `string[]`           | Category sidebar order          |
+| `excludeCategories`    | `string[]`           | Categories to exclude           |
+| `additionalCategories` | `object[]`           | Extra categories to add         |
+| `fileNameMapper`       | `function`           | Custom file name mapping        |
+| `nameMapper`           | `function`           | Custom display name mapping     |
+| `kindMapper`           | `function`           | Custom kind/category mapping    |
+| `exclude`              | `function`           | Predicate to filter symbols     |
 
 ## Documentation
 
