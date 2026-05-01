@@ -384,7 +384,7 @@ table:not(.api-docs__table) caption {
   @apply !mt-4 !text-sm !text-zinc-500; /* Adjusted text color */
 }
 
-table:not(.api-docs__table) * {
+table:not(.api-docs__table) *:not(code) {
   @apply !border-t-0 !border-x-0 !border-zinc-400/10;
 }
 
@@ -911,11 +911,11 @@ main .col:not(.col--3) ol li {
 }
 
 blockquote {
-  @apply border-l-0 pl-0 mt-8 bg-zinc-100 rounded-lg !px-5 !py-2;
+  @apply border-l-0 pl-0 mt-8 bg-zinc-100 rounded-lg !px-5 !py-3;
 }
 blockquote > p {
   line-height: 1.7 !important;
-  @apply font-medium italic text-xl bg-clip-text text-transparent bg-gradient-to-r from-zinc-800/70 via-zinc-500/80 to-zinc-800/70;
+  @apply font-medium italic text-xl bg-clip-text text-transparent bg-gradient-to-r from-zinc-800/70 via-zinc-500/80 to-zinc-800/70 !my-0;
 }
 .dark blockquote > p {
   @apply from-zinc-200/90 via-zinc-50 to-zinc-200/80;
@@ -1066,7 +1066,7 @@ body .theme-code-block {
 }
 
 *:not(pre) > code {
-  @apply pt-[3px] pb-[2px] px-1.5 text-[0.8em] text-white bg-zinc-600/60 !border-0 !border-b-2 border-zinc-500/30;
+  @apply pt-[3px] pb-[2px] px-1.5 text-[0.8em] text-white bg-zinc-600/60 border-0 border-b-2 !border-zinc-800/60;
 }
 
 .docs-wrapper a:has(> code) {
@@ -1164,7 +1164,7 @@ pre code:has(.code-block-diff-remove-line) {
 /* Alerts */
 
 .alert *:not(pre) > code {
-  @apply bg-zinc-400/30 border-zinc-600/30 dark:bg-zinc-50/10 text-zinc-800 dark:border-zinc-50/5 border;
+  @apply pt-[3px] pb-[2px] px-1.5 text-[0.8em] text-white bg-zinc-600/60 border-0 border-b-2 !border-zinc-800/60;
 }
 
 .alert {
@@ -1512,7 +1512,8 @@ body {
   .navbar__items .navbar__brand {
     margin-right: auto;
   }
-  body .navbar__items--right > div > button.DocSearch-Button {
+  body .navbar__items--right > div > .navbar__search-input {
+    width: 140px !important;
     @apply !px-2;
   }
   body .navbar__items--right > div:last-child {
@@ -1771,6 +1772,95 @@ html body button.DocSearch.DocSearch-Button {
   padding-bottom: 0 !important;
   border: 1px solid transparent !important;
   max-width: calc(100% - 22px) !important;
+}
+
+html body .navbar__search-input {
+  @apply !rounded-xl !text-zinc-600 !placeholder-zinc-400;
+  background: #fafafa !important;
+  border: 1px solid #e4e4e7 !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+  height: 36px !important;
+  font-size: 0.8rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.01em !important;
+  width: 180px !important;
+  padding-left: 2.1rem !important;
+  padding-right: 3.8rem !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' stroke='%23a1a1aa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='6' cy='6' r='5'/%3E%3Cpath d='m13 13-3.5-3.5'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: 0.75rem center !important;
+  background-size: 14px !important;
+}
+
+html body .navbar__search-input:hover {
+  border-color: #d4d4d8 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06) !important;
+}
+
+html body .navbar__search-input:focus {
+  width: 240px !important;
+  border-color: #d4d4d8 !important;
+  outline: none !important;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.06),
+    0 0 0 3px rgba(0, 0, 0, 0.03) !important;
+}
+
+html body .navbar__search {
+  --search-local-modal-background: #141415;
+  --search-local-modal-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  --search-local-hit-background: #1e1e21;
+  --search-local-hit-shadow: none;
+  --search-local-hit-color: #e4e4e7;
+  --search-local-highlight-color: #60a5fa;
+  --search-local-muted-color: #71717a;
+  --search-local-hit-active-color: #fff;
+  --search-local-modal-width: 480px;
+  --search-local-spacing: 10px;
+  --search-local-hit-height: 48px;
+}
+
+html body .searchHintContainer {
+  right: 8px !important;
+  gap: 2px !important;
+}
+
+html body .searchHint {
+  font-size: 8px !important;
+  font-weight: 500 !important;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif !important;
+  line-height: 1 !important;
+  padding: 1px 3px !important;
+  min-width: 14px !important;
+  height: 16px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  border-radius: 3px !important;
+  color: #a1a1aa !important;
+  background: #f4f4f5 !important;
+  border: 1px solid #e4e4e7 !important;
+  box-shadow: 0 1px 0 #e4e4e7 !important;
+}
+
+html body .searchBarContainer {
+  margin-left: 12px !important;
+}
+
+html body .dropdownMenu {
+  @apply !rounded-xl;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  margin-top: 6px !important;
+}
+
+html body .dropdownMenu .suggestion {
+  @apply !rounded-lg;
 }
 
 .pagination-nav__link {

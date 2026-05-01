@@ -181,10 +181,15 @@ const config: Config = {
     ],
   ],
 
-  themes: ["@docusaurus/theme-mermaid"],
+  themes: [
+    "@docusaurus/theme-mermaid",
+    [
+      "@easyops-cn/docusaurus-search-local",
+      { hashed: true },
+    ],
+  ],
 
   plugins: [
-    "@orama/plugin-docusaurus-v3",
     "@docusaurus/theme-live-codeblock",
     async function tailwindPlugin() {
       return {
@@ -230,10 +235,10 @@ const config: Config = {
       playgroundPosition: "bottom",
     },
     navbar: {
-      title: "",
+      title: "Docsgen",
       logo: {
         alt: "docsgen Logo",
-        src: "branding/logo-black.svg",
+        src: "branding/icon-black.svg",
         className: "dark:invert",
       },
       items: [
