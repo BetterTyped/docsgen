@@ -1,12 +1,13 @@
 import React from "react";
-import { JSONOutput, ReflectionKind } from "typedoc";
+import type { JSONOutput} from "typedoc";
+import { ReflectionKind } from "typedoc";
 
 import { ClassPage } from "../../pages/class.page";
 import { FunctionPage } from "../../pages/function.page";
 import { EnumPage } from "../../pages/enum.page";
 import { VarPage } from "../../pages/var.page";
 import { TypePage } from "../../pages/type.page";
-import { PagePropsType } from "../../types/page.types";
+import type { PagePropsType } from "../../types/page.types";
 import { transformMarkdown } from "./utils/processing.utils";
 import { DefaultPage } from "pages/default.page";
 import { isComponent } from "pages/utils/component.utils";
@@ -37,26 +38,26 @@ export const pageRenderer = (props: PagePropsType<JSONOutput.DeclarationReflecti
     return renderer(ComponentPage, props);
   }
   switch (props.reflection.kind) {
-    case ReflectionKind.Class: {
+    case ReflectionKind.Class: 
       return renderer(ClassPage, props);
-    }
-    case ReflectionKind.Enum: {
+    
+    case ReflectionKind.Enum: 
       return renderer(EnumPage, props);
-    }
-    case ReflectionKind.Variable: {
+    
+    case ReflectionKind.Variable: 
       return renderer(VarPage, props);
-    }
-    case ReflectionKind.Function: {
+    
+    case ReflectionKind.Function: 
       return renderer(FunctionPage, props);
-    }
-    case ReflectionKind.TypeAlias: {
+    
+    case ReflectionKind.TypeAlias: 
       return renderer(TypePage, props);
-    }
-    case ReflectionKind.Interface: {
+    
+    case ReflectionKind.Interface: 
       return renderer(TypePage, props);
-    }
-    default: {
+    
+    default: 
       return renderer(DefaultPage, props);
-    }
+    
   }
 };

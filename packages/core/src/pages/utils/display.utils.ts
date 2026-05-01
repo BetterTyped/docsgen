@@ -1,4 +1,5 @@
-import { JSONOutput, ReflectionKind } from "typedoc";
+import type { JSONOutput} from "typedoc";
+import { ReflectionKind } from "typedoc";
 
 import { isMethod } from "./methods.utils";
 import { getTags } from "pages/handlers/tags";
@@ -16,7 +17,7 @@ export const parens = (element: string, needsParens?: boolean) => {
 };
 
 export const objectToString = (value: Record<string, StringType> | string, level = 0) => {
-  if (typeof value === "string") return value;
+  if ("string" === typeof value) {return value;}
   const addIndent = (spaces: number) => {
     let strOutput = "";
     for (let i = 0; i < spaces; i += 1) {
@@ -27,7 +28,7 @@ export const objectToString = (value: Record<string, StringType> | string, level
   let strOutput = "";
 
   Object.keys(value).forEach((key) => {
-    if (typeof value[key] === "object") {
+    if ("object" === typeof value[key]) {
       strOutput += `${addIndent(level + 1) + key}: `;
       strOutput += `${objectToString(value[key], level + 1)};\n`;
     } else {
@@ -35,7 +36,7 @@ export const objectToString = (value: Record<string, StringType> | string, level
     }
   });
 
-  return `{\n${strOutput}${addIndent(level - 1)}${addIndent(level)}}`.replace(/"/g, "");
+  return `{\n${strOutput}${addIndent(level - 1)}${addIndent(level)}}`.replaceAll(/"/g, "");
 };
 
 // eslint-disable-next-line tree-shaking/no-side-effects-in-initialization
@@ -121,5 +122,5 @@ export const getSortedChildren = (
 
       return -1;
     })
-    .filter((element) => element.name !== "constructor");
+    .filter((element) => "constructor" !== element.name);
 };

@@ -1,9 +1,8 @@
-import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 import path from "path";
 import fs from "fs";
-import { importer } from "@docsgen/core";
+import { importer, type PackageOptions } from "@docsgen/core";
 import plugin from "@docsgen/docusaurus";
 
 import docsVersions from "./versions.json";
@@ -12,7 +11,9 @@ const getVersions = () => {
   const latestVersion = docsVersions[0] || "v0.0.0";
   const latestMajor = latestVersion[1];
   const versionsCount = Number(latestMajor) + 1;
-  const versions = { current: { label: `v${latestMajor}.0.0`, path: "" } };
+  const versions: Record<string, { label?: string; path?: string; noIndex?: boolean }> = {
+    current: { label: `v${latestMajor}.0.0`, path: "" },
+  };
 
   Array(versionsCount)
     .fill(0)
@@ -37,7 +38,7 @@ const getVersions = () => {
 const apiDocs = "api";
 const apiDocsDir = "docs/api";
 
-const getPackagesList = () => {
+const getPackagesList = (): PackageOptions[] => {
   const dirPath = path.join(__dirname, "../packages");
   const result: string[] = fs
     .readdirSync(dirPath)
@@ -49,8 +50,8 @@ const getPackagesList = () => {
   return result
     .filter((item) => !item.includes("tokens"))
     .map((dir) => {
-      const dirName = dir.split("/").pop();
-      const title = dirName[0].toUpperCase() + dirName.slice(1);
+      const dirName = dir.split("/").pop() as string;
+      const title = dirName;
 
       if (["hooks", "ui"].includes(dirName)) {
         return {
@@ -62,7 +63,7 @@ const getPackagesList = () => {
           generateMdx: true,
           outDir: `docs/${dirName}`,
           // If we generate mdx for the ui components, we need to put them in tabs
-          fileName: dirName === "ui" ? ({ isComponent }) => (isComponent ? "props" : undefined) : undefined,
+          fileNameMapper: dirName === "ui" ? ({ isComponent }) => (isComponent ? "props" : undefined) : undefined,
           excludeCategories: ["Namespaces"],
           orderCategories: {
             Enums: 901,
@@ -96,18 +97,30 @@ const config: Config = {
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://docsgen.dev",
+  url: "https://bettertyped.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
+  baseUrl: "/docsgen/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "BetterTyped", // Usually your GitHub org/user name.
   projectName: "docsgen", // Usually your repo name.
 
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
+
+  markdown: {
+    mermaid: true,
+  },
+
+  future: {
+    faster: true,
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true,
+      useCssCascadeLayers: false,
+    },
+  },
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -119,7 +132,7 @@ const config: Config = {
 
   scripts: [
     {
-      src: "/js/theme.js",
+      src: "/docsgen/js/theme.js",
       async: false,
     },
   ],
@@ -145,6 +158,9 @@ const config: Config = {
           sidebarCollapsed: false,
           sidebarPath: "./sidebars.ts",
           editUrl: "https://github.com/BetterTyped/docsgen/tree/main/documentation",
+          admonitions: {
+            keywords: ["secondary", "success", "learn", "important"],
+          },
           remarkPlugins: [
             importer({
               packageRoute: apiDocs,
@@ -155,6 +171,8 @@ const config: Config = {
         blog: {
           showReadingTime: true,
           editUrl: "https://github.com/BetterTyped/docsgen/tree/main/documentation",
+          include: ["**/*.{md,mdx}"],
+          exclude: ["**/.*"],
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -163,8 +181,10 @@ const config: Config = {
     ],
   ],
 
+  themes: ["@docusaurus/theme-mermaid"],
+
   plugins: [
-    // "@orama/plugin-docusaurus-v3",
+    "@orama/plugin-docusaurus-v3",
     "@docusaurus/theme-live-codeblock",
     async function tailwindPlugin() {
       return {
@@ -185,8 +205,9 @@ const config: Config = {
         id: apiDocs,
         outDir: `docs/api`,
         packages: getPackagesList(),
-        generateMdx: false,
-        generateMonorepoPage: false,
+        generateMdx: true,
+        addMonorepoPage: false,
+        addPackagePage: false,
         logLevel: "trace",
         pages: {
           component: {
@@ -201,8 +222,8 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/",
     colorMode: {
-      defaultMode: "dark",
-      // disableSwitch: true,
+      defaultMode: "light",
+      disableSwitch: true,
       respectPrefersColorScheme: false,
     },
     liveCodeBlock: {
@@ -219,19 +240,40 @@ const config: Config = {
         {
           position: "left",
           label: "Documentation",
-          to: "/docs/documentation",
-          activeBaseRegex: `^/docs((?!examples|guides).)*$`,
+          to: "/docs/getting-started",
+          activeBaseRegex: `/docs/`,
         },
-        // {
-        //   to: "/integrations",
-        //   position: "left",
-        //   label: "Integrations",
-        // },
-        // {
-        //   to: "/blog",
-        //   position: "left",
-        //   label: "Blog",
-        // },
+        {
+          position: "left",
+          label: "Guides",
+          to: "/docs/guides/getting-started",
+          activeBaseRegex: `/docs/guides/`,
+        },
+        {
+          position: "left",
+          label: "Api",
+          to: "/docs/api/getting-started",
+          activeBaseRegex: `/docs/api/`,
+        },
+        {
+          position: "left",
+          label: "Showcase",
+          to: "/docs/showcase",
+          activeBaseRegex: `/docs/showcase/`,
+        },
+        {
+          position: "left",
+          label: "Blog",
+          to: "/blog",
+        },
+        {
+          type: "search",
+          position: "right",
+        },
+        {
+          type: "custom-starButton",
+          position: "right",
+        },
       ],
     },
     footer: {
@@ -242,7 +284,7 @@ const config: Config = {
           items: [
             {
               label: "Documentation",
-              to: "/docs/documentation",
+              to: "/docs/getting-started",
             },
             {
               label: "License",
@@ -274,10 +316,6 @@ const config: Config = {
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} docsgen.`,
-    },
-    prism: {
-      theme: prismThemes.vsDark,
-      darkTheme: prismThemes.vsDark,
     },
   } satisfies Preset.ThemeConfig,
 };

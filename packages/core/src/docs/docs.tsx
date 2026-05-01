@@ -1,12 +1,13 @@
 import path from "path";
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 import { readJsonSync } from "fs-extra";
 
-import { PluginOptions, PkgMeta } from "../types/package.types";
+import type { PluginOptions, PkgMeta } from "../types/package.types";
 import { pluginOptionsPath, packageConfigPath } from "../constants/paths.constants";
 import { cleanFileName } from "../parsing/generator/utils/file.utils";
 import { getPackageDocsPath } from "../parsing/generator/utils/package.utils";
-import { DocsComponents, getComponent, GetComponentProps } from "importer/components/component-map.utils";
+import type { DocsComponents, GetComponentProps } from "importer/components/component-map.utils";
+import { getComponent } from "importer/components/component-map.utils";
 import { getFile, getMatchingElement } from "importer/utils/docs.utils";
 
 // TODO FIGURE OUT HOW TO MAKE THIS WORK
@@ -41,7 +42,7 @@ export const Docs = (
   }
 
   const packagesNames = pluginOptions.packages.map((pkg) => cleanFileName(pkg.title));
-  const isMonorepo = pluginOptions.packages.length > 1;
+  const isMonorepo = 1 < pluginOptions.packages.length;
 
   const reflectionsMap: { name: string; reflection: JSONOutput.ProjectReflection }[] = pluginOptions.packages.map(
     (pkg) => {
@@ -63,7 +64,7 @@ export const Docs = (
     throw new Error(`Cannot find package options for ${packageName}`);
   }
 
-  if (!reflectionsMap.length) {
+  if (reflectionsMap.length === 0) {
     throw new Error(`Cannot existing docs.json reflection files`);
   }
 

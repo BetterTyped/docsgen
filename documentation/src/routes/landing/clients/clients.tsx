@@ -1,16 +1,15 @@
 import { useEffect } from "react";
-import { Particles } from "@site/src/components/particles";
 import Swiper, { Autoplay } from "swiper";
-
-import Client01 from "../../../../static/img/client-01.svg";
-import Client02 from "../../../../static/img/client-02.svg";
-import Client03 from "../../../../static/img/client-03.svg";
-import Client04 from "../../../../static/img/client-04.svg";
-import Client05 from "../../../../static/img/client-05.svg";
-import Client06 from "../../../../static/img/client-06.svg";
-
+import { Particles } from "@site/src/components/particles";
+import Client01 from "@site/static/img/client-01.svg";
+import Client02 from "@site/static/img/client-02.svg";
+import Client03 from "@site/static/img/client-03.svg";
+import Client04 from "@site/static/img/client-04.svg";
+import Client05 from "@site/static/img/client-05.svg";
+import Client06 from "@site/static/img/client-06.svg";
 import "swiper/swiper.min.css";
 
+// eslint-disable-next-line react-hooks/rules-of-hooks
 Swiper.use([Autoplay]);
 
 export const Clients = () => {
@@ -34,13 +33,13 @@ export const Clients = () => {
   }, []);
 
   return (
-    <section className="container mx-auto px-4 sm:px-6 flex flex-col justify-center h-[220px]">
-      <div className="text-center text-base mb-10 max-w-[460px] mx-auto font-normal">
+    <section className="container max-w-4xl mx-auto px-4 sm:px-6 flex flex-col justify-center h-[220px]">
+      <div className="text-center text-base mb-10 max-w-[460px] mx-auto font-normal !text-gray-400">
         Companies that use{" "}
-        <a href="https://bettertyped.com" className="text-blue-500 font-semibold">
+        <a href="https://bettertyped.com" className="font-medium text-gray-400">
           BetterTyped
         </a>{" "}
-        software.
+        open-source software.
       </div>
       <div className="relative h-[60px]">
         {/* Particles animation */}
@@ -55,22 +54,22 @@ export const Clients = () => {
             <div className="swiper-wrapper !ease-linear select-none items-center">
               {/* Carousel items */}
               <div className="swiper-slide !w-auto">
-                <Client01 className="w-[100px] h-auto max-h-[30px] object-cover fill-slate-700 dark:fill-slate-300" />
+                <Client01 className="w-[100px] h-auto max-h-[30px] object-cover fill-zinc-700 dark:fill-zinc-300" />
               </div>
               <div className="swiper-slide !w-auto">
-                <Client02 className="w-[100px] h-auto max-h-[30px] object-cover fill-slate-700 dark:fill-slate-300" />
+                <Client02 className="w-[100px] h-auto max-h-[30px] object-cover fill-zinc-700 dark:fill-zinc-300" />
               </div>
               <div className="swiper-slide !w-auto">
-                <Client03 className="w-[100px] h-auto max-h-[30px] object-cover fill-slate-700 dark:fill-slate-300" />
+                <Client03 className="w-[100px] h-auto max-h-[30px] object-cover fill-zinc-700 dark:fill-zinc-300" />
               </div>
               <div className="swiper-slide !w-auto">
-                <Client04 className="w-[100px] h-auto max-h-[30px] object-cover fill-slate-700 dark:fill-slate-300" />
+                <Client04 className="w-[100px] h-auto max-h-[30px] object-cover fill-zinc-700 dark:fill-zinc-300" />
               </div>
               <div className="swiper-slide !w-auto">
-                <Client05 className="w-[100px] h-auto max-h-[30px] object-cover fill-slate-700 dark:fill-slate-300" />
+                <Client05 className="w-[100px] h-auto max-h-[30px] object-cover fill-zinc-700 dark:fill-zinc-300" />
               </div>
               <div className="swiper-slide !w-auto">
-                <Client06 className="w-[100px] h-auto max-h-[30px] object-cover fill-slate-700 dark:fill-slate-300" />
+                <Client06 className="w-[100px] h-auto max-h-[30px] object-cover fill-zinc-700 dark:fill-zinc-300" />
               </div>
             </div>
           </div>

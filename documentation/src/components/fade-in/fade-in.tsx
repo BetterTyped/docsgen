@@ -1,71 +1,50 @@
-import React from "react";
-import { useActors, useMakeup, Stage, StyleOptions } from "@react-theater/scroll";
-
-const FadeInContent = ({
-  children,
-  start = 0.05,
-  end = 0.25,
-  translateY = 50,
-  setActorStyle,
-}: {
-  children: React.ReactNode;
-  start?: number;
-  end?: number;
-  translateY?: number;
-  setActorStyle: (style: StyleOptions) => void;
-}) => {
-  // Change
-  useActors([
-    {
-      start: 0,
-      end: start,
-      screen: true,
-      onUpdate: () => {
-        setActorStyle({
-          opacity: 0,
-        });
-      },
-    },
-    {
-      start,
-      end,
-      screen: true,
-      onUpdate: ({ progress }) => {
-        setActorStyle({
-          opacity: progress,
-          translateY: `${translateY - translateY * progress}px`,
-        });
-      },
-    },
-  ]);
-
-  return children;
-};
+import React, { useEffect, useRef, useState } from "react";
 
 export const FadeIn = ({
   children,
-  start,
-  end,
-  translateY,
   className,
-  isStage = true,
+  translateY = 30,
+  delay = 0,
   ...rest
 }: {
   children: React.ReactNode;
-  start?: number;
-  end?: number;
   translateY?: number;
-  isStage?: boolean;
+  delay?: number;
 } & React.HTMLProps<HTMLDivElement>) => {
-  const [actorRef, setActorStyle] = useMakeup();
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
 
-  const Component = isStage ? Stage : "div";
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.1 },
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <Component {...rest} ref={actorRef} className={`${className || ""} opacity-0 will-change-transform`}>
-      <FadeInContent start={start} end={end} translateY={translateY} setActorStyle={setActorStyle}>
-        {children}
-      </FadeInContent>
-    </Component>
+    <div
+      {...rest}
+      ref={ref}
+      className={className}
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0)" : `translateY(${translateY}px)`,
+        transition: `opacity 0.6s ease ${delay}s, transform 0.6s ease ${delay}s`,
+        ...rest.style,
+      }}
+    >
+      {children}
+    </div>
   );
 };

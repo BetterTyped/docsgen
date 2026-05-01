@@ -1,0 +1,392 @@
+---
+sidebar_position: 3
+title: Monorepo Documentation
+sidebar_label: Monorepo
+---
+
+# Monorepo Documentation
+
+---
+
+This guide covers setting up docsgen for a monorepo with multiple packages. You will learn how to discover
+packages dynamically, configure per-package overrides, take advantage of cross-package type linking, and
+organize the sidebar for a multi-package documentation site.
+
+---
+
+:::tip Purpose
+
+1. **Dynamic discovery** - Automatically find and document all packages in a monorepo.
+2. **Per-package config** - Override settings like categories and mappers for individual packages.
+3. **Cross-package linking** - Understand how types referenced across packages are resolved.
+4. **Sidebar organization** - Structure the sidebar for multiple packages cleanly.
+
+:::
+
+---
+
+## Project Structure
+
+This guide assumes a monorepo layout like this:
+
+```
+my-monorepo/
+  packages/
+    core/
+      src/index.ts
+      tsconfig.json
+    react/
+      src/index.ts
+      tsconfig.json
+    cli/
+      src/index.ts
+      tsconfig.json
+  documentation/
+    docusaurus.config.ts
+    sidebars.ts
+    docs/
+```
+
+The tooling (Nx, Turborepo, Lerna, npm workspaces) does not matter. docsgen only needs the path to each
+package directory and its TypeScript entry point.
+
+---
+
+## Step 1 - Dynamic Package Discovery
+
+Instead of listing every package manually, scan the `packages/` directory at config time:
+
+```typescript
+import path from "path";
+import fs from "fs";
+
+const getPackagesList = () => {
+  const dirPath = path.join(__dirname, "../packages");
+  return fs
+    .readdirSync(dirPath)
+    .filter((name) => !name.startsWith("."))
+    .map((dirName) => ({
+      title: dirName,
+      dir: path.join(dirPath, dirName),
+      entryPath: "src/index.ts",
+      tsconfigDir: path.join(dirPath, dirName),
+    }));
+};
+```
+
+This returns one entry per package folder. When you add a new package, it is picked up automatically
+on the next build.
+
+---
+
+## Step 2 - Plugin Configuration
+
+Use the discovered packages in the plugin config:
+
+```typescript
+import plugin from "@docsgen/docusaurus";
+
+const config = {
+  plugins: [
+    [
+      "@docsgen/docusaurus",
+      {
+        id: "api",
+        outDir: "docs/api",
+        // highlight-next-line
+        packages: getPackagesList(),
+        addMonorepoPage: true,
+        addPackagePage: true,
+      } satisfies Parameters<typeof plugin>[1],
+    ],
+  ],
+};
+```
+
+| Option | Effect |
+| --- | --- |
+| `addMonorepoPage` | Generates a root `index.mdx` that lists all packages as a card grid. |
+| `addPackagePage` | Generates an `index.mdx` per package from its README. |
+
+---
+
+## Step 3 - Per-Package Overrides
+
+Each entry in the `packages` array accepts the full `PackageOptions`. Common overrides for monorepos:
+
+```typescript
+const getPackagesList = () => {
+  const dirPath = path.join(__dirname, "../packages");
+  return fs
+    .readdirSync(dirPath)
+    .filter((name) => !name.startsWith("."))
+    .map((dirName) => {
+      const base = {
+        title: dirName,
+        dir: path.join(dirPath, dirName),
+        entryPath: "src/index.ts",
+        tsconfigDir: path.join(dirPath, dirName),
+      };
+
+      // highlight-start
+      if (dirName === "react") {
+        return {
+          ...base,
+          kindMapper: ({ kind, reflection }) => {
+            if (kind === "Functions" && reflection.name.startsWith("use")) {
+              return "Hooks";
+            }
+            return kind;
+          },
+          orderCategories: {
+            Hooks: 1,
+            Components: 2,
+            Types: 3,
+          },
+        };
+      }
+      // highlight-end
+
+      return base;
+    });
+};
+```
+
+This moves functions starting with `use` into a "Hooks" category for the `react` package only, while
+other packages keep the default category structure.
+
+:::note Common per-package overrides
+
+- **`kindMapper`** - Remap categories (e.g., Functions to Hooks for React packages).
+- **`orderCategories`** - Control sidebar order per package.
+- **`excludeCategories`** - Hide entire categories (default: `["Namespaces"]`).
+- **`description`** - Package description shown on the monorepo index page.
+- **`logo`** - Path to a package logo for the monorepo index page.
+- **`showImports`** - Disable import statement generation for internal packages.
+- **`generateMdx`** - Skip MDX generation for specific packages.
+
+:::
+
+---
+
+## Step 4 - Cross-Package Type Linking
+
+When a function in one package returns a type from another package, docsgen resolves the reference
+automatically. For example:
+
+```typescript
+// packages/react/src/use-client.ts
+import { Client } from "@mylib/core";
+
+/**
+ * React hook that provides a configured Client instance.
+ * @returns The Client instance from the nearest provider
+ */
+export function useClient(): Client {
+  // ...
+}
+```
+
+In the generated docs for `useClient`, the return type `Client` links to the `Client` page under the
+`core` package documentation. This works because each package's `apiGenerator` receives the TypeDoc
+reflections from all packages, not just its own.
+
+No configuration is required. Cross-package linking works out of the box as long as all packages are
+included in the `packages` array.
+
+---
+
+## Step 5 - Sidebar Configuration
+
+For monorepos, a dedicated API sidebar keeps generated content separate from hand-written docs:
+
+```typescript
+const sidebars = {
+  docs: [{ type: "autogenerated", dirName: "guides" }],
+  // highlight-start
+  api: [{ type: "autogenerated", dirName: "api" }],
+  // highlight-end
+};
+```
+
+The generated sidebar will look like:
+
+```
+API
+  Overview (monorepo index)
+  core/
+    Overview (package README)
+    Classes/
+    Functions/
+    Types/
+  react/
+    Overview
+    Hooks/
+    Components/
+    Types/
+  cli/
+    Overview
+    Functions/
+    Types/
+```
+
+See the [Sidebar Configuration](/docs/guides/docusaurus/sidebar-setup) guide for more advanced layouts.
+
+---
+
+## Step 6 - Add the Importer
+
+Configure the importer to embed API fragments from any package:
+
+```typescript
+import { importer } from "@docsgen/core";
+
+const config = {
+  presets: [
+    [
+      "classic",
+      {
+        docs: {
+          remarkPlugins: [
+            importer({
+              packageRoute: "api",
+              apiDir: "docs/api",
+            }),
+          ],
+        },
+      },
+    ],
+  ],
+};
+```
+
+Then reference any package by its title in `@import` directives:
+
+```markdown
+## Core Client
+
+(@import core Client type=methods&display=table)
+
+## React Hooks
+
+(@import react useClient type=returns)
+```
+
+---
+
+## Complete Example
+
+```typescript
+import { importer } from "@docsgen/core";
+import plugin from "@docsgen/docusaurus";
+import type { Config } from "@docusaurus/types";
+import type * as Preset from "@docusaurus/preset-classic";
+import path from "path";
+import fs from "fs";
+
+const apiDocs = "api";
+const apiDocsDir = "docs/api";
+
+const getPackagesList = () => {
+  const dirPath = path.join(__dirname, "../packages");
+  return fs
+    .readdirSync(dirPath)
+    .filter((name) => !name.startsWith("."))
+    .map((dirName) => ({
+      title: dirName,
+      dir: path.join(dirPath, dirName),
+      entryPath: "src/index.ts",
+      tsconfigDir: path.join(dirPath, dirName),
+    }));
+};
+
+const config: Config = {
+  title: "My Library",
+  url: "https://my-library.dev",
+  baseUrl: "/",
+
+  presets: [
+    [
+      "classic",
+      {
+        docs: {
+          sidebarPath: "./sidebars.ts",
+          remarkPlugins: [
+            importer({
+              packageRoute: apiDocs,
+              apiDir: apiDocsDir,
+            }),
+          ],
+        },
+      } satisfies Preset.Options,
+    ],
+  ],
+
+  plugins: [
+    [
+      "@docsgen/docusaurus",
+      {
+        id: apiDocs,
+        outDir: apiDocsDir,
+        packages: getPackagesList(),
+        addMonorepoPage: true,
+        addPackagePage: true,
+        logLevel: "info",
+      } satisfies Parameters<typeof plugin>[1],
+    ],
+  ],
+};
+
+export default config;
+```
+
+---
+
+## Output Structure
+
+After building, the generated output looks like:
+
+```
+docs/api/
+  options.json
+  index.mdx                  # Monorepo index with all packages
+  core/
+    docs.json
+    package-config.json
+    index.mdx                # From core/README.md
+    Classes/
+      Client.mdx
+    Functions/
+      createClient.mdx
+    Types/
+      ClientOptions.mdx
+  react/
+    docs.json
+    package-config.json
+    index.mdx
+    Hooks/
+      useClient.mdx
+      useFetch.mdx
+    Types/
+      ...
+  cli/
+    docs.json
+    package-config.json
+    index.mdx
+    Functions/
+      ...
+```
+
+Each package gets its own subdirectory with category folders, and the monorepo index links to all of them.
+
+---
+
+:::secondary Summary
+
+You set up docsgen for a monorepo by dynamically discovering packages, applying per-package overrides,
+and configuring a dedicated API sidebar. Cross-package type linking works automatically. Use
+`addMonorepoPage` and `addPackagePage` to generate index pages, and the importer to embed API fragments
+from any package in your hand-written guides. See [Configuration](/docs/getting-started/configuration)
+for the full options reference.
+
+:::

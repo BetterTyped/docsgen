@@ -1,7 +1,7 @@
 import React from "react";
 
-import { DisplayType, HeadingType } from "../../types/components.types";
-import { PagePropsType } from "../../types/page.types";
+import type { DisplayType, HeadingType } from "../../types/components.types";
+import type { PagePropsType } from "../../types/page.types";
 import { getSignature } from "../utils/signature.utils";
 import { Parameter } from "./parameter";
 import { Table } from "../modules/table/table";
@@ -20,14 +20,14 @@ export const Parameters: React.FC<PagePropsType & ParametersProps> = (props) => 
   const { reflectionsTree, reflection, headingSize = "h2", display = "table", className = "" } = props;
   const signature = getSignature(reflection);
 
-  if (!signature?.parameters?.length) return null;
+  if (!signature?.parameters?.length) {return null;}
 
   const Heading = headingSize;
 
   const firstParam = signature.parameters[0];
   const children = isComponent(reflection) ? getTypes(reflectionsTree, firstParam) : signature.parameters;
 
-  if (display === "grid") {
+  if ("grid" === display) {
     return (
       <Grid
         className={`api-docs__parameters ${className}`}
@@ -39,7 +39,7 @@ export const Parameters: React.FC<PagePropsType & ParametersProps> = (props) => 
     );
   }
 
-  if (display === "table") {
+  if ("table" === display) {
     return (
       <Table
         className={`api-docs__parameters ${className}`}

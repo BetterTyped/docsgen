@@ -1,0 +1,307 @@
+---
+sidebar_position: 2
+title: Customizing Page Templates
+sidebar_label: Custom Pages
+---
+
+# Customizing Page Templates
+
+---
+
+docsgen generates a page for every exported symbol using built-in React templates. This guide shows you how
+to toggle individual sections, replace them with custom renderers, and override entire page templates to
+match your documentation style.
+
+---
+
+:::tip Purpose
+
+1. **Toggle sections** - Hide parts of a page you do not need (e.g., hide usage, hide imports).
+2. **Replace sections** - Swap a section with your own React component while keeping the rest.
+3. **Full override** - Replace an entire page template with a completely custom layout.
+4. **Access reflection data** - Use `PagePropsType` to build custom content from TypeDoc data.
+
+:::
+
+---
+
+## How Page Templates Work
+
+Each reflection kind (class, function, component, etc.) has a React template composed of named sections.
+When docsgen renders a symbol, it selects the template based on the kind, renders each section in order,
+and converts the result to MDX.
+
+The `pages` option in `PluginOptions` lets you customize each template:
+
+```typescript
+{
+  pages: {
+    class: { /* section overrides */ },
+    function: { /* section overrides */ },
+    component: { /* section overrides */ },
+    enum: { /* section overrides */ },
+    type: { /* section overrides */ },
+    var: { /* section overrides */ },
+    default: { /* section overrides */ },
+  },
+}
+```
+
+---
+
+## Available Sections by Kind
+
+| Kind | Sections |
+| --- | --- |
+| `class` | `mdx`, `intro`, `parameters`, `properties`, `methods`, `usage` |
+| `component` | `mdx`, `intro`, `usage`, `properties` |
+| `function` | `mdx`, `intro`, `usage`, `parameters`, `returns` |
+| `enum` | `mdx`, `intro`, `preview` |
+| `type` | `mdx`, `intro`, `preview`, `returns` |
+| `var` | `mdx`, `intro`, `preview`, `returns` |
+| `default` | `mdx`, `intro` |
+
+Every kind also supports a `custom` key for full page overrides.
+
+The `mdx` section controls frontmatter and sidebar metadata. The `intro` section includes the symbol name,
+description, source location, import statement, type definition, and npm install command.
+
+---
+
+## Toggling Sections
+
+Set a section to `false` to hide it entirely. The section will not appear in the generated MDX.
+
+### Example: Hide Usage and Methods on Class Pages
+
+```typescript
+{
+  pages: {
+    class: {
+      // highlight-start
+      usage: false,
+      methods: false,
+      // highlight-end
+    },
+  },
+}
+```
+
+This keeps the intro, parameters, and properties sections but removes usage examples and the methods list.
+
+### Example: Minimal Function Pages
+
+```typescript
+{
+  pages: {
+    function: {
+      // highlight-start
+      usage: false,
+      returns: false,
+      // highlight-end
+    },
+  },
+}
+```
+
+Function pages will only show the intro (name, description, signature) and parameters.
+
+---
+
+## Replacing a Section
+
+Pass a function instead of a boolean to replace a section with your own React component. The function
+receives `PagePropsType` and must return a React node.
+
+### Example: Custom Parameters Section
+
+```typescript
+{
+  pages: {
+    function: {
+      parameters: (props) => {
+        const { reflection } = props;
+        const params = reflection.signatures?.[0]?.parameters || [];
+
+        return (
+          <div>
+            <h2>Arguments</h2>
+            <ul>
+              {params.map((param) => (
+                <li key={param.name}>
+                  <code>{param.name}</code>
+                  {param.comment?.summary?.[0]?.text
+                    ? ` - ${param.comment.summary[0].text}`
+                    : ""}
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      },
+    },
+  },
+}
+```
+
+This replaces the default parameters table with a simple bulleted list. All other sections (intro, usage,
+returns) remain unchanged.
+
+### Example: Custom Intro with Badge
+
+```typescript
+{
+  pages: {
+    class: {
+      intro: (props) => {
+        const { reflection } = props;
+        const isDeprecated = reflection.comment?.blockTags?.some(
+          (tag) => tag.tag === "@deprecated"
+        );
+
+        return (
+          <>
+            <h1>{reflection.name}</h1>
+            {isDeprecated && (
+              <span style={{ color: "red", fontWeight: "bold" }}>
+                DEPRECATED
+              </span>
+            )}
+            {reflection.comment?.summary?.map((part, i) => (
+              <p key={i}>{part.text}</p>
+            ))}
+          </>
+        );
+      },
+    },
+  },
+}
+```
+
+---
+
+## Full Page Override
+
+Use the `custom` key to replace the entire template. When `custom` is set, all other section options
+are ignored.
+
+### Example: Minimal Function Page
+
+```typescript
+{
+  pages: {
+    function: {
+      custom: (props) => {
+        const { reflection, packageOptions } = props;
+        const sig = reflection.signatures?.[0];
+        const params = sig?.parameters || [];
+
+        return (
+          <>
+            <h1>{reflection.name}</h1>
+            {reflection.comment?.summary?.map((part, i) => (
+              <p key={i}>{part.text}</p>
+            ))}
+
+            <h2>Signature</h2>
+            <pre>
+              {reflection.name}({params.map((p) => p.name).join(", ")})
+            </pre>
+
+            {params.length > 0 && (
+              <>
+                <h2>Parameters</h2>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {params.map((param) => (
+                      <tr key={param.name}>
+                        <td><code>{param.name}</code></td>
+                        <td>
+                          {param.comment?.summary?.[0]?.text || ""}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </>
+            )}
+          </>
+        );
+      },
+    },
+  },
+}
+```
+
+This produces a page with just the name, description, signature, and a simple parameter table. No
+import statement, no npm command, no usage examples.
+
+---
+
+## PagePropsType Reference
+
+Every template and section function receives these properties:
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `reflection` | `JSONOutput.SomeReflection` | TypeDoc reflection data for this symbol. Contains name, kind, comment, signatures, children, and type information. |
+| `pluginOptions` | `PluginOptions` | Global plugin configuration. |
+| `packageOptions` | `PackageOptions` | Package-level configuration for this symbol's package. |
+| `reflectionsTree` | `ProjectReflection[]` | Full reflection trees for all packages (for cross-referencing). |
+| `npmName` | `string` | npm package name. |
+| `packageName` | `string` | Cleaned package title. |
+
+The `reflection` object is a standard TypeDoc JSON reflection. Key fields:
+
+- `reflection.name` - Symbol name
+- `reflection.comment` - JSDoc comment (summary, blockTags, modifierTags)
+- `reflection.signatures` - Function/method signatures (parameters, return type)
+- `reflection.children` - Child reflections (class members, enum members)
+- `reflection.type` - Type information
+
+---
+
+## Combining Approaches
+
+You can mix toggles, replacements, and defaults in the same configuration:
+
+```typescript
+{
+  pages: {
+    class: {
+      usage: false,
+      intro: (props) => (
+        <>
+          <h1>{props.reflection.name}</h1>
+          <p>{props.reflection.comment?.summary?.[0]?.text}</p>
+        </>
+      ),
+      // parameters, properties, methods use defaults
+    },
+    function: {
+      returns: false,
+      // intro, usage, parameters use defaults
+    },
+  },
+}
+```
+
+Sections you do not mention keep their default rendering. This lets you make targeted changes without
+rewriting entire templates.
+
+---
+
+:::secondary Summary
+
+Use `pages` in `PluginOptions` to customize generated page templates. Set sections to `false` to hide them,
+pass a function to replace them, or use `custom` to override the entire page. All customization functions
+receive `PagePropsType` with the full TypeDoc reflection data. For the complete section reference, see
+[Page Templates](/docs/core/page-templates).
+
+:::

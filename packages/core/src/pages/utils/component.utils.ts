@@ -1,4 +1,4 @@
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 
 import { getSignature } from "./signature.utils";
 
@@ -14,7 +14,8 @@ export const isComponent = (reflection: JSONOutput.SomeReflection) => {
   const hasComponentsTypes =
     signature &&
     "types" in signature &&
-    (signature?.types as JSONOutput.ReferenceType[]).every((type) => {
+    signature.types &&
+    (signature.types as JSONOutput.ReferenceType[]).every((type) => {
       return ["React.ReactNode", "JSX.Element", "ReactNode", "Element"].includes(type?.name);
     });
 

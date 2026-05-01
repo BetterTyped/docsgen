@@ -1,0 +1,370 @@
+---
+sidebar_position: 3
+title: Filtering and Organizing Output
+sidebar_label: Filtering & Organizing
+---
+
+# Filtering and Organizing Output
+
+---
+
+By default, docsgen generates a page for every exported symbol in your entry point. This guide shows you how
+to filter out symbols you do not want documented, remap categories to match your project's conventions,
+control sidebar ordering, and bundle supplementary documentation alongside generated pages.
+
+---
+
+:::tip Purpose
+
+1. **Exclude symbols** - Hide internal helpers, experimental APIs, or entire categories.
+2. **Remap categories** - Move symbols into custom categories like "Hooks" or "Utilities".
+3. **Control ordering** - Set consistent sidebar positions across all categories.
+4. **Custom names** - Change how file names and display names are generated.
+5. **Bundle extra docs** - Co-locate hand-written guides with generated pages using `@docs`.
+
+:::
+
+---
+
+## Excluding Symbols
+
+docsgen provides three ways to exclude symbols from generation, each suited to different scenarios.
+
+### The @exclude JSDoc Tag
+
+Add `@exclude` directly in your source code to skip a specific symbol:
+
+```typescript
+/**
+ * @exclude
+ */
+export function internalHelper() {
+  // Will not appear in generated docs
+}
+```
+
+:::note When to use @exclude
+
+- Internal utilities that are exported for testing but not part of the public API.
+- Temporary exports during a migration.
+- Symbols that are re-exported from another package (to avoid duplicates).
+
+:::
+
+### The exclude Predicate
+
+For programmatic filtering, use the `exclude` function in `PackageOptions`. It receives each reflection's
+kind and JSDoc tags:
+
+```typescript
+{
+  packages: [
+    {
+      title: "core",
+      dir: "../packages/core",
+      entryPath: "src/index.ts",
+      // highlight-start
+      exclude: ({ kind, tags }) => {
+        // Skip symbols tagged @internal
+        if (tags.some((tag) => tag.tag === "@internal")) return true;
+        // Skip all variables
+        if (kind === "Variables") return true;
+        return false;
+      },
+      // highlight-end
+    },
+  ],
+}
+```
+
+This is useful when you have many symbols to filter by a common pattern (tag, kind, or naming convention)
+without adding `@exclude` to every one.
+
+### excludeCategories
+
+To skip entire categories from generation:
+
+```typescript
+{
+  excludeCategories: ["Namespaces", "Variables"],
+}
+```
+
+The default is `["Namespaces"]`. This removes the category folder and all symbols in it.
+
+### Combining Approaches
+
+These three methods work together. A symbol is excluded if any of them matches:
+
+1. The symbol has an `@exclude` JSDoc tag.
+2. The `exclude` predicate returns `true`.
+3. The symbol's category is listed in `excludeCategories`.
+
+---
+
+## Remapping Categories with kindMapper
+
+By default, symbols are grouped into categories matching their TypeDoc kind: `Classes`, `Functions`,
+`Types`, `Enums`, `Variables`. Use `kindMapper` to remap them.
+
+### Example: Separate Hooks from Functions
+
+A common pattern for React packages is moving functions that start with `use` into a "Hooks" category:
+
+```typescript
+{
+  kindMapper: ({ kind, reflection }) => {
+    // highlight-start
+    if (kind === "Functions" && reflection.name.startsWith("use")) {
+      return "Hooks";
+    }
+    // highlight-end
+    return kind;
+  },
+}
+```
+
+This produces:
+
+```
+Functions/
+  createClient.mdx
+  formatDate.mdx
+Hooks/
+  useClient.mdx
+  useFetch.mdx
+  useQuery.mdx
+```
+
+### Example: Merge Interfaces into Types
+
+If you want interfaces and type aliases in the same category:
+
+```typescript
+{
+  kindMapper: ({ kind }) => {
+    if (kind === "Interfaces") return "Types";
+    return kind;
+  },
+}
+```
+
+---
+
+## Ordering Categories
+
+Use `orderCategories` to control sidebar positions. Lower numbers appear first:
+
+```typescript
+{
+  orderCategories: {
+    Classes: 1,
+    Hooks: 2,
+    Functions: 3,
+    Types: 4,
+    Enums: 5,
+    Variables: 6,
+  },
+}
+```
+
+This writes `_category_.json` files with the specified `position` value in each category folder. Docusaurus
+uses these files to sort sidebar items.
+
+Without explicit ordering, Docusaurus sorts categories alphabetically.
+
+---
+
+## Additional Categories
+
+Create category folders that do not come from TypeDoc output:
+
+```typescript
+{
+  additionalCategories: [
+    {
+      name: "Guides",
+      category: { label: "Guides", position: 0 },
+    },
+  ],
+}
+```
+
+This is useful when you want to mix hand-written guides into the generated API sidebar. The category
+folder is created with a `_category_.json` file, and you can place hand-written MDX files inside it.
+
+---
+
+## Custom File Names with fileNameMapper
+
+Control the output file name for each symbol. The function receives reflection metadata and returns a
+file name string, or `undefined` to use the default.
+
+### Example: Component Props Sub-pages
+
+```typescript
+{
+  fileNameMapper: ({ isComponent, name }) => {
+    // highlight-start
+    if (isComponent) return "props";
+    // highlight-end
+    return undefined;
+  },
+}
+```
+
+This generates component docs at `Components/Button/props.mdx` instead of `Components/Button.mdx`,
+which is useful when you want a sub-page structure for component documentation.
+
+### Example: Lowercase File Names
+
+```typescript
+{
+  fileNameMapper: ({ name }) => {
+    return name.toLowerCase();
+  },
+}
+```
+
+---
+
+## Custom Display Names with nameMapper
+
+Transform how symbol names appear in sidebar labels and page headings:
+
+```typescript
+{
+  nameMapper: ({ name }) => {
+    // Remove leading underscore from internal-style names
+    return name.replace(/^_/, "");
+  },
+}
+```
+
+This only affects the display name. The file name is controlled separately by `fileNameMapper`.
+
+---
+
+## Supplementary Docs with @docs
+
+The `@docs` JSDoc tag copies a folder of additional files into the generated output alongside the
+symbol's page. This lets you co-locate guides, images, and examples with your source code.
+
+### Source Code
+
+```typescript
+/**
+ * HTTP client with support for caching, queuing, and retries.
+ *
+ * @docs ./docs
+ */
+export class Client {}
+```
+
+### File Structure
+
+```
+packages/core/src/
+  client.ts
+  docs/
+    advanced-usage.mdx
+    migration-guide.mdx
+    architecture.png
+```
+
+### Generated Output
+
+```
+docs/api/core/Classes/Client/
+  Client.mdx              # Generated API page
+  advanced-usage.mdx      # Copied from source
+  migration-guide.mdx     # Copied from source
+  architecture.png        # Copied from source
+```
+
+The supplementary files appear in the sidebar alongside the generated page, and you can reference images
+from the generated MDX.
+
+:::note When @docs is helpful
+
+- Long-form tutorials that belong next to the class they document.
+- Architecture diagrams and images referenced from guides.
+- Migration guides that should travel with the code during refactors.
+- Examples that are too complex for `@example` JSDoc blocks.
+
+:::
+
+---
+
+## Practical Example: React Library
+
+Here is a complete configuration for a React component library that separates hooks, components, and
+utilities:
+
+```typescript
+{
+  packages: [
+    {
+      title: "ui-kit",
+      dir: "../packages/ui-kit",
+      entryPath: "src/index.ts",
+      tsconfigDir: "../packages/ui-kit",
+
+      kindMapper: ({ kind, reflection }) => {
+        if (kind === "Functions" && reflection.name.startsWith("use")) {
+          return "Hooks";
+        }
+        return kind;
+      },
+
+      orderCategories: {
+        Hooks: 1,
+        Components: 2,
+        Types: 3,
+        Functions: 4,
+      },
+
+      excludeCategories: ["Namespaces", "Variables"],
+
+      exclude: ({ tags }) => {
+        return tags.some((tag) => tag.tag === "@internal");
+      },
+
+      fileNameMapper: ({ isComponent, name }) => {
+        if (isComponent) return "props";
+        return undefined;
+      },
+    },
+  ],
+}
+```
+
+This produces a clean sidebar:
+
+```
+Hooks/
+  useTheme.mdx
+  useModal.mdx
+Components/
+  Button/
+    props.mdx
+  Modal/
+    props.mdx
+Types/
+  ButtonProps.mdx
+  ModalProps.mdx
+Functions/
+  formatColor.mdx
+```
+
+---
+
+:::secondary Summary
+
+Use `@exclude`, `exclude`, and `excludeCategories` to filter symbols. Use `kindMapper` to remap categories,
+`orderCategories` to control sidebar order, and `fileNameMapper`/`nameMapper` to customize file and display
+names. The `@docs` tag bundles supplementary documentation alongside generated pages. For the full options
+reference, see [Customization](/docs/getting-started/customization) and
+[Configuration](/docs/getting-started/configuration).
+
+:::

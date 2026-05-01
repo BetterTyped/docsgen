@@ -1,14 +1,7 @@
 {
   "files": [],
   "references": [
-    {
-      "path": "./packages/core"
-    },
-    {
-      "path": "./packages/docusaurus"
-    },
-    {
-      "path": "./packages/playground"
-    },
+    { "path": "./packages/core" },
+    { "path": "./packages/docusaurus" }
   ]
 }

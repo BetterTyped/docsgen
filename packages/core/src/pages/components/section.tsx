@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOMServer from "react-dom/server";
 
-import { HeadingType } from "../../types/components.types";
-import { PagePropsType } from "types/page.types";
+import type { HeadingType } from "../../types/components.types";
+import type { PagePropsType } from "types/page.types";
 
 const isChildNull = (children: React.ReactElement) => {
   return !ReactDOMServer.renderToStaticMarkup(children);
@@ -31,11 +31,11 @@ export const Section: React.FC<{ children: React.ReactNode } & SectionType> = ({
   headingSize = "h2",
   render,
 }) => {
-  if (render === false) {
+  if (false === render) {
     return null;
   }
 
-  if (typeof render === "function") {
+  if ("function" === typeof render) {
     return render(props);
   }
 

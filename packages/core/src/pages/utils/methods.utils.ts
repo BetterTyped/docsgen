@@ -1,4 +1,5 @@
-import { JSONOutput, ReflectionKind } from "typedoc";
+import type { JSONOutput} from "typedoc";
+import { ReflectionKind } from "typedoc";
 
 import { getReference } from "./reference.utils";
 import { getTags } from "pages/handlers";
@@ -8,14 +9,14 @@ const isFunctionReflection = (
   reflectionsTree: JSONOutput.ProjectReflection[],
 ): boolean => {
   if (
-    typeof reflection.type === "object" &&
+    "object" === typeof reflection.type &&
     "target" in reflection.type &&
     reflection.type.target &&
     "name" in reflection.type
   ) {
     const referenceType = getReference(reflectionsTree, reflection.type);
 
-    if (referenceType?.type?.type === "conditional") {
+    if ("conditional" === referenceType?.type?.type) {
       if (referenceType.type?.trueType && isFunctionReflection(referenceType.type.trueType, reflectionsTree)) {
         return true;
       }
@@ -31,7 +32,7 @@ const isFunctionReflection = (
     }
   }
   if (
-    typeof reflection.type === "object" &&
+    "object" === typeof reflection.type &&
     reflection?.type &&
     "declaration" in reflection.type &&
     reflection.type.declaration
@@ -76,7 +77,7 @@ export const getMethods = (
         return -1;
       })
       // TODO add separate component for constructor
-      .filter((element) => element.name !== "constructor")
+      .filter((element) => "constructor" !== element.name)
       .filter((element) => {
         return isMethod(element, reflectionsTree);
       })

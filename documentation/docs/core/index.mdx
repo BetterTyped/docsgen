@@ -1,23 +1,108 @@
 ---
 sidebar_position: 1
-title: Intro
-sidebar_label: Intro
-hide_table_of_contents: true
+title: Overview
+sidebar_label: Overview
 ---
 
-import { PackageDetails } from "@site/src/components";
+# Docsgen
 
-<PackageDetails pkg="@docsgen/core" />
+---
 
-# Docgen
+> The core engine that powers docsgen. It handles TypeScript parsing via TypeDoc, renders structured API pages
+> through React templates, transforms HTML to MDX, and provides the `importer` remark plugin for embedding
+> API fragments in hand-written docs.
 
-> Docgen is a tool for generating documentation from TypeScript source code. It is designed to support additional
-> semi-automated way of creating documentation by importing parts of the generated output for amazing DX.
+---
 
-:::note Work in progress
+## Public API
 
-Please note that this documentation is a work in progress and we will be adding more modules soon. Until this time you
-can check the [source code](https://github.com/BetterTyped/docsgen) for more information. In case of any questions
-[contact us](mailto:maciekpyrc@gmail.com).
+The package exports the following from its entry point:
+
+| Export     | Description                                                                                                  |
+| ---------- | ------------------------------------------------------------------------------------------------------------ |
+| `generate` | Main function that orchestrates the full documentation generation pipeline. Called by `@docsgen/docusaurus`. |
+| `importer` | Remark plugin factory for `@import` directives in MDX.                                                       |
+| `name`     | Plugin name constant (`"docgen"`).                                                                           |
+| Types      | `PluginOptions`, `PackageOptions`, `PkgMeta`, `PagePropsType`, `PackagePages`, and more.                     |
+| Pages      | All page templates, section components, and rendering utilities.                                             |
+
+---
+
+## Architecture
+
+The generation pipeline flows through these stages:
+
+1. **TypeDoc Parsing** - `parseTypescriptToJson` bootstraps TypeDoc with your configuration, converts TypeScript
+   source to a project reflection, and writes `docs.json`.
+
+2. **API Generation** - `apiGenerator` iterates the reflection tree, filters excluded symbols, determines the
+   reflection kind (class, function, component, enum, type, variable), and delegates to the page renderer.
+
+3. **Page Rendering** - `pageRenderer` selects the appropriate React page template based on the symbol kind.
+   The template is rendered to HTML via `renderToString`.
+
+4. **MDX Transformation** - `transformMarkdown` converts the HTML output to clean MDX with YAML frontmatter
+   for Docusaurus sidebar integration.
+
+5. **File Writing** - MDX files, `_category_.json` sidecars, and metadata files (`options.json`,
+   `package-config.json`) are written to the output directory.
+
+---
+
+## Component Detection
+
+docsgen automatically detects React components by checking if a function's return type includes `ReactNode`,
+`JSX.Element`, `ReactElement`, or similar React types. Detected components use the `ComponentPage` template
+instead of `FunctionPage`, which includes a Props section with table and detail views.
+
+---
+
+## Cross-package Resolution
+
+In monorepo setups, each package's `apiGenerator` receives the TypeDoc JSON reflections from **all** packages,
+not just its own. This means type references that cross package boundaries (e.g., a function in `@mylib/react`
+returning a type from `@mylib/core`) can be resolved and linked correctly in the generated docs.
+
+---
+
+## Watch Mode
+
+Setting `watch: true` enables TypeDoc's `convertAndWatch` mode. When source files change, TypeDoc automatically
+regenerates the JSON reflection, and docsgen re-renders the MDX pages. This is useful during development with
+`docusaurus start` for live-reloading documentation as you edit code.
+
+---
+
+## README-based Package Pages
+
+When `addPackagePage` is `true` (the default), docsgen generates an `index.mdx` for each package from its
+README file. The README path is resolved from `PackageOptions.readmeDir` + `PackageOptions.readmeName`
+(defaulting to `README.md` in the package root). If no README is found, a placeholder "Overview" page is
+created instead.
+
+---
+
+## Monorepo Index Page
+
+When documenting multiple packages with `addMonorepoPage: true`, docsgen generates a root `index.mdx` that
+lists all packages as a card grid. Each card shows the package title, optional logo, and links to the
+package's documentation folder.
+
+---
+
+## When to Use @docsgen/core Directly
+
+Most users interact with `@docsgen/core` indirectly through `@docsgen/docusaurus`. You would import from
+`@docsgen/core` directly when:
+
+- Using the `importer` remark plugin in your Docusaurus config
+- Writing custom page templates using the exported page components
+- Building a custom integration outside of Docusaurus
+- Accessing type definitions for configuration
+
+:::secondary Next steps
+
+- See [Page Templates](/docs/core/page-templates) for details on built-in templates and customization.
+- See [TypeDoc Integration](/docs/core/typedoc-integration) for how TypeDoc is configured under the hood.
 
 :::

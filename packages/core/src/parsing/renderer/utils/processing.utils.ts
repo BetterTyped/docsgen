@@ -10,7 +10,7 @@ import { pretty } from "./html.prettify";
  * Processing
  */
 const sanitizeHtmlComments = (html: string) => {
-  return html.replace(/(<!--.*?-->)|(<!--[\S\s]+?-->)|(<!--[\S\s]*?$)/g, "");
+  return html.replaceAll(/(<!--.*?-->)|(<!--[\S\s]+?-->)|(<!--[\S\s]*?$)/g, "");
 };
 
 const transformCode = (html: string) => {
@@ -22,10 +22,10 @@ const transformCode = (html: string) => {
  */
 const changeCodeTags = (html: string) => {
   return html
-    .replace(/<pre>(.|\n)*?<\/pre>/g, (match) => {
+    .replaceAll(/<pre>(.|\n)*?<\/pre>/g, (match) => {
       return `\n\n${transformCode(match)}\n\n`;
     })
-    .replace(/<code>(.|\n)*?<\/code>/g, (match) => {
+    .replaceAll(/<code>(.|\n)*?<\/code>/g, (match) => {
       return `\n${transformCode(match)}\n`;
     });
 };
@@ -59,21 +59,22 @@ const parseHtml = (html: string) => {
 const transform = (html: string) => {
   const parsedHtml = parseHtml(html);
 
-  const h1 = parsedHtml.getElementsByTagName("h1") as unknown as HTMLElement[];
-  const h2 = parsedHtml.getElementsByTagName("h2") as unknown as HTMLElement[];
-  const h3 = parsedHtml.getElementsByTagName("h3") as unknown as HTMLElement[];
-  const h4 = parsedHtml.getElementsByTagName("h4") as unknown as HTMLElement[];
+  const h1 = parsedHtml.querySelectorAll("h1") as unknown as HTMLElement[];
+  const h2 = parsedHtml.querySelectorAll("h2") as unknown as HTMLElement[];
+  const h3 = parsedHtml.querySelectorAll("h3") as unknown as HTMLElement[];
+  const h4 = parsedHtml.querySelectorAll("h4") as unknown as HTMLElement[];
   const mdx = parsedHtml.querySelectorAll(`.${mdxClassName}`) as unknown as HTMLElement[];
 
   let mdxSettings = "";
 
   // Parse <h> tags to support "On this page" functionality
-  [...Array.from(h1), ...Array.from(h2), ...Array.from(h3), ...Array.from(h4)].forEach((node) => {
+  // oxlint-disable-next-line no-useless-spread
+  [...h1, ...h2, ...h3, ...h4].forEach((node) => {
     node.replaceWith(`\n${transformCode(node.outerHTML)}\n`);
   });
 
   // Remove nodes with .mdx-settings class name
-  Array.from(mdx).forEach((node) => {
+  [...mdx].forEach((node) => {
     mdxSettings = `${node.innerHTML}\n\n`;
     // clean up the mdx settings from html tree
     node.replaceWith("");
@@ -101,7 +102,7 @@ export const transformMarkdown = (
     newHtml = processing(newHtml);
   });
 
-  if (!prettify) return newHtml;
+  if (!prettify) {return newHtml;}
 
   return newHtml;
 };

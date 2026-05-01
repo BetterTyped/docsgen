@@ -1,10 +1,10 @@
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 
 import { Code } from "pages/components/code";
 import { Type } from "pages/components/type";
-import { PagePropsType } from "types/page.types";
+import type { PagePropsType } from "types/page.types";
 import { getCommentNode } from "pages/handlers/comment";
-import { getSignaturePreview } from "pages/utils";
+import { getSignaturePreview, resolveSignature } from "pages/utils";
 
 export const Table = ({
   reflections,
@@ -34,19 +34,23 @@ export const Table = ({
         </thead>
         <tbody>
           {reflections.map((reflection, index) => {
-            const isMethod = "signatures" in reflection;
-            const name =
-              "signatures" in reflection && reflection?.signatures
-                ? getSignaturePreview({
-                    reflection: reflection.signatures[0],
-                    reflectionsTree,
-                    useArrow: true,
-                    hideGenerics: true,
-                    hideParamTypes: true,
-                    hideReturns: true,
-                  })
-                : reflection.name;
-            const type = "type" in reflection && typeof reflection.type !== "string" ? reflection.type : reflection;
+            const resolvedSignature = resolveSignature(reflection, reflectionsTree);
+            const isMethod = !!resolvedSignature;
+            const signatureForPreview =
+              "__type" === resolvedSignature?.name
+                ? { ...resolvedSignature, name: reflection.name }
+                : resolvedSignature;
+            const name = signatureForPreview
+              ? getSignaturePreview({
+                  reflection: signatureForPreview,
+                  reflectionsTree,
+                  useArrow: true,
+                  hideGenerics: true,
+                  hideParamTypes: true,
+                  hideReturns: true,
+                })
+              : reflection.name;
+            const type = "type" in reflection && "string" !== typeof reflection.type ? reflection.type : reflection;
 
             return (
               <tr className="api-docs__table-row" key={index}>

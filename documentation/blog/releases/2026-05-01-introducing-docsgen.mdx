@@ -1,0 +1,116 @@
+---
+title: Introducing Docsgen - Docs That Live With Your Code
+description: Docsgen 1.0 is here. Generate always up-to-date TypeScript documentation with zero maintenance.
+date: 2026-05-01
+slug: introducing-docsgen
+authors: [maciej]
+tags: [release, docsgen, typescript, documentation]
+---
+
+We are excited to announce the first public release of **Docsgen** - a documentation generator that keeps your API docs
+permanently in sync with your TypeScript source code.
+
+{/* truncate */}
+
+:::success Key features
+
+1. **Living documentation** - API references auto-update on every build. Rename a parameter, add a method, change a
+   return type - the docs reflect it without anyone touching the markdown.
+2. **@import directive** - Embed live API fragments (method tables, parameter lists, type definitions) directly in
+   hand-written MDX using a simple `@import` syntax.
+3. **Docusaurus integration** - First-class plugin that hooks into the Docusaurus build lifecycle with watch mode and a
+   concurrency guard for fast dev server reloads.
+4. **Monorepo support** - Generate docs for every package in a monorepo with cross-package type linking, per-package
+   configuration, and a shared index page.
+5. **Full TypeDoc power** - Built on TypeDoc for reliable TypeScript parsing. Supports generics, overloads, decorators,
+   and complex type hierarchies out of the box.
+6. **MDX output** - Generates clean MDX files with frontmatter, sidebar metadata, and Docusaurus-compatible category
+   files.
+
+:::
+
+## The problem
+
+Documentation gets outdated. It's one of the most universal frustrations in software development. You ship a feature,
+update the code, and forget to update the docs. Or worse, you update them but miss a renamed parameter or a changed
+return type. Over time, the gap between your code and your docs grows until developers stop trusting the documentation
+entirely.
+
+We built Docsgen to eliminate this class of problem.
+
+## The mental model
+
+Docsgen splits documentation into two layers:
+
+- **The narrative** - You write this. It explains the general idea, when to use something, how things fit together. This
+  requires human understanding and cannot be generated.
+- **The technical details** - Method tables, parameter types, return values, import statements, type definitions. These
+  come from `@import` directives that read your actual source code.
+
+When you change your code, the technical details update automatically on the next build. The narrative stays as you wrote
+it. No manual sync required.
+
+## How it works
+
+### 1. Install
+
+```bash
+npm install @docsgen/core @docsgen/docusaurus
+```
+
+### 2. Configure
+
+Add the plugin to your Docusaurus config:
+
+```ts
+plugins: [
+  [
+    "@docsgen/docusaurus",
+    {
+      id: "api",
+      outDir: "docs/api",
+      packages: [
+        {
+          title: "My Package",
+          dir: "./packages/my-package",
+          entryPath: "src/index.ts",
+        },
+      ],
+    },
+  ],
+];
+```
+
+### 3. Write living docs
+
+In any MDX file, use `@import` to embed API fragments:
+
+```md
+## Methods
+
+(@import core Request type=methods&display=table)
+
+## Parameters
+
+(@import core Request type=parameters&display=block)
+```
+
+These directives are replaced with real, generated content from your codebase at build time. The output stays accurate
+as long as the code compiles.
+
+## What's next
+
+This is just the beginning. We're working on:
+
+- More display modes and component types for the `@import` directive
+- Additional framework integrations beyond Docusaurus
+- Interactive playground for trying out docsgen without installing anything
+- Better theme customization for generated pages
+
+## Get started
+
+- [Read the documentation](/docs/getting-started)
+- [View on GitHub](https://github.com/BetterTyped/docsgen)
+- [Install and try it](/docs/getting-started/quick-start)
+
+We'd love your feedback. Open an issue, submit a PR, or just star the repo if you find it useful.

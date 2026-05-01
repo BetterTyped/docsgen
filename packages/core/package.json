@@ -7,25 +7,31 @@
   "homepage": "",
   "license": "Apache-2.0",
   "platform": "node",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "source": "src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
   "scripts": {
-    "clean": "npx rimraf dist",
-    "test": "jest --watchAll --maxWorkers=3",
-    "test:pipeline": "jest --watchAll=false --maxWorkers=1 --no-cache --detectOpenHandles --forceExit",
-    "test:update-snapshot": "jest --watchAll --maxWorkers=3 --updateSnapshot",
-    "start": "tsc && (concurrently \"tsc -w\" \"tsc-alias -w\")",
-    "build": "yarn clean && tsc -p tsconfig.build.json && tsc-alias",
-    "lint": "eslint . --ext .js,.jsx,.tsx,.ts --fix",
-    "format": "prettier --write .",
-    "typecheck": "tsc --noEmit --emitDeclarationOnly false",
-    "tests": "yarn lint-staged",
-    "release": "yarn semantic-release --extends ./release.config.cjs  -t 'docsgen-v${version}'"
+    "clean": "rimraf dist",
+    "test": "vitest",
+    "test:pipeline": "vitest run --reporter=verbose",
+    "test:update-snapshot": "vitest run --update",
+    "start": "vite build --watch",
+    "build": "vite build",
+    "lint": "oxlint .",
+    "format": "oxfmt .",
+    "typecheck": "tsgo --noEmit",
+    "release": "semantic-release --extends ./release.config.cjs -t 'docsgen-v${version}'"
   },
   "dependencies": {
-    "@reins/query-params": "^0.1.1",
+    "listr2": "^8.2.5",
     "fs-extra": "^11.2.0",
     "js-beautify": "^1.15.1",
     "mdast-util-from-markdown": "^2.0.0",
@@ -58,17 +64,6 @@
     "@types/react-dom": "^18.0.6",
     "outdent": "^0.8.0"
   },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "yarn jest"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.com/"
@@ -76,7 +71,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BetterTyped/docsgen.git",
-    "directory": "packages/store"
+    "directory": "packages/core"
   },
   "bugs": {
     "url": "https://github.com/BetterTyped/docsgen/issues"

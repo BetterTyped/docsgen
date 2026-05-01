@@ -1,7 +1,8 @@
 import React from "react";
 
-import { PagePropsType } from "../../types/page.types";
+import type { PagePropsType } from "../../types/page.types";
 import { getSignature } from "../utils/signature.utils";
+import { warning } from "../../helpers/log.utils";
 import { Definition } from "./definition";
 import { Description } from "./description";
 import { Name } from "./name";
@@ -10,7 +11,7 @@ import { Preview } from "./preview";
 import { Returns } from "./returns";
 import { Section } from "./section";
 import { Sources } from "./sources";
-import { DisplayType } from "types/components.types";
+import type { DisplayType } from "types/components.types";
 import { Grid } from "../modules/grid/grid";
 import { Table } from "../modules/table/table";
 
@@ -31,9 +32,9 @@ export const Method: React.FC<PagePropsType & MethodProps> = (props) => {
     return null;
   }
 
-  if (display === "grid") {
+  if ("grid" === display) {
     if (!methodSignature?.parameters) {
-      console.error("Cannot display grid view, parameters not found for method: ", name);
+      warning(`Cannot display grid view, parameters not found for method: ${name}`);
       return null;
     }
 
@@ -48,9 +49,9 @@ export const Method: React.FC<PagePropsType & MethodProps> = (props) => {
     );
   }
 
-  if (display === "table") {
+  if ("table" === display) {
     if (!methodSignature?.parameters) {
-      console.error("Cannot display table view, parameters not found for method: ", name);
+      warning(`Cannot display table view, parameters not found for method: ${name}`);
       return null;
     }
 

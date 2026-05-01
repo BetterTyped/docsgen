@@ -1,0 +1,131 @@
+---
+sidebar_position: 3
+title: TypeDoc Integration
+sidebar_label: TypeDoc Integration
+---
+
+# TypeDoc Integration
+
+---
+
+docsgen uses [TypeDoc](https://typedoc.org/) under the hood to parse TypeScript source code into a structured
+reflection tree. This page explains how TypeDoc is configured, what defaults are applied, and how you can customize
+the behavior.
+
+---
+
+## Default Configuration
+
+When docsgen runs TypeDoc, it applies these defaults:
+
+```typescript
+{
+  excludeExternals: true,
+  excludeInternal: true,
+  excludePrivate: true,
+  excludeProtected: true,
+  entryPointStrategy: "expand",
+  logLevel: "Error",
+  exclude: [
+    "**/*.test.*",
+    "**/*.spec.*",
+    "**/__tests__/**",
+    "**/__mocks__/**",
+  ],
+  plugin: ["typedoc-plugin-markdown"],
+}
+```
+
+These defaults ensure that only the public API surface is documented, test files are excluded, and the
+`typedoc-plugin-markdown` plugin is always loaded.
+
+---
+
+## Passing Custom TypeDoc Options
+
+Use the `typeDocOptions` field in `PluginOptions` to override or extend these defaults:
+
+```typescript
+{
+  typeDocOptions: {
+    excludeProtected: false,            // Include protected members
+    categorizeByGroup: true,            // Group by category tags
+    plugin: ["typedoc-plugin-mdn-links"], // Additional plugins
+    readme: "none",                      // Don't include README in output
+  },
+}
+```
+
+Your custom options are merged with the defaults. The `typedoc-plugin-markdown` plugin is always prepended to the
+plugin array - you cannot remove it, but you can add additional plugins alongside it.
+
+---
+
+## Entry Point Strategy
+
+docsgen uses the `"expand"` entry point strategy by default. This means TypeDoc will:
+
+1. Treat each file matched by `entryPath` as a separate module.
+2. Recursively include all exports from those files.
+
+If your package uses a barrel `index.ts` that re-exports from submodules, a single `entryPath: "src/index.ts"`
+is usually sufficient.
+
+For packages with multiple independent entry points:
+
+```typescript
+{
+  entryPath: ["src/client.ts", "src/server.ts"],
+}
+```
+
+---
+
+## TSConfig Resolution
+
+TypeDoc needs a tsconfig to understand your project's module resolution, paths, and compiler options. docsgen
+resolves the tsconfig in this order:
+
+1. **Per-package** - `tsconfigDir` + `tsconfigName` from `PackageOptions` (defaults to `"tsconfig.json"` in
+   the package directory).
+2. **Global** - `tsConfigPath` from `PluginOptions` (shared across all packages).
+3. **Fallback** - TypeDoc's own tsconfig discovery.
+
+---
+
+## TypeDoc Readers
+
+docsgen registers two TypeDoc readers automatically:
+
+- **TSConfigReader** - Reads compiler options from your tsconfig.
+- **TypeDocReader** - Reads any `typedoc.json` configuration file in the project.
+
+If your package has a `typedoc.json` at its root, those options will also be picked up.
+
+---
+
+## Watch Mode
+
+Setting `watch: true` in `PluginOptions` enables TypeDoc's `convertAndWatch` mode. In this mode, TypeDoc watches
+the source files for changes and regenerates the JSON reflection automatically. This is useful during development
+with `docusaurus start`.
+
+---
+
+## JSON Output
+
+TypeDoc generates a `docs.json` file per package containing the full project reflection as JSON. This file is:
+
+- Used by the page generator to create MDX files.
+- Used by the `importer` remark plugin to resolve `@import` directives.
+- Cached on disk so subsequent builds can skip regeneration when possible.
+
+The JSON follows TypeDoc's `JSONOutput.ProjectReflection` schema, which includes all exported symbols, their
+types, parameters, return types, JSDoc comments, and source locations.
+
+:::secondary Summary
+
+docsgen wraps TypeDoc with sensible defaults for API documentation. Use `typeDocOptions` to customize parsing
+behavior, configure entry points via `entryPath`, and control tsconfig resolution per-package or globally.
+
+:::

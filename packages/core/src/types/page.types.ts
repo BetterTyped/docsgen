@@ -1,6 +1,6 @@
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 
-import { PackageOptions, PluginOptions } from "./package.types";
+import type { PackageOptions, PluginOptions } from "./package.types";
 
 export type PagePropsType<T = JSONOutput.SomeReflection> = {
   reflection: T;

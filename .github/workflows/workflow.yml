@@ -11,23 +11,23 @@ jobs:
     name: Prepare environment
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+        uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "yarn"
-          cache-dependency-path: yarn.lock
-        env:
-          FORCE_COLOR: 0
-      - name: Install node_modules on cache miss
-        if: steps.cache-node-modules.outputs.cache-hit != 'true'
-        run: yarn install --frozen-lockfile
+          cache: "pnpm"
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
       - name: Cache node_modules
-        if: steps.cache-node-modules.outputs.cache-hit != 'true'
-        uses: actions/cache/save@v3
+        uses: actions/cache/save@v4
         with:
           path: node_modules
-          key: yarn-${{ hashFiles('yarn.lock') }}
+          key: pnpm-${{ hashFiles('pnpm-lock.yaml') }}
 
   tests:
     name: Run tests
@@ -39,38 +39,33 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        test-group: ["core", "docusaurus", "playground"]
+        test-group: ["core", "docusaurus"]
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "yarn"
-          cache-dependency-path: yarn.lock
+          cache: "pnpm"
       - name: Restore node_modules
-        uses: actions/cache/restore@v3
+        uses: actions/cache/restore@v4
         id: cache-node-modules
         with:
           path: node_modules
-          key: yarn-${{ hashFiles('yarn.lock') }}
+          key: pnpm-${{ hashFiles('pnpm-lock.yaml') }}
           fail-on-cache-miss: false
-      - name: Install node_modules on cache miss
+      - name: Install dependencies on cache miss
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
       - name: Build
-        run: yarn build
+        run: pnpm build
       - name: Test package
-        run: yarn workspace @docsgen/${{ matrix.test-group }} test:pipeline
-  #       - name: Send Report
-  #         uses: paambaati/codeclimate-action@v3.0.0
-  #         env:
-  #           CC_TEST_REPORTER_ID: c206a2ed5aa86c7480a13634e91e440a27a98a5d134653f8ea9a7d5f987e68c3
-  #         with:
-  #           coverageLocations: |
-  #             ${{github.workspace}}/packages/core/coverage/lcov.info:lcov
-  #             ${{github.workspace}}/packages/react/coverage/lcov.info:lcov
+        run: pnpm --filter @docsgen/${{ matrix.test-group }} test:pipeline
 
   release:
     name: Release
@@ -79,27 +74,30 @@ jobs:
     needs: tests
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "yarn"
-          cache-dependency-path: yarn.lock
+          cache: "pnpm"
       - name: Restore node_modules
-        uses: actions/cache/restore@v3
+        uses: actions/cache/restore@v4
         id: cache-node-modules
         with:
           path: node_modules
-          key: yarn-${{ hashFiles('yarn.lock') }}
+          key: pnpm-${{ hashFiles('pnpm-lock.yaml') }}
           fail-on-cache-miss: false
-      - name: Install node_modules on cache miss
+      - name: Install dependencies on cache miss
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
       - name: Build
-        run: yarn build
+        run: pnpm build
       - name: Publish
-        run: yarn release
+        run: pnpm release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

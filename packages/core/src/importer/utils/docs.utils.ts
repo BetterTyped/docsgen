@@ -2,9 +2,9 @@
 /* eslint-disable global-require */
 /* eslint-disable import/no-dynamic-require */
 import { promises } from "fs";
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 
-import { PkgMeta } from "../../types/package.types";
+import type { PkgMeta } from "../../types/package.types";
 import { error } from "../../helpers/log.utils";
 
 export const isDocsJSONGenerated = async (packageConfig: PkgMeta): Promise<void> => {
@@ -16,8 +16,8 @@ export const isDocsJSONGenerated = async (packageConfig: PkgMeta): Promise<void>
     notFoundDocs.push(packageConfig.title);
   }
 
-  if (notFoundDocs.length > 0) {
-    throw Error(`Could not find docs for the following packages: ${notFoundDocs.join(", ")}`);
+  if (0 < notFoundDocs.length) {
+    throw new Error(`Could not find docs for the following packages: ${notFoundDocs.join(", ")}`);
   }
 };
 
@@ -35,7 +35,7 @@ export const getFile = <T = Record<string, unknown>>(path: string): T | null => 
   try {
     const file = require(path);
     return file;
-  } catch (err) {
+  } catch {
     error(`Cannot find module for: ${path}`);
     return null;
   }

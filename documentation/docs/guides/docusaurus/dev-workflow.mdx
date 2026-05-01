@@ -1,0 +1,279 @@
+---
+sidebar_position: 3
+title: Development Workflow
+sidebar_label: Dev Workflow
+---
+
+# Development Workflow
+
+---
+
+This guide covers how to work with docsgen during development, including the dev server, watch mode,
+the concurrency guard that prevents duplicate runs, log levels for debugging, and solutions for
+common issues.
+
+---
+
+:::tip Purpose
+
+1. **Dev server** - Understand how docsgen runs during `docusaurus start`.
+2. **Watch mode** - Enable live regeneration when source files change.
+3. **Concurrency guard** - Know how the minute-level lock prevents duplicate runs.
+4. **Debugging** - Use log levels and output inspection to troubleshoot problems.
+5. **Troubleshooting** - Fix common issues with generation and the importer.
+
+:::
+
+---
+
+## Running the Dev Server
+
+When you run `docusaurus start`, Docusaurus loads all plugins, including `@docsgen/docusaurus`. The
+plugin runs the full generation pipeline on startup:
+
+```bash
+npm run start
+```
+
+docsgen parses your TypeScript source, generates MDX files, and writes them to your `outDir`. Docusaurus
+then picks up these files and serves them. You can browse the generated API pages immediately.
+
+---
+
+## Watch Mode
+
+By default, docsgen runs once at startup. To regenerate documentation automatically when your source
+files change, enable watch mode:
+
+```typescript
+[
+  "@docsgen/docusaurus",
+  {
+    id: "api",
+    outDir: "docs/api",
+    packages: [/* ... */],
+    // highlight-next-line
+    watch: true,
+  },
+],
+```
+
+With `watch: true`, TypeDoc uses its `convertAndWatch` mode. When you edit a TypeScript source file,
+TypeDoc detects the change, re-parses the project, and docsgen regenerates the affected MDX pages.
+Docusaurus's hot-reload then picks up the changed files and refreshes the browser.
+
+:::caution Watch mode and performance
+
+Watch mode re-runs the full TypeDoc parse on every source change. For large projects with many entry
+points, this can be slow. Consider using watch mode only during active API documentation work, and
+disabling it when working on guides or site styling.
+
+:::
+
+---
+
+## The Concurrency Guard
+
+The Docusaurus plugin includes a concurrency guard that prevents duplicate generation runs. This is
+important because Docusaurus may reload the plugin multiple times during development (e.g., when
+configuration files change).
+
+### How It Works
+
+The plugin writes a timestamp file (`loadingTypedoc[{id}].json`) to Docusaurus's `generatedFilesDir`.
+On each load, it compares the current time with the saved timestamp. If they match within the same
+minute (ISO string comparison with the last 8 characters stripped), the plugin skips generation.
+
+In practice, this means:
+
+- **First load** - Always runs generation (no timestamp file exists).
+- **Subsequent loads within the same minute** - Skips generation (reuses existing output).
+- **Loads after one minute** - Runs generation again.
+
+### What This Means for Development
+
+If you restart the dev server quickly (within a minute), docsgen will not re-run. This speeds up rapid
+restart cycles. If you need to force regeneration, either:
+
+1. Wait for the next minute boundary, or
+2. Delete the lock file from Docusaurus's generated files directory, or
+3. Stop the dev server, run `npm run build` to do a full rebuild, then restart.
+
+---
+
+## Log Levels
+
+docsgen supports configurable log levels to help you understand what is happening during generation:
+
+```typescript
+[
+  "@docsgen/docusaurus",
+  {
+    id: "api",
+    outDir: "docs/api",
+    packages: [/* ... */],
+    // highlight-next-line
+    logLevel: "trace",
+  },
+],
+```
+
+| Level | What it shows |
+| --- | --- |
+| `error` | Only errors that prevent generation |
+| `warning` | Errors and warnings (e.g., missing tsconfig) |
+| `success` | Errors, warnings, and success messages |
+| `info` | General progress information (default) |
+| `trace` | Everything, including detailed step-by-step output |
+
+### When to Use Each Level
+
+- **`info`** - Normal development. Shows enough to confirm generation ran successfully.
+- **`trace`** - Debugging generation issues. Shows which files are being processed, which reflections
+  are found, and how pages are rendered.
+- **`error`** - CI/CD pipelines where you only want to know about failures.
+
+---
+
+## Inspecting Generated Output
+
+When troubleshooting, check the generated files directly:
+
+### options.json
+
+Located at the root of your `outDir` (e.g., `docs/api/options.json`). Contains the serialized plugin
+options. The importer reads this file to resolve `@import` directives.
+
+```bash
+ls docs/api/options.json
+```
+
+If this file is missing, the plugin did not run. Check:
+- Is `@docsgen/docusaurus` in your `plugins` array?
+- Did the concurrency guard skip generation?
+- Are there errors in the console?
+
+### docs.json
+
+Located in each package's subdirectory (e.g., `docs/api/core/docs.json`). Contains the TypeDoc JSON
+reflection output. This is the raw data that drives page generation.
+
+```bash
+ls docs/api/core/docs.json
+```
+
+If this file is missing or empty, TypeDoc failed to parse the package. Check:
+- Does the `entryPath` exist?
+- Does the `tsconfig.json` compile without errors?
+- Are there TypeDoc errors in the console?
+
+### package-config.json
+
+Contains metadata about each package (title, paths). Used internally by the importer.
+
+---
+
+## Troubleshooting
+
+### Generation does not run
+
+**Symptom:** No files appear in `outDir` after starting the dev server.
+
+**Possible causes:**
+
+1. **Plugin not configured** - Verify `@docsgen/docusaurus` is in the `plugins` array of your
+   `docusaurus.config.ts`.
+2. **Concurrency guard** - The plugin skipped generation because a run happened within the last
+   minute. Wait a minute or delete the lock file.
+3. **Build error** - Check the console for errors. Set `logLevel: "trace"` for detailed output.
+
+### Importer shows raw @import text
+
+**Symptom:** `@import` directives appear as plain text instead of rendered content.
+
+**Possible causes:**
+
+1. **Importer not configured** - Add the `importer` remark plugin to your docs preset. See
+   [Importer](/docs/getting-started/importer) for setup instructions.
+2. **Missing options.json** - The importer cannot find the generated options file. Verify that
+   `apiDir` in the importer config matches `outDir` in the plugin config.
+3. **Package name mismatch** - The package title in the `@import` directive must match the `title`
+   in your package configuration.
+4. **Symbol not found** - The symbol name in the `@import` directive must match an exported symbol
+   exactly (case-sensitive).
+
+### TypeDoc errors
+
+**Symptom:** Generation runs but produces errors or incomplete output.
+
+**Possible causes:**
+
+1. **TypeScript compilation errors** - TypeDoc requires your project to compile. Fix any TypeScript
+   errors first.
+2. **Wrong tsconfig** - Verify that `tsconfigDir` and `tsconfigName` point to the correct
+   `tsconfig.json` file.
+3. **Missing entry point** - Verify that `entryPath` resolves to an existing file relative to `dir`.
+4. **Plugin conflicts** - Custom `typeDocOptions` may conflict with docsgen's defaults. Check
+   for conflicting `entryPointStrategy` or `plugin` settings.
+
+### Stale output
+
+**Symptom:** Generated pages do not reflect recent code changes.
+
+**Possible causes:**
+
+1. **No rebuild** - Run `npm run build` or restart the dev server to trigger generation.
+2. **Watch mode disabled** - Enable `watch: true` for automatic regeneration during development.
+3. **Cached docs.json** - The concurrency guard may have skipped generation. Delete the lock file
+   or wait for the next minute.
+4. **Browser cache** - Hard-refresh the browser or clear the Docusaurus build cache with
+   `npx docusaurus clear`.
+
+---
+
+## Build Optimization
+
+For large projects, generation can take significant time. Here are strategies to speed up development:
+
+### Skip Generation During Styling Work
+
+If you are only working on site styling or hand-written guides (without `@import` directives), you can
+temporarily remove the docsgen plugin from your config. The existing generated files in `outDir` will
+still be served by Docusaurus.
+
+### Use Selective Entry Points
+
+Instead of pointing to a barrel `index.ts` that re-exports everything, use specific entry points to
+generate docs for only the modules you are working on:
+
+```typescript
+{
+  entryPath: ["src/client.ts", "src/hooks.ts"],
+}
+```
+
+### Reduce TypeDoc Scope
+
+Use `typeDocOptions` to limit what TypeDoc processes:
+
+```typescript
+{
+  typeDocOptions: {
+    exclude: ["**/test/**", "**/internal/**", "**/*.spec.ts"],
+  },
+}
+```
+
+This is applied on top of docsgen's defaults, which already exclude common test patterns.
+
+---
+
+:::secondary Summary
+
+Use `docusaurus start` with the docsgen plugin for development. Enable `watch: true` for live
+regeneration. The concurrency guard prevents duplicate runs within the same minute. Set
+`logLevel: "trace"` when debugging issues. Inspect `options.json` and `docs.json` to verify
+generation output. For common issues, check plugin configuration, importer setup, and TypeScript
+compilation status. See [Setup](/docs/docusaurus/setup) for the full integration reference.
+
+:::

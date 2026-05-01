@@ -1,0 +1,448 @@
+---
+sidebar_position: 5
+title: Writing Effective JSDoc
+sidebar_label: Effective JSDoc
+---
+
+# Writing Effective JSDoc
+
+---
+
+docsgen extracts documentation from JSDoc and TSDoc comments in your TypeScript source via TypeDoc. The quality
+of your generated documentation depends directly on how you write these comments. This guide covers best practices
+for writing JSDoc that produces rich, useful API pages.
+
+---
+
+:::tip Purpose
+
+1. **Write better descriptions** - Structure descriptions so they render well on generated pages.
+2. **Document parameters and returns** - Produce useful parameter tables and return value sections.
+3. **Add usage examples** - Create code examples that appear in the "Usage" section.
+4. **Use extended tags** - Take advantage of `@docs`, `@exclude`, `@badge`, and other tags.
+5. **Avoid common pitfalls** - Know what patterns produce poor or missing documentation.
+
+:::
+
+---
+
+## Descriptions
+
+The first paragraph of a JSDoc comment becomes the symbol's main description. It appears prominently in the
+intro section of the generated page.
+
+### Good Descriptions
+
+A good description answers: "What does this do and when would I use it?"
+
+```typescript
+/**
+ * Manages HTTP request lifecycle including caching, queuing, and retry
+ * logic. Use this as the main entry point for configuring and sending
+ * requests to an API endpoint.
+ */
+export class Client {}
+```
+
+```typescript
+/**
+ * Creates a debounced version of the given function that delays
+ * invocation until the specified wait time has elapsed since the
+ * last call.
+ */
+export function debounce<T extends (...args: unknown[]) => void>(
+  fn: T,
+  wait: number,
+): T {}
+```
+
+### Weak Descriptions
+
+Avoid descriptions that just restate the name:
+
+```typescript
+// diff-remove-start
+/**
+ * The Client class.
+ */
+export class Client {}
+// diff-remove-end
+
+// diff-add-start
+/**
+ * Manages HTTP request lifecycle including caching, queuing, and retry logic.
+ */
+export class Client {}
+// diff-add-end
+```
+
+### Using @remarks for Additional Context
+
+The `@remarks` tag adds information that appears after the main description. Use it for implementation
+details, caveats, or background that is important but secondary:
+
+```typescript
+/**
+ * Parses a date string into a Date object using the project's default
+ * timezone.
+ *
+ * @remarks
+ * This function uses the `Intl.DateTimeFormat` API internally and falls
+ * back to UTC parsing if the timezone is not supported by the runtime.
+ * The fallback behavior means results may differ across environments.
+ */
+export function parseDate(input: string): Date {}
+```
+
+---
+
+## Parameters
+
+Use `@param` to document function and constructor parameters. Each `@param` produces a row in the
+generated parameters table.
+
+### Basic Parameters
+
+```typescript
+/**
+ * Sends an HTTP request to the specified endpoint.
+ *
+ * @param method - The HTTP method (GET, POST, PUT, DELETE)
+ * @param url - Full URL or path relative to the base URL
+ * @param body - Request body, serialized as JSON
+ */
+export function send(method: string, url: string, body?: unknown) {}
+```
+
+### Object Parameters
+
+When a function takes a configuration object, document each property in the interface or type:
+
+```typescript
+/**
+ * Options for configuring the HTTP client.
+ */
+export interface ClientOptions {
+  /** Base URL prepended to all request paths. */
+  baseUrl: string;
+  /** Default request timeout in milliseconds. */
+  timeout?: number;
+  /**
+   * Maximum number of retry attempts for failed requests.
+   * @defaultValue 3
+   */
+  retries?: number;
+}
+
+/**
+ * Creates a new HTTP client with the given configuration.
+ *
+ * @param options - Client configuration
+ */
+export function createClient(options: ClientOptions): Client {}
+```
+
+Documenting properties on the interface ensures they appear in both the `ClientOptions` type page
+and in the parameters section of `createClient`.
+
+### @defaultValue
+
+Use `@defaultValue` to document default values for optional parameters and properties:
+
+```typescript
+export interface PaginationOptions {
+  /**
+   * Number of items per page.
+   * @defaultValue 20
+   */
+  pageSize?: number;
+  /**
+   * Starting page index (zero-based).
+   * @defaultValue 0
+   */
+  startPage?: number;
+}
+```
+
+---
+
+## Return Values
+
+Use `@returns` to describe what a function returns and when:
+
+```typescript
+/**
+ * Looks up a user by their unique identifier.
+ *
+ * @param id - The user's unique ID
+ * @returns The user object if found, or `null` if no user exists with the given ID
+ */
+export function findUser(id: string): User | null {}
+```
+
+For complex return types, document the structure:
+
+```typescript
+/**
+ * Fetches paginated data from the API.
+ *
+ * @returns An object containing the data array, total count, and
+ *   pagination metadata for building navigation controls
+ */
+export function fetchPage<T>(url: string): {
+  data: T[];
+  total: number;
+  hasNext: boolean;
+  hasPrev: boolean;
+} {}
+```
+
+---
+
+## Generic Type Parameters
+
+Use `@typeParam` to document generic type parameters:
+
+```typescript
+/**
+ * A type-safe event emitter that enforces event name and payload types
+ * at compile time.
+ *
+ * @typeParam Events - A record mapping event names to their payload types
+ *
+ * @example
+ * ```typescript
+ * type AppEvents = {
+ *   login: { userId: string };
+ *   logout: undefined;
+ * };
+ *
+ * const emitter = new Emitter<AppEvents>();
+ * emitter.on("login", (payload) => {
+ *   console.log(payload.userId);
+ * });
+ * ```
+ */
+export class Emitter<Events extends Record<string, unknown>> {}
+```
+
+---
+
+## Usage Examples
+
+The `@example` tag renders code blocks in the "Usage" section of the generated page. You can include
+multiple examples:
+
+```typescript
+/**
+ * Creates a rate limiter that restricts function calls to a maximum
+ * number within a time window.
+ *
+ * @param maxCalls - Maximum number of calls allowed in the window
+ * @param windowMs - Time window in milliseconds
+ *
+ * @example
+ * ```typescript
+ * // Allow 5 API calls per second
+ * const limiter = createRateLimiter(5, 1000);
+ *
+ * async function fetchData() {
+ *   await limiter.acquire();
+ *   return fetch("/api/data");
+ * }
+ * ```
+ *
+ * @example
+ * ```typescript
+ * // Use with retry logic
+ * const limiter = createRateLimiter(10, 60000);
+ *
+ * for (const item of items) {
+ *   await limiter.acquire();
+ *   await processItem(item);
+ * }
+ * ```
+ */
+export function createRateLimiter(maxCalls: number, windowMs: number) {}
+```
+
+:::note Writing good examples
+
+- **Show realistic usage**, not trivial `console.log` calls.
+- **Include necessary context** (imports, setup) so the example is self-contained.
+- **Add a comment** explaining what the example demonstrates when it is not obvious.
+- **Use multiple `@example` tags** for different scenarios (basic, advanced, edge case).
+
+:::
+
+---
+
+## Supplementary Docs with @docs
+
+For symbols that need more documentation than JSDoc can provide, use `@docs` to copy a folder of
+additional files into the generated output:
+
+```typescript
+/**
+ * Full-featured HTTP client with caching, queuing, retry, and
+ * interceptor support.
+ *
+ * @docs ./docs
+ */
+export class Client {}
+```
+
+Place the docs folder next to your source file:
+
+```
+src/
+  client.ts
+  docs/
+    architecture.mdx
+    migration-from-v1.mdx
+    caching-strategy.png
+```
+
+These files are copied into the generated output alongside `Client.mdx` and appear in the sidebar.
+See [Filtering and Organizing Output](/docs/guides/core/filtering-and-organizing) for more details.
+
+---
+
+## The @exclude Tag
+
+Use `@exclude` to prevent a symbol from appearing in the generated docs:
+
+```typescript
+/**
+ * @exclude
+ */
+export function testHelper() {}
+```
+
+This is useful for symbols that are exported for testing purposes or for internal tooling but should
+not be part of the public API documentation.
+
+---
+
+## Before and After
+
+Here is a comparison of minimal documentation vs. well-documented TypeScript:
+
+### Before (Minimal)
+
+```typescript
+export interface Config {
+  url: string;
+  timeout: number;
+  retry: boolean;
+}
+
+export function init(config: Config) {}
+
+export function send(method: string, path: string, data?: unknown) {}
+```
+
+This generates pages with type information but no descriptions, no examples, and no context about
+when or how to use these symbols.
+
+### After (Well-Documented)
+
+```typescript
+/**
+ * Configuration for initializing the API client.
+ */
+export interface Config {
+  /** Base URL for all API requests (e.g., "https://api.example.com"). */
+  url: string;
+  /**
+   * Request timeout in milliseconds. Requests exceeding this limit
+   * are aborted with a TimeoutError.
+   * @defaultValue 30000
+   */
+  timeout: number;
+  /**
+   * Whether to retry failed requests automatically.
+   * When enabled, uses exponential backoff with a maximum of 3 attempts.
+   * @defaultValue true
+   */
+  retry: boolean;
+}
+
+/**
+ * Initializes the API client with the given configuration. Must be called
+ * before any requests are sent. Calling init again replaces the existing
+ * configuration.
+ *
+ * @param config - Client configuration
+ *
+ * @example
+ * ```typescript
+ * init({
+ *   url: "https://api.example.com",
+ *   timeout: 5000,
+ *   retry: true,
+ * });
+ * ```
+ */
+export function init(config: Config) {}
+
+/**
+ * Sends an HTTP request using the initialized client configuration.
+ *
+ * @param method - HTTP method (GET, POST, PUT, DELETE, PATCH)
+ * @param path - Request path appended to the base URL
+ * @param data - Optional request body, serialized as JSON
+ * @returns The parsed response body
+ *
+ * @example
+ * ```typescript
+ * const users = await send("GET", "/users");
+ * ```
+ *
+ * @example
+ * ```typescript
+ * const created = await send("POST", "/users", {
+ *   name: "Jane",
+ *   email: "jane@example.com",
+ * });
+ * ```
+ */
+export function send(method: string, path: string, data?: unknown) {}
+```
+
+The "after" version produces pages with descriptions on every symbol, parameter tables with
+explanations, default value annotations, and runnable usage examples.
+
+---
+
+## Tag Reference
+
+For a quick reference of all supported tags and their effects on generated pages, see
+[JSDoc Tags](/docs/getting-started/jsdoc-tags).
+
+| Tag | Effect on Generated Page |
+| --- | --- |
+| First paragraph | Main description in the intro section |
+| `@param` | Row in the parameters table |
+| `@returns` | Content in the returns section |
+| `@typeParam` | Generic type parameter documentation |
+| `@example` | Code block in the usage section |
+| `@remarks` | Additional text after the main description |
+| `@defaultValue` | Default value annotation on parameters/properties |
+| `@deprecated` | Deprecation notice on the page |
+| `@see` | Cross-reference link |
+| `@throws` | Exception documentation |
+| `@docs` | Copies supplementary docs folder into output |
+| `@exclude` | Skips the symbol entirely |
+
+---
+
+:::secondary Summary
+
+Good JSDoc produces good documentation. Write descriptions that explain purpose and context, not just
+what the symbol is named. Document every parameter and return value. Add `@example` blocks with realistic
+code. Use `@docs` for long-form supplementary content and `@exclude` to hide internal symbols. The
+difference between minimal and thorough JSDoc is the difference between a type reference and a useful
+API guide.
+
+:::

@@ -1,8 +1,26 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "./src",
-    "outDir": "./dist/",
-    "module": "commonjs"
-  }
+    "paths": {
+      "types": ["./src/types"],
+      "types/*": ["./src/types/*"],
+      "pages": ["./src/pages"],
+      "pages/*": ["./src/pages/*"],
+      "plugin": ["./src/plugin"],
+      "plugin/*": ["./src/plugin/*"],
+      "importer": ["./src/importer"],
+      "importer/*": ["./src/importer/*"],
+      "constants": ["./src/constants"],
+      "constants/*": ["./src/constants/*"],
+      "helpers": ["./src/helpers"],
+      "helpers/*": ["./src/helpers/*"],
+      "docs": ["./src/docs"],
+      "docs/*": ["./src/docs/*"],
+      "parsing": ["./src/parsing"],
+      "parsing/*": ["./src/parsing/*"],
+      "snapshots": ["./src/snapshots"],
+      "snapshots/*": ["./src/snapshots/*"]
+    }
+  },
+  "include": ["src"]
 }

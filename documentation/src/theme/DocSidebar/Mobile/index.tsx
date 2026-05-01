@@ -3,12 +3,12 @@ import { NavbarSecondaryMenuFiller } from "@docusaurus/theme-common";
 import { useNavbarMobileSidebar } from "@docusaurus/theme-common/internal";
 import DocSidebarItems from "@theme/DocSidebarItems";
 import { useFilteredSidebar } from "@site/src/hooks/use-filtered-sidebar";
-import { useSidebar } from "@site/src/hooks/use-sidebar";
+import { SidebarItem, useSidebar } from "@site/src/hooks/use-sidebar";
 import { sections } from "@site/src/sections";
 
 import { SidebarMenu } from "../../../components/sidebar-menu/sidebar-menu";
 
-const DocSidebarMobileSecondaryMenu = ({ sidebar, path }) => {
+const DocSidebarMobileSecondaryMenu = ({ sidebar, path }: { sidebar: SidebarItem[]; path: string }) => {
   const mobileSidebar = useNavbarMobileSidebar();
 
   const filteredSidebar = useFilteredSidebar(sidebar);
@@ -39,7 +39,7 @@ const DocSidebarMobileSecondaryMenu = ({ sidebar, path }) => {
     </div>
   );
 };
-const DocSidebarMobile = (props) => {
+const DocSidebarMobile = (props: any) => {
   return <NavbarSecondaryMenuFiller component={DocSidebarMobileSecondaryMenu} props={props} />;
 };
 

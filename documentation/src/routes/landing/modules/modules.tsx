@@ -1,37 +1,24 @@
-/* eslint-disable react/no-array-index-key */
-/* eslint-disable no-nested-ternary */
-import { useWindowSize } from "@reins/hooks";
-import { FadeIn } from "@site/src/components/fade-in/fade-in";
 import { Title } from "@site/src/components";
 import { Cards } from "./cards";
 
 export const Modules = () => {
-  const [width] = useWindowSize();
-
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="pt-12 md:pt-20">
-          {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <FadeIn start={0.05} end={0.25}>
-              <div>
-                <div className="inline-flex font-medium bg-clip-text !text-transparent bg-gradient-to-r from-blue-500 to-pink-500 dark:from-blue-500 dark:to-blue-200 pb-3">
-                  Where DX meets business
-                </div>
+            <div>
+              <div className="inline-flex font-medium bg-clip-text !text-transparent bg-gradient-to-r from-blue-500 to-pink-500 pb-3">
+                Explore the packages
               </div>
-            </FadeIn>
-            <FadeIn start={0} end={0.2}>
-              <Title wrapperClass="h2 bg-clip-text !text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">
-                Scale your development
-              </Title>
-            </FadeIn>
-            <FadeIn start={0.05} end={0.2}>
-              <p className="text-lg text-slate-400">
-                With our platform you can build any type of application, from simple landing pages to complex enterprise
-                systems.
-              </p>
-            </FadeIn>
+            </div>
+            <Title wrapperClass="h2 bg-clip-text !text-transparent bg-gradient-to-r from-slate-600/60 via-slate-800 to-slate-600/60 pb-4">
+              Everything you need
+            </Title>
+            <p className="text-lg text-slate-400">
+              A modular toolkit for generating, embedding, and maintaining TypeScript documentation
+              that stays in sync with your codebase.
+            </p>
           </div>
 
           <div className="relative mb-20">

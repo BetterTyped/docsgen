@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`It should render correctly class page should render correct class page element 1`] = `
+exports[`It should render correctly class page > should render correct class page element 1`] = `
 "---
 sidebar_position: 1
 title: Request
@@ -2563,7 +2563,16 @@ setPayloadMapper<MappedPayload>(payloadMapper: (data: Payload) => MappedPayload)
             </thead>
             <tbody>
               <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">payloadMapper</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+payloadMapper(data)
+\`\`\`
+
+
+                  </div>
+                </td>
                 <td class="api-docs__table-type">
                   <div class="api-docs__pre">
 
@@ -2883,7 +2892,16 @@ setRequestMapper<NewRequest>(requestMapper: RequestMapper<Request<Response, Payl
             </thead>
             <tbody>
               <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">requestMapper</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+requestMapper(request, requestId)
+\`\`\`
+
+
+                  </div>
+                </td>
                 <td class="api-docs__table-type">
                   <div class="api-docs__pre">
 
@@ -2973,7 +2991,16 @@ setResponseMapper<Properties>(responseMapper: ResponseMapper<Request<Response, P
             </thead>
             <tbody>
               <tr class="api-docs__table-row">
-                <td class="api-docs__table-name">responseMapper</td>
+                <td class="api-docs__table-type">
+                  <div class="api-docs__pre">
+
+\`\`\`tsx
+responseMapper(response)
+\`\`\`
+
+
+                  </div>
+                </td>
                 <td class="api-docs__table-type">
                   <div class="api-docs__pre">
 

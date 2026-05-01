@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 import { render } from "@testing-library/react";
 
 import { Parameters } from "../parameters";
@@ -8,7 +8,7 @@ import { HF_TREE_REFLECTION } from "snapshots/hf-core-reflection";
 describe("It should render correct parameters", () => {
   it("should render correct parameters", () => {
     const requestReflection = HF_TREE_REFLECTION.children!.find(
-      (reflection) => reflection.name === "Request",
+      (reflection) => "Request" === reflection.name,
     ) as JSONOutput.DeclarationReflection;
 
     const { container } = render(
@@ -22,8 +22,8 @@ describe("It should render correct parameters", () => {
       />,
     );
 
-    expect(container.innerHTML).toInclude("client");
-    expect(container.innerHTML).toInclude("requestOptions");
-    expect(container.innerHTML).toInclude("initialRequestConfiguration");
+    expect(container.innerHTML).toContain("client");
+    expect(container.innerHTML).toContain("requestOptions");
+    expect(container.innerHTML).toContain("initialRequestConfiguration");
   });
 });

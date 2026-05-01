@@ -1,6 +1,6 @@
 import React from "react";
 
-import { PagePropsType } from "../../types/page.types";
+import type { PagePropsType } from "../../types/page.types";
 import { getCommentNode } from "pages/handlers/comment";
 import { getSignature } from "pages/utils";
 

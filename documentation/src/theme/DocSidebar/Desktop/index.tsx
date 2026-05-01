@@ -4,12 +4,12 @@ import Logo from "@theme/Logo";
 import CollapseButton from "@theme/DocSidebar/Desktop/CollapseButton";
 import Content from "@theme/DocSidebar/Desktop/Content";
 import { useFilteredSidebar } from "@site/src/hooks/use-filtered-sidebar";
-import { useSidebar } from "@site/src/hooks/use-sidebar";
+import { SidebarItem, useSidebar } from "@site/src/hooks/use-sidebar";
 import { sections } from "@site/src/sections";
 
 import { SidebarMenu } from "../../../components/sidebar-menu/sidebar-menu";
 
-const DocSidebarDesktop = ({ path, sidebar, onCollapse }) => {
+const DocSidebarDesktop = ({ path, sidebar, onCollapse }: { path: string; sidebar: SidebarItem[]; onCollapse: () => void }) => {
   const {
     navbar: { hideOnScroll },
     docs: {

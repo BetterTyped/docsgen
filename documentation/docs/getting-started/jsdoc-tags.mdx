@@ -1,0 +1,125 @@
+---
+sidebar_position: 7
+title: JSDoc Tags
+sidebar_label: JSDoc Tags
+---
+
+# JSDoc Tags
+
+---
+
+docsgen reads JSDoc comments from your TypeScript source code through TypeDoc. Certain tags have special behavior
+that affects what gets generated and how.
+
+---
+
+## docsgen-specific Tags
+
+### @exclude
+
+Prevents the symbol from appearing in generated documentation. The symbol is skipped entirely during generation:
+
+```typescript
+/**
+ * @exclude
+ */
+export function debugHelper() {
+  // This will not appear in the docs
+}
+```
+
+### @docs
+
+Copies a folder of supplementary documentation files into the generated output alongside the symbol's page:
+
+```typescript
+/**
+ * @docs ./additional-docs
+ */
+export class HttpClient {}
+```
+
+The path is resolved relative to the source file's location in the package. For example, if `HttpClient` is
+defined in `src/client/http-client.ts` and you specify `@docs ./docs`, docsgen looks for
+`src/client/docs/` and copies its contents into the generated output directory alongside the `HttpClient.mdx`
+page. Any `.md`, `.mdx`, images, or other files in that folder become navigable in the sidebar or referenceable
+from the generated page.
+
+The copy uses `fs.copySync` with `errorOnExist: false`, so it safely merges into existing output directories
+without overwriting.
+
+### @example
+
+Rendered in the "Usage" section of function and class pages. Standard TypeDoc behavior - the content is displayed
+as a code block:
+
+```typescript
+/**
+ * Creates a new HTTP client instance.
+ *
+ * @example
+ * ```typescript
+ * const client = createClient({ baseUrl: "https://api.example.com" });
+ * ```
+ */
+export function createClient(options: ClientOptions) {}
+```
+
+---
+
+## Standard TypeDoc Tags
+
+docsgen supports all standard TypeDoc tags. The most commonly used ones in generated documentation:
+
+| Tag | Description |
+| --- | --- |
+| `@param` | Describes a function parameter. Rendered in the Parameters section. |
+| `@returns` | Describes the return value. Rendered in the Returns section. |
+| `@typeParam` | Describes a generic type parameter. Rendered in the Generics section. |
+| `@deprecated` | Marks a symbol as deprecated. |
+| `@see` | Cross-reference to another symbol or URL. |
+| `@remarks` | Additional information beyond the main description. |
+| `@defaultValue` | Documents the default value of a parameter or property. |
+| `@throws` | Documents exceptions that may be thrown. |
+
+### Description
+
+The first paragraph of a JSDoc comment (before any tags) is used as the symbol's description. It appears in the
+intro section of the generated page:
+
+```typescript
+/**
+ * Manages HTTP request lifecycle including caching, queuing, and retry logic.
+ *
+ * This class is the main entry point for configuring and sending requests.
+ *
+ * @param options - Configuration options for the client
+ */
+export class Client {}
+```
+
+---
+
+## TypeDoc Exclusion Options
+
+Beyond the `@exclude` tag, you can also control visibility through TypeDoc's built-in options via `typeDocOptions`:
+
+```typescript
+{
+  typeDocOptions: {
+    excludeExternals: true,    // Skip re-exported external symbols
+    excludeInternal: true,     // Skip @internal tagged symbols
+    excludePrivate: true,      // Skip private class members
+    excludeProtected: true,    // Skip protected class members
+  },
+}
+```
+
+These are enabled by default in docsgen.
+
+:::secondary Summary
+
+Use `@exclude` to hide symbols, `@docs` to bundle supplementary files, and `@example` for usage sections. All
+standard TypeDoc JSDoc tags are supported for descriptions, parameters, return types, and more.
+
+:::

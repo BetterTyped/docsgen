@@ -1,0 +1,345 @@
+---
+sidebar_position: 4
+title: Documenting React Components
+sidebar_label: React Components
+---
+
+# Documenting React Components
+
+---
+
+docsgen automatically detects React components and generates documentation with props tables, usage examples,
+and component-specific layouts. This guide covers how detection works, how to document components and hooks
+effectively, and how to configure the output for a React component library.
+
+---
+
+:::tip Purpose
+
+1. **Understand auto-detection** - Learn how docsgen identifies React components from return types.
+2. **Document props** - Write JSDoc for component props that produces useful tables.
+3. **Organize hooks** - Use `kindMapper` to separate hooks from regular functions.
+4. **Configure output** - Set up file names, categories, and sections for component libraries.
+
+:::
+
+---
+
+## How Component Detection Works
+
+docsgen checks whether an exported function's return type includes any of the following:
+
+- `ReactNode`
+- `JSX.Element`
+- `ReactElement`
+- `Element`
+
+If the return type matches, the function uses the `ComponentPage` template instead of `FunctionPage`.
+This happens automatically with no configuration required.
+
+### What Changes on a ComponentPage
+
+| Feature | FunctionPage | ComponentPage |
+| --- | --- | --- |
+| Parameters section | Function parameters table | Replaced by props table |
+| Props detail view | Not available | Per-prop documentation with types |
+| Returns section | Return type documentation | Not shown |
+| Usage section | `@example` blocks | `@example` blocks |
+
+The `ComponentPage` template is designed for the way developers consume component APIs: through
+a props reference rather than a parameter list.
+
+---
+
+## Documenting Component Props
+
+The most common pattern is defining props as a separate interface or type, then using it as the
+function parameter:
+
+```typescript
+/**
+ * Props for the Button component.
+ */
+export interface ButtonProps {
+  /** The button label text. */
+  label: string;
+  /** Visual style variant. */
+  variant?: "primary" | "secondary" | "ghost";
+  /** Size of the button. */
+  size?: "sm" | "md" | "lg";
+  /** Whether the button is disabled. */
+  disabled?: boolean;
+  /** Called when the button is clicked. */
+  onClick?: () => void;
+}
+
+/**
+ * A configurable button component with multiple visual variants.
+ *
+ * Use the `variant` prop to control the visual style, and `size` to
+ * control the dimensions. The button supports disabled state and
+ * click handlers.
+ *
+ * @param props - Button configuration
+ *
+ * @example
+ * ```tsx
+ * <Button label="Save" variant="primary" onClick={handleSave} />
+ * ```
+ *
+ * @example
+ * ```tsx
+ * <Button label="Cancel" variant="ghost" size="sm" />
+ * ```
+ */
+export function Button(props: ButtonProps): JSX.Element {
+  // ...
+}
+```
+
+docsgen generates a page with:
+
+1. Component name and description
+2. Usage examples from `@example` tags
+3. A props table showing each prop's name, type, and description
+4. Per-prop detail sections for complex types
+
+:::note Best practices for props documentation
+
+- **Document every prop** with a JSDoc comment on the interface/type member.
+- **Use union types** for constrained values (e.g., `"sm" | "md" | "lg"`) so the docs show all options.
+- **Mark optional props** with `?` so the docs indicate which props are required.
+- **Use `@defaultValue`** to document default values for optional props.
+- **Export the props type** so it gets its own page and can be referenced via `@import`.
+
+:::
+
+---
+
+## Documenting Hooks
+
+React hooks are regular functions, so docsgen generates them as `FunctionPage` by default. To separate hooks
+from other functions in the sidebar, use `kindMapper`:
+
+```typescript
+{
+  kindMapper: ({ kind, reflection }) => {
+    // highlight-start
+    if (kind === "Functions" && reflection.name.startsWith("use")) {
+      return "Hooks";
+    }
+    // highlight-end
+    return kind;
+  },
+}
+```
+
+### Writing Hook Documentation
+
+Hooks benefit from clear documentation of their return value and any configuration options:
+
+```typescript
+/**
+ * Provides the current theme context value with a toggle function.
+ *
+ * Must be used inside a `ThemeProvider`. Throws if no provider is found
+ * in the component tree.
+ *
+ * @returns An object with the current theme and a function to toggle it
+ *
+ * @example
+ * ```tsx
+ * function Header() {
+ *   const { theme, toggle } = useTheme();
+ *   return (
+ *     <header className={theme}>
+ *       <button onClick={toggle}>Switch Theme</button>
+ *     </header>
+ *   );
+ * }
+ * ```
+ */
+export function useTheme(): { theme: "light" | "dark"; toggle: () => void } {
+  // ...
+}
+```
+
+For hooks that accept configuration objects, document both the options and the return value:
+
+```typescript
+/**
+ * Configuration for the useFetch hook.
+ */
+export interface UseFetchOptions<T> {
+  /** The URL to fetch data from. */
+  url: string;
+  /** Whether to fetch immediately on mount. */
+  immediate?: boolean;
+  /** Transform the response before storing. */
+  transform?: (data: unknown) => T;
+}
+
+/**
+ * Fetches data from a URL with loading and error states.
+ *
+ * @param options - Fetch configuration
+ * @returns An object with data, loading state, error, and a refetch function
+ *
+ * @example
+ * ```tsx
+ * function UserList() {
+ *   const { data, loading, error } = useFetch<User[]>({
+ *     url: "/api/users",
+ *     immediate: true,
+ *   });
+ *
+ *   if (loading) return <Spinner />;
+ *   if (error) return <Error message={error.message} />;
+ *   return <List items={data} />;
+ * }
+ * ```
+ */
+export function useFetch<T>(options: UseFetchOptions<T>) {
+  // ...
+}
+```
+
+---
+
+## Embedding Component Docs with @import
+
+Use the importer to embed component and hook documentation in your guides:
+
+```markdown
+## Button Component
+
+The Button supports multiple variants and sizes:
+
+(@import ui-kit Button type=properties&display=table)
+
+### Basic Usage
+
+(@import ui-kit Button type=parameters&display=block)
+```
+
+For hooks:
+
+```markdown
+## Data Fetching
+
+Use `useFetch` to load data with built-in loading and error states:
+
+(@import ui-kit useFetch type=parameters&display=table)
+
+### Return Value
+
+(@import ui-kit useFetch type=returns&display=table)
+```
+
+---
+
+## Complete Configuration for a Component Library
+
+Here is a full configuration for a React component library with components, hooks, and utility types:
+
+```typescript
+{
+  packages: [
+    {
+      title: "ui-kit",
+      dir: "../packages/ui-kit",
+      entryPath: "src/index.ts",
+      tsconfigDir: "../packages/ui-kit",
+
+      // highlight-start
+      kindMapper: ({ kind, reflection }) => {
+        if (kind === "Functions" && reflection.name.startsWith("use")) {
+          return "Hooks";
+        }
+        return kind;
+      },
+
+      orderCategories: {
+        Components: 1,
+        Hooks: 2,
+        Types: 3,
+        Functions: 4,
+      },
+
+      excludeCategories: ["Namespaces", "Variables"],
+      // highlight-end
+    },
+  ],
+
+  pages: {
+    component: {
+      usage: true,
+      properties: true,
+    },
+    function: {
+      usage: true,
+      parameters: true,
+      returns: true,
+    },
+  },
+}
+```
+
+This produces a sidebar like:
+
+```
+ui-kit/
+  Components/
+    Button.mdx
+    Modal.mdx
+    Tooltip.mdx
+  Hooks/
+    useTheme.mdx
+    useFetch.mdx
+    useModal.mdx
+  Types/
+    ButtonProps.mdx
+    ModalProps.mdx
+    UseFetchOptions.mdx
+```
+
+---
+
+## ComponentPage Sections
+
+The `ComponentPage` template supports these section options:
+
+| Section | Default | Description |
+| --- | --- | --- |
+| `mdx` | enabled | Frontmatter and sidebar metadata |
+| `intro` | enabled | Component name, description, sources, import, definition, npm |
+| `usage` | enabled | `@example` JSDoc blocks |
+| `properties` | enabled | Props table and per-prop detail documentation |
+
+Toggle or replace sections using the `pages.component` configuration:
+
+```typescript
+{
+  pages: {
+    component: {
+      usage: false,
+      properties: (props) => {
+        // Custom props rendering
+        return <div>Custom props for {props.reflection.name}</div>;
+      },
+    },
+  },
+}
+```
+
+---
+
+:::secondary Summary
+
+docsgen automatically detects React components by their return type and uses the `ComponentPage` template
+with props tables. Document props thoroughly using JSDoc on interface members. Use `kindMapper` to
+separate hooks into their own category, and `orderCategories` to control sidebar order. See
+[Customizing Page Templates](/docs/guides/core/custom-pages) for more on section toggles and overrides,
+and [Importer](/docs/getting-started/importer) for embedding component docs in guides.
+
+:::

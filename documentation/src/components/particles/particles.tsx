@@ -3,7 +3,6 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
 import { useRef, useEffect, useLayoutEffect } from "react";
 import MousePosition from "@site/src/hooks/use-mouse-position";
-import { useDidMount, useThrottle } from "@reins/hooks";
 
 interface ParticlesProps {
   className?: string;
@@ -25,14 +24,14 @@ export const Particles = ({ className = "", quantity = 40, staticity = 50, ease 
   const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
   const dpr = 1;
 
-  const { throttle, reset } = useThrottle({ interval: 10, timeout: 10 });
+  const rafId = useRef<number>(0);
 
-  useDidMount(() => {
+  useEffect(() => {
     initCanvas();
     return () => {
-      reset();
+      cancelAnimationFrame(rafId.current);
     };
-  });
+  }, []);
 
   useLayoutEffect(() => {
     if (canvasRef.current) {
@@ -215,9 +214,7 @@ export const Particles = ({ className = "", quantity = 40, staticity = 50, ease 
       });
     }
 
-    throttle(() => {
-      window.requestAnimationFrame(animate);
-    });
+    rafId.current = window.requestAnimationFrame(animate);
   };
 
   return (

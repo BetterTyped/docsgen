@@ -13,29 +13,13 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "downlevelIteration": true,
-    "baseUrl": ".",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
     "noImplicitReturns": false,
     "strictPropertyInitialization": false,
-    "paths": {
-      "storybook": ["storybook/src/index.ts"]
-    },
-    "types": ["jest", "node", "@testing-library/jest-dom"]
-  },
-  "ts-node": {
-    "compilerOptions": {
-      "module": "esnext"
-    }
-  },
-  "tsc-alias": {
-    "resolveFullPaths": true,
-    "verbose": false
+    "types": ["vitest/globals", "node", "@testing-library/jest-dom"]
   },
   "exclude": ["node_modules/**/*", "**/node_modules/**/*", "dist/**/*", "**/dist/**/*", "*.js"]
 }

@@ -1,8 +1,8 @@
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 
 import { Code } from "pages/components/code";
 import { Type } from "pages/components/type";
-import { PagePropsType } from "types/page.types";
+import type { PagePropsType } from "types/page.types";
 import { getCallPreview } from "pages/utils/parsing.utils";
 import { getCommentNode } from "pages/handlers/comment";
 
@@ -29,7 +29,7 @@ export const Grid = ({
             reflection?.signatures &&
             getCallPreview({ signature: reflection?.signatures?.[0], reflectionsTree })) ||
           "";
-        const type = "type" in reflection && typeof reflection.type !== "string" ? reflection.type : reflection;
+        const type = "type" in reflection && "string" !== typeof reflection.type ? reflection.type : reflection;
 
         return (
           <div className="api-docs__grid-row" key={index}>

@@ -1,0 +1,170 @@
+---
+sidebar_position: 2
+title: Page Templates
+sidebar_label: Page Templates
+---
+
+# Page Templates
+
+---
+
+docsgen uses React components as page templates for each kind of TypeScript symbol. Each template is composed of
+reusable section components that you can toggle, replace, or fully override.
+
+---
+
+## Built-in Templates
+
+### ClassPage
+
+Used for TypeScript classes. Sections: `mdx`, `intro`, `parameters`, `properties`, `methods`, `usage`.
+
+The intro section shows the class name, description, source location, import statement, type definition, and npm
+install command. Parameters shows constructor parameters. Properties and Methods list class members. Usage renders
+`@example` JSDoc blocks.
+
+### ComponentPage
+
+Used for React components (auto-detected by return type). Sections: `mdx`, `intro`, `usage`, `properties`.
+
+The properties section renders both a compact table overview and detailed per-prop documentation, making it ideal
+for component API reference.
+
+### FunctionPage
+
+Used for standalone functions. Sections: `mdx`, `intro`, `usage`, `parameters`, `returns`.
+
+Shows function signature, parameters table, and return type documentation.
+
+### EnumPage
+
+Used for TypeScript enums. Sections: `mdx`, `intro`, `preview`.
+
+The preview section shows all enum members and their values.
+
+### TypePage
+
+Used for type aliases. Sections: `mdx`, `intro`, `preview`, `returns`.
+
+Preview shows the type definition. Returns shows the structure for complex types.
+
+### VarPage
+
+Used for exported variables and constants. Sections: `mdx`, `intro`, `preview`, `returns`.
+
+Same structure as TypePage.
+
+### DefaultPage
+
+Fallback for any reflection kind not covered above. Sections: `mdx`, `intro`.
+
+---
+
+## Section Components
+
+Each section is built from smaller components that can be used independently (including via the `@import` directive):
+
+| Component | Description |
+| --- | --- |
+| `Name` | Symbol name as a heading. |
+| `Description` | JSDoc description text. |
+| `Sources` | Source file location link. |
+| `Import` | Import statement code block. |
+| `Definition` | Full type/class definition. |
+| `Npm` | npm install command. |
+| `Preview` | Compact type preview. |
+| `Parameters` | Parameter table and details. Supports `display="table"` or `display="block"`. |
+| `Properties` | Object/interface property documentation. |
+| `Methods` | Class method documentation. |
+| `Returns` | Return type documentation. |
+| `ReturnsPreview` | Compact return type preview. |
+| `Examples` | `@example` JSDoc content. |
+| `Generics` | Generic type parameter documentation. |
+| `Signature` | Function/method signature. |
+
+---
+
+## Customizing Templates
+
+### Toggle Sections
+
+Disable a section by setting it to `false` in the `pages` configuration:
+
+```typescript
+{
+  pages: {
+    class: {
+      methods: false,
+      usage: false,
+    },
+  },
+}
+```
+
+### Replace a Section
+
+Pass a function that receives `PagePropsType` and returns a React node:
+
+```typescript
+{
+  pages: {
+    function: {
+      intro: (props) => {
+        return (
+          <>
+            <h1>{props.reflection.name}</h1>
+            <p>Custom intro content</p>
+          </>
+        );
+      },
+    },
+  },
+}
+```
+
+### Full Page Override
+
+Use the `custom` key to replace the entire template:
+
+```typescript
+{
+  pages: {
+    class: {
+      custom: (props) => {
+        const { reflection, packageOptions, pluginOptions } = props;
+        return (
+          <div>
+            <h1>{reflection.name}</h1>
+            <pre>{JSON.stringify(reflection, null, 2)}</pre>
+          </div>
+        );
+      },
+    },
+  },
+}
+```
+
+When `custom` is provided, all other section options are ignored.
+
+---
+
+## PagePropsType
+
+Every page template and section component receives `PagePropsType`, which includes:
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `reflection` | `JSONOutput.SomeReflection` | The TypeDoc reflection data for this symbol. |
+| `pluginOptions` | `PluginOptions` | Global plugin configuration. |
+| `packageOptions` | `PackageOptions` | Package-level configuration for this symbol's package. |
+| `reflectionsTree` | `ProjectReflection[]` | Full reflection trees for all packages (for cross-referencing). |
+| `npmName` | `string` | npm package name. |
+| `packageName` | `string` | Cleaned package title. |
+
+:::secondary Summary
+
+docsgen provides seven built-in page templates covering classes, components, functions, enums, types, variables,
+and a default fallback. Each template is composed of toggleable section components. Use the `pages` configuration
+to disable sections, replace them with custom renderers, or override entire pages.
+
+:::

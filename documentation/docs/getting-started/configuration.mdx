@@ -1,0 +1,210 @@
+---
+sidebar_position: 4
+title: Configuration
+sidebar_label: Configuration
+---
+
+# Configuration
+
+---
+
+docsgen is configured through two main types: `PluginOptions` (global settings) and `PackageOptions` (per-package
+settings). Both are passed through the `@docsgen/docusaurus` plugin in your `docusaurus.config.ts`.
+
+---
+
+## PluginOptions
+
+These are the top-level options passed to the plugin.
+
+```typescript
+[
+  "@docsgen/docusaurus",
+  {
+    id: "api",
+    outDir: "docs/api",
+    packages: [
+      /* PackageOptions[] */
+    ],
+    generateMdx: true,
+    addMonorepoPage: true,
+    addPackagePage: true,
+    logLevel: "info",
+    watch: false,
+    tsConfigPath: "./tsconfig.json",
+    typeDocOptions: {},
+    pages: {},
+  },
+];
+```
+
+| Option            | Type                      | Default      | Description                                                                                 |
+| ----------------- | ------------------------- | ------------ | ------------------------------------------------------------------------------------------- |
+| `id`              | `string`                  | **required** | Unique identifier for this plugin instance. Used internally for concurrency control.        |
+| `outDir`          | `string`                  | **required** | Output directory for generated docs, relative to the Docusaurus site root.                  |
+| `packages`        | `PackageOptions[]`        | **required** | Array of packages to generate documentation for.                                            |
+| `generateMdx`     | `boolean`                 | `true`       | Whether to generate `.mdx` files. Set to `false` if you only need the JSON reflection data. |
+| `addMonorepoPage` | `boolean`                 | `true`       | When documenting multiple packages, generates an `index.mdx` listing all packages.          |
+| `addPackagePage`  | `boolean`                 | `true`       | Generates a per-package `index.mdx` from the package's README.                              |
+| `logLevel`        | `string`                  | `"info"`     | Logging verbosity. One of `"trace"`, `"info"`, `"success"`, `"warning"`, `"error"`.         |
+| `watch`           | `boolean`                 | `false`      | Enables TypeDoc watch mode to regenerate JSON on source changes.                            |
+| `tsConfigPath`    | `string`                  | -            | Optional shared tsconfig path. Per-package `tsconfigDir`/`tsconfigName` takes precedence.   |
+| `typeDocOptions`  | `Partial<TypeDocOptions>` | `{}`         | Additional TypeDoc options merged into the default configuration.                           |
+| `pages`           | `object`                  | `{}`         | Per-kind page template overrides. See [Customization](/docs/getting-started/customization). |
+
+---
+
+## PackageOptions
+
+Each entry in the `packages` array describes a TypeScript package to document.
+
+```typescript
+{
+  title: "core",
+  dir: "../packages/core",
+  entryPath: "src/index.ts",
+  tsconfigDir: "../packages/core",
+  tsconfigName: "tsconfig.json",
+  readmeName: "README.md",
+  showImports: true,
+  excludeCategories: ["Namespaces"],
+  orderCategories: {
+    Classes: 1,
+    Functions: 2,
+    Types: 3,
+  },
+}
+```
+
+| Option                 | Type                     | Default           | Description                                                                                                  |
+| ---------------------- | ------------------------ | ----------------- | ------------------------------------------------------------------------------------------------------------ |
+| `title`                | `string`                 | **required**      | Display title for this package. Used in generated page headings and sidebar labels.                          |
+| `dir`                  | `string`                 | **required**      | Absolute or relative path to the package root directory.                                                     |
+| `entryPath`            | `string \| string[]`     | **required**      | Entry file(s) relative to `dir` that TypeDoc should parse.                                                   |
+| `outDir`               | `string`                 | -                 | Override output directory for this package. Useful for placing generated docs in a specific sidebar section. |
+| `logo`                 | `string`                 | `""`              | Logo URL shown on the monorepo index page.                                                                   |
+| `description`          | `string`                 | `""`              | Package description shown on the monorepo index page.                                                        |
+| `tsconfigName`         | `string`                 | `"tsconfig.json"` | tsconfig file name used for TypeDoc parsing.                                                                 |
+| `tsconfigDir`          | `string`                 | `""`              | Directory containing the tsconfig file.                                                                      |
+| `readmeName`           | `string`                 | `"README.md"`     | Filename of the README used to generate the package index page.                                              |
+| `readmeDir`            | `string`                 | `""`              | Directory containing the README file. Defaults to the package `dir`.                                         |
+| `showImports`          | `boolean`                | `true`            | Whether to show import statements on generated pages.                                                        |
+| `hasPackagePage`       | `boolean`                | -                 | Override `addPackagePage` for this specific package.                                                         |
+| `generateMdx`          | `boolean`                | -                 | Override `generateMdx` for this specific package.                                                            |
+| `orderCategories`      | `Record<string, number>` | `{}`              | Control sidebar position of category folders. Lower numbers appear first.                                    |
+| `excludeCategories`    | `string[]`               | `["Namespaces"]`  | Category names to exclude from generation.                                                                   |
+| `additionalCategories` | `array`                  | -                 | Extra category folders to create with custom `_category_.json` metadata.                                     |
+| `fileNameMapper`       | `function`               | -                 | Custom function to control the output filename for each symbol.                                              |
+| `nameMapper`           | `function`               | -                 | Custom function to transform sidebar display names.                                                          |
+| `kindMapper`           | `function`               | -                 | Custom function to remap reflection kinds (e.g., map "Function" to "Hooks").                                 |
+| `exclude`              | `function`               | -                 | Predicate to exclude specific reflections based on kind and JSDoc tags.                                      |
+
+---
+
+## Mapper Functions
+
+The mapper functions give you fine-grained control over the generated output.
+
+### fileNameMapper
+
+Controls the file name used for a generated MDX page. Useful when a symbol (like a React component) needs multiple
+files (e.g., separate props page):
+
+```typescript
+{
+  fileNameMapper: ({ isComponent, name }) => {
+    if (isComponent) return "props";
+    return undefined; // use default
+  },
+}
+```
+
+### nameMapper
+
+Transforms how symbol names appear in sidebar labels:
+
+```typescript
+{
+  nameMapper: ({ name }) => {
+    return name.replace("Internal", "");
+  },
+}
+```
+
+### kindMapper
+
+Remaps the category a symbol is placed into:
+
+```typescript
+{
+  kindMapper: ({ kind, reflection }) => {
+    if (kind === "Functions" && reflection.name.startsWith("use")) {
+      return "Hooks";
+    }
+    return kind;
+  },
+}
+```
+
+---
+
+## Full Example
+
+Here is a complete configuration from the
+[HyperFetch documentation](https://hyperfetch.bettertyped.com/docs/api/getting-started):
+
+```typescript
+import { importer } from "@docsgen/core";
+import plugin from "@docsgen/docusaurus";
+
+const config = {
+  presets: [
+    [
+      "classic",
+      {
+        docs: {
+          remarkPlugins: [
+            importer({
+              packageRoute: "api",
+              apiDir: "docs/api",
+            }),
+          ],
+        },
+      },
+    ],
+  ],
+  plugins: [
+    [
+      "@docsgen/docusaurus",
+      {
+        id: "api",
+        outDir: "docs/api",
+        logLevel: "trace",
+        addMonorepoPage: false,
+        addPackagePage: false,
+        packages: [
+          {
+            title: "core",
+            dir: "../packages/core",
+            entryPath: "src/index.ts",
+            tsconfigDir: "../packages/core",
+          },
+          {
+            title: "react",
+            dir: "../packages/react",
+            entryPath: "src/index.ts",
+            tsconfigDir: "../packages/react",
+          },
+        ],
+      } satisfies Parameters<typeof plugin>[1],
+    ],
+  ],
+};
+```
+
+:::secondary Summary
+
+`PluginOptions` configures the overall generation behavior, while `PackageOptions` lets you fine-tune each
+package individually. Use mapper functions and exclude predicates for advanced control over the output structure.
+
+:::

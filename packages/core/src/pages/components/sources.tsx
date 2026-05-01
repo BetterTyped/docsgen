@@ -1,6 +1,6 @@
 import React from "react";
 
-import { PagePropsType } from "../../types/page.types";
+import type { PagePropsType } from "../../types/page.types";
 import { Type } from "./type";
 
 export const Sources: React.FC<PagePropsType> = (props) => {

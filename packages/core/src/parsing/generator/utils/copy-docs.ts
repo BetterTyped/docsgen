@@ -1,6 +1,6 @@
 import path from "path";
 import fs from "fs-extra";
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 
 import { getSignature, getTags } from "pages";
 import { error } from "helpers/log.utils";
@@ -12,7 +12,7 @@ export const copyDocs = (reflection: JSONOutput.DeclarationReflection, projectDi
 
   if (tags?.length && source) {
     tags.forEach((tag) => {
-      if (!tag.title && !tag.description) return;
+      if (!tag.title && !tag.description) {return;}
 
       const dirParts = projectDirectory.split("/");
 
@@ -28,7 +28,7 @@ export const copyDocs = (reflection: JSONOutput.DeclarationReflection, projectDi
       const eraseIndex = dirParts.findIndex((part) => {
         return pathParts.find((currPart) => currPart === part);
       });
-      if (eraseIndex !== -1) {
+      if (-1 !== eraseIndex) {
         const index = dirParts.length - eraseIndex;
         Array(index)
           .fill(0)

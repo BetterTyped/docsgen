@@ -1,7 +1,7 @@
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 
 export const getGenericParamsPreview = ({ generics }: { generics?: JSONOutput.TypeParameterReflection[] }): string => {
-  if (!generics || generics.length === 0) {
+  if (!generics || 0 === generics.length) {
     return "";
   }
 

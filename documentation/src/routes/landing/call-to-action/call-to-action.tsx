@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { Description, Title } from "@site/src/components";
+import Link from "@docusaurus/Link";
 
 export const CallToAction = () => {
   return (
@@ -11,8 +12,8 @@ export const CallToAction = () => {
             className="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/3 aspect-square max-w-[80vw]"
             aria-hidden="true"
           >
-            <div className="absolute inset-0 translate-z-0 dark:bg-blue-500 bg-blue-300 rounded-full blur-[120px] opacity-70" />
-            <div className="absolute w-1/4 h-1/4 translate-z-0 dark:bg-blue-400 bg-blue-200 rounded-full blur-[40px]" />
+            <div className="absolute inset-0 translate-z-0 bg-blue-300 rounded-full blur-[120px] opacity-70" />
+            <div className="absolute w-1/4 h-1/4 translate-z-0 bg-blue-200 rounded-full blur-[40px]" />
           </div>
           {/* Blurred shape */}
           <div
@@ -27,7 +28,7 @@ export const CallToAction = () => {
                 </linearGradient>
               </defs>
               <path
-                className="dark:fill-blue-700 fill-blue-200"
+                className="fill-blue-200"
                 fillRule="evenodd"
                 d="m0 0 461 369-284 58z"
                 transform="matrix(1 0 0 -1 0 427)"
@@ -37,12 +38,12 @@ export const CallToAction = () => {
           {/* Content */}
           <div className="max-w-3xl mx-auto text-center">
             <div>
-              <div className="inline-flex font-medium bg-clip-text !text-transparent bg-gradient-to-r from-blue-500 to-pink-500 dark:from-blue-500 dark:to-blue-200 pb-3">
-                Start today
+              <div className="inline-flex font-medium bg-clip-text !text-transparent bg-gradient-to-r from-blue-500 to-pink-500 pb-3">
+                Get started
               </div>
             </div>
-            <Title className="h2 bg-clip-text !text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">
-              Build with{" "}
+            <Title className="h2 bg-clip-text !text-transparent bg-gradient-to-r from-slate-600/60 via-slate-800 to-slate-600/60 pb-4">
+              Try{" "}
               <span
                 className="font-bold bg-clip-text bg-gradient-to-r !text-transparent from-blue-600 to-pink-500"
                 style={{
@@ -53,14 +54,20 @@ export const CallToAction = () => {
               </span>
             </Title>
             <Description className="text-lg text-slate-400 mb-8">
-              Try it for yourself! Start coding for free and upgrade anytime.
+              Open source and free. Set up in minutes, keep your docs accurate forever.
             </Description>
-            <div>
-              <a
-                href="https://share-eu1.hsforms.com/1qvuH3v9FQbG6q2oZ-8D7PQ2dk74d"
-                className="hover:opacity-70 !no-underline bg-gradient-to-b dark:from-40% dark:from-slate-50 dark:to-slate-200 from-20% from-slate-600 to-slate-900 text-white dark:text-black font-semibold rounded-xl max-w-full border text-center py-3 px-10"
+            <div className="flex gap-4 justify-center flex-wrap">
+              <Link
+                to="/docs/getting-started"
+                className="hover:opacity-70 !no-underline bg-gradient-to-b from-20% from-slate-600 to-slate-900 text-white font-semibold rounded-xl max-w-full border text-center py-3 px-10"
               >
-                Contact us <span className="ml-2">💬</span>
+                Read the docs
+              </Link>
+              <a
+                href="https://github.com/BetterTyped/docsgen"
+                className="hover:opacity-70 !no-underline bg-white text-slate-800 font-semibold rounded-xl max-w-full border border-slate-300 text-center py-3 px-10"
+              >
+                View on GitHub
               </a>
             </div>
           </div>

@@ -2,7 +2,7 @@ import React from "react";
 import * as path from "path";
 
 import { error } from "../../helpers/log.utils";
-import { PluginOptions } from "../../types/package.types";
+import type { PluginOptions } from "../../types/package.types";
 import { cleanFileName, createFile } from "../../parsing/generator/utils/file.utils";
 import { transformMarkdown } from "../../parsing/renderer/utils/processing.utils";
 
@@ -10,7 +10,7 @@ const MonorepoPage: React.FC<{ options: PluginOptions }> = ({ options }) => {
   const { packages, outDir } = options;
 
   const breadcrumbs = outDir.split("/").filter(Boolean);
-  if (breadcrumbs.length > 1) breadcrumbs.shift();
+  if (1 < breadcrumbs.length) {breadcrumbs.shift();}
 
   return (
     <>

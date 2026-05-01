@@ -1,0 +1,260 @@
+---
+sidebar_position: 6
+title: Customization
+sidebar_label: Customization
+---
+
+# Customization
+
+---
+
+docsgen gives you control over what appears on each generated page, how files are named, which symbols are included,
+and how categories are organized.
+
+---
+
+## Page Section Toggles
+
+Each reflection kind has a page template with named sections. You can toggle sections on/off or replace them with
+custom renderers using the `pages` option in `PluginOptions`.
+
+### Available Page Kinds
+
+| Kind | Sections |
+| --- | --- |
+| `class` | `mdx`, `intro`, `parameters`, `properties`, `methods`, `usage`, `custom` |
+| `component` | `mdx`, `intro`, `usage`, `properties`, `custom` |
+| `function` | `mdx`, `intro`, `usage`, `parameters`, `returns`, `custom` |
+| `enum` | `mdx`, `intro`, `preview`, `custom` |
+| `type` | `mdx`, `intro`, `preview`, `returns`, `custom` |
+| `var` | `mdx`, `intro`, `preview`, `returns`, `custom` |
+| `default` | `mdx`, `intro`, `custom` |
+
+### Disabling a Section
+
+Pass `false` to hide a section:
+
+```typescript
+{
+  pages: {
+    class: {
+      methods: false,
+    },
+    component: {
+      intro: false,
+    },
+  },
+}
+```
+
+### Custom Section Renderer
+
+Pass a function to replace a section with your own React component:
+
+```typescript
+{
+  pages: {
+    function: {
+      parameters: (props) => {
+        const { reflection } = props;
+        return <div>Custom parameters for {reflection.name}</div>;
+      },
+    },
+  },
+}
+```
+
+### Full Page Override
+
+Use the `custom` key to replace the entire page template:
+
+```typescript
+{
+  pages: {
+    class: {
+      custom: (props) => {
+        const { reflection, pluginOptions, packageOptions } = props;
+        return (
+          <>
+            <h1>{reflection.name}</h1>
+            <p>Fully custom page layout</p>
+          </>
+        );
+      },
+    },
+  },
+}
+```
+
+---
+
+## File and Name Mappers
+
+### fileNameMapper
+
+Controls the output file name for each symbol. Receives the reflection metadata and returns a file name string,
+or `undefined` to use the default.
+
+```typescript
+{
+  fileNameMapper: ({ isComponent, reflection, kind, name }) => {
+    if (isComponent) return "props";
+    return undefined;
+  },
+}
+```
+
+This is useful for React component documentation where you might want a `props.mdx` sub-page.
+
+### nameMapper
+
+Transforms how a symbol name appears in sidebar labels and headings:
+
+```typescript
+{
+  nameMapper: ({ name, reflection }) => {
+    return name.replace(/^_/, "");
+  },
+}
+```
+
+### kindMapper
+
+Remaps the category (folder) a symbol is placed into. A common use case is moving functions that start with `use`
+into a "Hooks" category:
+
+```typescript
+{
+  kindMapper: ({ kind, reflection }) => {
+    if (kind === "Functions" && reflection.name.startsWith("use")) {
+      return "Hooks";
+    }
+    return kind;
+  },
+}
+```
+
+---
+
+## Excluding Symbols
+
+### excludeCategories
+
+Exclude entire categories from generation:
+
+```typescript
+{
+  excludeCategories: ["Namespaces", "Variables"],
+}
+```
+
+The default is `["Namespaces"]`.
+
+### exclude Function
+
+A predicate that receives each reflection's kind and JSDoc tags. Return `true` to skip the symbol:
+
+```typescript
+{
+  exclude: ({ kind, tags }) => {
+    return tags.some((tag) => tag.tag === "@internal");
+  },
+}
+```
+
+### @exclude JSDoc Tag
+
+Add `@exclude` to any symbol's JSDoc comment to skip it during generation:
+
+```typescript
+/**
+ * @exclude
+ */
+export function internalHelper() {}
+```
+
+---
+
+## Category Ordering
+
+### orderCategories
+
+Control the sidebar position of category folders. Lower numbers appear first:
+
+```typescript
+{
+  orderCategories: {
+    Classes: 1,
+    Functions: 2,
+    Hooks: 3,
+    Interfaces: 4,
+    Types: 5,
+    Variables: 6,
+    Enums: 7,
+  },
+}
+```
+
+This writes `_category_.json` files with the specified `position` value.
+
+### additionalCategories
+
+Create extra category folders that don't come from TypeDoc output:
+
+```typescript
+{
+  additionalCategories: [
+    {
+      name: "Guides",
+      category: { label: "Guides", position: 0 },
+    },
+  ],
+}
+```
+
+---
+
+## Supplementary Docs with @docs
+
+The `@docs` JSDoc tag copies a folder of additional documentation files into the generated output directory next to
+the symbol's page. This lets you co-locate hand-written guides, images, or examples right next to your source code
+and have them automatically bundled with the generated API docs.
+
+```typescript
+/**
+ * @docs ./docs
+ */
+export class Client {}
+```
+
+If the source file is at `src/client.ts` and there is a `src/docs/` folder next to it, those files will be copied
+into the generated `Classes/Client/` directory.
+
+This follows the same "living documentation" principle as `@import` - the supplementary docs live next to the
+code, travel with it during refactors, and are always included in the generated output. If you move a class to
+a different file, the `@docs` folder moves with it.
+
+---
+
+## The Always Up-to-Date Principle
+
+All of these customization options work together to create documentation that maintains itself:
+
+- **Generated pages** update automatically when your TypeScript source changes.
+- **`@import` directives** in hand-written MDX pull live data from the source on every build.
+- **`@docs` folders** co-locate supplementary docs with the code they describe.
+- **Mapper functions** let you control presentation without touching generated content.
+- **Exclude predicates** filter symbols programmatically based on their actual tags and kinds.
+
+The result is documentation where the human writes the narrative and context, and the tooling ensures every
+technical detail stays accurate. There is no manual sync step, no stale parameter lists, and no broken type
+references.
+
+:::secondary Summary
+
+Use `pages` to toggle or replace page sections, mapper functions to control naming and categorization, `exclude`
+and `excludeCategories` to filter output, `orderCategories` to control sidebar order, and `@docs` to bundle
+supplementary files. All of these work together with `@import` to create documentation that stays accurate
+as your code evolves.
+
+:::

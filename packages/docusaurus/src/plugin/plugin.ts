@@ -1,6 +1,7 @@
 import * as path from "path";
-import { generate, PluginOptions } from "@docsgen/core";
-import { LoadContext } from "@docusaurus/types";
+import type { PluginOptions } from "@docsgen/core";
+import { generate } from "@docsgen/core";
+import type { LoadContext } from "@docusaurus/types";
 
 import { createInstance, isNewInstance } from "../helpers/concurrency.utils";
 

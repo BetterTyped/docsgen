@@ -1,45 +1,34 @@
-import { useState } from "react";
-import { useDidMount, useWindowEvent } from "@reins/hooks";
+import { useEffect } from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 
 import { Hero } from "./hero";
-import { Clients } from "./clients";
+import { HowItWorks } from "./how-it-works";
+import { Showcase } from "./showcase";
 import { Summary } from "./summary";
 import { CallToAction } from "./call-to-action";
 import { Modules } from "./modules/modules";
-import { Integrations } from "./integrations/integrations";
+import { Clients } from "./clients";
+import { Sponsors } from "./sponsors/sponsors";
 
 export const Landing = () => {
   const { siteConfig } = useDocusaurusContext();
 
-  const [hide, setHide] = useState(false);
-
-  useDidMount(() => {
+  useEffect(() => {
     window.scrollTo(0, 0);
-  });
-
-  useWindowEvent(
-    "scroll",
-    () => {
-      const hideValue = window.scrollY > window.innerHeight * 2;
-
-      if (hide !== hideValue) {
-        setHide(hideValue);
-      }
-    },
-    [hide],
-  );
+  }, []);
 
   return (
-    <Layout title="Modern frontend ecosystem" description={siteConfig.tagline}>
-      <div className="w-[100vw] max-w-[100vw]" style={{ contain: "paint" }}>
+    <Layout title="Docs that live with your code" description={siteConfig.tagline}>
+      <div className="w-[100vw] max-w-[100vw]" style={{ contain: "layout" }}>
         <div className="relative z-2">
           <Hero />
           <Clients />
+          <HowItWorks />
+          <Showcase />
           <Modules />
-          <Integrations />
           <Summary />
+          <Sponsors />
           <CallToAction />
         </div>
       </div>

@@ -8,7 +8,7 @@ import { name as libraryName } from "../../../constants/name.constants";
 export const readFile = (filePath: string): string | null => {
   try {
     return fs.readFileSync(filePath, "utf8");
-  } catch (err) {
+  } catch {
     return null;
   }
 };
@@ -42,8 +42,8 @@ export function prepareApiDirectory(dirname: string) {
 }
 
 export const cleanFileName = (name: string) => {
-  const newName = name.replace(/\s+/gi, "-"); // Replace white space with dash
-  return newName.replace(/[^a-zA-Z0-9-]/gi, ""); // Strip any special charactere
+  const newName = name.replaceAll(/\s+/gi, "-"); // Replace white space with dash
+  return newName.replaceAll(/[^a-zA-Z0-9-]/gi, ""); // Strip any special charactere
 };
 
 function copyFolderSync(from: string, to: string) {
@@ -58,7 +58,7 @@ function copyFolderSync(from: string, to: string) {
         copyFolderSync(path.join(from, element), path.join(to, element));
       }
     });
-  } catch (err) {
+  } catch {
     return null;
   }
 }

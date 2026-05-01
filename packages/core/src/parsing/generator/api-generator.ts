@@ -1,10 +1,10 @@
 import * as path from "path";
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 
 import { trace, error } from "../../helpers/log.utils";
 import { createFile, readFile } from "./utils/file.utils";
 import { pageRenderer } from "../renderer/renderer";
-import { PackageOptions, PluginOptions } from "../../types/package.types";
+import type { PackageOptions, PluginOptions } from "../../types/package.types";
 import { getKindName } from "../../pages/utils/display.utils";
 import { isComponent } from "pages/utils/component.utils";
 import { copyDocs } from "./utils/copy-docs";

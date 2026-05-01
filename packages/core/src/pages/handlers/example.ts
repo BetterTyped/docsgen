@@ -1,11 +1,11 @@
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 
 import { getTags } from "./tags";
 import { getComment } from "./comment";
 
 export const getExamples = (reflection: JSONOutput.SomeReflection) => {
   const comment = getComment(reflection);
-  if (!comment) return [];
+  if (!comment) {return [];}
   const example = getTags(comment, "@example");
 
   return example;

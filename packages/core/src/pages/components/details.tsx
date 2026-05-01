@@ -1,4 +1,4 @@
-import { PagePropsType } from "types/page.types";
+import type { PagePropsType } from "types/page.types";
 import { Definition } from "./definition";
 import { Import } from "./import";
 import { Npm } from "./npm";

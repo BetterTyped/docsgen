@@ -1,7 +1,7 @@
 import React from "react";
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 
-import { PagePropsType } from "../../types/page.types";
+import type { PagePropsType } from "../../types/page.types";
 import { getSignature } from "../utils/signature.utils";
 
 export type GenericsProps = {
@@ -13,14 +13,14 @@ export const Generics: React.FC<PagePropsType<JSONOutput.DeclarationReflection> 
   const { reflection, className = "" } = props;
   const signature = getSignature(reflection);
 
-  if (!signature?.typeParameter) return null;
+  if (!signature?.typeParameter) {return null;}
 
   return (
     <div className={`api-docs__generics ${className}`}>
       {"<"}
       {signature.typeParameter.map((param, index) => (
         <React.Fragment key={param.id}>
-          {index > 0 && ","}
+          { 0 < index && ","}
           {param.name}
         </React.Fragment>
       ))}

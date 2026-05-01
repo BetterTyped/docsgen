@@ -1,7 +1,7 @@
 import React from "react";
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 
-import { PagePropsType } from "../../types/page.types";
+import type { PagePropsType } from "../../types/page.types";
 
 export type DefinitionProps = {
   className?: string;
@@ -17,7 +17,7 @@ export const Definition: React.FC<PagePropsType & DefinitionProps> = (props) => 
 
   const source = getDefinition(reflection);
 
-  if (!source) return null;
+  if (!source) {return null;}
 
   return (
     <div className={`api-docs__definition api-docs__details ${className}`}>

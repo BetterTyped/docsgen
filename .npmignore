@@ -1,7 +1,7 @@
 node_modules
 __tests__
 coverage
-jest.config.ts
-jest.setup.ts
+vite.config.ts
+vitest.setup.ts
 project.json
 src

@@ -1,13 +1,13 @@
-import * as TypeDoc from "typedoc";
+import type * as TypeDoc from "typedoc";
 
-import { logsLevels } from "helpers/log.utils";
-import { ClassPageOptions } from "pages/class.page";
-import { ComponentPageOptions } from "pages/component.page";
-import { DefaultPageOptions } from "pages/default.page";
-import { EnumPageOptions } from "pages/enum.page";
-import { FunctionPageOptions } from "pages/function.page";
-import { TypePageOptions } from "pages/type.page";
-import { VariablePageOptions } from "pages/var.page";
+import type { logsLevels } from "helpers/log.utils";
+import type { ClassPageOptions } from "pages/class.page";
+import type { ComponentPageOptions } from "pages/component.page";
+import type { DefaultPageOptions } from "pages/default.page";
+import type { EnumPageOptions } from "pages/enum.page";
+import type { FunctionPageOptions } from "pages/function.page";
+import type { TypePageOptions } from "pages/type.page";
+import type { VariablePageOptions } from "pages/var.page";
 
 export enum PackagePages {
   CLASS = "class",
@@ -66,7 +66,7 @@ export type PackageOptions = {
     reflection: TypeDoc.JSONOutput.SomeReflection;
     kind: string | TypeDoc.ReflectionKind;
     name: string;
-  }) => string;
+  }) => string | undefined;
   nameMapper?: (options: { name: string; reflection: TypeDoc.JSONOutput.SomeReflection }) => string;
   kindMapper?: (options: { kind: string; reflection: TypeDoc.JSONOutput.SomeReflection }) => string;
   exclude?: (reflection: { kind: string; tags: TypeDoc.JSONOutput.CommentTag[] }) => boolean;

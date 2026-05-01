@@ -1,0 +1,23 @@
+---
+description: Never use em dashes in user-facing text
+alwaysApply: true
+---
+
+# No em dashes
+
+Never use the em dash character (`—` or `&mdash;`). Use alternative punctuation instead:
+
+- Rewrite with a comma, semicolon, colon, or period
+- Use parentheses for parenthetical asides
+- Split into two sentences
+
+```
+❌ We extended TSDoc — adding custom tags and badges
+✅ We extended TSDoc with custom tags and badges
+
+❌ Control every page — not the other way around
+✅ Control every page, not the other way around
+
+❌ Method tables, parameter lists — all auto-generated
+✅ Method tables, parameter lists, and more. All auto-generated.
+```

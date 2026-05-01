@@ -1,5 +1,5 @@
-import { RequiredKeys } from "../types/helpers.types";
-import { PackageOptions } from "../types/package.types";
+import type { RequiredKeys } from "../types/helpers.types";
+import type { PackageOptions } from "../types/package.types";
 
 export const defaultPackageOptions: RequiredKeys<
   Omit<

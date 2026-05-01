@@ -1,36 +1,32 @@
 import path from "path";
 import React from "react";
-// TS fails to import it at build
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import { visit, SKIP } from "unist-util-visit";
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 import { mdxFromMarkdown } from "mdast-util-mdx";
 import { fromMarkdown } from "mdast-util-from-markdown";
 import { mdxjs } from "micromark-extension-mdxjs";
 import { readJsonSync } from "fs-extra";
-import { parse } from "@reins/query-params";
-
-import { PluginOptions, PkgMeta } from "../types/package.types";
+import type { PluginOptions, PkgMeta } from "../types/package.types";
 import { pluginOptionsPath, packageConfigPath } from "../constants/paths.constants";
 import { getFile, getMatchingElement } from "./utils/docs.utils";
-import { DocsComponents, getComponent, GetComponentProps } from "./components/component-map.utils";
+import type { DocsComponents, GetComponentProps } from "./components/component-map.utils";
+import { getComponent } from "./components/component-map.utils";
 import { cleanFileName } from "../parsing/generator/utils/file.utils";
 import { renderer } from "../parsing/renderer/renderer";
 import { getPackageDocsPath } from "../parsing/generator/utils/package.utils";
 
 function escapeRegExp(string: string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
+  return string.replaceAll(/[.*+?^${}()|[\]\\]/g, String.raw`\$&`); // $& means the whole matched string
 }
 
 function replaceAll(str: string, find: string, replace: string) {
-  return str.replace(new RegExp(escapeRegExp(find), "g"), replace);
+  return str.replaceAll(new RegExp(escapeRegExp(find), "g"), replace);
 }
 
 type TreeNode = {
   type: string;
   value: string;
-  children: Array<TreeNode>;
+  children: TreeNode[];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data?: Record<string, any>; // large structure
   position: {
@@ -41,7 +37,7 @@ type TreeNode = {
 
 type TreeType = {
   type: "root";
-  children: Array<TreeNode>;
+  children: TreeNode[];
 };
 
 type FileType = {
@@ -78,7 +74,7 @@ export const importer = (options: { packageRoute: string; apiDir: string; versio
       }
 
       const packagesNames = pluginOptions.packages.map((pkg) => cleanFileName(pkg.title));
-      const isMonorepo = pluginOptions.packages.length > 1;
+      const isMonorepo = 1 < pluginOptions.packages.length;
 
       const reflectionsMap: { name: string; reflection: JSONOutput.ProjectReflection }[] = pluginOptions.packages.map(
         (pkg) => {
@@ -99,7 +95,6 @@ export const importer = (options: { packageRoute: string; apiDir: string; versio
         const apiImport = node.value.match(rgx) as null | string[];
         if (apiImport) {
           const [, , packageName, componentName, componentOptions] = apiImport;
-          // eslint-disable-next-line prettier/prettier
           if (!packagesNames.includes(packageName)) {
             throw new Error(`Cannot find package ${packageName}, available packages: ${packagesNames.join(", ")}`);
           }
@@ -107,7 +102,7 @@ export const importer = (options: { packageRoute: string; apiDir: string; versio
           if (!packageOptions) {
             throw new Error(`Cannot find package options for ${packageName}`);
           }
-          if (!reflectionsMap.length) {
+          if (reflectionsMap.length === 0) {
             throw new Error(`Cannot existing docs.json reflection files`);
           }
           const configPath = path.join(docsDir, packageName, packageConfigPath);
@@ -132,10 +127,10 @@ export const importer = (options: { packageRoute: string; apiDir: string; versio
             .replace("]", "")
             .replace(")", "");
           let optionsNormalization = replaceAll(replaceAll(optionsPreparation, ",", "&"), ":", "=");
-          if (optionsNormalization[optionsNormalization.length - 1] === "&") {
+          if ("&" === optionsNormalization[optionsNormalization.length - 1]) {
             optionsNormalization = optionsNormalization.slice(0, -1);
           }
-          const parsedOptions = parse(optionsNormalization) as GetComponentProps<keyof DocsComponents>;
+          const parsedOptions = Object.fromEntries(new URLSearchParams(optionsNormalization)) as unknown as GetComponentProps<keyof DocsComponents>;
           const Component = getComponent(parsedOptions);
           const html = renderer(Component as React.FC, {
             ...parsedOptions,
@@ -157,13 +152,12 @@ export const importer = (options: { packageRoute: string; apiDir: string; versio
               if (parent) {
                 // eslint-disable-next-line no-param-reassign
                 parent.children = parent.children
-                  .map((child) => {
+                  .flatMap((child) => {
                     if (child === paragraph) {
                       return paragraph.children;
                     }
                     return child;
-                  })
-                  .flat();
+                  });
               }
             });
             Object.assign(node, subTree);

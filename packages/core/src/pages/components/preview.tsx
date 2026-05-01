@@ -1,7 +1,8 @@
 import React from "react";
-import { JSONOutput, ReflectionKind } from "typedoc";
+import type { JSONOutput} from "typedoc";
+import { ReflectionKind } from "typedoc";
 
-import { PagePropsType } from "../../types/page.types";
+import type { PagePropsType } from "../../types/page.types";
 import { Type } from "./type";
 import { Code } from "./code";
 import { GenericParameters } from "./generic-parameters";
@@ -16,20 +17,20 @@ import { Signature } from "./signature";
 export const Preview: React.FC<PagePropsType<JSONOutput.SomeReflection | JSONOutput.SomeType>> = (props) => {
   const { reflection, reflectionsTree } = props;
 
-  if (!reflection) return null;
+  if (!reflection) {return null;}
 
   /**
    * Reference handling
    */
 
-  if ("type" in reflection && typeof reflection.type !== "string" && reflection.type?.type === "reference") {
+  if ("type" in reflection && "string" !== typeof reflection.type && "reference" === reflection.type?.type) {
     const reference = getReference(reflectionsTree, reflection.type);
 
     if (reference) {
       return <Preview {...props} reflection={reference} />;
     }
   }
-  if ("type" in reflection && reflection.type === "reference") {
+  if ("type" in reflection && "reference" === reflection.type) {
     const reference = getReference(reflectionsTree, reflection);
 
     if (reference) {
@@ -47,7 +48,7 @@ export const Preview: React.FC<PagePropsType<JSONOutput.SomeReflection | JSONOut
 
   if (reflection.kind === ReflectionKind.Class) {
     const signature = getSignature(reflection);
-    if (!signature) return null;
+    if (!signature) {return null;}
 
     const [name, typeSignature, callSignature] = getCallPreview({ signature, reflectionsTree });
     const children = getTypes(reflectionsTree, reflection);
@@ -82,7 +83,7 @@ export const Preview: React.FC<PagePropsType<JSONOutput.SomeReflection | JSONOut
 
   if (isComponent(reflection)) {
     const signature = getSignature(reflection);
-    if (!signature) return null;
+    if (!signature) {return null;}
 
     const [name] = getCallPreview({ signature, reflectionsTree });
 
@@ -103,7 +104,7 @@ export const Preview: React.FC<PagePropsType<JSONOutput.SomeReflection | JSONOut
     reflection.kind === ReflectionKind.CallSignature
   ) {
     const signature = getSignature(reflection);
-    if (!signature) return null;
+    if (!signature) {return null;}
 
     const [name, typeSignature, callSignature] = getCallPreview({ signature, reflectionsTree });
 
@@ -127,21 +128,21 @@ export const Preview: React.FC<PagePropsType<JSONOutput.SomeReflection | JSONOut
       reflection?.children?.map<[string, string | number | boolean]>((child: any) => {
         const type = child.type && "value" in child.type && child.type.value;
 
-        if (typeof type === "object" && type && "value" in type) {
+        if ("object" === typeof type && type && "value" in type) {
           return [child.name, type.value || ""];
         }
 
         return [child.name, type || ""];
       });
 
-    if (!children) return null;
+    if (!children) {return null;}
 
     return (
       <div className="api-docs__preview enum">
         <Code>
           {`enum ${name} {\n`}
           {children.map((element) => {
-            const isString = typeof element[1] === "string";
+            const isString = "string" === typeof element[1];
             const value = !isString ? element[1] : `"${element[1]}"`;
             return `  ${element[0]} = ${value}; \n`;
           })}
@@ -177,7 +178,7 @@ export const Preview: React.FC<PagePropsType<JSONOutput.SomeReflection | JSONOut
         })) ||
       [];
 
-    if (!children?.length && !type) return null;
+    if (!children?.length && !type) {return null;}
 
     const generics = "typeParameters" in reflection && reflection.typeParameters && (
       <GenericParameters generics={reflection.typeParameters} />

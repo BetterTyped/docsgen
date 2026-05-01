@@ -1,9 +1,9 @@
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 
 import { getSignature } from "pages/utils/signature.utils";
 
 export const getComment = (reflection: JSONOutput.SomeReflection | undefined): JSONOutput.Comment | undefined => {
-  if (!reflection) return;
+  if (!reflection) {return;}
 
   if (reflection.comment) {
     return reflection.comment;

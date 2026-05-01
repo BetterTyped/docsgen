@@ -1,55 +1,9 @@
-import React from "react";
-import { useActors, useMakeup, Stage, StyleOptions } from "@react-theater/scroll";
-
-const ScaleOutContent = ({
-  children,
-  start = 0.01,
-  end = 0.55,
-  scale = 1,
-  setActorStyle,
-}: {
-  children: React.ReactNode;
-  start?: number;
-  end?: number;
-  scale?: number;
-  setActorStyle: (style: StyleOptions) => void;
-}) => {
-  // Change
-  useActors([
-    {
-      start: 0,
-      end: start,
-      screen: true,
-      onUpdate: () => {
-        setActorStyle({
-          opacity: 0,
-          scale: 0.4,
-        });
-      },
-    },
-    {
-      start,
-      end,
-      screen: true,
-      onUpdate: ({ progress }) => {
-        setActorStyle({
-          opacity: progress,
-          scale: 0.4 + (scale - 0.4) * progress,
-        });
-      },
-    },
-  ]);
-
-  return children;
-};
+import React, { useEffect, useRef, useState } from "react";
 
 export const ScaleOut = ({
   children,
-  start,
-  end,
-  scale,
   className,
-  isStage = true,
+  delay = 0,
   ...rest
 }: {
   children: React.ReactNode;
@@ -57,15 +11,42 @@ export const ScaleOut = ({
   end?: number;
   scale?: number;
   isStage?: boolean;
+  delay?: number;
 } & React.HTMLProps<HTMLDivElement>) => {
-  const [actorRef, setActorStyle] = useMakeup();
-  const Component = isStage ? Stage : "div";
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.05 },
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <Component {...rest} ref={actorRef} className={`${className || ""} opacity-0 will-change-transform`}>
-      <ScaleOutContent start={start} end={end} scale={scale} setActorStyle={setActorStyle}>
-        {children}
-      </ScaleOutContent>
-    </Component>
+    <div
+      {...rest}
+      ref={ref}
+      className={className}
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? "scale(1)" : "scale(0.4)",
+        transition: `opacity 0.8s ease ${delay}s, transform 0.8s ease ${delay}s`,
+        ...rest.style,
+      }}
+    >
+      {children}
+    </div>
   );
 };

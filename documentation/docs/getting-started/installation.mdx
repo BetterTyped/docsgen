@@ -1,0 +1,72 @@
+---
+sidebar_position: 2
+title: Installation
+sidebar_label: Installation
+---
+
+# Installation
+
+---
+
+## Prerequisites
+
+- **Node.js** 18 or later
+- A **Docusaurus 3** project (or a new one created with `npx create-docusaurus@latest`)
+- **TypeScript** source code you want to document
+
+---
+
+## Install Packages
+
+Install both the core engine and the Docusaurus plugin:
+
+```bash
+npm install @docsgen/core @docsgen/docusaurus
+```
+
+```bash
+yarn add @docsgen/core @docsgen/docusaurus
+```
+
+```bash
+pnpm add @docsgen/core @docsgen/docusaurus
+```
+
+---
+
+## Peer Dependencies
+
+`@docsgen/core` depends on the following packages that your Docusaurus project likely already provides:
+
+- `react` >= 18
+- `react-dom` >= 18
+- `typedoc` (installed automatically as a dependency)
+
+If you plan to use the `@import` embedding feature inside your MDX files, the `importer` remark plugin is included
+in `@docsgen/core` - no additional installation is needed.
+
+---
+
+## Monorepo Setup
+
+In a monorepo (Nx, Turborepo, pnpm workspaces), install the packages at the documentation app level or at the
+root depending on your setup. The documentation app needs access to `@docsgen/core` and `@docsgen/docusaurus`
+at build time.
+
+If your documentation app is a separate workspace, use workspace protocol links:
+
+```json
+{
+  "dependencies": {
+    "@docsgen/core": "workspace:*",
+    "@docsgen/docusaurus": "workspace:*"
+  }
+}
+```
+
+:::secondary Summary
+
+You now have docsgen installed. Head to [Quick Start](/docs/getting-started/quick-start) to configure it in your
+Docusaurus project.
+
+:::

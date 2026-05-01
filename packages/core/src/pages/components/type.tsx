@@ -1,7 +1,7 @@
 import React from "react";
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 
-import { PagePropsType } from "../../types/page.types";
+import type { PagePropsType } from "../../types/page.types";
 import { getTypePreview } from "pages/utils/types.utils";
 
 export const Type = ({

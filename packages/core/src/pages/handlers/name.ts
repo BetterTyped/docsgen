@@ -1,25 +1,25 @@
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 
 export const getStatusIcon = (reflection: JSONOutput.SomeReflection) => {
   const { comment } = reflection;
 
-  if (!comment) return "";
+  if (!comment) {return "";}
 
-  const tags = (comment.blockTags || []).map((blockTag) => blockTag.tag);
+  const tags = new Set((comment.blockTags || []).map((blockTag) => blockTag.tag));
 
-  if (tags.includes("@new")) {
+  if (tags.has("@new")) {
     return "🆕 ";
   }
-  if (tags.includes("@alpha")) {
+  if (tags.has("@alpha")) {
     return "⚠️ ";
   }
-  if (tags.includes("@beta")) {
+  if (tags.has("@beta")) {
     return "🚧 ";
   }
-  if (tags.includes("@experimental")) {
+  if (tags.has("@experimental")) {
     return "🧪 ";
   }
-  if (tags.includes("@deprecated")) {
+  if (tags.has("@deprecated")) {
     return "⛔️ ";
   }
 

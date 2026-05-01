@@ -1,4 +1,5 @@
-import { JSONOutput, ReflectionKind } from "typedoc";
+import type { JSONOutput} from "typedoc";
+import { ReflectionKind } from "typedoc";
 
 import { isMethod } from "./methods.utils";
 import { getReference } from "./reference.utils";
@@ -9,32 +10,30 @@ export const getTypes = (
   reflectionsTree: JSONOutput.ProjectReflection[],
   reflection: JSONOutput.SomeReflection | JSONOutput.SomeType,
 ): JSONOutput.DeclarationReflection[] => {
-  if (!reflection) return [];
+  if (!reflection) {return [];}
 
-  if ("type" in reflection && typeof reflection.type !== "string" && reflection.type) {
+  if ("type" in reflection && "string" !== typeof reflection.type && reflection.type) {
     return getTypes(reflectionsTree, reflection.type);
   }
 
-  if ("type" in reflection && typeof reflection.type === "string" && reflection.type === "intersection") {
+  if ("type" in reflection && "string" === typeof reflection.type && "intersection" === reflection.type) {
     return reflection.types
-      .map((type) => {
+      .flatMap((type) => {
         return getTypes(reflectionsTree, type);
       })
-      .flat()
       .filter(Boolean);
   }
 
   if (
     "type" in reflection &&
-    typeof reflection.type === "object" &&
+    "object" === typeof reflection.type &&
     reflection.type &&
     "typeArguments" in reflection.type
   ) {
     return reflection.type?.typeArguments
-      ?.map((type) => {
+      ?.flatMap((type) => {
         return getTypes(reflectionsTree, type);
       })
-      .flat()
       .filter(Boolean) as JSONOutput.DeclarationReflection[];
   }
 
@@ -43,7 +42,7 @@ export const getTypes = (
   }
   if (
     "type" in reflection &&
-    typeof reflection.type === "object" &&
+    "object" === typeof reflection.type &&
     "declaration" in reflection.type &&
     reflection.type.declaration &&
     "children" in reflection.type.declaration
@@ -52,19 +51,18 @@ export const getTypes = (
   }
   if (
     "type" in reflection &&
-    typeof reflection.type === "object" &&
+    "object" === typeof reflection.type &&
     "types" in reflection.type &&
     reflection.type?.types
   ) {
     return reflection.type.types
-      .map((type) => {
+      .flatMap((type) => {
         return getTypes(reflectionsTree, type);
       })
-      .flat()
       .filter(Boolean);
   }
 
-  if ("type" in reflection && typeof reflection.type === "string" && reflection.type === "reference") {
+  if ("type" in reflection && "string" === typeof reflection.type && "reference" === reflection.type) {
     const reference = getReference(reflectionsTree, reflection);
 
     if (reference?.kind === ReflectionKind.Class) {
@@ -76,7 +74,7 @@ export const getTypes = (
       return types;
     }
 
-    if (!reference) return [];
+    if (!reference) {return [];}
     return getTypes(reflectionsTree, reference);
   }
 
@@ -91,7 +89,7 @@ export const getProperties = (
   children: JSONOutput.DeclarationReflection[],
   reflectionsTree: JSONOutput.ProjectReflection[],
 ) => {
-  if (!children) return [];
+  if (!children) {return [];}
   return children
     .sort((a, b) => {
       const nameA = a.name.startsWith("_");
@@ -105,7 +103,7 @@ export const getProperties = (
       }
       return -1;
     })
-    .filter((element) => element.name !== "constructor")
+    .filter((element) => "constructor" !== element.name)
     .filter((element) => {
       return !isMethod(element, reflectionsTree);
     })

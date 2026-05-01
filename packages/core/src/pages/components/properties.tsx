@@ -1,9 +1,9 @@
 import React from "react";
 
-import { PagePropsType } from "../../types/page.types";
+import type { PagePropsType } from "../../types/page.types";
 import { getTypes, getProperties } from "../utils/properties.utils";
 import { Property } from "./property";
-import { DisplayType } from "types/components.types";
+import type { DisplayType } from "types/components.types";
 import { Grid } from "../modules/grid/grid";
 import { Table } from "../modules/table/table";
 
@@ -16,13 +16,13 @@ export const Properties: React.FC<PagePropsType & PropertiesProps> = (props) => 
   const { reflection, reflectionsTree, display, className = "" } = props;
   const children = getTypes(reflectionsTree, reflection);
 
-  if (!children) return null;
+  if (!children) {return null;}
 
   const properties = getProperties(children, reflectionsTree);
 
-  if (!properties.length) return null;
+  if (properties.length === 0) {return null;}
 
-  if (display === "grid") {
+  if ("grid" === display) {
     return (
       <Grid
         className={`api-docs__properties ${className}`}
@@ -34,7 +34,7 @@ export const Properties: React.FC<PagePropsType & PropertiesProps> = (props) => 
     );
   }
 
-  if (display === "table") {
+  if ("table" === display) {
     return (
       <Table
         className={`api-docs__properties ${className}`}

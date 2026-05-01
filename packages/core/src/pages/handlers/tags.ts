@@ -1,4 +1,4 @@
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 
 export const parseTag = (
   tag: JSONOutput.CommentTag,
@@ -6,7 +6,7 @@ export const parseTag = (
 ): { description: string; title: string; raw: JSONOutput.CommentTag } => {
   const content = tag.content
     .map(({ kind, text }) => {
-      if (kind === "code") {
+      if ("code" === kind) {
         return `\n${text}\n`;
       }
       return text;

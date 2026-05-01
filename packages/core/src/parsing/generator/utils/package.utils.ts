@@ -4,14 +4,14 @@
 import * as path from "path";
 
 import { docsJsonPath, packageConfigPath } from "../../../constants/paths.constants";
-import { PackageOptions, PkgMeta } from "../../../types/package.types";
+import type { PackageOptions, PkgMeta } from "../../../types/package.types";
 import { cleanFileName } from "./file.utils";
 
 export const getPackageJson = (dir: string, name: string): undefined | Record<string, unknown> => {
   try {
     const files = require(path.join(dir, name));
     return files;
-  } catch (err) {
+  } catch {
     throw new Error("Cannot find package.json");
   }
 };
@@ -31,8 +31,8 @@ export const getPackageOptions = (
   docsGenerationDir: string,
   generatedFilesDir: string,
   tsConfigPath: string | undefined,
+  // oxlint-disable-next-line max-params
   isMonorepo: boolean,
-  // eslint-disable-next-line max-params
 ) => {
   const { dir, title, entryPath, tsconfigName = "/tsconfig.json", tsconfigDir = packageOptions.dir } = packageOptions;
 

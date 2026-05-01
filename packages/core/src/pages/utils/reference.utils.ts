@@ -1,9 +1,9 @@
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 
 export const getReference = (reflectionsTree: JSONOutput.ProjectReflection[], reference: JSONOutput.ReferenceType) => {
   const { target, name } = reference;
   let reflectionMatch: JSONOutput.DeclarationReflection | undefined;
-  if (typeof target === "number") {
+  if ("number" === typeof target) {
     // First element is always current library so we are not mixing ids between
     reflectionsTree[0].children?.some((reflection) => {
       if (reflection.id === target) {
@@ -25,7 +25,7 @@ export const getReference = (reflectionsTree: JSONOutput.ProjectReflection[], re
       }),
     );
     // If there are more matches, our result is not reliable
-    if (matches.length === 1) {
+    if (1 === matches.length) {
       const [match] = matches;
       reflectionMatch = match;
     }

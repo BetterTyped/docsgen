@@ -1,7 +1,7 @@
 // https://github.com/TypeStrong/typedoc-default-themes/blob/master/src/default/partials/member.signature.title.hbs
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 
-import { PagePropsType } from "../../types/page.types";
+import type { PagePropsType } from "../../types/page.types";
 import { getSignature, getSignaturePreview } from "pages/utils";
 
 export type SignatureProps = {

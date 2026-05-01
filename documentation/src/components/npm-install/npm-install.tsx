@@ -1,22 +1,29 @@
-import { useState } from "react";
-import { useClipboard, useIsMounted } from "@reins/hooks";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { Copy } from "lucide-react";
 
 export const NpmInstall = ({ pkg }: { pkg: string }) => {
-  const isMounted = useIsMounted();
+  const mountedRef = useRef(true);
   const [done, setDone] = useState(false);
 
-  const { copy } = useClipboard({
-    onSuccess: () => {
+  useEffect(() => {
+    return () => {
+      mountedRef.current = false;
+    };
+  }, []);
+
+  const copy = useCallback(async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
       setDone(true);
       setTimeout(() => {
-        if (isMounted) {
+        if (mountedRef.current) {
           setDone(false);
         }
       }, 1000);
-    },
-    onError: () => {},
-  });
+    } catch {
+      // ignore clipboard errors
+    }
+  }, []);
 
   return (
     <div className="relative mb-10 w-fit">

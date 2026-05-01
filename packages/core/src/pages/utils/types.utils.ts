@@ -1,6 +1,6 @@
 /* eslint-disable max-lines */
 /* eslint-disable no-nested-ternary */
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 
 import { getSignaturePreview } from "./signature.utils";
 
@@ -21,10 +21,10 @@ export const getTypePreview = ({
   reflectionsTree: JSONOutput.ProjectReflection[];
   needParens?: boolean;
 }): string => {
-  if (!typeReflection) return "void";
-  if (typeReflection === null) return "null";
+  if (!typeReflection) {return "void";}
+  if (null === typeReflection) {return "null";}
 
-  if ("type" in typeReflection && typeof typeReflection.type !== "string") {
+  if ("type" in typeReflection && "string" !== typeof typeReflection.type) {
     return getTypePreview({
       typeReflection: typeReflection.type,
       reflectionsTree,
@@ -88,10 +88,10 @@ export const getTypePreview = ({
     case "mapped": {
       const type = typeReflection as unknown as JSONOutput.MappedType;
 
-      const modifier = type.readonlyModifier === "+" ? "readonly " : type.readonlyModifier === "-" ? "-readonly " : "";
+      const modifier = "+" === type.readonlyModifier ? "readonly " : "-" === type.readonlyModifier ? "-readonly " : "";
       const inType = getTypePreview({ typeReflection: type.parameterType, reflectionsTree, needParens });
       const nameType = type.nameType && getTypePreview({ typeReflection: type.nameType, reflectionsTree, needParens });
-      const optionalModifier = type.optionalModifier === "+" ? "?:" : "-?:";
+      const optionalModifier = "+" === type.optionalModifier ? "?:" : "-?:";
       const assignmentModifier = type.optionalModifier ? optionalModifier : ":";
       const typePreview = getTypePreview({ typeReflection: type.templateType, reflectionsTree, needParens });
 
@@ -119,7 +119,7 @@ export const getTypePreview = ({
     case "reference": {
       const type = typeReflection as unknown as JSONOutput.ReferenceType;
 
-      return `${type.name}${type.typeArguments && type.typeArguments.length > 0 ? `<${type.typeArguments.map((t) => getTypePreview({ typeReflection: t, reflectionsTree, needParens })).join(", ")}>` : ""}`;
+      return `${type.name}${type.typeArguments && 0 < type.typeArguments.length ? `<${type.typeArguments.map((t) => getTypePreview({ typeReflection: t, reflectionsTree, needParens })).join(", ")}>` : ""}`;
     }
 
     case "reflection": {
@@ -127,15 +127,15 @@ export const getTypePreview = ({
       const decl = type.declaration;
 
       // object literal
-      if (decl?.children && decl.children.length > 0) {
+      if (decl?.children && 0 < decl.children.length) {
         return `{ ${decl.children.map((child) => `${child.name}${child.flags?.isOptional ? "?" : ""}: ${child.type ? getTypePreview({ typeReflection: child.type, reflectionsTree, needParens }) : "any"}`).join("; ")} }`;
       }
 
-      if (decl?.signatures && decl.signatures.length === 1) {
+      if (decl?.signatures && 1 === decl.signatures.length) {
         return getSignaturePreview({ reflection: decl.signatures[0], reflectionsTree, useArrow: true, hideName: true });
       }
 
-      if (decl?.signatures && decl.signatures.length > 0) {
+      if (decl?.signatures && 0 < decl.signatures.length) {
         return parens(
           `{ ${decl.signatures.map((sig) => getSignaturePreview({ reflection: sig, reflectionsTree, useArrow: true, hideName: true })).join("; ")} }`,
           needParens,
@@ -187,7 +187,7 @@ export const getTypePreview = ({
     case "template-literal": {
       const type = typeReflection as unknown as unknown as JSONOutput.TemplateLiteralType;
 
-      return `${type.head}${type.tail.map((t, i) => ` ${i > 0 ? "${" : ""}${typeof t[0] !== "string" ? getTypePreview({ typeReflection: t[0], reflectionsTree, needParens }) : ""}${t[1]}`).join("")}`;
+      return `${type.head}${type.tail.map((t, i) => ` ${ 0 < i ? "${" : ""}${ "string" !== typeof t[0] ? getTypePreview({ typeReflection: t[0], reflectionsTree, needParens }) : ""}${t[1]}`).join("")}`;
     }
 
     default:

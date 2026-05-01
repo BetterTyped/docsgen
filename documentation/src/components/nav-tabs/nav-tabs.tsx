@@ -11,7 +11,7 @@ export const NavTabs = ({
   tabs: Array<{ to: string; label: string; active: boolean }>;
 }) => {
   if (
-    sections.some((section) => section.names.includes(title.toLocaleLowerCase())) ||
+    sections.some((section) => section.paths.includes(title.toLocaleLowerCase())) ||
     !tabs.length ||
     tabs.length < 2
   ) {

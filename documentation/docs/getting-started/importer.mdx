@@ -1,0 +1,379 @@
+---
+sidebar_position: 5
+title: Importer
+sidebar_label: Importer
+---
+
+# Importer
+
+---
+
+The `importer` is a remark plugin that lets you embed auto-generated API documentation fragments directly inside
+hand-written MDX pages. Instead of duplicating type definitions or parameter tables, you write a single `@import`
+directive and the rendered content is injected at build time.
+
+This is one of the most powerful features of docsgen - it bridges auto-generated API reference with your
+hand-written guides and tutorials.
+
+---
+
+## Setup
+
+Add the `importer` as a remark plugin in your Docusaurus docs preset:
+
+```typescript
+import { importer } from "@docsgen/core";
+
+const config = {
+  presets: [
+    [
+      "classic",
+      {
+        docs: {
+          // highlight-start
+          remarkPlugins: [
+            importer({
+              packageRoute: "api",
+              apiDir: "docs/api",
+            }),
+          ],
+          // highlight-end
+        },
+      },
+    ],
+  ],
+};
+```
+
+| Option         | Type     | Description                                                                  |
+| -------------- | -------- | ---------------------------------------------------------------------------- |
+| `packageRoute` | `string` | The route segment for API docs (matches the `id` used in the plugin config). |
+| `apiDir`       | `string` | Path to the generated API docs directory, relative to the site root.         |
+| `versionedDir` | `string` | Optional. Override for versioned docs directory resolution.                  |
+
+:::caution Prerequisite
+
+The `@docsgen/docusaurus` plugin must run before the importer can work. It generates `options.json` and `docs.json`
+files that the importer reads to resolve `@import` directives.
+
+:::
+
+---
+
+## Syntax
+
+Place an `@import` directive on its own line in any MDX file:
+
+```
+@import <packageName> <symbolName> <options>
+```
+
+- **packageName** - The cleaned title of the package (as defined in `PackageOptions.title`).
+- **symbolName** - The name of the exported symbol (class, function, type, etc.).
+- **options** - Query-string-style options that control what to render and how.
+
+Options use `key=value` pairs separated by `&`:
+
+```
+(@import core Request type=methods&display=table)
+```
+
+You can also use comma-separated or colon-separated syntax - the importer normalizes both to `&`/`=` internally:
+
+```
+(@import core Request type:methods,display:table)
+```
+
+---
+
+## Display Modes
+
+Many components support a `display` option that controls how the content is rendered. This is critical for
+embedding API fragments into guides where you want compact, readable output.
+
+| Display Mode | Description                                                                                                                                    |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `table`      | Renders data as a structured table with Name, Type, and Description columns. Best for overviews and quick reference.                           |
+| `grid`       | Renders data as styled card-like rows with name, type, and description. Good for visual documentation.                                         |
+| `block`      | Renders each item as a full detailed block with headings, source links, definitions, and sub-sections. Best for comprehensive reference pages. |
+
+The `display` option works on these component types:
+
+| Component    | Supports display         | Default |
+| ------------ | ------------------------ | ------- |
+| `methods`    | `table`, `grid`, `block` | `block` |
+| `method`     | `table`, `grid`, `block` | `block` |
+| `parameters` | `table`, `grid`, `block` | `table` |
+| `properties` | `table`, `grid`, `block` | `block` |
+| `returns`    | `table`, `grid`, `block` | `table` |
+
+### Table Display
+
+The `table` display mode renders a clean, compact table. This is especially useful for methods and properties
+where you want to give readers a quick overview:
+
+```
+(@import core Request type=methods&display=table)
+```
+
+This renders a table with columns:
+
+- **Name** - method name with call signature (e.g., `setParams(params)`)
+- **Description** - JSDoc description of the method
+
+For parameters and properties, the table includes an additional **Type** column showing the TypeScript type.
+
+### Grid Display
+
+The `grid` display renders each item as a card-like row with the name, type preview, and description:
+
+```
+(@import core Request type=properties&display=grid)
+```
+
+### Block Display
+
+The `block` display renders full detail for each item, including source links, definitions, parameter tables,
+and return types. This is the most comprehensive view:
+
+```
+(@import core Request type=methods&display=block)
+```
+
+Each method in block mode shows its own name heading, source location, description, definition, parameter
+details, and return type.
+
+---
+
+## Available Components
+
+The `type` option selects which component to render. Each component extracts a specific part of the symbol's
+documentation:
+
+### Full-page Components
+
+| Type          | Description                                                               | Options                   |
+| ------------- | ------------------------------------------------------------------------- | ------------------------- |
+| `definition`  | Source file location with link to the code.                               | -                         |
+| `npm`         | NPM installation command.                                                 | -                         |
+| `import`      | Import statement code block.                                              | -                         |
+| `details`     | Detailed symbol information.                                              | -                         |
+| `description` | JSDoc description text.                                                   | -                         |
+| `name`        | Symbol name as a heading.                                                 | `headingSize` (`h1`-`h6`) |
+| `preview`     | Compact type/class/function preview showing the full signature structure. | -                         |
+| `sources`     | Source file location.                                                     | -                         |
+| `signature`   | Function or method call signature.                                        | -                         |
+
+### Collection Components (support `display`)
+
+| Type             | Description                                         | Options                                             |
+| ---------------- | --------------------------------------------------- | --------------------------------------------------- |
+| `methods`        | All methods of a class or interface.                | `display` (`table`, `grid`, `block`)                |
+| `parameters`     | All parameters of a function or constructor.        | `display` (`table`, `grid`, `block`), `headingSize` |
+| `properties`     | All properties of a class or interface.             | `display` (`table`, `grid`, `block`)                |
+| `returns`        | Return type documentation with structure breakdown. | `display` (`table`, `grid`, `block`), `headingSize` |
+| `returnsPreview` | Compact return type preview.                        | -                                                   |
+| `generics`       | Generic type parameters and their constraints.      | -                                                   |
+| `type`           | Type information block.                             | -                                                   |
+
+### Single-item Components
+
+| Type        | Description                        | Options                                       |
+| ----------- | ---------------------------------- | --------------------------------------------- |
+| `method`    | Documentation for a single method. | `display`, `name` (method name), `withParams` |
+| `parameter` | A single parameter.                | `name` (parameter name)                       |
+| `property`  | A single property.                 | `name` (property name)                        |
+
+---
+
+## Examples
+
+### Methods as a table
+
+Embed a compact methods overview directly in a guide:
+
+```
+(@import core Request type=methods&display=table)
+```
+
+This produces a table like:
+
+| Name                     | Description                                  |
+| ------------------------ | -------------------------------------------- |
+| `setParams(params)`      | Set the URL path parameters for the request. |
+| `setQueryParams(params)` | Set query string parameters.                 |
+| `send()`                 | Execute the request.                         |
+
+### Parameters as a table
+
+```
+(@import core createClient type=parameters&display=table)
+```
+
+Produces a table with Name, Type, and Description columns for each function parameter.
+
+### Properties in grid layout
+
+```
+(@import core Client type=properties&display=grid)
+```
+
+### Full method detail
+
+Show complete documentation for a single method:
+
+```
+(@import core Request type=method&name=send)
+```
+
+This renders the method's name heading, source link, description, definition, parameters, and return type.
+
+### A specific method's parameters as a table
+
+Combine `method` type with `display=table` to show just the parameter table for one method:
+
+```
+(@import core Request type=method&name=setParams&display=table)
+```
+
+### Type definition
+
+```
+(@import core RequestOptions type=definition)
+```
+
+### Import statement
+
+```
+(@import core Client type=import)
+```
+
+### Return type structure
+
+```
+(@import react useFetch type=returns&display=table)
+```
+
+### NPM install command
+
+```
+(@import core Client type=npm)
+```
+
+### Class preview
+
+Shows a compact structural preview of the class with constructor, properties, and method signatures:
+
+```
+(@import core Client type=preview)
+```
+
+---
+
+## Writing Living Documentation
+
+The importer enables a documentation workflow where your guides never go stale. The mental model is:
+
+**You write the narrative. The code provides the details.**
+
+You are the one who explains _why_ something exists, _when_ to use it, how concepts fit together, and what
+tradeoffs to consider. That requires human understanding and cannot be generated. But the method signatures,
+parameter types, property tables, and import statements? Those come from your source code, pulled in fresh on
+every build.
+
+:::tip Why this matters
+
+1. **Docs auto-update** - Rename a parameter, add a method, change a return type. The docs reflect it on the
+   next build without anyone touching the markdown.
+2. **Docs never break** - The technical details are extracted from the same codebase that compiles. If the code
+   compiles, the docs are correct.
+3. **Docs live with the code** - There is no separate "update the docs" step in your workflow. The docs and
+   the code are the same source of truth.
+4. **Zero maintenance** - No more stale parameter lists, outdated method tables, or wrong type signatures.
+   The cost of keeping docs accurate drops to zero.
+
+:::
+
+### Example: a guide page
+
+Here is what a typical hand-written guide looks like with `@import`:
+
+```markdown
+## Creating a Request
+
+The `Request` class is the main way to configure and execute HTTP calls.
+It uses a builder pattern - chain methods to set parameters, headers, and
+options before sending.
+
+First, import the class:
+
+(@import core Request type=import)
+
+### Available methods
+
+Use the methods below to configure the request before sending:
+
+(@import core Request type=methods&display=table)
+
+### Sending
+
+To execute the request, call `send`. It returns a promise that resolves
+with the response data and metadata:
+
+(@import core Request type=method&name=send)
+
+### Parameters
+
+The constructor accepts these options:
+
+(@import core Request type=parameters&display=table)
+```
+
+Notice the pattern: every technical detail (import path, method list, method docs, parameter table) is an
+`@import` directive. The writer only provides the context and explanation around them.
+
+When the `Request` class gains a new method, it appears in the table automatically. When a parameter is
+renamed, the table updates. When the import path changes, it updates. The guide stays accurate across
+refactors, major versions, and API changes - with no manual maintenance.
+
+---
+
+## Finding Component Names
+
+Component names for `@import` directives correspond to the exported symbol names from your TypeScript source.
+You can find them by:
+
+1. Browsing the generated `docs/api` directory - each `.mdx` file represents a symbol.
+2. Looking at your package's `src/index.ts` exports.
+3. Checking the generated `docs.json` file for the package.
+
+---
+
+## How It Works
+
+1. The importer walks the MDX AST looking for `text` nodes matching the `@import` pattern.
+2. It loads the `options.json` from the generated API directory to find package metadata.
+3. It reads the TypeDoc `docs.json` reflection for the target package.
+4. It finds the matching reflection by name and parses the options string into component props.
+5. The selected React component is rendered to HTML using `renderToString`.
+6. The HTML is converted back to MDX AST nodes and spliced into the document tree.
+7. The original text node is replaced with the rendered content.
+
+This all happens at build time, so there is no runtime cost. The output is static HTML/MDX.
+
+---
+
+## Versioned Docs
+
+The importer automatically detects versioned docs directories (`versioned_docs/version-*`). When building a specific
+version, it resolves the API docs from the corresponding versioned directory. You can override this with the
+`versionedDir` option if your directory structure differs from the default.
+
+:::secondary Summary
+
+The `importer` remark plugin bridges generated API data and hand-written MDX. Use `@import` directives to embed
+methods tables, parameter lists, type definitions, previews, and more. The `display` option (`table`, `grid`,
+`block`) controls the rendering format, making it easy to embed compact reference tables in guides or detailed
+breakdowns in reference pages.
+
+:::

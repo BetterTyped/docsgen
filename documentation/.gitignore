@@ -3,13 +3,8 @@
 
 # Production
 /build
-/docs/api
-/docs/hooks/*
-!/docs/hooks/index.mdx
-!/docs/hooks/cards.tsx
-
-/docs/ui/*
-!/docs/ui/cards.tsx
+/docs/api/*
+!/docs/api/getting-started/
 
 # Generated files
 .docusaurus
@@ -25,3 +20,5 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.env

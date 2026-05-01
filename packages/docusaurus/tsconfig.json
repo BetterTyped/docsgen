@@ -1,8 +1,12 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "./src",
-    "outDir": "./dist/",
-    "module": "commonjs"
-  }
+    "paths": {
+      "helpers": ["./src/helpers"],
+      "helpers/*": ["./src/helpers/*"],
+      "plugin": ["./src/plugin"],
+      "plugin/*": ["./src/plugin/*"]
+    }
+  },
+  "include": ["src"]
 }

@@ -1,4 +1,4 @@
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 
 import { getTypePreview } from "./types.utils";
 
@@ -23,7 +23,7 @@ export const getCallPreview = ({
       // eslint-disable-next-line no-nested-ternary
       const paramName = param.flags?.isRest
         ? `...${param.name}`
-        : param.name === "__namedParameter"
+        : "__namedParameter" === param.name
           ? `params$${index}`
           : param.name;
 

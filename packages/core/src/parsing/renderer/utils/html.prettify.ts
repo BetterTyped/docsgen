@@ -1,4 +1,5 @@
-import beautify, { HTMLBeautifyOptions } from "js-beautify";
+import type { HTMLBeautifyOptions } from "js-beautify";
+import beautify from "js-beautify";
 
 const options: HTMLBeautifyOptions = {
   unformatted: ["code", "pre", "em", "strong", "span"],

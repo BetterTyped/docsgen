@@ -1,23 +1,110 @@
 ---
 sidebar_position: 1
-title: Intro
-sidebar_label: Intro
-hide_table_of_contents: true
+title: Overview
+sidebar_label: Overview
 ---
 
-import { PackageDetails } from "@site/src/components";
+# Docusaurus Plugin
 
-<PackageDetails pkg="@docsgen/core" />
+---
 
-# Docgen
+> The Docusaurus plugin for docsgen. It integrates `@docsgen/core` into the Docusaurus build lifecycle,
+> handling concurrency control and delegating all generation work to the core engine.
 
-> Docgen is a tool for generating documentation from TypeScript source code. It is designed to support additional
-> semi-automated way of creating documentation by importing parts of the generated output for amazing DX.
+---
 
-:::note Work in progress
+## What It Does
 
-Please note that this documentation is a work in progress and we will be adding more modules soon. Until this time you
-can check the [source code](https://github.com/BetterTyped/docsgen) for more information. In case of any questions
-[contact us](mailto:maciekpyrc@gmail.com).
+`@docsgen/docusaurus` is a thin wrapper that:
+
+1. **Registers as a Docusaurus plugin** named `docsgen-docusaurus`.
+2. **Guards against duplicate runs** - uses a timestamp-based lock file to ensure generation runs at most once
+   per minute per plugin instance. This prevents redundant work during Docusaurus hot reloads.
+3. **Delegates to `@docsgen/core`** - calls the `generate` function with the Docusaurus `LoadContext` and your
+   `PluginOptions`.
+
+The plugin itself contains minimal logic. All parsing, rendering, and file writing is handled by `@docsgen/core`.
+
+---
+
+## Concurrency Guard
+
+During development with `docusaurus start`, Docusaurus may invoke plugins multiple times as files change. To
+prevent running the full TypeDoc parsing pipeline on every hot reload, the plugin uses a timestamp-based guard:
+
+1. A marker file (`loadingTypedoc[{id}].json`) is written to Docusaurus's `generatedFilesDir` with the current
+   timestamp.
+2. On subsequent invocations, the plugin compares the current time to the stored timestamp at roughly
+   **minute-level** resolution.
+3. If the timestamps match (same minute), generation is skipped.
+4. If the timestamps differ, a new generation run is triggered.
+
+The `id` from `PluginOptions` is used in the marker file name, so multiple docsgen plugin instances (e.g., for
+different doc sections) run independently.
+
+:::info Production builds
+
+In production builds (`docusaurus build`), the plugin is typically invoked once. The concurrency guard is
+primarily useful during development to avoid redundant work.
+
+:::
+
+---
+
+## How It Fits In
+
+The plugin is a **side-effect plugin** - it does not replace or wrap `@docusaurus/plugin-content-docs`. Instead,
+it writes generated MDX files into your docs directory during the build. Docusaurus then picks up those files
+through its normal content pipeline.
+
+This means you configure both:
+
+1. **`@docsgen/docusaurus`** in `plugins` - to generate API docs.
+2. **`preset-classic` docs** (or `@docusaurus/plugin-content-docs`) - to serve and render those docs with sidebars.
+
+---
+
+## Installation
+
+```bash
+npm install @docsgen/docusaurus @docsgen/core
+```
+
+`@docsgen/core` is a peer dependency of `@docsgen/docusaurus`.
+
+---
+
+## Basic Usage
+
+```typescript
+import plugin from "@docsgen/docusaurus";
+
+const config = {
+  plugins: [
+    [
+      "@docsgen/docusaurus",
+      {
+        id: "api",
+        outDir: "docs/api",
+        packages: [
+          {
+            title: "my-library",
+            dir: "../packages/my-library",
+            entryPath: "src/index.ts",
+            tsconfigDir: "../packages/my-library",
+          },
+        ],
+      } satisfies Parameters<typeof plugin>[1],
+    ],
+  ],
+};
+```
+
+See [Setup](/docs/docusaurus/setup) for a complete integration guide.
+
+:::secondary Next steps
+
+- Follow the [Setup](/docs/docusaurus/setup) guide for complete Docusaurus integration.
+- See [Configuration](/docs/getting-started/configuration) for all available plugin options.
 
 :::

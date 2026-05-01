@@ -1,4 +1,51 @@
-import { Book, Cpu, Plug, Youtube } from 'lucide-react';
+import React from 'react';
+import { Book } from 'lucide-react';
+
+export const CoreIcon: React.FC<{ className?: string }> = ({ className }) =>
+  React.createElement('svg', { className, viewBox: '0 0 156 156', fill: 'none', xmlns: 'http://www.w3.org/2000/svg' },
+    React.createElement('path', {
+      fillRule: 'evenodd', clipRule: 'evenodd', fill: 'currentColor',
+      d: 'M6 0C2.68629 0 0 2.68629 0 6V150C0 153.314 2.68629 156 6 156H150C153.314 156 156 153.314 156 150V6C156 2.68629 153.314 0 150 0H6ZM122.859 23.4L89.7 54.6L122.859 85.8L132.6 76.6348L109.182 54.6L132.6 32.5653L122.859 23.4Z',
+    }),
+  );
+
+export const DocusaurusIcon: React.FC<{ className?: string }> = ({ className }) =>
+  React.createElement('img', { className, src: '/docsgen/img/docusaurus.png', alt: 'Docusaurus' });
+
+
+export type Section = {
+  label: string;
+  description: string;
+  dir: string;
+  /**
+   * @important
+   * Names provides backwards compatibility with the old sidebars
+   * This way we can add more paths if we rename something
+   */
+  paths: string[];
+  img: React.ComponentType<{ className?: string }>;
+  text: string;
+  textAction: string;
+  textHover: string;
+  icon: string;
+  iconHover: string;
+  border: string;
+  borderHover: string;
+  category: string;
+  featured?: boolean;
+  isPackage: boolean;
+  isNew?: boolean;
+  isPro?: boolean;
+} & (
+  | {
+      isPackage: false;
+      package?: string;
+    }
+  | {
+      isPackage: true;
+      package: string;
+    }
+);
 
 /**
  * This sections list must support backward compatibility with the old sidebars and sections
@@ -6,13 +53,13 @@ import { Book, Cpu, Plug, Youtube } from 'lucide-react';
  *
  * @Example Matching of the sidebar and folders are done through the names array, it should include the name of folder
  */
-export const sections = [
+export const sections: Section[] = [
   {
-    label: "Documentation",
-    description: "",
+    label: "Getting Started",
+    description: "Getting started guides, configuration, and usage documentation",
     isPackage: false,
-    dir: "docs",
-    names: ["documentation"],
+    dir: "getting-started",
+    paths: ["getting-started"],
     img: Book,
     text: "drop-shadow-sm !text-purple-500 dark:!text-purple-400",
     textAction:
@@ -23,14 +70,16 @@ export const sections = [
       "group-hover:shadow-purple-200 dark:group-hover:bg-purple-500 group-hover:bg-purple-400 group-hover:dark:bg-purple-500",
     border: "border-purple-500 dark:border-purple-400",
     borderHover: "hover:border-purple-500 hover:dark:border-purple-400",
+    category: "Docs",
   },
   {
-    label: "Core",
-    description: "Components for building the UIs and layouts of your app",
+    label: "Docsgen",
+    description: "Core engine for TypeDoc parsing, React page rendering, and MDX generation",
     isPackage: true,
+    package: "core",
     dir: "core",
-    names: ["core"],
-    img: Cpu,
+    paths: ["core"],
+    img: CoreIcon,
     text: "drop-shadow-sm !text-sky-500 dark:!text-sky-400",
     textAction: "focus:!text-sky-500 focus:dark:!text-sky-400 active:!text-sky-600 active:dark:!text-sky-300",
     textHover: "hover:!text-sky-500 hover:dark:!text-sky-400",
@@ -39,14 +88,16 @@ export const sections = [
       "group-hover:shadow-sky-200 dark:group-hover:bg-sky-500 group-hover:bg-sky-400 group-hover:dark:bg-sky-500",
     border: "border-sky-500 dark:border-sky-400",
     borderHover: "hover:border-sky-500 hover:dark:border-sky-400",
+    category: "Docs",
   },
   {
-    label: "Docusaurus",
-    description: "Essential hooks for your React application",
+    label: "Docusaurus Plugin",
+    description: "Docusaurus plugin that integrates docsgen into the build lifecycle",
     isPackage: true,
+    package: "docusaurus",
     dir: "docusaurus",
-    names: ["docusaurus"],
-    img: Plug,
+    paths: ["docusaurus"],
+    img: DocusaurusIcon,
     text: "drop-shadow-sm !text-yellow-500 dark:!text-yellow-400",
     textAction:
       "focus:!text-yellow-500 focus:dark:!text-yellow-400 active:!text-yellow-600 active:dark:!text-yellow-300",
@@ -56,22 +107,7 @@ export const sections = [
       "group-hover:shadow-yellow-200 dark:group-hover:bg-yellow-500 group-hover:bg-yellow-400 group-hover:dark:bg-yellow-500",
     border: "border-yellow-500 dark:border-yellow-400",
     borderHover: "hover:border-yellow-500 hover:dark:border-yellow-400",
-  },
-  {
-    label: "Playground",
-    description: "",
-    isPackage: true,
-    dir: "playground",
-    names: ["playground"],
-    img: Youtube,
-    text: "drop-shadow-sm !text-green-500 dark:!text-green-400",
-    textAction: "focus:!text-green-500 focus:dark:!text-green-400 active:!text-green-600 active:dark:!text-green-300",
-    textHover: "hover:!text-green-500 hover:dark:!text-green-400",
-    icon: "group-hover:shadow-green-200 dark:group-hover:bg-green-500 bg-green-400 dark:bg-green-500",
-    iconHover:
-      "group-hover:shadow-green-200 dark:group-hover:bg-green-500 group-hover:bg-green-400 group-hover:dark:bg-green-500",
-    border: "border-green-500 dark:border-green-400",
-    borderHover: "hover:border-green-500 hover:dark:border-green-400",
+    category: "Docs",
   },
   // {
   //   label: "",

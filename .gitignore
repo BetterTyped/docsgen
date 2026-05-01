@@ -6,7 +6,6 @@ dist
 tmp
 /out-tsc
 
-
 # dependencies
 node_modules
 
@@ -31,19 +30,14 @@ node_modules
 /connect.lock
 /coverage
 /libpeerconnection.log
-npm-debug.log
-yarn-error.log
 testem.log
 /typings
 .idea
-.vscode
 .env.local
 .env.test.local
-.env.development.loval
+.env.development.local
 .env.production.local
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # System Files
 .DS_Store

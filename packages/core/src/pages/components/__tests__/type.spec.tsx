@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 import { render } from "@testing-library/react";
 
 import { Type } from "../type";
@@ -78,10 +78,10 @@ describe("It should render correct type", () => {
       />,
     );
 
-    expect(container.innerHTML).toInclude("xs");
-    expect(container.innerHTML).toInclude("sm");
-    expect(container.innerHTML).toInclude("md");
-    expect(container.innerHTML).toInclude("lg");
-    expect(container.innerHTML).toInclude("xl");
+    expect(container.innerHTML).toContain("xs");
+    expect(container.innerHTML).toContain("sm");
+    expect(container.innerHTML).toContain("md");
+    expect(container.innerHTML).toContain("lg");
+    expect(container.innerHTML).toContain("xl");
   });
 });

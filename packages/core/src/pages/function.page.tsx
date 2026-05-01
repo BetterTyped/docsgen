@@ -1,6 +1,6 @@
 import React from "react";
 
-import { PagePropsType } from "../types/page.types";
+import type { PagePropsType } from "../types/page.types";
 import { Definition } from "./components/definition";
 import { Description } from "./components/description";
 import { Import } from "./components/import";
@@ -29,14 +29,8 @@ export type FunctionPageOptions = {
 export const FunctionPage: React.FC<PagePropsType> = (props) => {
   const { pluginOptions } = props;
   const { pages } = pluginOptions;
-  const {
-    mdx = true,
-    intro = true,
-    parameters = true,
-    usage = true,
-    returns = true,
-    custom,
-  } = pages?.[PackagePages.FUNCTION] || {};
+  const { mdx = true, intro = true, parameters = true, usage = true, returns = true, custom } =
+    pages?.[PackagePages.FUNCTION] || {};
 
   if (custom) {
     return custom(props);

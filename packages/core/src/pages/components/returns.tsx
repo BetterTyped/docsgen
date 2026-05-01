@@ -1,11 +1,11 @@
 import React from "react";
 
-import { PagePropsType } from "../../types/page.types";
+import type { PagePropsType } from "../../types/page.types";
 import { getTags } from "../handlers/tags";
 import { Code } from "./code";
 import { getTypes } from "../utils/properties.utils";
 import { getSortedChildren } from "../utils/display.utils";
-import { DisplayType, HeadingType } from "types/components.types";
+import type { DisplayType, HeadingType } from "types/components.types";
 import { Table } from "../modules/table/table";
 import { Grid } from "../modules/grid/grid";
 import { Type } from "./type";
@@ -25,12 +25,12 @@ export const Returns: React.FC<PagePropsType & ReturnsProps> = (props) => {
   const disableReturn = getTags(comment, "@disableReturns")[0];
   const signature = getSignature(reflection);
 
-  if (disableReturn) return null;
+  if (disableReturn) {return null;}
 
   const children = getTypes(reflectionsTree, signature || reflection);
   const sorted = getSortedChildren(children, reflectionsTree);
 
-  if (display === "grid" && sorted.length) {
+  if ("grid" === display && sorted.length > 0) {
     return (
       <Grid
         className={`api-docs__returns ${className}`}
@@ -42,7 +42,7 @@ export const Returns: React.FC<PagePropsType & ReturnsProps> = (props) => {
     );
   }
 
-  if (display === "table" && sorted.length) {
+  if ("table" === display && sorted.length > 0) {
     return (
       <Table
         className={`api-docs__returns ${className}`}
@@ -54,7 +54,7 @@ export const Returns: React.FC<PagePropsType & ReturnsProps> = (props) => {
     );
   }
 
-  if (onlyArray) return null;
+  if (onlyArray) {return null;}
 
   return (
     <div className={`api-docs__returns ${className}`}>

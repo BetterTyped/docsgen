@@ -1,6 +1,6 @@
 import React from "react";
 
-import { PagePropsType } from "../../types/page.types";
+import type { PagePropsType } from "../../types/page.types";
 
 export type NpmProps = {
   className?: string;

@@ -1,5 +1,5 @@
 /* eslint-disable max-lines */
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 
 export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
   id: 911,
@@ -347,7 +347,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           ],
           type: {
             type: "literal",
-            value: 86400000,
+            value: 86_400_000,
           },
         },
         {
@@ -366,7 +366,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           ],
           type: {
             type: "literal",
-            value: 3600000,
+            value: 3_600_000,
           },
         },
         {
@@ -385,7 +385,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           ],
           type: {
             type: "literal",
-            value: 60000,
+            value: 60_000,
           },
         },
         {
@@ -404,7 +404,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           ],
           type: {
             type: "literal",
-            value: 2592000000,
+            value: 2_592_000_000,
           },
         },
         {
@@ -423,7 +423,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           ],
           type: {
             type: "literal",
-            value: 2678400000,
+            value: 2_678_400_000,
           },
         },
         {
@@ -461,7 +461,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           ],
           type: {
             type: "literal",
-            value: 604800000,
+            value: 604_800_000,
           },
         },
         {
@@ -480,7 +480,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           ],
           type: {
             type: "literal",
-            value: 31536000000,
+            value: 31_536_000_000,
           },
         },
         {
@@ -499,7 +499,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           ],
           type: {
             type: "literal",
-            value: 31622400000,
+            value: 31_622_400_000,
           },
         },
       ],
@@ -563,7 +563,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2423,
               name: "new AppManager",
               variant: "signature",
-              kind: 16384,
+              kind: 16_384,
               flags: {},
               sources: [
                 {
@@ -578,7 +578,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2424,
                   name: "options",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {
                     isOptional: true,
                   },
@@ -641,7 +641,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2427,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               children: [
                 {
@@ -664,7 +664,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2432,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -719,7 +719,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2429,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -774,7 +774,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2438,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -829,7 +829,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2435,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -884,7 +884,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2447,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -914,7 +914,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2449,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -922,7 +922,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2450,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -992,7 +992,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2441,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -1022,7 +1022,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2443,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -1030,7 +1030,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2444,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -1100,7 +1100,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2459,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -1130,7 +1130,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2461,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -1138,7 +1138,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2462,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -1208,7 +1208,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2453,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -1238,7 +1238,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2455,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -1246,7 +1246,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2456,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -1430,7 +1430,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2480,
                   name: "isFocused",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -1479,7 +1479,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2483,
                   name: "isOnline",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -1563,7 +1563,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1431,
               name: "new Cache",
               variant: "signature",
-              kind: 16384,
+              kind: 16_384,
               flags: {},
               sources: [
                 {
@@ -1578,7 +1578,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1432,
                   name: "C",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "reference",
@@ -1593,7 +1593,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1433,
                   name: "client",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -1608,7 +1608,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1434,
                   name: "options",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {
                     isOptional: true,
                   },
@@ -1710,7 +1710,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1437,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               children: [
                 {
@@ -1741,7 +1741,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1439,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -1771,21 +1771,21 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1441,
                               name: "Response",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                             },
                             {
                               id: 1442,
                               name: "Error",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                             },
                             {
                               id: 1443,
                               name: "Adapter",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -1800,7 +1800,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1444,
                               name: "data",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -1871,7 +1871,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1450,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -1901,7 +1901,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1452,
                               name: "cacheKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -1947,7 +1947,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1446,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -1977,7 +1977,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1448,
                               name: "cacheKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -2029,7 +2029,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1454,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -2059,21 +2059,21 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1456,
                               name: "Response",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                             },
                             {
                               id: 1457,
                               name: "Error",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                             },
                             {
                               id: 1458,
                               name: "Adapter",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -2088,7 +2088,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1459,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -2096,7 +2096,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1460,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -2126,7 +2126,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 1462,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -2218,7 +2218,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1464,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -2248,21 +2248,21 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1466,
                               name: "Response",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                             },
                             {
                               id: 1467,
                               name: "Error",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                             },
                             {
                               id: 1468,
                               name: "Adapter",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -2277,7 +2277,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1469,
                               name: "cacheKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -2288,7 +2288,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1470,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -2296,7 +2296,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1471,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -2326,7 +2326,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 1473,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -2404,7 +2404,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1489,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -2434,7 +2434,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1491,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -2442,7 +2442,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1492,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -2472,7 +2472,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 1494,
                                           name: "cacheKey",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "intrinsic",
@@ -2525,7 +2525,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1496,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -2555,7 +2555,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1498,
                               name: "cacheKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -2566,7 +2566,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1499,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -2574,7 +2574,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1500,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -2658,7 +2658,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1475,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -2688,7 +2688,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1477,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -2696,7 +2696,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1478,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -2726,7 +2726,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 1480,
                                           name: "cacheKey",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "intrinsic",
@@ -2793,7 +2793,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1482,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -2823,7 +2823,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1484,
                               name: "cacheKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -2834,7 +2834,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1485,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -2842,7 +2842,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1486,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -3142,7 +3142,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1531,
                   name: "cacheKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -3205,21 +3205,21 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1523,
                   name: "Response",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                 },
                 {
                   id: 1524,
                   name: "Error",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                 },
                 {
                   id: 1525,
                   name: "Adapter",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "reference",
@@ -3234,7 +3234,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1526,
                   name: "cacheKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -3383,21 +3383,21 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1537,
                   name: "Response",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                 },
                 {
                   id: 1538,
                   name: "Error",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                 },
                 {
                   id: 1539,
                   name: "Adapter",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "reference",
@@ -3412,7 +3412,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1540,
                   name: "cacheKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -3514,7 +3514,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1534,
                   name: "invalidateKeys",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "union",
@@ -3688,7 +3688,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1545,
                   name: "cacheKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -3751,7 +3751,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1511,
                   name: "Request",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "reference",
@@ -3766,7 +3766,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1512,
                   name: "request",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -3788,7 +3788,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1513,
                   name: "response",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intersection",
@@ -3871,7 +3871,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1514,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           children: [
                             {
@@ -3971,7 +3971,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1518,
                   name: "Request",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "reference",
@@ -3986,7 +3986,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1519,
                   name: "request",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -4008,7 +4008,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1520,
                   name: "partialResponse",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -4130,7 +4130,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1548,
           name: "C",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -4175,7 +4175,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1070,
               name: "new Client",
               variant: "signature",
-              kind: 16384,
+              kind: 16_384,
               flags: {},
               sources: [
                 {
@@ -4190,7 +4190,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1071,
                   name: "GlobalErrorType",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "reference",
@@ -4212,7 +4212,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1072,
                   name: "Adapter",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "reference",
@@ -4231,7 +4231,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1073,
                   name: "EndpointMapper",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "reference",
@@ -4245,7 +4245,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1074,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -4275,7 +4275,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1076,
                               name: "endpoint",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -4298,7 +4298,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1077,
                   name: "options",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -4624,7 +4624,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1108,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               sources: [
                 {
@@ -4654,7 +4654,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1110,
                       name: "request",
                       variant: "param",
-                      kind: 32768,
+                      kind: 32_768,
                       flags: {},
                       type: {
                         type: "reference",
@@ -4672,7 +4672,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1111,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               children: [
                                 {
@@ -4800,7 +4800,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1098,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               sources: [
                 {
@@ -4830,7 +4830,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1100,
                       name: "request",
                       variant: "param",
-                      kind: 32768,
+                      kind: 32_768,
                       flags: {},
                       type: {
                         type: "reference",
@@ -4848,7 +4848,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1101,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               children: [
                                 {
@@ -5038,7 +5038,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1114,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               sources: [
                 {
@@ -5068,7 +5068,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1116,
                       name: "request",
                       variant: "param",
-                      kind: 32768,
+                      kind: 32_768,
                       flags: {},
                       type: {
                         type: "reference",
@@ -5086,7 +5086,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1117,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               children: [
                                 {
@@ -5274,7 +5274,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1126,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               sources: [
                 {
@@ -5304,7 +5304,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1128,
                       name: "request",
                       variant: "param",
-                      kind: 32768,
+                      kind: 32_768,
                       flags: {},
                       type: {
                         type: "reference",
@@ -5322,7 +5322,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1129,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               children: [
                                 {
@@ -5684,7 +5684,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1120,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               sources: [
                 {
@@ -5714,7 +5714,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1122,
                       name: "request",
                       variant: "param",
-                      kind: 32768,
+                      kind: 32_768,
                       flags: {},
                       type: {
                         type: "reference",
@@ -5732,7 +5732,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1123,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               children: [
                                 {
@@ -5860,7 +5860,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1104,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               sources: [
                 {
@@ -5890,7 +5890,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1106,
                       name: "options",
                       variant: "param",
-                      kind: 32768,
+                      kind: 32_768,
                       flags: {},
                       type: {
                         type: "reference",
@@ -6158,7 +6158,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1269,
                   name: "request",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -6176,7 +6176,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1270,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           children: [
                             {
@@ -6311,7 +6311,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1279,
                   name: "response",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -6346,7 +6346,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1280,
                   name: "request",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -6364,7 +6364,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1281,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           children: [
                             {
@@ -6521,7 +6521,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1274,
                   name: "request",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -6539,7 +6539,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1275,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           children: [
                             {
@@ -6674,7 +6674,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1291,
                   name: "response",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -6709,7 +6709,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1292,
                   name: "request",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -6727,7 +6727,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1293,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           children: [
                             {
@@ -6884,7 +6884,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1285,
                   name: "response",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -6919,7 +6919,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1286,
                   name: "request",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -6937,7 +6937,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1287,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           children: [
                             {
@@ -7094,7 +7094,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1231,
                   name: "plugin",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -7225,7 +7225,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1306,
                   name: "RequestProperties",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "reference",
@@ -7257,7 +7257,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1307,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       children: [
                         {
@@ -7385,7 +7385,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1312,
                   name: "_USE_DOUBLE_INITIALIZATION",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {
                     isOptional: true,
                   },
@@ -7429,7 +7429,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1313,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -7459,7 +7459,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1315,
                           name: "EndpointType",
                           variant: "typeParam",
-                          kind: 131072,
+                          kind: 131_072,
                           flags: {},
                           type: {
                             type: "intrinsic",
@@ -7470,7 +7470,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1316,
                           name: "AdapterOptions",
                           variant: "typeParam",
-                          kind: 131072,
+                          kind: 131_072,
                           flags: {},
                           type: {
                             type: "intrinsic",
@@ -7481,7 +7481,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1317,
                           name: "MethodType",
                           variant: "typeParam",
-                          kind: 131072,
+                          kind: 131_072,
                           flags: {},
                           type: {
                             type: "intrinsic",
@@ -7494,7 +7494,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1318,
                           name: "params",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -7797,7 +7797,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1299,
                   name: "hydrationData",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "union",
@@ -7824,7 +7824,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1300,
                   name: "options",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {
                     isOptional: true,
                   },
@@ -7854,7 +7854,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1301,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -7884,7 +7884,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1303,
                                   name: "item",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reference",
@@ -7968,7 +7968,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1198,
                   name: "callback",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -8055,7 +8055,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1204,
                   name: "ErrorType",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   default: {
                     type: "literal",
@@ -8068,7 +8068,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1205,
                   name: "callback",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -8213,7 +8213,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1218,
                   name: "callback",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -8300,7 +8300,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1224,
                   name: "ErrorType",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   default: {
                     type: "literal",
@@ -8313,7 +8313,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1225,
                   name: "callback",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -8458,7 +8458,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1211,
                   name: "ErrorType",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   default: {
                     type: "literal",
@@ -8471,7 +8471,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1212,
                   name: "callback",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -8616,7 +8616,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1201,
                   name: "callbacks",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "array",
@@ -8706,7 +8706,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1208,
                   name: "callbacks",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "array",
@@ -8851,7 +8851,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1221,
                   name: "callbacks",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "array",
@@ -8941,7 +8941,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1228,
                   name: "callbacks",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "array",
@@ -9086,7 +9086,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1215,
                   name: "callbacks",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "array",
@@ -9231,7 +9231,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1234,
                   name: "plugin",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -9318,7 +9318,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1237,
                   name: "callback",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reflection",
@@ -9326,7 +9326,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1238,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -9356,7 +9356,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1240,
                               name: "request",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -9374,7 +9374,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 1241,
                                       name: "__type",
                                       variant: "declaration",
-                                      kind: 65536,
+                                      kind: 65_536,
                                       flags: {},
                                       children: [
                                         {
@@ -9506,7 +9506,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1184,
                   name: "NewAdapter",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "reference",
@@ -9519,7 +9519,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1185,
                   name: "Returns",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "union",
@@ -9545,7 +9545,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1186,
                   name: "callback",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reflection",
@@ -9553,7 +9553,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1187,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -9583,7 +9583,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1189,
                               name: "client",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -9786,7 +9786,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1145,
                   name: "callback",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reflection",
@@ -9794,7 +9794,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1146,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -9824,7 +9824,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1148,
                               name: "request",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -9842,7 +9842,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 1149,
                                       name: "__type",
                                       variant: "declaration",
-                                      kind: 65536,
+                                      kind: 65_536,
                                       flags: {},
                                       children: [
                                         {
@@ -10006,7 +10006,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1245,
                   name: "callback",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reflection",
@@ -10014,7 +10014,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1246,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -10044,7 +10044,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1248,
                               name: "request",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -10062,7 +10062,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 1249,
                                       name: "__type",
                                       variant: "declaration",
-                                      kind: 65536,
+                                      kind: 65_536,
                                       flags: {},
                                       children: [
                                         {
@@ -10194,7 +10194,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1153,
                   name: "debug",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -10279,7 +10279,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1195,
                   name: "defaultExtra",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -10376,7 +10376,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1192,
                   name: "defaultMethod",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -10465,7 +10465,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1261,
                   name: "callback",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reflection",
@@ -10473,7 +10473,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1262,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -10503,7 +10503,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1264,
                               name: "request",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -10521,7 +10521,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 1265,
                                       name: "__type",
                                       variant: "declaration",
-                                      kind: 65536,
+                                      kind: 65_536,
                                       flags: {},
                                       children: [
                                         {
@@ -10653,7 +10653,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1177,
                   name: "isMockEnabled",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -10738,7 +10738,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1180,
                   name: "NewEndpointMapper",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "reference",
@@ -10771,7 +10771,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1181,
                   name: "endpointMapper",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -10858,7 +10858,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1171,
                   name: "headerMapper",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -10945,7 +10945,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1159,
                   name: "callback",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reflection",
@@ -10953,7 +10953,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1160,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -10983,7 +10983,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1162,
                               name: "Client",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -11082,7 +11082,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1156,
                   name: "severity",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -11169,7 +11169,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1174,
                   name: "payloadMapper",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -11256,7 +11256,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1165,
                   name: "queryParamsConfig",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -11335,7 +11335,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1253,
                   name: "callback",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reflection",
@@ -11343,7 +11343,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1254,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -11373,7 +11373,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1256,
                               name: "request",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -11391,7 +11391,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 1257,
                                       name: "__type",
                                       variant: "declaration",
-                                      kind: 65536,
+                                      kind: 65_536,
                                       flags: {},
                                       children: [
                                         {
@@ -11523,7 +11523,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1139,
                   name: "callback",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "union",
@@ -11538,7 +11538,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1140,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -11568,7 +11568,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1142,
                                   name: "options",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reference",
@@ -11780,7 +11780,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1168,
                   name: "stringifyFn",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   comment: {
                     summary: [
@@ -11868,7 +11868,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1319,
           name: "GlobalErrorType",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -11890,7 +11890,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1320,
           name: "Adapter",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -11909,7 +11909,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1321,
           name: "EndpointMapper",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -11923,7 +11923,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1322,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               sources: [
                 {
@@ -11945,7 +11945,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1324,
                       name: "endpoint",
                       variant: "param",
-                      kind: 32768,
+                      kind: 32_768,
                       flags: {},
                       type: {
                         type: "intrinsic",
@@ -11998,7 +11998,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3354,
               name: "new Dispatcher",
               variant: "signature",
-              kind: 16384,
+              kind: 16_384,
               flags: {},
               sources: [
                 {
@@ -12013,7 +12013,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3355,
                   name: "client",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -12026,7 +12026,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3356,
                   name: "options",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {
                     isOptional: true,
                   },
@@ -12116,7 +12116,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3359,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               children: [
                 {
@@ -12153,7 +12153,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3376,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -12183,7 +12183,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3378,
                               name: "Request",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -12198,7 +12198,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3379,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -12206,7 +12206,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3380,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -12236,7 +12236,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3382,
                                           name: "values",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -12314,7 +12314,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3384,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -12344,7 +12344,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3386,
                               name: "Request",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -12359,7 +12359,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3387,
                               name: "queryKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -12370,7 +12370,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3388,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -12378,7 +12378,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3389,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -12408,7 +12408,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3391,
                                           name: "values",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -12486,7 +12486,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3410,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -12516,7 +12516,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3412,
                               name: "Request",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -12531,7 +12531,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3413,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -12539,7 +12539,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3414,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -12569,7 +12569,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3416,
                                           name: "values",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -12647,7 +12647,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3418,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -12677,7 +12677,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3420,
                               name: "Request",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -12692,7 +12692,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3421,
                               name: "queryKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -12703,7 +12703,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3422,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -12711,7 +12711,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3423,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -12741,7 +12741,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3425,
                                           name: "values",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -12819,7 +12819,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3393,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -12849,7 +12849,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3395,
                               name: "Request",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -12864,7 +12864,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3396,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -12872,7 +12872,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3397,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -12902,7 +12902,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3399,
                                           name: "values",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -12980,7 +12980,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3401,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -13010,7 +13010,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3403,
                               name: "Request",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -13025,7 +13025,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3404,
                               name: "queryKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -13036,7 +13036,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3405,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -13044,7 +13044,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3406,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -13074,7 +13074,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3408,
                                           name: "values",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -13138,7 +13138,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3361,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -13168,7 +13168,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3363,
                               name: "Request",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -13183,7 +13183,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3364,
                               name: "values",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -13232,7 +13232,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3371,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -13262,7 +13262,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3373,
                               name: "Request",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -13277,7 +13277,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3374,
                               name: "values",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -13326,7 +13326,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3366,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -13356,7 +13356,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3368,
                               name: "Request",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -13371,7 +13371,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3369,
                               name: "values",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -13509,7 +13509,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3534,
                   name: "request",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -13568,7 +13568,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3457,
                   name: "Request",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "reference",
@@ -13589,7 +13589,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3458,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -13600,7 +13600,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3459,
                   name: "element",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -13668,7 +13668,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3498,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -13679,7 +13679,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3499,
                   name: "requestId",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -13690,7 +13690,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3500,
                   name: "request",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -13751,7 +13751,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3513,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -13762,7 +13762,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3514,
                   name: "requestId",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -13819,7 +13819,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3510,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -13920,7 +13920,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3467,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -13934,7 +13934,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3468,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   children: [
                     {
@@ -14061,7 +14061,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3530,
                   name: "Request",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "reference",
@@ -14076,7 +14076,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3531,
                   name: "request",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -14147,7 +14147,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3537,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -14158,7 +14158,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3538,
                   name: "requestId",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -14169,7 +14169,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3539,
                   name: "abortKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -14245,7 +14245,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3520,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -14256,7 +14256,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3521,
                   name: "requestId",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -14313,7 +14313,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3517,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -14425,7 +14425,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3474,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -14542,7 +14542,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3454,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -14599,7 +14599,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3445,
                   name: "Request",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "reference",
@@ -14620,7 +14620,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3446,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -14688,7 +14688,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3524,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -14792,7 +14792,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3449,
                   name: "Request",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "reference",
@@ -14813,7 +14813,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3450,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -14824,7 +14824,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3451,
                   name: "requestId",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -14901,7 +14901,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3494,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -14912,7 +14912,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3495,
                   name: "requestId",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -14980,7 +14980,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3491,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -15042,7 +15042,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3506,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -15053,7 +15053,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3507,
                   name: "requestId",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -15110,7 +15110,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3503,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -15167,7 +15167,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3527,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -15224,7 +15224,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3437,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -15281,7 +15281,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3542,
                   name: "storageElement",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -15370,7 +15370,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3462,
                   name: "Request",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "reference",
@@ -15391,7 +15391,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3463,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -15402,7 +15402,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3464,
                   name: "queue",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -15481,7 +15481,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3434,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -15538,7 +15538,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3481,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -15549,7 +15549,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3482,
                   name: "requestId",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -15606,7 +15606,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3440,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -15663,7 +15663,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3485,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -15674,7 +15674,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3486,
                   name: "requestId",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -15742,7 +15742,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3878,
               name: "new EventEmitter",
               variant: "signature",
-              kind: 16384,
+              kind: 16_384,
               flags: {},
               sources: [
                 {
@@ -15757,7 +15757,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3879,
                   name: "options",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {
                     isOptional: true,
                   },
@@ -15811,7 +15811,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3904,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               sources: [
                 {
@@ -15841,7 +15841,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3906,
                       name: "event",
                       variant: "param",
-                      kind: 32768,
+                      kind: 32_768,
                       flags: {},
                       type: {
                         type: "union",
@@ -15861,7 +15861,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3907,
                       name: "listener",
                       variant: "param",
-                      kind: 32768,
+                      kind: 32_768,
                       flags: {},
                       type: {
                         type: "reflection",
@@ -15869,7 +15869,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 3908,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -15899,7 +15899,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3910,
                                   name: "args",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {
                                     isRest: true,
                                   },
@@ -15959,7 +15959,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3912,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               sources: [
                 {
@@ -15989,7 +15989,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3914,
                       name: "event",
                       variant: "param",
-                      kind: 32768,
+                      kind: 32_768,
                       flags: {},
                       type: {
                         type: "union",
@@ -16009,7 +16009,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3915,
                       name: "listener",
                       variant: "param",
-                      kind: 32768,
+                      kind: 32_768,
                       flags: {},
                       type: {
                         type: "reflection",
@@ -16017,7 +16017,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 3916,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -16047,7 +16047,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3918,
                                   name: "args",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {
                                     isRest: true,
                                   },
@@ -16121,7 +16121,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3898,
                   name: "event",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "union",
@@ -16141,7 +16141,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3899,
                   name: "listener",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reflection",
@@ -16149,7 +16149,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3900,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -16179,7 +16179,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3902,
                               name: "args",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {
                                 isRest: true,
                               },
@@ -16255,7 +16255,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3891,
                   name: "event",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "union",
@@ -16275,7 +16275,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3892,
                   name: "listener",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reflection",
@@ -16283,7 +16283,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3893,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -16313,7 +16313,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3895,
                               name: "args",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {
                                 isRest: true,
                               },
@@ -16389,7 +16389,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3882,
                   name: "event",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -16400,7 +16400,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3883,
                   name: "listener",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reflection",
@@ -16408,7 +16408,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3884,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -16438,7 +16438,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3886,
                               name: "count",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -16462,7 +16462,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3887,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -16567,7 +16567,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3220,
               name: "new LoggerManager",
               variant: "signature",
-              kind: 16384,
+              kind: 16_384,
               flags: {},
               sources: [
                 {
@@ -16582,7 +16582,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3221,
                   name: "client",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -16610,7 +16610,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3222,
                   name: "options",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {
                     isOptional: true,
                   },
@@ -16734,7 +16734,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3233,
                   name: "module",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -16785,7 +16785,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3230,
                   name: "severity",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -16852,7 +16852,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 914,
               name: "new Plugin",
               variant: "signature",
-              kind: 16384,
+              kind: 16_384,
               flags: {},
               sources: [
                 {
@@ -16867,7 +16867,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 915,
                   name: "Client",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "reference",
@@ -16886,7 +16886,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 916,
                   name: "PluginData",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   default: {
                     type: "intrinsic",
@@ -16899,7 +16899,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 917,
                   name: "config",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -17102,7 +17102,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 933,
                   name: "callback",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "union",
@@ -17117,7 +17117,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 934,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -17147,7 +17147,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 936,
                                   name: "data",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reflection",
@@ -17155,7 +17155,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 937,
                                       name: "__type",
                                       variant: "declaration",
-                                      kind: 65536,
+                                      kind: 65_536,
                                       flags: {},
                                       children: [
                                         {
@@ -17281,7 +17281,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 949,
                   name: "callback",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "union",
@@ -17296,7 +17296,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 950,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -17326,7 +17326,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 952,
                                   name: "data",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reflection",
@@ -17334,7 +17334,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 953,
                                       name: "__type",
                                       variant: "declaration",
-                                      kind: 65536,
+                                      kind: 65_536,
                                       flags: {},
                                       children: [
                                         {
@@ -17468,7 +17468,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 982,
                   name: "callback",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "union",
@@ -17483,7 +17483,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 983,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -17513,7 +17513,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 985,
                                   name: "data",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reflection",
@@ -17521,7 +17521,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 986,
                                       name: "__type",
                                       variant: "declaration",
-                                      kind: 65536,
+                                      kind: 65_536,
                                       flags: {},
                                       children: [
                                         {
@@ -17731,7 +17731,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 991,
                   name: "callback",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "union",
@@ -17746,7 +17746,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 992,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -17776,7 +17776,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 994,
                                   name: "data",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reflection",
@@ -17784,7 +17784,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 995,
                                       name: "__type",
                                       variant: "declaration",
-                                      kind: 65536,
+                                      kind: 65_536,
                                       flags: {},
                                       children: [
                                         {
@@ -17998,7 +17998,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 965,
                   name: "callback",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "union",
@@ -18013,7 +18013,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 966,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -18043,7 +18043,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 968,
                                   name: "data",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reflection",
@@ -18051,7 +18051,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 969,
                                       name: "__type",
                                       variant: "declaration",
-                                      kind: 65536,
+                                      kind: 65_536,
                                       flags: {},
                                       children: [
                                         {
@@ -18185,7 +18185,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 973,
                   name: "callback",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "union",
@@ -18200,7 +18200,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 974,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -18230,7 +18230,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 976,
                                   name: "data",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reflection",
@@ -18238,7 +18238,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 977,
                                       name: "__type",
                                       variant: "declaration",
-                                      kind: 65536,
+                                      kind: 65_536,
                                       flags: {},
                                       children: [
                                         {
@@ -18448,7 +18448,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 957,
                   name: "callback",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "union",
@@ -18463,7 +18463,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 958,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -18493,7 +18493,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 960,
                                   name: "data",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reflection",
@@ -18501,7 +18501,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 961,
                                       name: "__type",
                                       variant: "declaration",
-                                      kind: 65536,
+                                      kind: 65_536,
                                       flags: {},
                                       children: [
                                         {
@@ -18635,7 +18635,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 941,
                   name: "callback",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "union",
@@ -18650,7 +18650,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 942,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -18680,7 +18680,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 944,
                                   name: "data",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reflection",
@@ -18688,7 +18688,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 945,
                                       name: "__type",
                                       variant: "declaration",
-                                      kind: 65536,
+                                      kind: 65_536,
                                       flags: {},
                                       children: [
                                         {
@@ -18806,7 +18806,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 925,
                   name: "client",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -18859,7 +18859,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 928,
                   name: "Key",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "typeOperator",
@@ -18888,7 +18888,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 929,
                   name: "method",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -18902,7 +18902,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 930,
                   name: "data",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -18964,7 +18964,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 998,
           name: "Client",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -18983,7 +18983,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 999,
           name: "PluginData",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           default: {
             type: "intrinsic",
@@ -19070,7 +19070,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2026,
               name: "new Request",
               variant: "signature",
-              kind: 16384,
+              kind: 16_384,
               flags: {},
               sources: [
                 {
@@ -19085,35 +19085,35 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2027,
                   name: "Response",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                 },
                 {
                   id: 2028,
                   name: "Payload",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                 },
                 {
                   id: 2029,
                   name: "QueryParams",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                 },
                 {
                   id: 2030,
                   name: "LocalError",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                 },
                 {
                   id: 2031,
                   name: "Endpoint",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -19124,7 +19124,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2032,
                   name: "Client",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "reference",
@@ -19137,7 +19137,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2033,
                   name: "HasPayload",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -19152,7 +19152,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2034,
                   name: "HasParams",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -19167,7 +19167,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2035,
                   name: "HasQuery",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -19184,7 +19184,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2036,
                   name: "client",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -19199,7 +19199,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2037,
                   name: "requestOptions",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -19270,7 +19270,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2038,
                   name: "initialRequestConfiguration",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {
                     isOptional: true,
                   },
@@ -20855,7 +20855,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2166,
                   name: "NewData",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -20874,7 +20874,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2167,
                   name: "NewParams",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -20893,7 +20893,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2168,
                   name: "NewQueryParams",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -20914,7 +20914,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2169,
                   name: "configuration",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {
                     isOptional: true,
                   },
@@ -21369,7 +21369,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2116,
                   name: "abortKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -21496,7 +21496,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2078,
                   name: "auth",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -21623,7 +21623,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2107,
                   name: "cache",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "union",
@@ -21759,7 +21759,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2119,
                   name: "cacheKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -21886,7 +21886,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2110,
                   name: "cacheTime",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "union",
@@ -22022,7 +22022,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2095,
                   name: "cancelable",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -22149,7 +22149,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2125,
                   name: "deduplicate",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -22276,7 +22276,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2128,
                   name: "deduplicateTime",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -22403,7 +22403,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2142,
                   name: "isMockEnabled",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -22530,7 +22530,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2104,
                   name: "garbageCollection",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "union",
@@ -22666,7 +22666,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2075,
                   name: "headers",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -22798,7 +22798,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2137,
                   name: "mockData",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -23017,7 +23017,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2134,
                   name: "offline",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -23144,7 +23144,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2092,
                   name: "options",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -23287,7 +23287,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2081,
                   name: "P",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "reference",
@@ -23302,7 +23302,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2082,
                   name: "params",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -23446,7 +23446,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2085,
                   name: "P",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                 },
               ],
@@ -23455,7 +23455,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2086,
                   name: "payload",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -23613,7 +23613,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2145,
                   name: "MappedPayload",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -23626,7 +23626,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2146,
                   name: "payloadMapper",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reflection",
@@ -23634,7 +23634,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2147,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -23664,7 +23664,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2149,
                               name: "data",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -23808,7 +23808,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2089,
                   name: "queryParams",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -23935,7 +23935,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2122,
                   name: "queryKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -24062,7 +24062,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2113,
                   name: "queued",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -24208,7 +24208,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2152,
                   name: "NewRequest",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "reference",
@@ -24223,7 +24223,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2153,
                   name: "requestMapper",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   comment: {
                     summary: [
@@ -24468,7 +24468,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2156,
                   name: "Properties",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "reference",
@@ -24517,7 +24517,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2157,
                   name: "responseMapper",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {
                     isOptional: true,
                   },
@@ -24830,7 +24830,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2098,
                   name: "retry",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "union",
@@ -24966,7 +24966,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2101,
                   name: "retryTime",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "union",
@@ -25102,7 +25102,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2131,
                   name: "used",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -25349,35 +25349,35 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2176,
           name: "Response",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
         {
           id: 2177,
           name: "Payload",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
         {
           id: 2178,
           name: "QueryParams",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
         {
           id: 2179,
           name: "LocalError",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
         {
           id: 2180,
           name: "Endpoint",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "intrinsic",
@@ -25388,7 +25388,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2181,
           name: "Client",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -25401,7 +25401,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2182,
           name: "HasPayload",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "union",
@@ -25421,7 +25421,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2183,
           name: "HasParams",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "union",
@@ -25441,7 +25441,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2184,
           name: "HasQuery",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "union",
@@ -25509,7 +25509,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2578,
               name: "new RequestManager",
               variant: "signature",
-              kind: 16384,
+              kind: 16_384,
               flags: {},
               sources: [
                 {
@@ -25625,7 +25625,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2581,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               children: [
                 {
@@ -25648,7 +25648,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2610,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -25678,7 +25678,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2612,
                               name: "data",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -25726,7 +25726,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2599,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -25756,7 +25756,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2601,
                               name: "data",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -25812,7 +25812,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2583,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -25842,7 +25842,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2585,
                               name: "data",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -25890,7 +25890,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2614,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -25920,7 +25920,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2616,
                               name: "data",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -25968,7 +25968,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2587,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -25998,7 +25998,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2589,
                               name: "data",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -26046,7 +26046,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2603,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -26076,7 +26076,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2605,
                               name: "Adapter",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -26091,7 +26091,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2606,
                               name: "data",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -26113,7 +26113,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2607,
                                           name: "__type",
                                           variant: "declaration",
-                                          kind: 65536,
+                                          kind: 65_536,
                                           flags: {},
                                           children: [
                                             {
@@ -26211,7 +26211,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2591,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -26241,7 +26241,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2593,
                               name: "data",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -26289,7 +26289,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2595,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -26319,7 +26319,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2597,
                               name: "data",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -26367,7 +26367,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2783,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -26397,7 +26397,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2785,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -26418,7 +26418,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2786,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -26426,7 +26426,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2787,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -26456,7 +26456,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2789,
                                           name: "request",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -26520,7 +26520,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2800,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -26550,7 +26550,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2802,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -26571,7 +26571,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2803,
                               name: "requestId",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -26582,7 +26582,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2804,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -26590,7 +26590,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2805,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -26620,7 +26620,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2807,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -26684,7 +26684,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2791,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -26714,7 +26714,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2793,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -26735,7 +26735,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2794,
                               name: "abortKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -26746,7 +26746,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2795,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -26754,7 +26754,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2796,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -26784,7 +26784,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2798,
                                           name: "request",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -26848,7 +26848,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2731,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -26878,7 +26878,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2733,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -26899,7 +26899,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2734,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -26907,7 +26907,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2735,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -26937,7 +26937,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2737,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -27001,7 +27001,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2748,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -27031,7 +27031,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2750,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -27052,7 +27052,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2751,
                               name: "requestId",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -27063,7 +27063,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2752,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -27071,7 +27071,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2753,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -27101,7 +27101,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2755,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -27165,7 +27165,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2739,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -27195,7 +27195,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2741,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -27216,7 +27216,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2742,
                               name: "queryKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -27227,7 +27227,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2743,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -27235,7 +27235,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2744,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -27265,7 +27265,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2746,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -27337,7 +27337,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2618,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -27367,7 +27367,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2620,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -27382,7 +27382,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2621,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -27390,7 +27390,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2622,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -27420,7 +27420,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2624,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -27484,7 +27484,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2635,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -27514,7 +27514,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2637,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -27529,7 +27529,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2638,
                               name: "cacheKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -27540,7 +27540,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2639,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -27548,7 +27548,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2640,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -27578,7 +27578,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2642,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -27642,7 +27642,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2644,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -27672,7 +27672,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2646,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -27687,7 +27687,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2647,
                               name: "requestId",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -27698,7 +27698,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2648,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -27706,7 +27706,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2649,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -27736,7 +27736,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2651,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -27800,7 +27800,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2626,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -27830,7 +27830,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2628,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -27845,7 +27845,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2629,
                               name: "queryKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -27856,7 +27856,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2630,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -27864,7 +27864,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2631,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -27894,7 +27894,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2633,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -27958,7 +27958,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2809,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -27988,7 +27988,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2811,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -28009,7 +28009,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2812,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -28017,7 +28017,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2813,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -28047,7 +28047,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2815,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -28111,7 +28111,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2826,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -28141,7 +28141,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2828,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -28162,7 +28162,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2829,
                               name: "requestId",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -28173,7 +28173,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2830,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -28181,7 +28181,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2831,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -28211,7 +28211,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2833,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -28275,7 +28275,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2817,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -28305,7 +28305,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2819,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -28326,7 +28326,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2820,
                               name: "queryKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -28337,7 +28337,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2821,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -28345,7 +28345,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2822,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -28375,7 +28375,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2824,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -28439,7 +28439,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2653,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -28469,7 +28469,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2655,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -28484,7 +28484,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2656,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -28492,7 +28492,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2657,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -28522,7 +28522,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2659,
                                           name: "details",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -28586,7 +28586,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2670,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -28616,7 +28616,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2672,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -28631,7 +28631,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2673,
                               name: "requestId",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -28642,7 +28642,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2674,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -28650,7 +28650,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2675,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -28680,7 +28680,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2677,
                                           name: "details",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -28744,7 +28744,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2661,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -28774,7 +28774,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2663,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -28789,7 +28789,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2664,
                               name: "queryKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -28800,7 +28800,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2665,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -28808,7 +28808,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2666,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -28838,7 +28838,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2668,
                                           name: "details",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -28902,7 +28902,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2757,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -28932,7 +28932,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2759,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -28947,7 +28947,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2760,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -28955,7 +28955,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2761,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -28985,7 +28985,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2763,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -29049,7 +29049,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2765,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -29079,7 +29079,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2767,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -29094,7 +29094,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2768,
                               name: "cacheKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -29105,7 +29105,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2769,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -29113,7 +29113,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2770,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -29143,7 +29143,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2772,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -29207,7 +29207,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2774,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -29237,7 +29237,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2776,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -29252,7 +29252,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2777,
                               name: "requestId",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -29263,7 +29263,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2778,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -29271,7 +29271,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2779,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -29301,7 +29301,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2781,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -29365,7 +29365,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2679,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -29395,7 +29395,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2681,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -29410,7 +29410,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2682,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -29418,7 +29418,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2683,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -29448,7 +29448,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2685,
                                           name: "details",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -29512,7 +29512,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2696,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -29542,7 +29542,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2698,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -29557,7 +29557,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2699,
                               name: "requestId",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -29568,7 +29568,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2700,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -29576,7 +29576,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2701,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -29606,7 +29606,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2703,
                                           name: "details",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -29670,7 +29670,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2687,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -29700,7 +29700,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2689,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -29715,7 +29715,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2690,
                               name: "queryKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -29726,7 +29726,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2691,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -29734,7 +29734,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2692,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -29764,7 +29764,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2694,
                                           name: "details",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -29828,7 +29828,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2705,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -29858,7 +29858,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2707,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -29879,7 +29879,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2708,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -29887,7 +29887,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2709,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -29917,7 +29917,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2711,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -29981,7 +29981,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2722,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -30011,7 +30011,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2724,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -30032,7 +30032,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2725,
                               name: "requestId",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -30043,7 +30043,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2726,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -30051,7 +30051,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2727,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -30081,7 +30081,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2729,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -30145,7 +30145,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2713,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -30175,7 +30175,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2715,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -30196,7 +30196,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2716,
                               name: "queryKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -30207,7 +30207,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2717,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -30215,7 +30215,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2718,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -30245,7 +30245,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2720,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -30382,7 +30382,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2853,
                   name: "abortKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -30431,7 +30431,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2856,
                   name: "abortKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -30442,7 +30442,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2857,
                   name: "requestId",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -30491,7 +30491,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2837,
                   name: "abortKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -30502,7 +30502,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2838,
                   name: "requestId",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -30551,7 +30551,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2841,
                   name: "abortKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -30562,7 +30562,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2842,
                   name: "requestId",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -30625,7 +30625,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2845,
                   name: "abortKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -30636,7 +30636,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2846,
                   name: "requestId",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -30685,7 +30685,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2849,
                   name: "abortKey",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -30696,7 +30696,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2850,
                   name: "requestId",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -30829,7 +30829,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1789,
       name: "AdapterExtraType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -30845,7 +30845,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1790,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -30904,7 +30904,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1848,
       name: "AdapterHeadersProps",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -30920,7 +30920,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1849,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -30997,7 +30997,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1742,
       name: "AdapterInstance",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       comment: {
         summary: [
@@ -31052,7 +31052,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1788,
       name: "AdapterOptionsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -31084,7 +31084,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1792,
       name: "AdapterPayloadMappingType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -31100,7 +31100,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1793,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           sources: [
             {
@@ -31122,7 +31122,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1795,
                   name: "data",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -31186,7 +31186,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1743,
       name: "AdapterType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -31201,7 +31201,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1758,
           name: "AdapterOptions",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           default: {
             type: "reference",
@@ -31214,7 +31214,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1759,
           name: "MethodType",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "intrinsic",
@@ -31231,7 +31231,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1760,
           name: "StatusType",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "union",
@@ -31257,7 +31257,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1761,
           name: "Extra",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -31289,7 +31289,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1762,
           name: "QueryParams",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           default: {
             type: "union",
@@ -31315,7 +31315,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1763,
           name: "EndpointType",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           default: {
             type: "intrinsic",
@@ -31329,7 +31329,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1744,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           sources: [
             {
@@ -31351,7 +31351,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1746,
                   name: "request",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -31369,7 +31369,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1747,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           children: [
                             {
@@ -31479,7 +31479,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1749,
                   name: "requestId",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -31490,7 +31490,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1750,
                   name: "DO_NOT_USE",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {
                     isOptional: true,
                   },
@@ -31500,7 +31500,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1751,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       children: [
                         {
@@ -31706,7 +31706,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 2484,
       name: "AppManagerOptionsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -31722,7 +31722,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2485,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -31747,7 +31747,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2493,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -31769,7 +31769,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 2495,
                           name: "setFocused",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reflection",
@@ -31777,7 +31777,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2496,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               sources: [
                                 {
@@ -31799,7 +31799,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 2498,
                                       name: "isFocused",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "intrinsic",
@@ -31855,7 +31855,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2487,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -31932,7 +31932,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2490,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -32002,7 +32002,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2500,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -32024,7 +32024,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 2502,
                           name: "setOnline",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reflection",
@@ -32032,7 +32032,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2503,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               sources: [
                                 {
@@ -32054,7 +32054,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 2505,
                                       name: "isOnline",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "intrinsic",
@@ -32103,7 +32103,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1581,
       name: "CacheAsyncStorageType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -32119,7 +32119,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1582,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -32142,7 +32142,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1602,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -32164,7 +32164,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1604,
                           name: "key",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "intrinsic",
@@ -32212,7 +32212,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1592,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -32234,21 +32234,21 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1595,
                           name: "Response",
                           variant: "typeParam",
-                          kind: 131072,
+                          kind: 131_072,
                           flags: {},
                         },
                         {
                           id: 1596,
                           name: "Error",
                           variant: "typeParam",
-                          kind: 131072,
+                          kind: 131_072,
                           flags: {},
                         },
                         {
                           id: 1597,
                           name: "Adapter",
                           variant: "typeParam",
-                          kind: 131072,
+                          kind: 131_072,
                           flags: {},
                           type: {
                             type: "reference",
@@ -32263,7 +32263,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1594,
                           name: "key",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "intrinsic",
@@ -32345,7 +32345,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1599,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -32433,7 +32433,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1584,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -32455,21 +32455,21 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1588,
                           name: "Response",
                           variant: "typeParam",
-                          kind: 131072,
+                          kind: 131_072,
                           flags: {},
                         },
                         {
                           id: 1589,
                           name: "Error",
                           variant: "typeParam",
-                          kind: 131072,
+                          kind: 131_072,
                           flags: {},
                         },
                         {
                           id: 1590,
                           name: "Adapter",
                           variant: "typeParam",
-                          kind: 131072,
+                          kind: 131_072,
                           flags: {},
                           type: {
                             type: "reference",
@@ -32484,7 +32484,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1586,
                           name: "key",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "intrinsic",
@@ -32495,7 +32495,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1587,
                           name: "data",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -32570,7 +32570,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1632,
       name: "CacheInitialData",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -32606,7 +32606,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1549,
       name: "CacheOptionsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -32621,7 +32621,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1570,
           name: "C",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -32643,7 +32643,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1550,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -32707,7 +32707,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1559,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -32729,7 +32729,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1563,
                           name: "Response",
                           variant: "typeParam",
-                          kind: 131072,
+                          kind: 131_072,
                           flags: {},
                           default: {
                             type: "intrinsic",
@@ -32740,7 +32740,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1564,
                           name: "Error",
                           variant: "typeParam",
-                          kind: 131072,
+                          kind: 131_072,
                           flags: {},
                           default: {
                             type: "intrinsic",
@@ -32751,7 +32751,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1565,
                           name: "Adapter",
                           variant: "typeParam",
-                          kind: 131072,
+                          kind: 131_072,
                           flags: {},
                           type: {
                             type: "reference",
@@ -32772,7 +32772,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1561,
                           name: "key",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "intrinsic",
@@ -32783,7 +32783,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1562,
                           name: "data",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -32855,7 +32855,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1567,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -32877,7 +32877,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1569,
                           name: "key",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "intrinsic",
@@ -32924,7 +32924,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1555,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -32946,7 +32946,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1557,
                           name: "cache",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -33056,7 +33056,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1633,
       name: "CacheSetState",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -33071,7 +33071,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1637,
           name: "CacheData",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -33091,7 +33091,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1634,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               sources: [
                 {
@@ -33113,7 +33113,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1636,
                       name: "previousData",
                       variant: "param",
-                      kind: 32768,
+                      kind: 32_768,
                       flags: {},
                       type: {
                         type: "union",
@@ -33151,7 +33151,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1605,
       name: "CacheStorageType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -33167,7 +33167,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1606,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -33190,7 +33190,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1630,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -33236,7 +33236,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1626,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -33258,7 +33258,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1628,
                           name: "key",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "intrinsic",
@@ -33295,7 +33295,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1616,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -33317,21 +33317,21 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1619,
                           name: "Response",
                           variant: "typeParam",
-                          kind: 131072,
+                          kind: 131_072,
                           flags: {},
                         },
                         {
                           id: 1620,
                           name: "Error",
                           variant: "typeParam",
-                          kind: 131072,
+                          kind: 131_072,
                           flags: {},
                         },
                         {
                           id: 1621,
                           name: "Adapter",
                           variant: "typeParam",
-                          kind: 131072,
+                          kind: 131_072,
                           flags: {},
                           type: {
                             type: "reference",
@@ -33346,7 +33346,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1618,
                           name: "key",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "intrinsic",
@@ -33417,7 +33417,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1623,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -33494,7 +33494,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1608,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -33516,21 +33516,21 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1612,
                           name: "Response",
                           variant: "typeParam",
-                          kind: 131072,
+                          kind: 131_072,
                           flags: {},
                         },
                         {
                           id: 1613,
                           name: "Error",
                           variant: "typeParam",
-                          kind: 131072,
+                          kind: 131_072,
                           flags: {},
                         },
                         {
                           id: 1614,
                           name: "Adapter",
                           variant: "typeParam",
-                          kind: 131072,
+                          kind: 131_072,
                           flags: {},
                           type: {
                             type: "reference",
@@ -33545,7 +33545,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1610,
                           name: "key",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "intrinsic",
@@ -33556,7 +33556,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1611,
                           name: "data",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -33620,7 +33620,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1571,
       name: "CacheValueType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -33635,7 +33635,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1578,
           name: "Response",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           default: {
             type: "intrinsic",
@@ -33646,7 +33646,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1579,
           name: "Error",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           default: {
             type: "intrinsic",
@@ -33657,7 +33657,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1580,
           name: "Adapter",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -33717,7 +33717,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1572,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               children: [
                 {
@@ -33841,7 +33841,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1351,
       name: "ClientErrorType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -33884,7 +33884,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1424,
       name: "ClientGenericType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -33900,7 +33900,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1425,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -33994,7 +33994,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1352,
       name: "ClientInstance",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -34029,7 +34029,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1362,
       name: "ClientOptionsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       comment: {
         summary: [
@@ -34052,7 +34052,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1383,
           name: "C",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -34068,7 +34068,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1363,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -34132,7 +34132,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1372,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -34154,7 +34154,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1374,
                           name: "client",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -34214,7 +34214,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1368,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -34236,7 +34236,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1370,
                           name: "client",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -34325,7 +34325,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1376,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -34347,7 +34347,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1378,
                           name: "client",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -34407,7 +34407,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1380,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -34429,7 +34429,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1382,
                           name: "client",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -34508,7 +34508,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1402,
       name: "DefaultEndpointMapper",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -34523,7 +34523,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1406,
           name: "EndpointType",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           default: {
             type: "intrinsic",
@@ -34537,7 +34537,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1403,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           sources: [
             {
@@ -34559,7 +34559,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1405,
                   name: "endpoint",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -34583,7 +34583,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3543,
       name: "DispatcherOptionsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -34599,7 +34599,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3544,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -34624,7 +34624,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3561,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -34646,7 +34646,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 3563,
                           name: "dispatcherInstance",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -34687,7 +34687,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3556,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -34709,7 +34709,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 3559,
                           name: "Request",
                           variant: "typeParam",
-                          kind: 131072,
+                          kind: 131_072,
                           flags: {},
                           type: {
                             type: "reference",
@@ -34724,7 +34724,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 3558,
                           name: "data",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -34774,7 +34774,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3547,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -34796,7 +34796,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 3549,
                           name: "dispatcherInstance",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -34837,7 +34837,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3551,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -34859,7 +34859,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 3554,
                           name: "Request",
                           variant: "typeParam",
-                          kind: 131072,
+                          kind: 131_072,
                           flags: {},
                           type: {
                             type: "reference",
@@ -34874,7 +34874,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 3553,
                           name: "data",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -34947,7 +34947,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3579,
       name: "DispatcherStorageType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -34963,7 +34963,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3580,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -34986,7 +34986,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3603,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -35032,7 +35032,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3599,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -35054,7 +35054,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 3601,
                           name: "key",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "intrinsic",
@@ -35091,7 +35091,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3596,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -35186,7 +35186,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3588,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -35208,7 +35208,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 3591,
                           name: "Request",
                           variant: "typeParam",
-                          kind: 131072,
+                          kind: 131_072,
                           flags: {},
                           type: {
                             type: "reference",
@@ -35229,7 +35229,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 3590,
                           name: "key",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "intrinsic",
@@ -35286,7 +35286,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3593,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -35356,7 +35356,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3582,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -35378,7 +35378,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 3586,
                           name: "Request",
                           variant: "typeParam",
-                          kind: 131072,
+                          kind: 131_072,
                           flags: {},
                           type: {
                             type: "reference",
@@ -35399,7 +35399,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 3584,
                           name: "key",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "intrinsic",
@@ -35410,7 +35410,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 3585,
                           name: "data",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -35460,7 +35460,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3836,
       name: "ExtendRequest",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -35475,7 +35475,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3837,
           name: "Req",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -35488,7 +35488,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3838,
           name: "Properties",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reflection",
@@ -35496,7 +35496,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3839,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               children: [
                 {
@@ -36120,7 +36120,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1774,
       name: "ExtractAdapterEndpointType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -36135,7 +36135,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1775,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -36200,7 +36200,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1770,
       name: "ExtractAdapterExtraType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -36215,7 +36215,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1771,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -36280,7 +36280,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1766,
       name: "ExtractAdapterMethodType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -36295,7 +36295,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1767,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -36360,7 +36360,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1764,
       name: "ExtractAdapterOptionsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       comment: {
         summary: [
@@ -36383,7 +36383,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1765,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -36448,7 +36448,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1772,
       name: "ExtractAdapterQueryParamsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -36463,7 +36463,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1773,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -36528,7 +36528,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3808,
       name: "ExtractAdapterResolvedType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -36543,7 +36543,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3809,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -36611,7 +36611,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1768,
       name: "ExtractAdapterStatusType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -36626,7 +36626,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1769,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -36691,7 +36691,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3828,
       name: "ExtractAdapterType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -36706,7 +36706,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3829,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -36791,7 +36791,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3852,
       name: "ExtractClientAdapterType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -36806,7 +36806,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3853,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -36865,7 +36865,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3850,
       name: "ExtractClientGlobalError",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -36880,7 +36880,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3851,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -36939,7 +36939,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3854,
       name: "ExtractClientMapperType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -36954,7 +36954,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3855,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -37013,7 +37013,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3826,
       name: "ExtractClientType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -37028,7 +37028,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3827,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -37105,7 +37105,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3824,
       name: "ExtractEndpointType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -37120,7 +37120,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3825,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -37197,7 +37197,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3816,
       name: "ExtractErrorType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -37212,7 +37212,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3817,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -37312,7 +37312,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3818,
       name: "ExtractGlobalErrorType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -37327,7 +37327,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3819,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -37412,7 +37412,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3832,
       name: "ExtractHasParamsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -37427,7 +37427,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3833,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -37504,7 +37504,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3830,
       name: "ExtractHasPayloadType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -37519,7 +37519,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3831,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -37596,7 +37596,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3834,
       name: "ExtractHasQueryParamsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -37611,7 +37611,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3835,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -37688,7 +37688,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3820,
       name: "ExtractLocalErrorType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -37703,7 +37703,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3821,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -37780,7 +37780,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3822,
       name: "ExtractParamsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -37795,7 +37795,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3823,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -37901,7 +37901,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3812,
       name: "ExtractPayloadType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -37916,7 +37916,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3813,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -37993,7 +37993,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3814,
       name: "ExtractQueryParamsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -38008,7 +38008,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3815,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -38085,7 +38085,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3810,
       name: "ExtractResponseType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -38100,7 +38100,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3811,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -38177,7 +38177,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 2273,
       name: "ExtractRouteParams",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -38192,7 +38192,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2274,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "intrinsic",
@@ -38365,7 +38365,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1776,
       name: "ExtractUnionAdapter",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -38380,7 +38380,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1777,
           name: "Adapter",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -38393,7 +38393,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1778,
           name: "Values",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reflection",
@@ -38401,7 +38401,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1779,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               children: [
                 {
@@ -38787,7 +38787,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 2275,
       name: "FetchParamsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       comment: {
         summary: [
@@ -38810,14 +38810,14 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2282,
           name: "Params",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
         {
           id: 2283,
           name: "HasParams",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "union",
@@ -38851,7 +38851,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
             id: 2276,
             name: "__type",
             variant: "declaration",
-            kind: 65536,
+            kind: 65_536,
             flags: {},
             children: [
               {
@@ -38913,7 +38913,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2278,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               children: [
                 {
@@ -38962,7 +38962,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2280,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               children: [
                 {
@@ -39011,7 +39011,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 2284,
       name: "FetchPayloadType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       comment: {
         summary: [
@@ -39034,14 +39034,14 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2291,
           name: "Payload",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
         {
           id: 2292,
           name: "HasPayload",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "union",
@@ -39075,7 +39075,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
             id: 2285,
             name: "__type",
             variant: "declaration",
-            kind: 65536,
+            kind: 65_536,
             flags: {},
             children: [
               {
@@ -39137,7 +39137,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2287,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               children: [
                 {
@@ -39186,7 +39186,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2289,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               children: [
                 {
@@ -39235,7 +39235,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 2293,
       name: "FetchQueryParamsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       comment: {
         summary: [
@@ -39258,14 +39258,14 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2302,
           name: "QueryParams",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
         {
           id: 2303,
           name: "HasQuery",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "union",
@@ -39301,7 +39301,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
             id: 2294,
             name: "__type",
             variant: "declaration",
-            kind: 65536,
+            kind: 65_536,
             flags: {},
             children: [
               {
@@ -39363,7 +39363,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2296,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               children: [
                 {
@@ -39427,7 +39427,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                 id: 2298,
                 name: "__type",
                 variant: "declaration",
-                kind: 65536,
+                kind: 65_536,
                 flags: {},
                 children: [
                   {
@@ -39477,7 +39477,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                 id: 2300,
                 name: "__type",
                 variant: "declaration",
-                kind: 65536,
+                kind: 65_536,
                 flags: {},
                 children: [
                   {
@@ -39527,7 +39527,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3784,
       name: "GeneratorReturnMockTypes",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -39542,14 +39542,14 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3791,
           name: "Response",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
         {
           id: 3792,
           name: "Request",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -39583,7 +39583,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3785,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               sources: [
                 {
@@ -39605,7 +39605,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3787,
                       name: "r",
                       variant: "param",
-                      kind: 32768,
+                      kind: 32_768,
                       flags: {},
                       type: {
                         type: "reference",
@@ -39641,7 +39641,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3788,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               sources: [
                 {
@@ -39663,7 +39663,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3790,
                       name: "r",
                       variant: "param",
-                      kind: 32768,
+                      kind: 32_768,
                       flags: {},
                       type: {
                         type: "reference",
@@ -39711,7 +39711,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1880,
       name: "HFBufferEncoding",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -39734,7 +39734,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           },
           {
             type: "literal",
-            value: "utf-8",
+            value: "utf8",
           },
           {
             type: "literal",
@@ -39775,7 +39775,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1843,
       name: "HeaderMappingType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -39791,7 +39791,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1844,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           sources: [
             {
@@ -39813,7 +39813,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1847,
                   name: "T",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                   type: {
                     type: "reference",
@@ -39828,7 +39828,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1846,
                   name: "request",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -39857,7 +39857,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3806,
       name: "HttpMethodsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -39897,7 +39897,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3807,
       name: "HttpStatusType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -39916,7 +39916,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3862,
       name: "HydrateDataType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -39931,7 +39931,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3867,
           name: "Data",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           default: {
             type: "intrinsic",
@@ -39942,7 +39942,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3868,
           name: "Error",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           default: {
             type: "intrinsic",
@@ -39953,7 +39953,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3869,
           name: "Adapter",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -39982,7 +39982,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3863,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               children: [
                 {
@@ -40091,7 +40091,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3859,
       name: "HydrationOptions",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -40124,7 +40124,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3860,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               children: [
                 {
@@ -40172,7 +40172,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3253,
       name: "LogType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -40188,7 +40188,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3254,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -40350,7 +40350,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3245,
       name: "LoggerFunctionType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -40366,7 +40366,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3246,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           sources: [
             {
@@ -40388,7 +40388,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3248,
                   name: "log",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -40411,7 +40411,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3261,
       name: "LoggerLevelType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -40447,7 +40447,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3262,
       name: "LoggerMessageType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -40497,7 +40497,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3249,
       name: "LoggerOptionsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -40513,7 +40513,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3250,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -40584,7 +40584,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3263,
       name: "LoggerRequestEventData",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -40600,7 +40600,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3264,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -40665,7 +40665,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3267,
       name: "LoggerResponseEventData",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -40680,7 +40680,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3273,
           name: "Adapter",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -40696,7 +40696,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3268,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -40820,7 +40820,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3240,
       name: "LoggerType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -40849,7 +40849,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3241,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               sources: [
                 {
@@ -40871,7 +40871,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3243,
                       name: "message",
                       variant: "param",
-                      kind: 32768,
+                      kind: 32_768,
                       flags: {},
                       type: {
                         type: "reference",
@@ -40884,7 +40884,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3244,
                       name: "extra",
                       variant: "param",
-                      kind: 32768,
+                      kind: 32_768,
                       flags: {
                         isOptional: true,
                       },
@@ -40926,7 +40926,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3793,
       name: "NegativeTypes",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -40954,7 +40954,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3798,
       name: "NonNullableKeys",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -40969,7 +40969,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3799,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -41025,7 +41025,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3796,
       name: "NullableKeys",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -41040,7 +41040,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3797,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -41093,7 +41093,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3794,
       name: "NullableType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -41108,7 +41108,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3795,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -41135,7 +41135,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 2271,
       name: "ParamType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -41163,7 +41163,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 2272,
       name: "ParamsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -41199,7 +41199,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 2246,
       name: "PayloadMapperType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -41214,7 +41214,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2251,
           name: "Payload",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -41224,7 +41224,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2247,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           sources: [
             {
@@ -41246,7 +41246,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2250,
                   name: "NewDataType",
                   variant: "typeParam",
-                  kind: 131072,
+                  kind: 131_072,
                   flags: {},
                 },
               ],
@@ -41255,7 +41255,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2249,
                   name: "payload",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -41282,7 +41282,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 2252,
       name: "PayloadType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -41297,7 +41297,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2253,
           name: "Payload",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -41324,7 +41324,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1001,
       name: "PluginInstance",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -41355,7 +41355,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1000,
       name: "PluginLifecycle",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -41395,7 +41395,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1065,
       name: "PluginMethodParameters",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -41410,7 +41410,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1066,
           name: "Key",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "typeOperator",
@@ -41436,7 +41436,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1067,
           name: "Client",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -41505,7 +41505,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1011,
       name: "PluginMethods",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -41520,7 +41520,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1064,
           name: "Client",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -41536,7 +41536,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1012,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -41561,7 +41561,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1014,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -41583,7 +41583,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1016,
                           name: "data",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reflection",
@@ -41591,7 +41591,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1017,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               children: [
                                 {
@@ -41666,7 +41666,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1026,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -41688,7 +41688,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1028,
                           name: "data",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reflection",
@@ -41696,7 +41696,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1029,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               children: [
                                 {
@@ -41779,7 +41779,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1051,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -41801,7 +41801,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1053,
                           name: "data",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reflection",
@@ -41809,7 +41809,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1054,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               children: [
                                 {
@@ -41961,7 +41961,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1058,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -41983,7 +41983,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1060,
                           name: "data",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reflection",
@@ -41991,7 +41991,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1061,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               children: [
                                 {
@@ -42166,7 +42166,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1038,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -42188,7 +42188,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1040,
                           name: "data",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reflection",
@@ -42196,7 +42196,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1041,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               children: [
                                 {
@@ -42279,7 +42279,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1044,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -42301,7 +42301,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1046,
                           name: "data",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reflection",
@@ -42309,7 +42309,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1047,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               children: [
                                 {
@@ -42461,7 +42461,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1032,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -42483,7 +42483,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1034,
                           name: "data",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reflection",
@@ -42491,7 +42491,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1035,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               children: [
                                 {
@@ -42574,7 +42574,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1020,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -42596,7 +42596,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1022,
                           name: "data",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reflection",
@@ -42604,7 +42604,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1023,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               children: [
                                 {
@@ -42679,7 +42679,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1006,
       name: "PluginOptionsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -42694,7 +42694,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1010,
           name: "PluginData",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -42704,7 +42704,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1007,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -42788,7 +42788,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1002,
       name: "PluginRequest",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -42803,7 +42803,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1005,
           name: "C",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -42829,7 +42829,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1003,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               children: [
                 {
@@ -42880,7 +42880,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1868,
       name: "ProgressDataType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -42896,7 +42896,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1869,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -42963,7 +42963,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 2186,
       name: "ProgressEventType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -42979,7 +42979,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2187,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -43042,7 +43042,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1872,
       name: "ProgressType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -43058,7 +43058,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1873,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -43206,7 +43206,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1841,
       name: "QueryParamType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -43262,7 +43262,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1840,
       name: "QueryParamValuesType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -43321,7 +43321,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1842,
       name: "QueryParamsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -43357,7 +43357,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1852,
       name: "QueryStringifyOptionsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -43373,7 +43373,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1853,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -43489,7 +43489,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1861,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -43511,7 +43511,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1863,
                           name: "value",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -43589,7 +43589,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1865,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -43611,7 +43611,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1867,
                           name: "value",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -43739,7 +43739,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3573,
       name: "QueueDataType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -43754,7 +43754,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3578,
           name: "Request",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -43776,7 +43776,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3574,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -43872,7 +43872,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3564,
       name: "QueueElementType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -43887,7 +43887,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3572,
           name: "Request",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -43909,7 +43909,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3565,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -44059,7 +44059,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1638,
       name: "RequestCacheType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -44074,7 +44074,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1639,
           name: "R",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -44128,7 +44128,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 2254,
       name: "RequestConfigurationType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -44143,28 +44143,28 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2265,
           name: "Payload",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
         {
           id: 2266,
           name: "Params",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
         {
           id: 2267,
           name: "QueryParams",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
         {
           id: 2268,
           name: "GenericEndpoint",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "intrinsic",
@@ -44175,14 +44175,14 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2269,
           name: "AdapterOptions",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
         {
           id: 2270,
           name: "MethodsType",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -44195,7 +44195,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2255,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               children: [
                 {
@@ -44503,7 +44503,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3769,
       name: "RequestDataMockTypes",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -44518,14 +44518,14 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3782,
           name: "Response",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
         {
           id: 3783,
           name: "Request",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -44577,7 +44577,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3770,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               sources: [
                 {
@@ -44599,7 +44599,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3772,
                       name: "r",
                       variant: "param",
-                      kind: 32768,
+                      kind: 32_768,
                       flags: {},
                       type: {
                         type: "reference",
@@ -44637,7 +44637,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                 id: 3773,
                 name: "__type",
                 variant: "declaration",
-                kind: 65536,
+                kind: 65_536,
                 flags: {},
                 sources: [
                   {
@@ -44659,7 +44659,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                         id: 3775,
                         name: "r",
                         variant: "param",
-                        kind: 32768,
+                        kind: 32_768,
                         flags: {},
                         type: {
                           type: "reference",
@@ -44696,7 +44696,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3776,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               sources: [
                 {
@@ -44718,7 +44718,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3778,
                       name: "r",
                       variant: "param",
-                      kind: 32768,
+                      kind: 32_768,
                       flags: {},
                       type: {
                         type: "reference",
@@ -44767,7 +44767,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                 id: 3779,
                 name: "__type",
                 variant: "declaration",
-                kind: 65536,
+                kind: 65_536,
                 flags: {},
                 sources: [
                   {
@@ -44789,7 +44789,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                         id: 3781,
                         name: "r",
                         variant: "param",
-                        kind: 32768,
+                        kind: 32_768,
                         flags: {},
                         type: {
                           type: "reference",
@@ -44838,7 +44838,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 2304,
       name: "RequestDynamicSendOptionsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -44853,7 +44853,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2307,
           name: "Request",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -44950,7 +44950,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2305,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               children: [
                 {
@@ -45011,7 +45011,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3191,
       name: "RequestEventType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -45026,7 +45026,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3195,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -45042,7 +45042,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3192,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -45108,7 +45108,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1353,
       name: "RequestGenericType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -45123,7 +45123,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1361,
           name: "QueryParams",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -45133,7 +45133,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1354,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -45311,7 +45311,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 2185,
       name: "RequestInstance",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -45372,7 +45372,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1384,
       name: "RequestInterceptorType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -45388,7 +45388,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1385,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           sources: [
             {
@@ -45410,7 +45410,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1387,
                   name: "request",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -45457,7 +45457,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 2190,
       name: "RequestJSON",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       comment: {
         summary: [
@@ -45480,7 +45480,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2220,
           name: "Request",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -45496,7 +45496,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2191,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -46260,7 +46260,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3183,
       name: "RequestLoadingEventType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -46275,7 +46275,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3188,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -46294,7 +46294,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3184,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               children: [
                 {
@@ -46393,7 +46393,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 2355,
       name: "RequestMapper",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -46408,7 +46408,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2360,
           name: "Request",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -46421,7 +46421,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2361,
           name: "NewRequest",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -46437,7 +46437,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2356,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           sources: [
             {
@@ -46459,7 +46459,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2358,
                   name: "request",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -46473,7 +46473,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2359,
                   name: "requestId",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "intrinsic",
@@ -46520,7 +46520,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3753,
       name: "RequestMockType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -46535,7 +46535,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3768,
           name: "Response",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -46545,7 +46545,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3754,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -46570,7 +46570,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 3761,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   children: [
                     {
@@ -46736,7 +46736,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3756,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -46861,7 +46861,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 2221,
       name: "RequestOptionsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       comment: {
         summary: [
@@ -46884,21 +46884,21 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2243,
           name: "GenericEndpoint",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
         {
           id: 2244,
           name: "AdapterOptions",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
         {
           id: 2245,
           name: "RequestMethods",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           default: {
             type: "reference",
@@ -46914,7 +46914,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2222,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -47534,7 +47534,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3189,
       name: "RequestProgressEventType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -47549,7 +47549,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3190,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -47590,7 +47590,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3196,
       name: "RequestRemovedEventType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -47605,7 +47605,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3201,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -47621,7 +47621,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3197,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -47729,7 +47729,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3202,
       name: "RequestResponseEventType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -47744,7 +47744,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3208,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -47760,7 +47760,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3203,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -47915,7 +47915,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1796,
       name: "RequestResponseType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -47930,7 +47930,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1805,
           name: "Request",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -47946,7 +47946,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1797,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -48205,7 +48205,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 2310,
       name: "RequestSendActionsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -48220,7 +48220,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2340,
           name: "Request",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -48236,7 +48236,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2311,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -48261,7 +48261,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2329,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -48283,7 +48283,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 2331,
                           name: "eventData",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -48333,7 +48333,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2337,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -48355,7 +48355,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 2339,
                           name: "details",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -48405,7 +48405,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2317,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -48427,7 +48427,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 2319,
                           name: "eventData",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -48477,7 +48477,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2333,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -48499,7 +48499,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 2335,
                           name: "eventData",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -48549,7 +48549,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2321,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -48571,7 +48571,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 2323,
                           name: "eventData",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -48621,7 +48621,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2313,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -48643,7 +48643,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 2315,
                           name: "eventData",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -48693,7 +48693,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2325,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -48715,7 +48715,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 2327,
                           name: "eventData",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -48765,7 +48765,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 2308,
       name: "RequestSendOptionsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -48780,7 +48780,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2309,
           name: "Request",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -48982,7 +48982,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 2341,
       name: "RequestSendType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -48997,7 +48997,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2354,
           name: "Request",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -49103,7 +49103,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                 id: 2342,
                 name: "__type",
                 variant: "declaration",
-                kind: 65536,
+                kind: 65_536,
                 flags: {},
                 sources: [
                   {
@@ -49125,7 +49125,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                         id: 2344,
                         name: "options",
                         variant: "param",
-                        kind: 32768,
+                        kind: 32_768,
                         flags: {
                           isOptional: true,
                         },
@@ -49182,7 +49182,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                 id: 2345,
                 name: "__type",
                 variant: "declaration",
-                kind: 65536,
+                kind: 65_536,
                 flags: {},
                 sources: [
                   {
@@ -49204,7 +49204,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                         id: 2347,
                         name: "options",
                         variant: "param",
-                        kind: 32768,
+                        kind: 32_768,
                         flags: {},
                         type: {
                           type: "reference",
@@ -49260,7 +49260,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2348,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               sources: [
                 {
@@ -49282,7 +49282,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2350,
                       name: "options",
                       variant: "param",
-                      kind: 32768,
+                      kind: 32_768,
                       flags: {},
                       type: {
                         type: "reference",
@@ -49338,7 +49338,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
             id: 2351,
             name: "__type",
             variant: "declaration",
-            kind: 65536,
+            kind: 65_536,
             flags: {},
             sources: [
               {
@@ -49360,7 +49360,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                     id: 2353,
                     name: "options",
                     variant: "param",
-                    kind: 32768,
+                    kind: 32_768,
                     flags: {},
                     type: {
                       type: "reference",
@@ -49415,7 +49415,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3800,
       name: "RequiredKeys",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -49430,7 +49430,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3801,
           name: "T",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -49492,7 +49492,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3209,
       name: "ResponseDetailsType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -49508,7 +49508,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3210,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -49722,7 +49722,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1829,
       name: "ResponseErrorType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -49737,14 +49737,14 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1838,
           name: "GenericErrorType",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
         {
           id: 1839,
           name: "Adapter",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -49760,7 +49760,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1830,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -49961,7 +49961,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1388,
       name: "ResponseInterceptorType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -49976,7 +49976,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1395,
           name: "Client",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -49989,7 +49989,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1396,
           name: "Response",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           default: {
             type: "intrinsic",
@@ -50000,7 +50000,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1397,
           name: "Error",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           default: {
             type: "intrinsic",
@@ -50014,7 +50014,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1389,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           sources: [
             {
@@ -50036,7 +50036,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1391,
                   name: "response",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -50080,7 +50080,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1392,
                   name: "request",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -50098,7 +50098,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1393,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           children: [
                             {
@@ -50233,7 +50233,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 2362,
       name: "ResponseMapper",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -50248,7 +50248,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2366,
           name: "Request",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -50261,14 +50261,14 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2367,
           name: "NewResponse",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
         {
           id: 2368,
           name: "NewError",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -50278,7 +50278,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 2363,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           sources: [
             {
@@ -50300,7 +50300,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2365,
                   name: "response",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "reference",
@@ -50456,7 +50456,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1818,
       name: "ResponseSuccessType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -50471,14 +50471,14 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1827,
           name: "GenericDataType",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
         {
           id: 1828,
           name: "Adapter",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -50494,7 +50494,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1819,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -50695,7 +50695,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1806,
       name: "ResponseType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -50710,21 +50710,21 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1815,
           name: "GenericDataType",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
         {
           id: 1816,
           name: "GenericErrorType",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
         {
           id: 1817,
           name: "Adapter",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -50740,7 +50740,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1807,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -50967,7 +50967,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3605,
       name: "RunningRequestValueType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -50983,7 +50983,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3606,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -51067,7 +51067,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3239,
       name: "SeverityType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -51103,7 +51103,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 1398,
       name: "StringifyCallbackType",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -51119,7 +51119,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1399,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           sources: [
             {
@@ -51141,7 +51141,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1401,
                   name: "queryParams",
                   variant: "param",
-                  kind: 32768,
+                  kind: 32_768,
                   flags: {},
                   type: {
                     type: "union",
@@ -51179,7 +51179,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
       id: 3802,
       name: "TypeWithDefaults",
       variant: "declaration",
-      kind: 2097152,
+      kind: 2_097_152,
       flags: {},
       sources: [
         {
@@ -51194,7 +51194,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3803,
           name: "Types",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "reference",
@@ -51220,7 +51220,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3804,
           name: "Key",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
           type: {
             type: "typeOperator",
@@ -51238,7 +51238,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 3805,
           name: "Value",
           variant: "typeParam",
-          kind: 131072,
+          kind: 131_072,
           flags: {},
         },
       ],
@@ -51481,7 +51481,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
           id: 1408,
           name: "__type",
           variant: "declaration",
-          kind: 65536,
+          kind: 65_536,
           flags: {},
           children: [
             {
@@ -51715,7 +51715,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1730,
               name: "request",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -51733,7 +51733,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1731,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       children: [
                         {
@@ -51858,7 +51858,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1733,
               name: "requestId",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -51869,7 +51869,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1734,
               name: "DO_NOT_USE",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {
                 isOptional: true,
               },
@@ -51879,7 +51879,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1735,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   children: [
                     {
@@ -52127,7 +52127,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3632,
               name: "currentRetries",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -52138,7 +52138,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3633,
               name: "retry",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "union",
@@ -52196,7 +52196,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1418,
               name: "ClientProperties",
               variant: "typeParam",
-              kind: 131072,
+              kind: 131_072,
               flags: {},
               type: {
                 type: "reference",
@@ -52210,7 +52210,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1419,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   children: [
                     {
@@ -52306,7 +52306,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1423,
               name: "options",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -52587,7 +52587,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2883,
               name: "abortKey",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -52636,7 +52636,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2886,
               name: "id",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -52721,7 +52721,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1901,
               name: "T",
               variant: "typeParam",
-              kind: 131072,
+              kind: 131_072,
               flags: {},
               type: {
                 type: "reference",
@@ -52742,7 +52742,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1902,
               name: "__namedParameters",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reflection",
@@ -52750,7 +52750,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1903,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   children: [
                     {
@@ -52775,7 +52775,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1909,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -52805,7 +52805,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1911,
                                   name: "error",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reference",
@@ -52960,7 +52960,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 1912,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   children: [
                     {
@@ -53022,7 +53022,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1927,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -53052,7 +53052,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1929,
                                   name: "status",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reference",
@@ -53074,7 +53074,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1930,
                                   name: "abortExtra",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reference",
@@ -53096,7 +53096,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1931,
                                   name: "callback",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reflection",
@@ -53104,7 +53104,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 1932,
                                       name: "__type",
                                       variant: "declaration",
-                                      kind: 65536,
+                                      kind: 65_536,
                                       flags: {},
                                       sources: [
                                         {
@@ -53142,7 +53142,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1934,
                                   name: "resolve",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reflection",
@@ -53150,7 +53150,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 1935,
                                       name: "__type",
                                       variant: "declaration",
-                                      kind: 65536,
+                                      kind: 65_536,
                                       flags: {},
                                       sources: [
                                         {
@@ -53180,7 +53180,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                               id: 1937,
                                               name: "value",
                                               variant: "param",
-                                              kind: 32768,
+                                              kind: 32_768,
                                               flags: {},
                                               type: {
                                                 type: "reference",
@@ -53230,7 +53230,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1938,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -53307,7 +53307,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1918,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -53376,7 +53376,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1921,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -53439,7 +53439,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1924,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -53526,7 +53526,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 2013,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -53556,7 +53556,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2015,
                                   name: "apiCall",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reflection",
@@ -53564,7 +53564,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 2016,
                                       name: "__type",
                                       variant: "declaration",
-                                      kind: 65536,
+                                      kind: 65_536,
                                       flags: {},
                                       sources: [
                                         {
@@ -53594,7 +53594,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                               id: 2018,
                                               name: "resolve",
                                               variant: "param",
-                                              kind: 32768,
+                                              kind: 32_768,
                                               flags: {},
                                               type: {
                                                 type: "reflection",
@@ -53602,7 +53602,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                                   id: 2019,
                                                   name: "__type",
                                                   variant: "declaration",
-                                                  kind: 65536,
+                                                  kind: 65_536,
                                                   flags: {},
                                                   sources: [
                                                     {
@@ -53632,7 +53632,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                                           id: 2021,
                                                           name: "value",
                                                           variant: "param",
-                                                          kind: 32768,
+                                                          kind: 32_768,
                                                           flags: {},
                                                           type: {
                                                             type: "union",
@@ -53778,7 +53778,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1976,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -53808,7 +53808,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1978,
                                   name: "status",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reference",
@@ -53830,7 +53830,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1979,
                                   name: "extra",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reference",
@@ -53852,7 +53852,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1980,
                                   name: "resolve",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reflection",
@@ -53860,7 +53860,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 1981,
                                       name: "__type",
                                       variant: "declaration",
-                                      kind: 65536,
+                                      kind: 65_536,
                                       flags: {},
                                       sources: [
                                         {
@@ -53890,7 +53890,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                               id: 1983,
                                               name: "value",
                                               variant: "param",
-                                              kind: 32768,
+                                              kind: 32_768,
                                               flags: {},
                                               type: {
                                                 type: "reference",
@@ -53989,7 +53989,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1941,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -54043,7 +54043,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 2003,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -54073,7 +54073,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2005,
                                   name: "error",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "intrinsic",
@@ -54084,7 +54084,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2006,
                                   name: "status",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reference",
@@ -54106,7 +54106,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2007,
                                   name: "extra",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reference",
@@ -54128,7 +54128,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2008,
                                   name: "resolve",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reflection",
@@ -54136,7 +54136,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 2009,
                                       name: "__type",
                                       variant: "declaration",
-                                      kind: 65536,
+                                      kind: 65_536,
                                       flags: {},
                                       sources: [
                                         {
@@ -54166,7 +54166,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                               id: 2011,
                                               name: "value",
                                               variant: "param",
-                                              kind: 32768,
+                                              kind: 32_768,
                                               flags: {},
                                               type: {
                                                 type: "reference",
@@ -54254,7 +54254,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1952,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -54308,7 +54308,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1948,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -54338,7 +54338,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1950,
                                   name: "progress",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reference",
@@ -54377,7 +54377,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1944,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -54407,7 +54407,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1946,
                                   name: "progress",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {
                                     isOptional: true,
                                   },
@@ -54448,7 +54448,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1963,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -54502,7 +54502,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1959,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -54532,7 +54532,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1961,
                                   name: "progress",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reference",
@@ -54571,7 +54571,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1955,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -54601,7 +54601,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1957,
                                   name: "progress",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {
                                     isOptional: true,
                                   },
@@ -54642,7 +54642,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1966,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -54672,7 +54672,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1968,
                                   name: "responseData",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "intrinsic",
@@ -54683,7 +54683,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1969,
                                   name: "status",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reference",
@@ -54705,7 +54705,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1970,
                                   name: "extra",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reference",
@@ -54727,7 +54727,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1971,
                                   name: "resolve",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reflection",
@@ -54735,7 +54735,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 1972,
                                       name: "__type",
                                       variant: "declaration",
-                                      kind: 65536,
+                                      kind: 65_536,
                                       flags: {},
                                       sources: [
                                         {
@@ -54765,7 +54765,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                               id: 1974,
                                               name: "value",
                                               variant: "param",
-                                              kind: 32768,
+                                              kind: 32_768,
                                               flags: {},
                                               type: {
                                                 type: "reference",
@@ -54864,7 +54864,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1985,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -54894,7 +54894,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1987,
                                   name: "status",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reference",
@@ -54916,7 +54916,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1988,
                                   name: "extra",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reference",
@@ -54938,7 +54938,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1989,
                                   name: "resolve",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reflection",
@@ -54946,7 +54946,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 1990,
                                       name: "__type",
                                       variant: "declaration",
-                                      kind: 65536,
+                                      kind: 65_536,
                                       flags: {},
                                       sources: [
                                         {
@@ -54976,7 +54976,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                               id: 1992,
                                               name: "value",
                                               variant: "param",
-                                              kind: 32768,
+                                              kind: 32_768,
                                               flags: {},
                                               type: {
                                                 type: "reference",
@@ -55075,7 +55075,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 1994,
                           name: "__type",
                           variant: "declaration",
-                          kind: 65536,
+                          kind: 65_536,
                           flags: {},
                           sources: [
                             {
@@ -55105,7 +55105,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1996,
                                   name: "status",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reference",
@@ -55127,7 +55127,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1997,
                                   name: "extra",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reference",
@@ -55149,7 +55149,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1998,
                                   name: "resolve",
                                   variant: "param",
-                                  kind: 32768,
+                                  kind: 32_768,
                                   flags: {},
                                   type: {
                                     type: "reflection",
@@ -55157,7 +55157,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 1999,
                                       name: "__type",
                                       variant: "declaration",
-                                      kind: 65536,
+                                      kind: 65_536,
                                       flags: {},
                                       sources: [
                                         {
@@ -55187,7 +55187,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                               id: 2001,
                                               name: "value",
                                               variant: "param",
-                                              kind: 32768,
+                                              kind: 32_768,
                                               flags: {},
                                               type: {
                                                 type: "reference",
@@ -55346,7 +55346,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1343,
               name: "request",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -55402,7 +55402,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1346,
               name: "data",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -55465,7 +55465,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2532,
               name: "emitter",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -55484,7 +55484,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2533,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               children: [
                 {
@@ -55507,7 +55507,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2538,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -55562,7 +55562,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2535,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -55617,7 +55617,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2544,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -55672,7 +55672,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2541,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -55727,7 +55727,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2553,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -55757,7 +55757,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2555,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -55765,7 +55765,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2556,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -55835,7 +55835,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2547,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -55865,7 +55865,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2549,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -55873,7 +55873,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2550,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -55943,7 +55943,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2565,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -55973,7 +55973,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2567,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -55981,7 +55981,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2568,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -56051,7 +56051,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2559,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -56081,7 +56081,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2561,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -56089,7 +56089,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2562,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -56193,7 +56193,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1657,
               name: "key",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -56242,7 +56242,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1642,
               name: "T",
               variant: "typeParam",
-              kind: 131072,
+              kind: 131_072,
               flags: {},
               type: {
                 type: "reference",
@@ -56257,7 +56257,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1643,
               name: "previousResponse",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "union",
@@ -56288,7 +56288,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1644,
               name: "response",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intersection",
@@ -56381,7 +56381,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1662,
               name: "emitter",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -56400,7 +56400,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1663,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               children: [
                 {
@@ -56431,7 +56431,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1665,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -56461,21 +56461,21 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1667,
                               name: "Response",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                             },
                             {
                               id: 1668,
                               name: "Error",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                             },
                             {
                               id: 1669,
                               name: "Adapter",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -56490,7 +56490,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1670,
                               name: "data",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -56561,7 +56561,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1676,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -56591,7 +56591,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1678,
                               name: "cacheKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -56637,7 +56637,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1672,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -56667,7 +56667,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1674,
                               name: "cacheKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -56719,7 +56719,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1680,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -56749,21 +56749,21 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1682,
                               name: "Response",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                             },
                             {
                               id: 1683,
                               name: "Error",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                             },
                             {
                               id: 1684,
                               name: "Adapter",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -56778,7 +56778,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1685,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -56786,7 +56786,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1686,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -56816,7 +56816,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 1688,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -56908,7 +56908,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1690,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -56938,21 +56938,21 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1692,
                               name: "Response",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                             },
                             {
                               id: 1693,
                               name: "Error",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                             },
                             {
                               id: 1694,
                               name: "Adapter",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -56967,7 +56967,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1695,
                               name: "cacheKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -56978,7 +56978,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1696,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -56986,7 +56986,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1697,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -57016,7 +57016,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 1699,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -57094,7 +57094,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1715,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -57124,7 +57124,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1717,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -57132,7 +57132,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1718,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -57162,7 +57162,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 1720,
                                           name: "cacheKey",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "intrinsic",
@@ -57215,7 +57215,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1722,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -57245,7 +57245,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1724,
                               name: "cacheKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -57256,7 +57256,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1725,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -57264,7 +57264,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1726,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -57348,7 +57348,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1701,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -57378,7 +57378,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1703,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -57386,7 +57386,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1704,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -57416,7 +57416,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 1706,
                                           name: "cacheKey",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "intrinsic",
@@ -57483,7 +57483,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1708,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -57513,7 +57513,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1710,
                               name: "cacheKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -57524,7 +57524,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 1711,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -57532,7 +57532,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 1712,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -57672,7 +57672,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1654,
               name: "key",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -57757,7 +57757,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3624,
               name: "key",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -57842,7 +57842,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3614,
               name: "key",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -57927,7 +57927,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3284,
               name: "emitter",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -57946,7 +57946,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3285,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               children: [
                 {
@@ -57983,7 +57983,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3302,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -58013,7 +58013,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3304,
                               name: "Request",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -58028,7 +58028,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3305,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -58036,7 +58036,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3306,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -58066,7 +58066,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3308,
                                           name: "values",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -58144,7 +58144,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3310,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -58174,7 +58174,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3312,
                               name: "Request",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -58189,7 +58189,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3313,
                               name: "queryKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -58200,7 +58200,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3314,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -58208,7 +58208,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3315,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -58238,7 +58238,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3317,
                                           name: "values",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -58316,7 +58316,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3336,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -58346,7 +58346,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3338,
                               name: "Request",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -58361,7 +58361,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3339,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -58369,7 +58369,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3340,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -58399,7 +58399,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3342,
                                           name: "values",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -58477,7 +58477,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3344,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -58507,7 +58507,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3346,
                               name: "Request",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -58522,7 +58522,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3347,
                               name: "queryKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -58533,7 +58533,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3348,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -58541,7 +58541,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3349,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -58571,7 +58571,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3351,
                                           name: "values",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -58649,7 +58649,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3319,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -58679,7 +58679,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3321,
                               name: "Request",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -58694,7 +58694,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3322,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -58702,7 +58702,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3323,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -58732,7 +58732,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3325,
                                           name: "values",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -58810,7 +58810,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3327,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -58840,7 +58840,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3329,
                               name: "Request",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -58855,7 +58855,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3330,
                               name: "queryKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -58866,7 +58866,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3331,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -58874,7 +58874,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3332,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -58904,7 +58904,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3334,
                                           name: "values",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -58968,7 +58968,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3287,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -58998,7 +58998,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3289,
                               name: "Request",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -59013,7 +59013,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3290,
                               name: "values",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -59062,7 +59062,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3297,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -59092,7 +59092,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3299,
                               name: "Request",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -59107,7 +59107,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3300,
                               name: "values",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -59156,7 +59156,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3292,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -59186,7 +59186,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3294,
                               name: "Request",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -59201,7 +59201,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3295,
                               name: "values",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -59284,7 +59284,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3619,
               name: "key",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -59369,7 +59369,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2926,
               name: "id",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -59418,7 +59418,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2923,
               name: "queryKey",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -59503,7 +59503,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1883,
               name: "errorCase",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {
                 isOptional: true,
               },
@@ -59572,7 +59572,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1649,
               name: "key",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -59657,7 +59657,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3627,
               name: "currentTimestamp",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -59668,7 +59668,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3628,
               name: "threshold",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -59679,7 +59679,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3629,
               name: "queueTimestamp",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {
                 isOptional: true,
               },
@@ -59730,7 +59730,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2867,
               name: "cacheKey",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -59779,7 +59779,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2870,
               name: "id",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -59828,7 +59828,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2864,
               name: "queryKey",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -59913,7 +59913,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2385,
               name: "requestStartTime",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -59929,7 +59929,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2386,
               name: "progressDate",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -59945,7 +59945,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2387,
               name: "progressEvent",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -59998,7 +59998,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2374,
               name: "__namedParameters",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -60049,7 +60049,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2878,
               name: "id",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -60098,7 +60098,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2875,
               name: "queryKey",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -60183,7 +60183,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2397,
               name: "Request",
               variant: "typeParam",
-              kind: 131072,
+              kind: 131_072,
               flags: {},
               type: {
                 type: "reference",
@@ -60198,7 +60198,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2398,
               name: "request",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -60212,7 +60212,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2399,
               name: "dispatcherType",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "union",
@@ -60291,7 +60291,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2377,
               name: "startDate",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -60307,7 +60307,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2378,
               name: "progressDate",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -60323,7 +60323,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2379,
               name: "__namedParameters",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -60339,7 +60339,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2380,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               children: [
                 {
@@ -60457,7 +60457,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2393,
               name: "request",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "union",
@@ -60489,7 +60489,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2394,
               name: "useInitialValues",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {
                 isOptional: true,
               },
@@ -60540,7 +60540,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2929,
               name: "emitter",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -60559,7 +60559,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2930,
               name: "__type",
               variant: "declaration",
-              kind: 65536,
+              kind: 65_536,
               flags: {},
               children: [
                 {
@@ -60582,7 +60582,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2959,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -60612,7 +60612,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2961,
                               name: "data",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -60660,7 +60660,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2948,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -60690,7 +60690,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2950,
                               name: "data",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -60746,7 +60746,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2932,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -60776,7 +60776,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2934,
                               name: "data",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -60824,7 +60824,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2963,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -60854,7 +60854,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2965,
                               name: "data",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -60902,7 +60902,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2936,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -60932,7 +60932,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2938,
                               name: "data",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -60980,7 +60980,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2952,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -61010,7 +61010,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2954,
                               name: "Adapter",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -61025,7 +61025,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2955,
                               name: "data",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -61047,7 +61047,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2956,
                                           name: "__type",
                                           variant: "declaration",
-                                          kind: 65536,
+                                          kind: 65_536,
                                           flags: {},
                                           children: [
                                             {
@@ -61145,7 +61145,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2940,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -61175,7 +61175,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2942,
                               name: "data",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -61223,7 +61223,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2944,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -61253,7 +61253,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2946,
                               name: "data",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -61301,7 +61301,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3132,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -61331,7 +61331,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3134,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -61352,7 +61352,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3135,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -61360,7 +61360,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3136,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -61390,7 +61390,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3138,
                                           name: "request",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -61454,7 +61454,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3149,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -61484,7 +61484,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3151,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -61505,7 +61505,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3152,
                               name: "requestId",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -61516,7 +61516,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3153,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -61524,7 +61524,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3154,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -61554,7 +61554,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3156,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -61618,7 +61618,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3140,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -61648,7 +61648,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3142,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -61669,7 +61669,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3143,
                               name: "abortKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -61680,7 +61680,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3144,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -61688,7 +61688,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3145,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -61718,7 +61718,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3147,
                                           name: "request",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -61782,7 +61782,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3080,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -61812,7 +61812,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3082,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -61833,7 +61833,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3083,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -61841,7 +61841,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3084,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -61871,7 +61871,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3086,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -61935,7 +61935,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3097,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -61965,7 +61965,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3099,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -61986,7 +61986,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3100,
                               name: "requestId",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -61997,7 +61997,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3101,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -62005,7 +62005,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3102,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -62035,7 +62035,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3104,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -62099,7 +62099,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3088,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -62129,7 +62129,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3090,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -62150,7 +62150,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3091,
                               name: "queryKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -62161,7 +62161,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3092,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -62169,7 +62169,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3093,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -62199,7 +62199,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3095,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -62271,7 +62271,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2967,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -62301,7 +62301,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2969,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -62316,7 +62316,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2970,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -62324,7 +62324,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2971,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -62354,7 +62354,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2973,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -62418,7 +62418,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2984,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -62448,7 +62448,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2986,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -62463,7 +62463,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2987,
                               name: "cacheKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -62474,7 +62474,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2988,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -62482,7 +62482,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2989,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -62512,7 +62512,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2991,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -62576,7 +62576,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2993,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -62606,7 +62606,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2995,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -62621,7 +62621,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2996,
                               name: "requestId",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -62632,7 +62632,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2997,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -62640,7 +62640,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2998,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -62670,7 +62670,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3000,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -62734,7 +62734,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 2975,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -62764,7 +62764,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2977,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -62779,7 +62779,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2978,
                               name: "queryKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -62790,7 +62790,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 2979,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -62798,7 +62798,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 2980,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -62828,7 +62828,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 2982,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -62892,7 +62892,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3158,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -62922,7 +62922,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3160,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -62943,7 +62943,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3161,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -62951,7 +62951,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3162,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -62981,7 +62981,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3164,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -63045,7 +63045,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3175,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -63075,7 +63075,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3177,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -63096,7 +63096,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3178,
                               name: "requestId",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -63107,7 +63107,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3179,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -63115,7 +63115,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3180,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -63145,7 +63145,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3182,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -63209,7 +63209,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3166,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -63239,7 +63239,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3168,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -63260,7 +63260,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3169,
                               name: "queryKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -63271,7 +63271,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3170,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -63279,7 +63279,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3171,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -63309,7 +63309,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3173,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -63373,7 +63373,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3002,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -63403,7 +63403,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3004,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -63418,7 +63418,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3005,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -63426,7 +63426,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3006,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -63456,7 +63456,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3008,
                                           name: "details",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -63520,7 +63520,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3019,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -63550,7 +63550,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3021,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -63565,7 +63565,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3022,
                               name: "requestId",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -63576,7 +63576,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3023,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -63584,7 +63584,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3024,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -63614,7 +63614,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3026,
                                           name: "details",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -63678,7 +63678,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3010,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -63708,7 +63708,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3012,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -63723,7 +63723,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3013,
                               name: "queryKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -63734,7 +63734,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3014,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -63742,7 +63742,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3015,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -63772,7 +63772,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3017,
                                           name: "details",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -63836,7 +63836,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3106,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -63866,7 +63866,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3108,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -63881,7 +63881,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3109,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -63889,7 +63889,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3110,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -63919,7 +63919,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3112,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -63983,7 +63983,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3114,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -64013,7 +64013,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3116,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -64028,7 +64028,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3117,
                               name: "cacheKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -64039,7 +64039,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3118,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -64047,7 +64047,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3119,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -64077,7 +64077,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3121,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -64141,7 +64141,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3123,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -64171,7 +64171,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3125,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -64186,7 +64186,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3126,
                               name: "requestId",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -64197,7 +64197,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3127,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -64205,7 +64205,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3128,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -64235,7 +64235,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3130,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -64299,7 +64299,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3028,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -64329,7 +64329,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3030,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -64344,7 +64344,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3031,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -64352,7 +64352,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3032,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -64382,7 +64382,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3034,
                                           name: "details",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -64446,7 +64446,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3045,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -64476,7 +64476,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3047,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -64491,7 +64491,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3048,
                               name: "requestId",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -64502,7 +64502,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3049,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -64510,7 +64510,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3050,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -64540,7 +64540,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3052,
                                           name: "details",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -64604,7 +64604,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3036,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -64634,7 +64634,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3038,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -64649,7 +64649,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3039,
                               name: "queryKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -64660,7 +64660,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3040,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -64668,7 +64668,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3041,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -64698,7 +64698,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3043,
                                           name: "details",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -64762,7 +64762,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3054,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -64792,7 +64792,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3056,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -64813,7 +64813,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3057,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -64821,7 +64821,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3058,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -64851,7 +64851,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3060,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -64915,7 +64915,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3071,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -64945,7 +64945,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3073,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -64966,7 +64966,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3074,
                               name: "requestId",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -64977,7 +64977,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3075,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -64985,7 +64985,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3076,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -65015,7 +65015,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3078,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -65079,7 +65079,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3062,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       sources: [
                         {
@@ -65109,7 +65109,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3064,
                               name: "T",
                               variant: "typeParam",
-                              kind: 131072,
+                              kind: 131_072,
                               flags: {},
                               type: {
                                 type: "reference",
@@ -65130,7 +65130,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3065,
                               name: "queryKey",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "intrinsic",
@@ -65141,7 +65141,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3066,
                               name: "callback",
                               variant: "param",
-                              kind: 32768,
+                              kind: 32_768,
                               flags: {},
                               type: {
                                 type: "reflection",
@@ -65149,7 +65149,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                   id: 3067,
                                   name: "__type",
                                   variant: "declaration",
-                                  kind: 65536,
+                                  kind: 65_536,
                                   flags: {},
                                   sources: [
                                     {
@@ -65179,7 +65179,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3069,
                                           name: "data",
                                           variant: "param",
-                                          kind: 32768,
+                                          kind: 32_768,
                                           flags: {},
                                           type: {
                                             type: "reference",
@@ -65281,7 +65281,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2899,
               name: "queryKey",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -65330,7 +65330,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2902,
               name: "id",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -65415,7 +65415,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3636,
               name: "request",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -65428,7 +65428,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3637,
               name: "latestRequest",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "union",
@@ -65490,7 +65490,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2891,
               name: "cacheKey",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -65539,7 +65539,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2894,
               name: "id",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -65588,7 +65588,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1886,
               name: "headersString",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -65688,7 +65688,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2910,
               name: "id",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -65737,7 +65737,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2907,
               name: "queryKey",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -65822,7 +65822,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2390,
               name: "request",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "union",
@@ -65928,7 +65928,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3858,
               name: "key",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -65977,7 +65977,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2918,
               name: "id",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -66026,7 +66026,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2915,
               name: "queryKey",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -66111,7 +66111,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1892,
               name: "responseChunks",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "array",
@@ -66125,7 +66125,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1893,
               name: "responseType",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "union",
@@ -66150,7 +66150,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1894,
               name: "responseEncoding",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -66273,7 +66273,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1330,
               name: "interceptors",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "array",
@@ -66289,7 +66289,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1331,
               name: "request",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -66353,14 +66353,14 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1334,
               name: "GlobalErrorType",
               variant: "typeParam",
-              kind: 131072,
+              kind: 131_072,
               flags: {},
             },
             {
               id: 1335,
               name: "Client",
               variant: "typeParam",
-              kind: 131072,
+              kind: 131_072,
               flags: {},
               type: {
                 type: "reference",
@@ -66375,7 +66375,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1336,
               name: "interceptors",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "array",
@@ -66400,7 +66400,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1337,
               name: "response",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -66441,7 +66441,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1338,
               name: "request",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -66459,7 +66459,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 1339,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       children: [
                         {
@@ -66589,7 +66589,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3238,
               name: "log",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -66640,7 +66640,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3640,
               name: "T",
               variant: "typeParam",
-              kind: 131072,
+              kind: 131_072,
               flags: {},
               type: {
                 type: "reference",
@@ -66661,7 +66661,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3641,
               name: "request",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -66674,7 +66674,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3642,
               name: "__namedParameters",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -66689,7 +66689,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                       id: 3643,
                       name: "__type",
                       variant: "declaration",
-                      kind: 65536,
+                      kind: 65_536,
                       flags: {},
                       children: [
                         {
@@ -66751,7 +66751,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3658,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               sources: [
                                 {
@@ -66781,7 +66781,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3660,
                                       name: "status",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "reference",
@@ -66803,7 +66803,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3661,
                                       name: "abortExtra",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "reference",
@@ -66825,7 +66825,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3662,
                                       name: "callback",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "reflection",
@@ -66833,7 +66833,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3663,
                                           name: "__type",
                                           variant: "declaration",
-                                          kind: 65536,
+                                          kind: 65_536,
                                           flags: {},
                                           sources: [
                                             {
@@ -66871,7 +66871,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3665,
                                       name: "resolve",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "reflection",
@@ -66879,7 +66879,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3666,
                                           name: "__type",
                                           variant: "declaration",
-                                          kind: 65536,
+                                          kind: 65_536,
                                           flags: {},
                                           sources: [
                                             {
@@ -66909,7 +66909,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                                   id: 3668,
                                                   name: "value",
                                                   variant: "param",
-                                                  kind: 32768,
+                                                  kind: 32_768,
                                                   flags: {},
                                                   type: {
                                                     type: "reference",
@@ -66959,7 +66959,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3669,
                                       name: "__type",
                                       variant: "declaration",
-                                      kind: 65536,
+                                      kind: 65_536,
                                       flags: {},
                                       sources: [
                                         {
@@ -67036,7 +67036,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3649,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               sources: [
                                 {
@@ -67105,7 +67105,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3652,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               sources: [
                                 {
@@ -67168,7 +67168,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3655,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               sources: [
                                 {
@@ -67255,7 +67255,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3744,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               sources: [
                                 {
@@ -67285,7 +67285,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3746,
                                       name: "apiCall",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "reflection",
@@ -67293,7 +67293,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3747,
                                           name: "__type",
                                           variant: "declaration",
-                                          kind: 65536,
+                                          kind: 65_536,
                                           flags: {},
                                           sources: [
                                             {
@@ -67323,7 +67323,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                                   id: 3749,
                                                   name: "resolve",
                                                   variant: "param",
-                                                  kind: 32768,
+                                                  kind: 32_768,
                                                   flags: {},
                                                   type: {
                                                     type: "reflection",
@@ -67331,7 +67331,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                                       id: 3750,
                                                       name: "__type",
                                                       variant: "declaration",
-                                                      kind: 65536,
+                                                      kind: 65_536,
                                                       flags: {},
                                                       sources: [
                                                         {
@@ -67361,7 +67361,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                                               id: 3752,
                                                               name: "value",
                                                               variant: "param",
-                                                              kind: 32768,
+                                                              kind: 32_768,
                                                               flags: {},
                                                               type: {
                                                                 type: "union",
@@ -67508,7 +67508,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3707,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               sources: [
                                 {
@@ -67538,7 +67538,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3709,
                                       name: "status",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "reference",
@@ -67560,7 +67560,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3710,
                                       name: "extra",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "reference",
@@ -67582,7 +67582,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3711,
                                       name: "resolve",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "reflection",
@@ -67590,7 +67590,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3712,
                                           name: "__type",
                                           variant: "declaration",
-                                          kind: 65536,
+                                          kind: 65_536,
                                           flags: {},
                                           sources: [
                                             {
@@ -67620,7 +67620,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                                   id: 3714,
                                                   name: "value",
                                                   variant: "param",
-                                                  kind: 32768,
+                                                  kind: 32_768,
                                                   flags: {},
                                                   type: {
                                                     type: "reference",
@@ -67720,7 +67720,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3672,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               sources: [
                                 {
@@ -67774,7 +67774,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3734,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               sources: [
                                 {
@@ -67804,7 +67804,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3736,
                                       name: "error",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "intrinsic",
@@ -67815,7 +67815,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3737,
                                       name: "status",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "reference",
@@ -67837,7 +67837,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3738,
                                       name: "extra",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "reference",
@@ -67859,7 +67859,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3739,
                                       name: "resolve",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "reflection",
@@ -67867,7 +67867,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3740,
                                           name: "__type",
                                           variant: "declaration",
-                                          kind: 65536,
+                                          kind: 65_536,
                                           flags: {},
                                           sources: [
                                             {
@@ -67897,7 +67897,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                                   id: 3742,
                                                   name: "value",
                                                   variant: "param",
-                                                  kind: 32768,
+                                                  kind: 32_768,
                                                   flags: {},
                                                   type: {
                                                     type: "reference",
@@ -67986,7 +67986,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3683,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               sources: [
                                 {
@@ -68040,7 +68040,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3679,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               sources: [
                                 {
@@ -68070,7 +68070,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3681,
                                       name: "progress",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "reference",
@@ -68109,7 +68109,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3675,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               sources: [
                                 {
@@ -68139,7 +68139,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3677,
                                       name: "progress",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {
                                         isOptional: true,
                                       },
@@ -68180,7 +68180,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3694,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               sources: [
                                 {
@@ -68234,7 +68234,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3690,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               sources: [
                                 {
@@ -68264,7 +68264,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3692,
                                       name: "progress",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "reference",
@@ -68303,7 +68303,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3686,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               sources: [
                                 {
@@ -68333,7 +68333,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3688,
                                       name: "progress",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {
                                         isOptional: true,
                                       },
@@ -68374,7 +68374,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3697,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               sources: [
                                 {
@@ -68404,7 +68404,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3699,
                                       name: "responseData",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "intrinsic",
@@ -68415,7 +68415,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3700,
                                       name: "status",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "reference",
@@ -68437,7 +68437,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3701,
                                       name: "extra",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "reference",
@@ -68459,7 +68459,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3702,
                                       name: "resolve",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "reflection",
@@ -68467,7 +68467,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3703,
                                           name: "__type",
                                           variant: "declaration",
-                                          kind: 65536,
+                                          kind: 65_536,
                                           flags: {},
                                           sources: [
                                             {
@@ -68497,7 +68497,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                                   id: 3705,
                                                   name: "value",
                                                   variant: "param",
-                                                  kind: 32768,
+                                                  kind: 32_768,
                                                   flags: {},
                                                   type: {
                                                     type: "reference",
@@ -68597,7 +68597,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3716,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               sources: [
                                 {
@@ -68627,7 +68627,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3718,
                                       name: "status",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "reference",
@@ -68649,7 +68649,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3719,
                                       name: "extra",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "reference",
@@ -68671,7 +68671,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3720,
                                       name: "resolve",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "reflection",
@@ -68679,7 +68679,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3721,
                                           name: "__type",
                                           variant: "declaration",
-                                          kind: 65536,
+                                          kind: 65_536,
                                           flags: {},
                                           sources: [
                                             {
@@ -68709,7 +68709,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                                   id: 3723,
                                                   name: "value",
                                                   variant: "param",
-                                                  kind: 32768,
+                                                  kind: 32_768,
                                                   flags: {},
                                                   type: {
                                                     type: "reference",
@@ -68809,7 +68809,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                               id: 3725,
                               name: "__type",
                               variant: "declaration",
-                              kind: 65536,
+                              kind: 65_536,
                               flags: {},
                               sources: [
                                 {
@@ -68839,7 +68839,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3727,
                                       name: "status",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "reference",
@@ -68861,7 +68861,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3728,
                                       name: "extra",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "reference",
@@ -68883,7 +68883,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                       id: 3729,
                                       name: "resolve",
                                       variant: "param",
-                                      kind: 32768,
+                                      kind: 32_768,
                                       flags: {},
                                       type: {
                                         type: "reflection",
@@ -68891,7 +68891,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                           id: 3730,
                                           name: "__type",
                                           variant: "declaration",
-                                          kind: 65536,
+                                          kind: 65_536,
                                           flags: {},
                                           sources: [
                                             {
@@ -68921,7 +68921,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                                                   id: 3732,
                                                   name: "value",
                                                   variant: "param",
-                                                  kind: 32768,
+                                                  kind: 32_768,
                                                   flags: {},
                                                   type: {
                                                     type: "reference",
@@ -69163,7 +69163,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2522,
               name: "K",
               variant: "typeParam",
-              kind: 131072,
+              kind: 131_072,
               flags: {},
               type: {
                 type: "typeOperator",
@@ -69185,7 +69185,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2523,
               name: "key",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -69199,7 +69199,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2524,
               name: "listener",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reflection",
@@ -69207,7 +69207,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2525,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -69237,7 +69237,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 2527,
                           name: "this",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -69253,7 +69253,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 2528,
                           name: "ev",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "indexedAccess",
@@ -69289,7 +69289,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2529,
               name: "options",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {
                 isOptional: true,
               },
@@ -69359,7 +69359,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2512,
               name: "K",
               variant: "typeParam",
-              kind: 131072,
+              kind: 131_072,
               flags: {},
               type: {
                 type: "typeOperator",
@@ -69381,7 +69381,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2513,
               name: "key",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -69395,7 +69395,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2514,
               name: "listener",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reflection",
@@ -69403,7 +69403,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                   id: 2515,
                   name: "__type",
                   variant: "declaration",
-                  kind: 65536,
+                  kind: 65_536,
                   flags: {},
                   sources: [
                     {
@@ -69433,7 +69433,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 2517,
                           name: "this",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "reference",
@@ -69449,7 +69449,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
                           id: 2518,
                           name: "ev",
                           variant: "param",
-                          kind: 32768,
+                          kind: 32_768,
                           flags: {},
                           type: {
                             type: "indexedAccess",
@@ -69485,7 +69485,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2519,
               name: "options",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {
                 isOptional: true,
               },
@@ -69555,7 +69555,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1897,
               name: "T",
               variant: "typeParam",
-              kind: 131072,
+              kind: 131_072,
               flags: {},
               type: {
                 type: "reference",
@@ -69570,7 +69570,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1898,
               name: "response",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -69630,7 +69630,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1889,
               name: "response",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -69679,7 +69679,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2402,
               name: "Request",
               variant: "typeParam",
-              kind: 131072,
+              kind: 131_072,
               flags: {},
               type: {
                 type: "reference",
@@ -69694,7 +69694,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2403,
               name: "request",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -69708,7 +69708,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2404,
               name: "options",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {
                 isOptional: true,
               },
@@ -69830,7 +69830,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3872,
               name: "R",
               variant: "typeParam",
-              kind: 131072,
+              kind: 131_072,
               flags: {},
               type: {
                 type: "reference",
@@ -69845,7 +69845,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3873,
               name: "request",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -69859,7 +69859,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3874,
               name: "response",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               comment: {
                 summary: [
@@ -69927,7 +69927,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 3875,
               name: "options",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {
                 isOptional: true,
               },
@@ -69996,7 +69996,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 2371,
               name: "value",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -70045,7 +70045,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1349,
               name: "queryParams",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "union",
@@ -70073,7 +70073,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1350,
               name: "options",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "reference",
@@ -70125,7 +70125,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
               id: 1327,
               name: "response",
               variant: "param",
-              kind: 32768,
+              kind: 32_768,
               flags: {},
               type: {
                 type: "intrinsic",
@@ -70265,7 +70265,7 @@ export const HF_TREE_REFLECTION: JSONOutput.ProjectReflection = {
     },
     {
       kind: "text",
-      text: " guidelines.\n\n## Features\n\n🔮 **Simple setup** - [Read more](https://hyperfetch.bettertyped.com/docs/guides/basic/setup)\n\n🎯 **Request cancellation** - [Read more](https://hyperfetch.bettertyped.com/docs/guides/advanced/cancellation)\n\n✨ **Window Focus/Blur Events** -\n[Read more](https://hyperfetch.bettertyped.com/docs/guides/react/core/window-focus-blur)\n\n🚀 **Queueing** - [Read more](https://hyperfetch.bettertyped.com/docs/guides/advanced/queueing)\n\n💎 **Automatic caching** - [Read more](https://hyperfetch.bettertyped.com/docs/documentation/core/cache)\n\n🪄 **Persistence** - [Read more](https://hyperfetch.bettertyped.com/docs/guides/advanced/persistence)\n\n🎊 **SSR Support** - [Read more](https://hyperfetch.bettertyped.com/docs/documentation/getting-started/environment)\n\n🔋 **Offline First** - [Read more](https://hyperfetch.bettertyped.com/docs/guides/advanced/offline)\n\n📡 **Built-in adapter** - [Read more](https://hyperfetch.bettertyped.com/docs/documentation/core/adapter)\n\n🧪 **Easy to test** - [Read more](https://hyperfetch.bettertyped.com/docs/documentation/getting-started/testing)\n\n🎟 **Authentication** - [Read more](https://hyperfetch.bettertyped.com/docs/guides/basic/authentication)\n\n💡 **Prefetching** - [Read more](https://hyperfetch.bettertyped.com/docs/guides/advanced/prefetching)\n\n## Help me keep working on this project ❤️\n\n- [Become a Sponsor on GitHub](https://github.com/sponsors/prc5)\n\n## Sources\n\n- #### [Installation](https://hyperfetch.bettertyped.com/docs/documentation/getting-started/installation)\n- #### [Docs](https://hyperfetch.bettertyped.com/)\n- #### [API](https://hyperfetch.bettertyped.com/api/)\n- #### [NPM](https://www.npmjs.com/package/@hyper-fetch/core)\n- #### [Guides](https://hyperfetch.bettertyped.com/guides/Basic/Setup)\n\n## Other Packages\n\n- #### [Hyper Fetch Sockets](https://github.com/BetterTyped/hyper-fetch/tree/main/packages/sockets)\n- #### [React Hyper Fetch](https://github.com/BetterTyped/hyper-fetch/tree/main/packages/react)",
+      text: " guidelines.\n\n## Features\n\n🔮 **Simple setup** - [Read more](https://hyperfetch.bettertyped.com/docs/guides/basic/setup)\n\n🎯 **Request cancellation** - [Read more](https://hyperfetch.bettertyped.com/docs/guides/advanced/cancellation)\n\n✨ **Window Focus/Blur Events** -\n[Read more](https://hyperfetch.bettertyped.com/docs/guides/react/core/window-focus-blur)\n\n🚀 **Queueing** - [Read more](https://hyperfetch.bettertyped.com/docs/guides/advanced/queueing)\n\n💎 **Automatic caching** - [Read more](https://hyperfetch.bettertyped.com/docs/getting-started/core/cache)\n\n🪄 **Persistence** - [Read more](https://hyperfetch.bettertyped.com/docs/guides/advanced/persistence)\n\n🎊 **SSR Support** - [Read more](https://hyperfetch.bettertyped.com/docs/getting-started/getting-started/environment)\n\n🔋 **Offline First** - [Read more](https://hyperfetch.bettertyped.com/docs/guides/advanced/offline)\n\n📡 **Built-in adapter** - [Read more](https://hyperfetch.bettertyped.com/docs/getting-started/core/adapter)\n\n🧪 **Easy to test** - [Read more](https://hyperfetch.bettertyped.com/docs/getting-started/getting-started/testing)\n\n🎟 **Authentication** - [Read more](https://hyperfetch.bettertyped.com/docs/guides/basic/authentication)\n\n💡 **Prefetching** - [Read more](https://hyperfetch.bettertyped.com/docs/guides/advanced/prefetching)\n\n## Help me keep working on this project ❤️\n\n- [Become a Sponsor on GitHub](https://github.com/sponsors/prc5)\n\n## Sources\n\n- #### [Installation](https://hyperfetch.bettertyped.com/docs/getting-started/getting-started/installation)\n- #### [Docs](https://hyperfetch.bettertyped.com/)\n- #### [API](https://hyperfetch.bettertyped.com/api/)\n- #### [NPM](https://www.npmjs.com/package/@hyper-fetch/core)\n- #### [Guides](https://hyperfetch.bettertyped.com/guides/Basic/Setup)\n\n## Other Packages\n\n- #### [Hyper Fetch Sockets](https://github.com/BetterTyped/hyper-fetch/tree/main/packages/sockets)\n- #### [React Hyper Fetch](https://github.com/BetterTyped/hyper-fetch/tree/main/packages/react)",
     },
   ],
   symbolIdMap: {

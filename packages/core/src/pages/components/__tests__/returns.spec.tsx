@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 import { render } from "@testing-library/react";
 
 import { Returns } from "../returns";
@@ -8,10 +8,10 @@ import { HF_TREE_REFLECTION } from "snapshots/hf-core-reflection";
 describe("It should render correct returns", () => {
   it("should render correct returns", () => {
     const requestReflection = HF_TREE_REFLECTION.children!.find(
-      (reflection) => reflection.name === "Request",
+      (reflection) => "Request" === reflection.name,
     ) as JSONOutput.DeclarationReflection;
     const setPayloadMapperReflection = requestReflection.children!.find(
-      (reflection) => reflection.name === "setPayloadMapper",
+      (reflection) => "setPayloadMapper" === reflection.name,
     ) as JSONOutput.SomeReflection;
 
     const { container } = render(
@@ -36,6 +36,6 @@ describe("It should render correct returns", () => {
       "HasPayload",
       "HasParams",
       "HasQuery",
-    ].forEach((name) => expect(container.innerHTML).toInclude(name));
+    ].forEach((name) => expect(container.innerHTML).toContain(name));
   });
 });

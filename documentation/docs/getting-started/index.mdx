@@ -1,0 +1,139 @@
+---
+sidebar_position: 1
+title: Introduction
+sidebar_label: Introduction
+---
+
+# Introduction
+
+---
+
+> **docsgen** is a documentation generation tool for TypeScript projects. It reads your source code via TypeDoc,
+> renders structured API pages through React templates, and outputs clean MDX files ready for Docusaurus.
+
+---
+
+## Docs That Live With Your Code
+
+The core idea behind docsgen is simple: **your documentation should never fall out of sync with your code**.
+
+Traditional documentation workflows break down over time. You write a guide explaining a class's methods, then
+a refactor renames a parameter, adds a new method, or changes a return type. The guide is now wrong, but nobody
+notices until a user reports it. Multiply this across every guide, tutorial, and reference page in your docs, and
+you end up with documentation that slowly drifts from reality.
+
+docsgen solves this by letting you **write the narrative yourself** and **pull the technical details from the
+source code**. You explain the concept, the "why", the context. docsgen fills in the method signatures, parameter
+types, property tables, and import statements - directly from your TypeScript source, every time you build.
+
+:::tip The docsgen mental model
+
+1. **You write the story** - Explain the general idea, when to use something, how things fit together. This is
+   the part that requires human understanding and cannot be generated.
+2. **Code provides the details** - Method tables, parameter types, return values, import statements, type
+   definitions. These come from `@import` directives that read your actual source code.
+3. **Docs auto-update** - When you rename a parameter, add a method, or change a type, the docs update on the
+   next build. No manual sync required.
+4. **Docs never break** - Because the technical details are extracted from the same codebase, they cannot drift.
+   If the code compiles, the docs are correct.
+
+:::
+
+Here is what this looks like in practice. You write a guide like this:
+
+```markdown
+## Sending Requests
+
+The `Request` class is the main way to configure and execute HTTP calls.
+Use the methods below to set parameters before sending:
+
+(@import core Request type=methods&display=table)
+
+To send the request, call the `send` method with optional runtime overrides:
+
+(@import core Request type=method&name=send)
+```
+
+You write two sentences of explanation. docsgen fills in the methods table and the full `send()` documentation -
+pulled from the code, always accurate, always current.
+
+---
+
+## Key Features
+
+:::note What makes docsgen different
+
+1. **Living documentation** - `@import` directives pull API details from your source code at build time. When
+   the code changes, the docs change. They can never fall out of sync.
+2. **TypeDoc-powered** - Parses your TypeScript source and extracts types, interfaces, classes, functions, enums,
+   and variables automatically.
+3. **React page templates** - Each reflection kind (class, function, component, etc.) has a dedicated React
+   template you can toggle, extend, or fully replace.
+4. **Monorepo-aware** - Supports multiple packages in a single documentation site with per-package configuration.
+5. **Display modes** - Embed API fragments as compact tables, visual grids, or full detailed blocks depending on
+   the context.
+6. **Docusaurus integration** - Ships as a first-class Docusaurus plugin with zero-config sidebar generation.
+7. **Customizable output** - Control file names, category ordering, symbol exclusions, and page sections through
+   simple configuration.
+
+:::
+
+---
+
+## Embed API Fragments in Your Docs
+
+The `@import` directive is the heart of the docsgen workflow. It lets you inject any part of your auto-generated
+API reference directly into hand-written MDX - methods, parameters, properties, types, imports, and more.
+
+```
+(@import core Request type=methods&display=table)
+```
+
+This renders a structured table with each method's name, call signature, and description - pulled directly from
+your TypeScript source. The `display` option supports `table`, `grid`, and `block` layouts for different
+documentation needs.
+
+See the [Importer](/docs/getting-started/importer) guide for the full reference of available components and
+display modes.
+
+---
+
+## Real-world Example
+
+The [HyperFetch API documentation](https://hyperfetch.bettertyped.com/docs/api/getting-started) is built entirely
+with docsgen. It generates pages for every exported class, function, type, and hook across multiple packages in a
+monorepo, then uses the `@import` directive to embed API details into hand-written guides. The guides stay
+accurate across major version changes because the technical details come from the code itself.
+
+---
+
+## Packages
+
+docsgen is made up of two packages:
+
+| Package               | Description                                                                                            |
+| --------------------- | ------------------------------------------------------------------------------------------------------ |
+| `@docsgen/core`       | Core engine - TypeDoc parsing, React page rendering, MDX generation, and the `importer` remark plugin. |
+| `@docsgen/docusaurus` | Docusaurus plugin wrapper that calls `@docsgen/core` during the Docusaurus build lifecycle.            |
+
+---
+
+## How It Works
+
+At a high level, docsgen follows this pipeline:
+
+1. **Parse** - TypeDoc reads your TypeScript entry points and produces a JSON reflection tree.
+2. **Render** - React page templates consume the reflection data and produce HTML.
+3. **Transform** - HTML is converted to MDX with frontmatter for Docusaurus sidebar integration.
+4. **Write** - MDX files are written to your docs directory, organized by category (Classes, Functions, Types, etc.).
+5. **Embed** - The `importer` remark plugin resolves `@import` directives in your hand-written MDX at build time,
+   injecting live API fragments from the same source code.
+
+:::secondary Next steps
+
+- Follow the [Installation](/docs/getting-started/installation) guide to add docsgen to your project.
+- Jump to [Quick Start](/docs/getting-started/quick-start) for a working setup in under 5 minutes.
+- See [Importer](/docs/getting-started/importer) for the `@import` directive reference.
+- See [Configuration](/docs/getting-started/configuration) for the complete options reference.
+
+:::

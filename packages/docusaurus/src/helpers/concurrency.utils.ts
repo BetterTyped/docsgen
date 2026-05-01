@@ -1,7 +1,7 @@
 import { writeFileSync } from "fs";
 import { ensureDirSync, existsSync } from "fs-extra";
 
-import { trace } from "./log.utils";
+import { trace } from "@docsgen/core";
 
 export const createInstance = (dir: string, fileName: string) => {
   trace("Creating instance...");

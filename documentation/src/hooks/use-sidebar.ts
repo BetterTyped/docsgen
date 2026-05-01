@@ -1,9 +1,48 @@
+import type React from "react";
 import { useMemo } from "react";
 import { useLocation } from "@docusaurus/router";
 import useGlobalData from "@docusaurus/useGlobalData";
 
 import { useVersion } from "./use-version";
+import type { Section } from "../sections";
 import { sections } from "../sections";
+import { apiOverviewSection } from "../apis";
+import { guides } from "../guides";
+
+const VERSION_SEGMENT = /^v\d+\.\d+\.\d+$/;
+
+/** e.g. /docs/integrations/foo/... or /docs/v7.0.0/integrations/foo/... → foo */
+function segmentAfterPathMarker(path: string, marker: string): string {
+  const parts = path.split("/").filter(Boolean);
+  const i = parts.indexOf(marker);
+  return parts[i + 1] ?? "";
+}
+
+/**
+ * First docs slug: /docsgen/docs/getting-started or /docs/v7.0.0/getting-started → getting-started
+ * Finds the "docs" segment regardless of baseUrl prefix, then skips optional version segment.
+ */
+function docsRootSlugFromPath(path: string): string {
+  const parts = path.split("/").filter(Boolean);
+  const docsIndex = parts.indexOf("docs");
+  if (docsIndex === -1) {
+    return "";
+  }
+  let i = docsIndex + 1;
+  if (VERSION_SEGMENT.test(parts[i] ?? "")) {
+    i += 1;
+  }
+  return parts[i] ?? "";
+}
+
+function docRouteActive(pathname: string, prefix: string, component: string): boolean {
+  const c = component.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  if (prefix === "docs") {
+    return new RegExp(`/docs/(?:v\\d+\\.\\d+\\.\\d+/)?${c}(?:/|$)`).test(pathname);
+  }
+  const p = prefix.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return new RegExp(`/docs/(?:v\\d+\\.\\d+\\.\\d+/)?${p}/${c}(?:/|$)`).test(pathname);
+}
 
 type SidebarElement = {
   link: {
@@ -32,17 +71,22 @@ export type SidebarItem = {
   description: string;
   index: number;
   link: SidebarElement["link"];
-  img: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  img?: React.ComponentType<{ className?: string }>;
   active: boolean;
-  section: (typeof sections)[number];
+  section?: Section;
+  isNew?: boolean;
+  isPro?: boolean;
 };
 
-export const useSidebar = (onlyPackages?: boolean): { sidebar: SidebarItem[]; activeItem: SidebarItem | null } => {
+export const useSidebar = (options?: {
+  showAllPackages?: boolean;
+}): { sidebar: SidebarItem[]; activeItem: SidebarItem | null } => {
   const location = useLocation();
   const data = useGlobalData();
 
   const [version] = useVersion();
 
+  const { showAllPackages = false } = options || {};
   const { versions } = data["docusaurus-plugin-content-docs"].default as {
     breadcrumbs: boolean;
     path: string; // "/docs"
@@ -55,31 +99,96 @@ export const useSidebar = (onlyPackages?: boolean): { sidebar: SidebarItem[]; ac
 
   const sidebar: SidebarItem[] = useMemo(() => {
     if (!currentVersion?.sidebars) return [];
-    return Object.values(currentVersion.sidebars).map((value) => {
-      /**
-       * DO NOT CHANGE!
-       * @caution If it fails - you made mistake in the sidebar config :)
-       */
-      const componentName = value.link.path.split("/")[2];
-      const component = componentName.toLocaleLowerCase();
-      const sectionIndex = sections.findIndex((item) =>
-        item.names.find((itemName) => itemName.toLowerCase() === component),
-      );
-      const section = sections[sectionIndex];
-      const active = location.pathname.includes(component);
-      return {
-        name: section?.label || componentName,
-        description: section?.description || "",
-        index: sectionIndex,
-        link: value.link,
-        img: section?.img,
-        active,
-        section,
-      } satisfies SidebarItem;
-    });
-  }, [version])
-    .filter((item) => item.section && (!onlyPackages || item.section.isPackage))
-    .sort((a, b) => a.index - b.index);
+
+    // Versioned URLs use /docs/vX.Y.Z/integrations/... — do not use "/docs/integrations" (no version in between).
+    const isApiPage = location.pathname.includes("/api/");
+    const isGuidesPage = location.pathname.includes("/guides/");
+
+    return Object.values(currentVersion.sidebars)
+      .filter((value) => {
+        if (!value.link?.path) {
+          // eslint-disable-next-line no-console
+          console.log("You must update the sidebars. Missing path for the following item");
+          return false; // Ensure items without a path are filtered out
+        }
+
+        const linkPath = value.link.path;
+        if (showAllPackages) {
+          return !linkPath.includes("/api/") && !linkPath.includes("/guides/");
+        }
+        if (isApiPage) {
+          return linkPath.includes("/api/");
+        }
+        if (isGuidesPage) {
+          return linkPath.includes("/guides/");
+        }
+        return !linkPath.includes("/api/") && !linkPath.includes("/guides/");
+      })
+      .map((value) => {
+        const { path } = value.link;
+        let componentName: string;
+        if (path.includes("/guides/")) {
+          componentName = segmentAfterPathMarker(path, "guides");
+        } else if (path.includes("/api/")) {
+          componentName = segmentAfterPathMarker(path, "api");
+        } else {
+          componentName = docsRootSlugFromPath(path);
+        }
+        const component = componentName.toLocaleLowerCase();
+
+        const allPackages: Section[] = [
+          apiOverviewSection,
+          ...sections.filter((item) => item.isPackage),
+        ];
+
+        const findIndex = (items: Section[], comp: string) =>
+          items.findIndex((item) => item.paths.find((itemName) => itemName.toLowerCase() === comp));
+
+        let section: Section | undefined;
+        let index: number;
+        let prefix: string;
+
+        if (showAllPackages) {
+          const packageIndex = findIndex(allPackages, component);
+          section = allPackages[packageIndex];
+          index = packageIndex;
+          // Prefix determination might need refinement based on showAllPackages logic,
+          // defaulting to 'docs' or inferring from section path if needed.
+          prefix = "docs"; // Or determine more dynamically if required
+        } else if (isApiPage) {
+          const packageIndex = findIndex(allPackages, component);
+          section = allPackages[packageIndex];
+          index = packageIndex;
+          prefix = "api";
+        } else if (isGuidesPage) {
+          const pkgIndex = findIndex(guides, component);
+          section = guides[pkgIndex];
+          index = pkgIndex;
+          prefix = "guides";
+        } else {
+          const pkgIndex = findIndex(sections, component);
+          section = sections[pkgIndex];
+          index = pkgIndex;
+          prefix = "docs";
+        }
+
+        const active = docRouteActive(location.pathname, prefix, component);
+
+        return {
+          name: section?.label || componentName,
+          description: section?.description || "",
+          index,
+          link: value.link,
+          img: section?.img,
+          active,
+          section,
+          isNew: section?.isNew,
+          isPro: section?.isPro,
+        } satisfies SidebarItem;
+      })
+      .filter((item) => item.section && (!showAllPackages || item.section.isPackage))
+      .sort((a, b) => a.index - b.index);
+  }, [currentVersion?.sidebars, location.pathname, showAllPackages]);
 
   const activeItem = sidebar.find((item) => item.active) ?? null;
 

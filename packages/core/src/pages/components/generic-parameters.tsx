@@ -1,12 +1,12 @@
 import React from "react";
-import { JSONOutput } from "typedoc";
+import type { JSONOutput } from "typedoc";
 
 export type GenericParametersProps = {
   generics?: JSONOutput.TypeParameterReflection[];
 };
 
 export const GenericParameters = ({ generics }: GenericParametersProps) => {
-  if (!generics || generics.length === 0) {
+  if (!generics || 0 === generics.length) {
     return null;
   }
 
@@ -15,7 +15,7 @@ export const GenericParameters = ({ generics }: GenericParametersProps) => {
       {"<"}
       {generics.map((param, i) => (
         <React.Fragment key={param.id}>
-          {i > 0 && ","}
+          { 0 < i && ","}
           {param.name}
         </React.Fragment>
       ))}

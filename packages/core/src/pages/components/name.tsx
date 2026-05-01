@@ -1,7 +1,7 @@
 import React from "react";
 
-import { HeadingType } from "../../types/components.types";
-import { PagePropsType } from "../../types/page.types";
+import type { HeadingType } from "../../types/components.types";
+import type { PagePropsType } from "../../types/page.types";
 import { getStatusIcon } from "../handlers/name";
 import { sanitizeString } from "parsing/renderer/utils/sanitize.utils";
 
@@ -15,7 +15,7 @@ export const Name: React.FC<PagePropsType & NameProps> = ({ reflection, headingS
 
   const icon = getStatusIcon(reflection);
 
-  if (headingSize === "h1") {
+  if ("h1" === headingSize) {
     return (
       <>
         {"\n"}

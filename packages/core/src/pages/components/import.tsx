@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 
-import { PagePropsType } from "../../types/page.types";
+import type { PagePropsType } from "../../types/page.types";
 import { Code } from "./code";
 
 export type ImportProps = {
@@ -18,7 +18,7 @@ export const Import: React.FC<PagePropsType & ImportProps> = (props) => {
   const { reflection, npmName, packageOptions, className = "" } = props;
   const { showImports = true } = packageOptions;
 
-  if (!showImports) return null;
+  if (!showImports) {return null;}
 
   return (
     <div className={`api-docs__import api-docs__details ${className}`}>
