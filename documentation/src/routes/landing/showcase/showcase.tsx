@@ -18,7 +18,7 @@ interface ShowcaseStep {
   previewBlocks: PreviewBlock[];
 }
 
-const codeClass = "!text-violet-600 !text-xs font-semibold !bg-violet-50 px-1.5 py-0.5 rounded !border-0";
+const codeClass = "!text-violet-600 !text-xs font-semibold !bg-violet-50 px-1.5 py-0.5 rounded !border-violet-400";
 
 const MethodsTable = () => (
   <div className="w-full rounded-lg border border-slate-200 overflow-hidden">
