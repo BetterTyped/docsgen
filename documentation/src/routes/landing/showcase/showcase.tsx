@@ -18,6 +18,8 @@ interface ShowcaseStep {
   previewBlocks: PreviewBlock[];
 }
 
+const codeClass = "!text-violet-600 !text-xs font-semibold !bg-violet-50 px-1.5 py-0.5 rounded !border-0";
+
 const MethodsTable = () => (
   <div className="w-full rounded-lg border border-slate-200 overflow-hidden">
     <table className="!w-full text-sm" style={{ display: "table", width: "100%" }}>
@@ -30,17 +32,17 @@ const MethodsTable = () => (
       </thead>
       <tbody>
         <tr className="border-b border-slate-100">
-          <td className="px-3 py-2"><code className="text-violet-600 text-xs font-semibold bg-violet-50 px-1.5 py-0.5 rounded">send()</code></td>
+          <td className="px-3 py-2"><code className={codeClass}>send()</code></td>
           <td className="px-3 py-2 text-emerald-600 text-xs font-mono">Promise&lt;Response&gt;</td>
           <td className="px-3 py-2 text-slate-600 text-xs">Execute the request</td>
         </tr>
         <tr className="border-b border-slate-100">
-          <td className="px-3 py-2"><code className="text-violet-600 text-xs font-semibold bg-violet-50 px-1.5 py-0.5 rounded">abort()</code></td>
+          <td className="px-3 py-2"><code className={codeClass}>abort()</code></td>
           <td className="px-3 py-2 text-emerald-600 text-xs font-mono">void</td>
           <td className="px-3 py-2 text-slate-600 text-xs">Cancel the request</td>
         </tr>
         <tr>
-          <td className="px-3 py-2"><code className="text-violet-600 text-xs font-semibold bg-violet-50 px-1.5 py-0.5 rounded">clone()</code></td>
+          <td className="px-3 py-2"><code className={codeClass}>clone()</code></td>
           <td className="px-3 py-2 text-emerald-600 text-xs font-mono">Request</td>
           <td className="px-3 py-2 text-slate-600 text-xs">Create a copy</td>
         </tr>
@@ -62,19 +64,19 @@ const ParametersTable = () => (
       <tbody>
         <tr className="border-b border-slate-100">
           <td className="px-3 py-2">
-            <code className="text-violet-600 text-xs font-semibold bg-violet-50 px-1.5 py-0.5 rounded">baseUrl</code>
+            <code className={codeClass}>baseUrl</code>
             <span className="ml-1.5 text-[10px] text-red-500 font-medium">required</span>
           </td>
           <td className="px-3 py-2 text-emerald-600 text-xs font-mono">string</td>
           <td className="px-3 py-2 text-slate-600 text-xs">Base URL for all requests</td>
         </tr>
         <tr className="border-b border-slate-100">
-          <td className="px-3 py-2"><code className="text-violet-600 text-xs font-semibold bg-violet-50 px-1.5 py-0.5 rounded">timeout</code></td>
+          <td className="px-3 py-2"><code className={codeClass}>timeout</code></td>
           <td className="px-3 py-2 text-emerald-600 text-xs font-mono">number</td>
           <td className="px-3 py-2 text-slate-600 text-xs">Request timeout in ms</td>
         </tr>
         <tr>
-          <td className="px-3 py-2"><code className="text-violet-600 text-xs font-semibold bg-violet-50 px-1.5 py-0.5 rounded">headers</code></td>
+          <td className="px-3 py-2"><code className={codeClass}>headers</code></td>
           <td className="px-3 py-2 text-emerald-600 text-xs font-mono">HeadersInit</td>
           <td className="px-3 py-2 text-slate-600 text-xs">Default request headers</td>
         </tr>
@@ -95,22 +97,22 @@ const ReturnsTable = () => (
       </thead>
       <tbody>
         <tr className="border-b border-slate-100">
-          <td className="px-3 py-2"><code className="text-violet-600 text-xs font-semibold bg-violet-50 px-1.5 py-0.5 rounded">data</code></td>
+          <td className="px-3 py-2"><code className={codeClass}>data</code></td>
           <td className="px-3 py-2 text-emerald-600 text-xs font-mono">T | null</td>
           <td className="px-3 py-2 text-slate-600 text-xs">Response data</td>
         </tr>
         <tr className="border-b border-slate-100">
-          <td className="px-3 py-2"><code className="text-violet-600 text-xs font-semibold bg-violet-50 px-1.5 py-0.5 rounded">error</code></td>
+          <td className="px-3 py-2"><code className={codeClass}>error</code></td>
           <td className="px-3 py-2 text-emerald-600 text-xs font-mono">Error | null</td>
           <td className="px-3 py-2 text-slate-600 text-xs">Request error</td>
         </tr>
         <tr className="border-b border-slate-100">
-          <td className="px-3 py-2"><code className="text-violet-600 text-xs font-semibold bg-violet-50 px-1.5 py-0.5 rounded">loading</code></td>
+          <td className="px-3 py-2"><code className={codeClass}>loading</code></td>
           <td className="px-3 py-2 text-emerald-600 text-xs font-mono">boolean</td>
           <td className="px-3 py-2 text-slate-600 text-xs">Loading state</td>
         </tr>
         <tr>
-          <td className="px-3 py-2"><code className="text-violet-600 text-xs font-semibold bg-violet-50 px-1.5 py-0.5 rounded">refetch</code></td>
+          <td className="px-3 py-2"><code className={codeClass}>refetch</code></td>
           <td className="px-3 py-2 text-emerald-600 text-xs font-mono">() =&gt; Promise&lt;T&gt;</td>
           <td className="px-3 py-2 text-slate-600 text-xs">Re-run the query</td>
         </tr>
@@ -326,6 +328,7 @@ export const Showcase = () => {
     timerRef.current = setTimeout(() => {
       setIsTransitioning(true);
       timerRef.current = setTimeout(() => {
+        setVisibleLines(0);
         setActiveStep((prev) => (prev + 1) % steps.length);
         setIsTransitioning(false);
       }, 400);
@@ -379,6 +382,7 @@ export const Showcase = () => {
 
     setIsTransitioning(true);
     timerRef.current = setTimeout(() => {
+      setVisibleLines(0);
       setActiveStep(index);
       setIsTransitioning(false);
     }, 400);
