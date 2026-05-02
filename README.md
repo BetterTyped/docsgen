@@ -138,11 +138,11 @@ const config = {
 Then use `@import` directives in any MDX file:
 
 ```markdown
-@import my-library MyClass type=methods&display=table
+(@import my-library MyClass type=methods&display=table)
 
-@import my-library createClient type=parameters&display=table
+(@import my-library createClient type=parameters&display=table)
 
-@import my-library MyClass type=properties&display=grid
+(@import my-library MyClass type=properties&display=grid)
 ```
 
 This renders live, always-up-to-date API fragments directly in your hand-written documentation.

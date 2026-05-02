@@ -98,11 +98,11 @@ const config = {
 Then use `@import` in any MDX file:
 
 ```markdown
-@import my-library MyClass type=methods&display=table
+(@import my-library MyClass type=methods&display=table)
 
-@import my-library createClient type=parameters&display=table
+(@import my-library createClient type=parameters&display=table)
 
-@import my-library MyType type=definition
+(@import my-library MyType type=definition)
 ```
 
 ### Available `@import` content types

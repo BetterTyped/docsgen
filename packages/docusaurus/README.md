@@ -166,7 +166,7 @@ const config = {
 Then in any MDX file:
 
 ```markdown
-@import my-library MyClass type=methods&display=table
+(@import my-library MyClass type=methods&display=table)
 ```
 
 See the [Importer guide](https://docs.docsgen.dev/docs/getting-started/importer) for the full reference.
@@ -176,18 +176,18 @@ See the [Importer guide](https://docs.docsgen.dev/docs/getting-started/importer)
 All options from `@docsgen/core` are passed through the plugin. See the
 [Configuration reference](https://docs.docsgen.dev/docs/getting-started/configuration) for the complete list.
 
-| Option | Type | Required | Description |
-| --- | --- | --- | --- |
-| `id` | `string` | Yes | Unique plugin instance identifier |
-| `outDir` | `string` | Yes | Output directory for generated files |
-| `packages` | `PackageOptions[]` | Yes | Array of packages to document |
-| `generateMdx` | `boolean` | No | Generate MDX files (default: `true`) |
-| `typeDocOptions` | `Partial<TypeDocOptions>` | No | TypeDoc configuration overrides |
-| `watch` | `boolean` | No | Enable watch mode for development |
-| `addMonorepoPage` | `boolean` | No | Generate monorepo index page |
-| `addPackagePage` | `boolean` | No | Generate per-package index pages |
-| `logLevel` | `LogLevel` | No | Logging verbosity |
-| `pages` | `PagesOptions` | No | Per-kind page template overrides |
+| Option            | Type                      | Required | Description                          |
+| ----------------- | ------------------------- | -------- | ------------------------------------ |
+| `id`              | `string`                  | Yes      | Unique plugin instance identifier    |
+| `outDir`          | `string`                  | Yes      | Output directory for generated files |
+| `packages`        | `PackageOptions[]`        | Yes      | Array of packages to document        |
+| `generateMdx`     | `boolean`                 | No       | Generate MDX files (default: `true`) |
+| `typeDocOptions`  | `Partial<TypeDocOptions>` | No       | TypeDoc configuration overrides      |
+| `watch`           | `boolean`                 | No       | Enable watch mode for development    |
+| `addMonorepoPage` | `boolean`                 | No       | Generate monorepo index page         |
+| `addPackagePage`  | `boolean`                 | No       | Generate per-package index pages     |
+| `logLevel`        | `LogLevel`                | No       | Logging verbosity                    |
+| `pages`           | `PagesOptions`            | No       | Per-kind page template overrides     |
 
 ## Peer Dependencies
 

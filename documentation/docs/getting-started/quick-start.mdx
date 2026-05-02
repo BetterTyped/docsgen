@@ -140,20 +140,20 @@ const config = {
 Then use `@import` directives in any MDX file to embed API fragments:
 
 ```markdown
-@import my-library MyClass type=methods&display=table
+(@import my-library MyClass type=methods&display=table)
 ```
 
 This renders a compact table of all methods with their signatures and descriptions. You can also embed
 parameters, properties, return types, definitions, and more:
 
 ```markdown
-@import my-library createClient type=parameters&display=table
+(@import my-library createClient type=parameters&display=table)
 
-@import my-library MyClass type=properties&display=grid
+(@import my-library MyClass type=properties&display=grid)
 
-@import my-library createClient type=returns
+(@import my-library createClient type=returns)
 
-@import my-library MyClass type=import
+(@import my-library MyClass type=import)
 ```
 
 The `display` option supports `table`, `grid`, and `block` modes for different documentation contexts.
