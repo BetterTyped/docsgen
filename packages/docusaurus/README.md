@@ -10,9 +10,9 @@
 
 **Docusaurus plugin that integrates docsgen into your site's build lifecycle. Install, configure, build.**
 
-**[Documentation](https://docs.docsgen.dev/) |
-[Quick Start](https://docs.docsgen.dev/docs/getting-started/quick-start) |
-[Guides](https://docs.docsgen.dev/docs/guides)**
+**[Documentation](https://bettertyped.github.io/docsgen/) |
+[Quick Start](https://bettertyped.github.io/docsgen/docs/getting-started/quick-start) |
+[Guides](https://bettertyped.github.io/docsgen/docs/guides)**
 
 [![npm](https://img.shields.io/npm/v/@docsgen/docusaurus)](https://www.npmjs.com/package/@docsgen/docusaurus)
 [![downloads](https://img.shields.io/npm/dm/@docsgen/docusaurus)](https://www.npmjs.com/package/@docsgen/docusaurus)
@@ -169,12 +169,12 @@ Then in any MDX file:
 (@import my-library MyClass type=methods&display=table)
 ```
 
-See the [Importer guide](https://docs.docsgen.dev/docs/getting-started/importer) for the full reference.
+See the [Importer guide](https://bettertyped.github.io/docsgen/docs/getting-started/importer) for the full reference.
 
 ## Configuration
 
 All options from `@docsgen/core` are passed through the plugin. See the
-[Configuration reference](https://docs.docsgen.dev/docs/getting-started/configuration) for the complete list.
+[Configuration reference](https://bettertyped.github.io/docsgen/docs/getting-started/configuration) for the complete list.
 
 | Option            | Type                      | Required | Description                          |
 | ----------------- | ------------------------- | -------- | ------------------------------------ |
@@ -199,12 +199,12 @@ All options from `@docsgen/core` are passed through the plugin. See the
 
 ## Documentation
 
-- [Getting Started](https://docs.docsgen.dev/docs/getting-started/installation)
-- [Quick Start](https://docs.docsgen.dev/docs/getting-started/quick-start)
-- [Configuration](https://docs.docsgen.dev/docs/getting-started/configuration)
-- [Importer](https://docs.docsgen.dev/docs/getting-started/importer)
-- [Customization](https://docs.docsgen.dev/docs/getting-started/customization)
-- [Guides](https://docs.docsgen.dev/docs/guides)
+- [Getting Started](https://bettertyped.github.io/docsgen/docs/getting-started/installation)
+- [Quick Start](https://bettertyped.github.io/docsgen/docs/getting-started/quick-start)
+- [Configuration](https://bettertyped.github.io/docsgen/docs/getting-started/configuration)
+- [Importer](https://bettertyped.github.io/docsgen/docs/getting-started/importer)
+- [Customization](https://bettertyped.github.io/docsgen/docs/getting-started/customization)
+- [Guides](https://bettertyped.github.io/docsgen/docs/guides)
 
 ## License
 

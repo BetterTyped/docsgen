@@ -10,9 +10,9 @@
 
 **The engine behind docsgen. TypeDoc-powered generation pipeline, React page templates, and the `@import` remark plugin.**
 
-**[Documentation](https://docs.docsgen.dev/) |
-[Quick Start](https://docs.docsgen.dev/docs/getting-started/quick-start) |
-[Guides](https://docs.docsgen.dev/docs/guides)**
+**[Documentation](https://bettertyped.github.io/docsgen/) |
+[Quick Start](https://bettertyped.github.io/docsgen/docs/getting-started/quick-start) |
+[Guides](https://bettertyped.github.io/docsgen/docs/guides)**
 
 [![npm](https://img.shields.io/npm/v/@docsgen/core)](https://www.npmjs.com/package/@docsgen/core)
 [![downloads](https://img.shields.io/npm/dm/@docsgen/core)](https://www.npmjs.com/package/@docsgen/core)
@@ -183,11 +183,11 @@ Every section can be toggled on/off or replaced with a custom React renderer via
 
 ## Documentation
 
-- [Getting Started](https://docs.docsgen.dev/docs/getting-started/installation)
-- [Configuration](https://docs.docsgen.dev/docs/getting-started/configuration)
-- [Importer](https://docs.docsgen.dev/docs/getting-started/importer)
-- [Customization](https://docs.docsgen.dev/docs/getting-started/customization)
-- [Guides](https://docs.docsgen.dev/docs/guides)
+- [Getting Started](https://bettertyped.github.io/docsgen/docs/getting-started/installation)
+- [Configuration](https://bettertyped.github.io/docsgen/docs/getting-started/configuration)
+- [Importer](https://bettertyped.github.io/docsgen/docs/getting-started/importer)
+- [Customization](https://bettertyped.github.io/docsgen/docs/getting-started/customization)
+- [Guides](https://bettertyped.github.io/docsgen/docs/guides)
 
 ## License
 

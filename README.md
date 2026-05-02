@@ -11,9 +11,9 @@
 Generate fully structured, always-accurate API documentation for your Docusaurus site directly from TypeScript source
 code. Every page stays in sync with your code automatically.
 
-**[Documentation](https://docs.docsgen.dev/) |
-[Quick Start](https://docs.docsgen.dev/docs/getting-started/quick-start) |
-[Guides](https://docs.docsgen.dev/docs/guides)**
+**[Documentation](https://bettertyped.github.io/docsgen/) |
+[Quick Start](https://bettertyped.github.io/docsgen/docs/getting-started/quick-start) |
+[Guides](https://bettertyped.github.io/docsgen/docs/guides)**
 
 [![npm](https://img.shields.io/npm/v/@docsgen/core)](https://www.npmjs.com/package/@docsgen/core)
 [![npm](https://img.shields.io/npm/v/@docsgen/docusaurus)](https://www.npmjs.com/package/@docsgen/docusaurus)
@@ -149,12 +149,12 @@ This renders live, always-up-to-date API fragments directly in your hand-written
 
 ## Documentation
 
-- [Getting Started](https://docs.docsgen.dev/docs/getting-started/installation)
-- [Quick Start](https://docs.docsgen.dev/docs/getting-started/quick-start)
-- [Configuration](https://docs.docsgen.dev/docs/getting-started/configuration)
-- [Importer](https://docs.docsgen.dev/docs/getting-started/importer)
-- [Customization](https://docs.docsgen.dev/docs/getting-started/customization)
-- [Guides](https://docs.docsgen.dev/docs/guides)
+- [Getting Started](https://bettertyped.github.io/docsgen/docs/getting-started/installation)
+- [Quick Start](https://bettertyped.github.io/docsgen/docs/getting-started/quick-start)
+- [Configuration](https://bettertyped.github.io/docsgen/docs/getting-started/configuration)
+- [Importer](https://bettertyped.github.io/docsgen/docs/getting-started/importer)
+- [Customization](https://bettertyped.github.io/docsgen/docs/getting-started/customization)
+- [Guides](https://bettertyped.github.io/docsgen/docs/guides)
 
 ---
 
