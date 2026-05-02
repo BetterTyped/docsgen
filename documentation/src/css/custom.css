@@ -1855,12 +1855,27 @@ html body .searchBarContainer {
 
 html body .dropdownMenu {
   @apply !rounded-xl;
+  background: #141415 !important;
   border: 1px solid rgba(255, 255, 255, 0.06) !important;
   margin-top: 6px !important;
 }
 
+html body .dropdownMenu * {
+  color: #e4e4e7 !important;
+}
+
+html body .dropdownMenu mark {
+  color: #60a5fa !important;
+  background: transparent !important;
+}
+
 html body .dropdownMenu .suggestion {
   @apply !rounded-lg;
+  background: #1e1e21 !important;
+}
+
+html body .dropdownMenu .suggestion span[class*="subtitle"] {
+  color: #71717a !important;
 }
 
 .pagination-nav__link {
