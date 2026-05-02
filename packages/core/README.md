@@ -1,6 +1,6 @@
 <h1 align="center">
 
-  <img src="./documentation/static/branding/icon-black.svg" width="260px" />
+  <img src="../../documentation/static/branding/icon-white.svg" width="260px" />
 
 </h1>
 
