@@ -441,7 +441,7 @@ export const Showcase = () => {
                 <div className="w-2.5 h-2.5 rounded-full bg-slate-300" />
               </div>
               <div className="flex-1 flex justify-center">
-                <div className="flex items-center gap-6 text-xs text-slate-400">
+                <div className="hidden md:flex items-center gap-6 text-xs text-slate-400">
                   <span className="font-medium text-slate-600">Source</span>
                   <span className="w-px h-3 bg-slate-200" />
                   <span className="font-medium text-slate-600">Preview</span>
@@ -453,7 +453,7 @@ export const Showcase = () => {
             {/* Content split */}
             <div className="grid md:grid-cols-2 min-h-[380px]">
               {/* Left: Code editor */}
-              <div className="relative border-r border-slate-100 p-6 md:p-8 bg-white">
+              <div className="relative border-r border-slate-100 p-6 md:p-8 bg-white overflow-hidden">
                 <div className="space-y-0.5">
                   {currentStep.code.map((line, index) => (
                     <CodeLineRenderer

@@ -1471,9 +1471,10 @@ body {
   box-shadow: none;
   border: 0;
   background: transparent !important;
+  position: relative;
 }
 
-@media (min-width: 996px) {
+@media (min-width: 997px) {
   .navbar {
     @apply backdrop-blur-sm;
     box-shadow: none;
@@ -1512,12 +1513,24 @@ body {
   .navbar__items .navbar__brand {
     margin-right: auto;
   }
+  .navbar__toggle {
+    position: absolute !important;
+    right: 16px;
+    top: 20px;
+  }
+  .navbar__items--right {
+    transform: translateX(20px);
+  }
+  body .navbar__items--right {
+    margin-right: 50px !important;
+  }
   body .navbar__items--right > div > .navbar__search-input {
     width: 140px !important;
+    padding-right: 0.5rem !important;
     @apply !px-2;
   }
-  body .navbar__items--right > div:last-child {
-    margin-right: 50px !important;
+  body [class*="searchHintContainer"] {
+    display: none !important;
   }
   .row.footer__links {
     display: grid;
@@ -1533,6 +1546,11 @@ body {
 @media (max-width: 500px) {
   .footer__item {
     @apply text-sm;
+  }
+}
+@media (max-width: 420px) {
+  .navbar__title.text--truncate {
+    display: none !important;
   }
 }
 /* Github icon */
@@ -1808,73 +1826,85 @@ html body .navbar__search-input:focus {
 }
 
 html body .navbar__search {
-  --search-local-modal-background: #141415;
+  --search-local-modal-background: #ffffff;
   --search-local-modal-shadow:
-    0 8px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.06);
-  --search-local-hit-background: #1e1e21;
+    0 8px 30px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.06);
+  --search-local-hit-background: #f4f4f5;
   --search-local-hit-shadow: none;
-  --search-local-hit-color: #e4e4e7;
-  --search-local-highlight-color: #60a5fa;
+  --search-local-hit-color: #3f3f46;
+  --search-local-highlight-color: #2563eb;
   --search-local-muted-color: #71717a;
-  --search-local-hit-active-color: #fff;
+  --search-local-hit-active-color: #18181b;
   --search-local-modal-width: 480px;
   --search-local-spacing: 10px;
   --search-local-hit-height: 48px;
 }
 
-html body .searchHintContainer {
+html body [class*="searchHintContainer"] {
   right: 8px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
   gap: 2px !important;
 }
 
-html body .searchHint {
-  font-size: 8px !important;
+html body [class*="searchHint"] {
+  font-size: 10px !important;
   font-weight: 500 !important;
   font-family:
     system-ui,
     -apple-system,
     sans-serif !important;
   line-height: 1 !important;
-  padding: 1px 3px !important;
-  min-width: 14px !important;
-  height: 16px !important;
+  padding: 2px 5px !important;
+  min-width: 18px !important;
+  height: 20px !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   text-align: center !important;
-  border-radius: 3px !important;
+  border-radius: 4px !important;
   color: #a1a1aa !important;
-  background: #f4f4f5 !important;
-  border: 1px solid #e4e4e7 !important;
-  box-shadow: 0 1px 0 #e4e4e7 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
-html body .searchBarContainer {
+html body [class*="searchBarContainer"] {
   margin-left: 12px !important;
+  position: relative;
 }
 
-html body .dropdownMenu {
+html body [class*="dropdownMenu"] {
   @apply !rounded-xl;
-  background: #141415 !important;
-  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  background: #ffffff !important;
+  border: 1px solid #e4e4e7 !important;
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.06) !important;
   margin-top: 6px !important;
 }
 
-html body .dropdownMenu * {
-  color: #e4e4e7 !important;
+html body [class*="dropdownMenu"] * {
+  color: #3f3f46 !important;
 }
 
-html body .dropdownMenu mark {
-  color: #60a5fa !important;
+html body [class*="dropdownMenu"] mark {
+  color: #2563eb !important;
   background: transparent !important;
+  font-weight: 600 !important;
 }
 
-html body .dropdownMenu .suggestion {
+html body [class*="dropdownMenu"] [class*="suggestion"] {
   @apply !rounded-lg;
-  background: #1e1e21 !important;
+  background: #f4f4f5 !important;
 }
 
-html body .dropdownMenu .suggestion span[class*="subtitle"] {
+html body [class*="dropdownMenu"] [class*="suggestion"]:hover {
+  background: #e4e4e7 !important;
+}
+
+html body [class*="dropdownMenu"] [class*="hitPath"],
+html body [class*="dropdownMenu"] [class*="subtitle"] {
   color: #71717a !important;
 }
 

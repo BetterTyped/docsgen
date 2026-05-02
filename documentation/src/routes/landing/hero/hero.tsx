@@ -46,17 +46,17 @@ export const Hero = () => {
           <p className="max-w-md text-center text-base my-7">Generate always up-to-date API documentation from your codebase. Zero maintenance, fully customizable.</p>
 
           {/* CTA Buttons */}
-          <div className="flex items-center gap-4">
-            <Link to="/docs/getting-started" className="!no-underline bg-indigo-500 hover:bg-indigo-600 text-white hover:text-white rounded-full px-9 h-12 m-1 ring-offset-2 ring-1 ring-indigo-400 flex items-center transition-colors">
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0">
+            <Link to="/docs/getting-started" className="!no-underline bg-indigo-500 hover:bg-indigo-600 text-white hover:text-white rounded-full px-9 h-12 m-1 ring-offset-2 ring-1 ring-indigo-400 flex items-center justify-center whitespace-nowrap transition-colors w-full sm:w-auto">
               Get started
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right ml-1 size-4" aria-hidden="true">
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
               </svg>
             </Link>
-            <Link to="/docs/showcase" className="!no-underline flex items-center gap-2 border border-slate-400 hover:bg-indigo-50 transition rounded-full px-7 h-12 text-slate-700 hover:text-slate-700">
+            <Link to="/docs/showcase" className="!no-underline flex items-center justify-center gap-2 border border-slate-400 hover:bg-indigo-50 transition rounded-full px-7 h-12 text-slate-700 hover:text-slate-700 whitespace-nowrap w-full sm:w-auto">
               <Eye className="size-5" strokeWidth={1.5} aria-hidden="true" />
-              <span className="">Showcase demo</span>
+              <span>Showcase demo</span>
             </Link>
           </div>
         </div>

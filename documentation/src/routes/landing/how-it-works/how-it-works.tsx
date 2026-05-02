@@ -245,7 +245,7 @@ const StepCard = ({ step, index }: { step: Step; index: number }) => {
   }, []);
 
   return (
-    <FadeIn delay={index * 0.1} translateY={30} className="h-full">
+    <FadeIn delay={index * 0.1} translateY={30} className="h-full min-w-0">
       <div
         ref={ref}
         className={`
@@ -254,7 +254,7 @@ const StepCard = ({ step, index }: { step: Step; index: number }) => {
           ${step.hoverBorder}
         `}
       >
-        <div className="p-6 md:p-8 flex flex-col flex-1">
+        <div className="p-6 md:p-8 flex flex-col flex-1 min-w-0">
           {/* Step number + icon */}
           <div className="flex items-center gap-3 mb-5">
             <div className={`flex items-center justify-center w-10 h-10 rounded-xl ${step.accentBg} ${step.accentBorder} border`}>
@@ -273,7 +273,7 @@ const StepCard = ({ step, index }: { step: Step; index: number }) => {
           <div
             className={`
               rounded-xl bg-slate-900 p-4 font-mono text-[12px] leading-relaxed [&_div]:text-[12px] [&_span]:text-[12px]
-              transition-all duration-500 overflow-hidden flex-1 whitespace-pre
+              transition-all duration-500 overflow-x-auto overflow-y-hidden flex-1 whitespace-pre
               ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}
             `}
           >

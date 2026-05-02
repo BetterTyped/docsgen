@@ -146,12 +146,12 @@ export const Summary = () => {
                           </div>
                         </div>
                         <div className="relative w-full md:w-1/2 overflow-hidden p-6 md:p-8">
-                          <div className="bg-slate-900 rounded-xl p-5 text-xs font-mono text-slate-300 leading-relaxed">
+                          <div className="bg-slate-900 rounded-xl p-5 text-xs font-mono text-slate-300 leading-relaxed overflow-hidden">
                             <div className="text-slate-500 text-xs">{"// your-docs/request.mdx"}</div>
                             <div className="mt-2">
                               <span className="text-blue-400 text-xs">## Methods</span>
                             </div>
-                            <div className="mt-1 text-xs whitespace-nowrap">
+                            <div className="mt-1 text-xs whitespace-nowrap overflow-hidden text-ellipsis">
                               <span className="text-pink-400 text-xs">{"(@import core Request "}</span>
                               <span className="text-pink-500 text-xs">{"type=methods&display=table)"}</span>
                             </div>

@@ -60,7 +60,7 @@ export default function TOC({ className, ...props }: Props): JSX.Element {
           <span>Sponsor</span>
         </a>
 
-        <h6 className="text-[16px] font-bold uppercase ml-[4px]">On this page</h6>
+        <h6 className="text-[12px] font-bold uppercase ml-[4px]">On this page</h6>
         <div
           className={clsx(
             styles.tableOfContents,
