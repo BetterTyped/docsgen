@@ -398,7 +398,7 @@ export const Showcase = () => {
               One directive. Live docs.
             </Title>
             <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-              Write a single <code className="text-pink-500 bg-pink-50 border border-pink-200/50 px-1.5 py-0.5 rounded text-sm font-mono">@import</code> in your MDX
+              Write a single <code className="!text-pink-500 !bg-pink-50 !border !border-pink-200/50 px-1.5 py-0.5 rounded text-sm font-mono">@import</code> in your MDX
               and get always-current API documentation rendered on every build.
             </p>
           </div>
