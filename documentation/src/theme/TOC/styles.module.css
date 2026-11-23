@@ -23,7 +23,13 @@
 
 .tableOfContents {
   overflow-y: auto;
-  max-height: calc(100vh - 420px);
+  /* What is left of the window after the buttons above and the partners and sponsors below. */
+  max-height: max(132px, calc(100vh - 420px - 300px));
+}
+
+/* Paid partners with logo tiles make the partners block taller, so the headings get less room. */
+.tocContent:has(:global(.bt-sp-tiles)) .tableOfContents {
+  max-height: max(132px, calc(100vh - 420px - 400px));
 }
 
 .tableOfContents a {
@@ -98,16 +104,6 @@
 
 .starButton svg {
   flex-shrink: 0;
-}
-
-/* Sponsors section */
-.sponsorsSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  padding-top: 16px;
-  border-top: 1px solid hsla(240, 4%, 20%, 0.171);
 }
 
 /* Sponsor button — override `main a`, `main a > span`, `main a > div`, `main a > p` from custom.css */
@@ -192,25 +188,6 @@
 
 .sponsorButton span {
   filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.12));
-}
-
-/* Sponsors image link — prevent yellow color leak */
-:global(main) .sponsorsImage,
-:global(main) .sponsorsImage:hover {
-  color: inherit !important;
-  text-decoration: none !important;
-}
-
-.sponsorsImage {
-  display: block;
-  width: 100%;
-  padding: 0 4px;
-}
-
-.sponsorsImage img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
 }
 
 /* Enable if you want to hide empty sidebar */
