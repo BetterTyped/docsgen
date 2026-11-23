@@ -5,6 +5,7 @@ import type { Props } from "@theme/TOC";
 import { useSidebar } from "@site/src/hooks/use-sidebar";
 import { sections } from "@site/src/sections";
 import { PackageDetails } from "@site/src/components";
+import { SponsorRail } from "@site/src/components/sponsors/sponsor-rail";
 
 import styles from "./styles.module.css";
 
@@ -74,21 +75,7 @@ export default function TOC({ className, ...props }: Props): JSX.Element {
           <TOCItems {...props} linkClassName={LINK_CLASS_NAME} linkActiveClassName={LINK_ACTIVE_CLASS_NAME} />
         </div>
 
-        <div className={styles.sponsorsSection}>
-          <a
-            href="https://github.com/sponsors/prc5"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.sponsorsImage}
-          >
-            <img
-              src="https://github.com/prc5/sponsors/blob/main/packages/all/sponsorkit/sponsors.png?raw=true"
-              alt="Our Sponsors"
-              width={1667}
-              height={646}
-            />
-          </a>
-        </div>
+        <SponsorRail />
       </div>
     </div>
   );

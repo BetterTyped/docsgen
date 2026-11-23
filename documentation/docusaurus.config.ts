@@ -6,6 +6,7 @@ import { importer, type PackageOptions } from "@docsgen/core";
 import plugin from "@docsgen/docusaurus";
 
 import docsVersions from "./versions.json";
+import sponsorsPlugin from "./src/plugins/sponsors";
 
 const getVersions = () => {
   const latestVersion = docsVersions[0] || "v0.0.0";
@@ -191,6 +192,7 @@ const config: Config = {
 
   plugins: [
     "@docusaurus/theme-live-codeblock",
+    sponsorsPlugin,
     async function tailwindPlugin() {
       return {
         name: "docusaurus-tailwindcss",
